@@ -1,0 +1,702 @@
+[
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Stop-loss premium",
+  "math": "Pi(d) = E[(S-d)^+]",
+  "package": "scipy.stats",
+  "func_name": "stop_loss_premium"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Straddle payoff",
+  "math": "Payoff = max(S-K,0)+max(K-S,0)-Premiums",
+  "package": "manual",
+  "func_name": "straddle_payoff"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Strangle payoff",
+  "math": "Payoff = max(S-K_c,0)+max(K_p-S,0)-Premiums",
+  "package": "manual",
+  "func_name": "strangle_payoff"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Stress capital buffer",
+  "math": "SCB = max(stress losses, regulatory floor) / RWA",
+  "package": "manual",
+  "func_name": "stress_capital_buffer"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Stress loss",
+  "math": "Stress Loss = V(current market state) - V(stressed state)",
+  "package": "QuantLib",
+  "func_name": "stress_loss"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Stressed VaR",
+  "math": "SVaR = VaR using stress-window parameters",
+  "package": "manual",
+  "func_name": "stressed_var"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Structural credit spread approximation",
+  "math": "s approx -ln[(De^{-rT}+E)/V_A]/T",
+  "package": "manual",
+  "func_name": "structural_credit_spread_approximation"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Survival function",
+  "math": "S_x(t) = P[T_x > t] = 1 - F_x(t)",
+  "package": "actuarialmath.Survival",
+  "func_name": "survival_function"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Survival probability",
+  "math": "Q(0,T) = exp(-int_0^T lambda(t) dt)",
+  "package": "QuantLib",
+  "func_name": "survival_probability"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Sustainable growth rate",
+  "math": "g = ROE x Retention Ratio",
+  "package": "manual",
+  "func_name": "sustainable_growth_rate"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Swap annuity",
+  "math": "A = sum_i alpha_i DF_i",
+  "package": "QuantLib.VanillaSwap",
+  "func_name": "swap_annuity"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Swap fixed leg PV",
+  "math": "PV_fixed = Σ_i N·K·α_i·DF(t_i)",
+  "package": "QuantLib.VanillaSwap",
+  "func_name": "swap_fixed_leg_pv"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Swap fixed rate",
+  "math": "K = (1 - DF_n) / sum_i alpha_i DF_i",
+  "package": "QuantLib.VanillaSwap",
+  "func_name": "swap_fixed_rate"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Swap floating leg PV",
+  "math": "PV_float = Σ_i N·L_i·α_i·DF(t_i)",
+  "package": "QuantLib.VanillaSwap",
+  "func_name": "swap_floating_leg_pv"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Swap present value",
+  "math": "PV_swap = PV_fixed_leg - PV_float_leg",
+  "package": "QuantLib.VanillaSwap",
+  "func_name": "swap_present_value"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Tail hedge payoff",
+  "math": "Tail Hedge = max(K-S_T,0) - Premium or futures P&L in stress",
+  "package": "manual",
+  "func_name": "tail_hedge_payoff"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Tail ratio",
+  "math": "Tail Ratio = |95th percentile| / |5th percentile|",
+  "package": "quantstats.stats",
+  "func_name": "tail_ratio"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Tangency portfolio weights",
+  "math": "w* proportional Sigma^{-1}(mu-r_f 1)",
+  "package": "PyPortfolioOpt.EfficientFrontier",
+  "func_name": "tangency_portfolio_weights"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Tax shield",
+  "math": "Tax Shield = Interest Expense x Tax Rate",
+  "package": "manual",
+  "func_name": "tax_shield"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Temporary annuity",
+  "math": "a_{x:n} = E[sum_{k=1}^n v^k 1(T_x>=k)]",
+  "package": "actuarialmath",
+  "func_name": "temporary_annuity"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Term insurance APV",
+  "math": "A_{x:n}^1 = E[v^{T_x} 1(T_x<=n)]",
+  "package": "actuarialmath",
+  "func_name": "term_insurance_apv"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Terminal capitalization value",
+  "math": "Terminal Value = NOI_{T+1} / Exit Cap Rate",
+  "package": "manual",
+  "func_name": "terminal_capitalization_value"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Terminal value (exit multiple)",
+  "math": "TV = Metric_n x Exit Multiple",
+  "package": "manual",
+  "func_name": "terminal_value_exit_multiple"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Terminal value (Gordon growth)",
+  "math": "TV = FCF_(n+1) / (WACC-g)",
+  "package": "manual",
+  "func_name": "terminal_value_gordon_growth"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Theta",
+  "math": "Theta = -S e^{-qT} n(d1)sigma/(2sqrt(T)) - rKe^{-rT}N(d2) + qSe^{-qT}N(d1)",
+  "package": "py-vollib-gen.greeks",
+  "func_name": "theta"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Through-the-cycle PD",
+  "math": "PD_TTC = long-run default frequency estimate",
+  "package": "manual",
+  "func_name": "through_the_cycle_pd"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Tier 1 capital ratio",
+  "math": "Tier 1 Ratio = Tier 1 Capital / RWA",
+  "package": "manual",
+  "func_name": "tier_1_capital_ratio"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Time value option",
+  "math": "Time Value = Option Premium - Intrinsic Value",
+  "package": "manual",
+  "func_name": "time_value_option"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Time-weighted return (TWRR)",
+  "math": "TWRR = prod_i (1+r_i) - 1",
+  "package": "manual",
+  "func_name": "time_weighted_return_twrr"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Tobin's Q",
+  "math": "Q = Market Value of Assets / Replacement Cost of Assets",
+  "package": "manual",
+  "func_name": "tobins_q"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Total capital ratio",
+  "math": "Total Capital Ratio = Total Capital / RWA",
+  "package": "manual",
+  "func_name": "total_capital_ratio"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Tracking error",
+  "math": "TE = Std(E[R_p] - R_b)",
+  "package": "empyrical-reloaded",
+  "func_name": "tracking_error"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Tranche attachment point",
+  "math": "Attach = subordination below tranche / pool balance",
+  "package": "manual",
+  "func_name": "tranche_attachment_point"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Tranche credit enhancement",
+  "math": "CE = Overcollateralization + Subordination + Excess Spread",
+  "package": "manual",
+  "func_name": "tranche_credit_enhancement"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Tranche detachment point",
+  "math": "Detach = 1 - subordination above tranche / pool balance",
+  "package": "manual",
+  "func_name": "tranche_detachment_point"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Tranche WAL",
+  "math": "WAL_tranche = sum_t t Principal_tranche,t / Total Principal_tranche",
+  "package": "absbox",
+  "func_name": "tranche_wal"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Tranche yield",
+  "math": "Solve y such that Tranche Price = PV(expected tranche cash flows)",
+  "package": "absbox",
+  "func_name": "tranche_yield"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Transfer rate from curve",
+  "math": "FTP_t = term matched funding curve + liquidity + optionality premium",
+  "package": "QuantLib.PiecewiseYieldCurve",
+  "func_name": "transfer_rate_from_curve"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Transition matrix probability",
+  "math": "P_{ij}(n) = [P^n]_{ij}",
+  "package": "numpy.linalg.matrix_power",
+  "func_name": "transition_matrix_probability"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Treynor ratio",
+  "math": "Treynor = (E[R_p]-R_f)/beta_p",
+  "package": "empyrical-reloaded",
+  "func_name": "treynor_ratio"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Treynor-Mazuy timing",
+  "math": "R_p-R_f = alpha + beta(R_m-R_f) + gamma(R_m-R_f)^2 + epsilon",
+  "package": "statsmodels.OLS",
+  "func_name": "treynor_mazuy_timing"
+ },
+ {
+  "domain": "FX & international finance",
+  "name": "Triangular arbitrage condition",
+  "math": "S_{A/B} × S_{B/C} × S_{C/A} = 1",
+  "package": "manual",
+  "func_name": "triangular_arbitrage_condition"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Trigger-based step-down",
+  "math": "Step-down when delinquency, CNL, and OC/IC tests satisfied",
+  "package": "absbox",
+  "func_name": "trigger_based_step_down"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Trinomial tree option value",
+  "math": "V = discounted expected value across three branches",
+  "package": "QuantLib",
+  "func_name": "trinomial_tree_option_value"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "TRIX",
+  "math": "TRIX = 1-period ROC of triple EMA",
+  "package": "TA-Lib.TRIX",
+  "func_name": "trix"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "True range",
+  "math": "TR = max(H-L, |H-C_{t-1}|, |L-C_{t-1}|)",
+  "package": "TA-Lib.TRANGE",
+  "func_name": "true_range"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Turbo amortization amount",
+  "math": "Turbo = excess cash after fees and note interest redirected to senior principal",
+  "package": "absbox",
+  "func_name": "turbo_amortization_amount"
+ },
+ {
+  "domain": "Liquidity risk & market liquidity",
+  "name": "Turnover ratio",
+  "math": "Turnover = Volume / Shares Outstanding",
+  "package": "manual",
+  "func_name": "turnover_ratio"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "TVPI",
+  "math": "TVPI = (Residual Value + Distributions) / Paid-In Capital",
+  "package": "manual",
+  "func_name": "tvpi"
+ },
+ {
+  "domain": "Trading, execution & market microstructure",
+  "name": "TWAP",
+  "math": "TWAP = (1/n) Σ_i P_i",
+  "package": "manual",
+  "func_name": "twap"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Ulcer index",
+  "math": "UI = sqrt(mean(drawdown^2))",
+  "package": "quantstats.stats",
+  "func_name": "ulcer_index"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Ultimate oscillator",
+  "math": "UO = weighted avg of BP/TR over 7,14,28 periods",
+  "package": "TA-Lib.momentum.UltimateOscillator",
+  "func_name": "ultimate_oscillator"
+ },
+ {
+  "domain": "FX & international finance",
+  "name": "Uncovered interest parity (UIP)",
+  "math": "E[S_{t+T}] / S_t approx (1+r_d T)/(1+r_f T)",
+  "package": "manual",
+  "func_name": "uncovered_interest_parity_uip"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Unexpected loss",
+  "math": "UL = sqrt(PD(1-PD)) x LGD x EAD",
+  "package": "manual",
+  "func_name": "unexpected_loss"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Unlevered beta",
+  "math": "beta_U = beta_L / [1 + (1-T)D/E]",
+  "package": "manual",
+  "func_name": "unlevered_beta"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Unlevered yield",
+  "math": "Unlevered Yield = NOI / Purchase Price",
+  "package": "manual",
+  "func_name": "unlevered_yield"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Up capture ratio",
+  "math": "Up Capture = mean(R_p|R_b>0)/mean(R_b|R_b>0)",
+  "package": "quantstats.stats",
+  "func_name": "up_capture_ratio"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Upside capture",
+  "math": "Upside Capture = Avg(R_p | R_b>0) / Avg(R_b | R_b>0)",
+  "package": "quantstats.stats",
+  "func_name": "upside_capture"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Upside potential ratio",
+  "math": "UPR = Upside Potential / Downside Deviation",
+  "package": "manual",
+  "func_name": "upside_potential_ratio"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Utilization rate",
+  "math": "Utilization = Outstanding Balance / Credit Limit",
+  "package": "manual",
+  "func_name": "utilization_rate"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Vacancy rate",
+  "math": "Vacancy Rate = Vacant Units or Lost Rent / Total Potential Units or Rent",
+  "package": "manual",
+  "func_name": "vacancy_rate"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Vanna",
+  "math": "Vanna = -e^{-qT} n(d1) d2 / sigma",
+  "package": "QuantLib",
+  "func_name": "vanna"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "VAR(p)",
+  "math": "y_t = c + A_1 y_{t-1}+…+A_p y_{t-p}+u_t",
+  "package": "statsmodels.tsa.api.VAR",
+  "func_name": "var_p"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Variance of loss",
+  "math": "Var(L) = E[L^2] - (E[L])^2",
+  "package": "actuarialmath",
+  "func_name": "variance_of_loss"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Variance ratio test",
+  "math": "VR(q) = Var(q-period returns)/(q Var(1-period returns))",
+  "package": "statsmodels.tsa.VAR",
+  "func_name": "variance_ratio_test"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Variance swap fair strike",
+  "math": "K_var = E_Q[ realized variance ]",
+  "package": "QuantLib.VanillaSwap",
+  "func_name": "variance_swap_fair_strike"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Vasicek one-factor portfolio loss quantile",
+  "math": "L_alpha = LGD Phi((Phi^-1(PD)+sqrt(rho)Phi^-1(alpha))/sqrt(1-rho))",
+  "package": "scipy.stats",
+  "func_name": "vasicek_one_factor_portfolio_loss_quantile"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Vasicek short-rate process",
+  "math": "dr_t = a(b-r_t)dt + sigma dW_t",
+  "package": "QuantLib.Vasicek",
+  "func_name": "vasicek_short_rate_process"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "VC liquidation preference payout",
+  "math": "Payout = max(Preference, Ownership x Exit Value) with participation rules",
+  "package": "manual",
+  "func_name": "vc_liquidation_preference_payout"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "VECM",
+  "math": "Delta y_t = Pi y_{t-1} + sum_i Gamma_i Delta y_{t-i} + u_t",
+  "package": "statsmodels.tsa.VECM",
+  "func_name": "vecm"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Vega",
+  "math": "Vega = S e^{-qT} n(d1) sqrt(T)",
+  "package": "py-vollib-gen.greeks",
+  "func_name": "vega"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Vintage cumulative loss",
+  "math": "Vintage Loss_t = cumulative net losses / original balance",
+  "package": "manual",
+  "func_name": "vintage_cumulative_loss"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "VIX variance relation",
+  "math": "VIX^2 ~ expected 30-day risk-neutral variance x 100^2",
+  "package": "manual",
+  "func_name": "vix_variance_relation"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Volatility clustering test",
+  "math": "ACF of r_t^2 significantly positive",
+  "package": "statsmodels.tsa.stattools",
+  "func_name": "volatility_clustering_test"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Volume-weighted average price (VWAP)",
+  "math": "VWAP = sum(P_t V_t) / sum(V_t) intraday",
+  "package": "TA-Lib.volume.VolumeWeightedAveragePrice",
+  "func_name": "volume_weighted_average_price_vwap"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Vomma / volga",
+  "math": "Vomma = Vega d1 d2 / sigma",
+  "package": "QuantLib",
+  "func_name": "vomma_over_volga"
+ },
+ {
+  "domain": "Trading, execution & market microstructure",
+  "name": "VWAP",
+  "math": "VWAP = Σ_i P_i V_i / Σ_i V_i",
+  "package": "manual",
+  "func_name": "vwap"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "VWAP benchmark",
+  "math": "VWAP = sum_t P_t V_t / sum_t V_t",
+  "package": "manual",
+  "func_name": "vwap_benchmark"
+ },
+ {
+  "domain": "Corporate finance & capital budgeting",
+  "name": "Weighted average cost of capital (WACC)",
+  "math": "WACC = E/V·R_e + D/V·R_d·(1-T)",
+  "package": "manual",
+  "func_name": "weighted_average_cost_of_capital_wacc"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Weighted average coupon (WAC)",
+  "math": "WAC = sum_i w_i coupon_i",
+  "package": "manual",
+  "func_name": "weighted_average_coupon_wac"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Weighted average life (WAL)",
+  "math": "WAL = sum_t t Principal_t / Total Principal",
+  "package": "manual",
+  "func_name": "weighted_average_life_wal"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Weighted average life of loan portfolio",
+  "math": "WAL = sum_t t Principal_t / sum_t Principal_t",
+  "package": "manual",
+  "func_name": "weighted_average_life_of_loan_portfolio"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Weighted average maturity (WAM)",
+  "math": "WAM = sum_i w_i maturity_i",
+  "package": "manual",
+  "func_name": "weighted_average_maturity_wam"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "Weighted least squares (WLS)",
+  "math": "beta_hat = (X'WX)^-1 X'Wy",
+  "package": "statsmodels.WLS",
+  "func_name": "weighted_least_squares_wls"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Weighted moving average (WMA)",
+  "math": "WMA = sum_i w_i P_{t-i} / sum_i w_i",
+  "package": "TA-Lib.WMA",
+  "func_name": "weighted_moving_average_wma"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "White heteroskedasticity test",
+  "math": "LM = nR^2 from auxiliary regression on X, X^2, cross terms",
+  "package": "statsmodels",
+  "func_name": "white_heteroskedasticity_test"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Whole life annuity-due",
+  "math": "adot_x = E[sum_{k>=0} v^k 1(T_x>k)]",
+  "package": "actuarialmath",
+  "func_name": "whole_life_annuity_due"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Whole life annuity-immediate",
+  "math": "a_x = E[sum_{k>=1} v^k 1(T_x>=k)]",
+  "package": "actuarialmath",
+  "func_name": "whole_life_annuity_immediate"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Whole life assurance",
+  "math": "A_x = Σ_k v^(k+1)·_k p_x·q_(x+k)",
+  "package": "actuarialmath.Insurance",
+  "func_name": "whole_life_assurance"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Williams %R",
+  "math": "%R = -100(H_n-C)/(H_n-L_n)",
+  "package": "TA-Lib.WILLR",
+  "func_name": "williams_pctr"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Win/loss ratio",
+  "math": "Win/Loss = avg positive return / |avg negative return|",
+  "package": "quantstats.stats",
+  "func_name": "win_over_loss_ratio"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Working capital",
+  "math": "Working Capital = Current Assets - Current Liabilities",
+  "package": "manual",
+  "func_name": "working_capital"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Wrong-way risk adjustment",
+  "math": "EPE_WWR > EPE due to positive dependence between exposure and PD",
+  "package": "manual",
+  "func_name": "wrong_way_risk_adjustment"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Yang-Zhang volatility",
+  "math": "sigma_YZ^2 = sigma_o^2 + k sigma_c^2 + (1-k) sigma_RS^2",
+  "package": "manual",
+  "func_name": "yang_zhang_volatility"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Yield curve carry",
+  "math": "Carry approx Coupon + Roll-down + Financing",
+  "package": "manual",
+  "func_name": "yield_curve_carry"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Yield to call (YTC)",
+  "math": "P = sum_t C/(1+y)^t + CallPrice/(1+y)^T_call",
+  "package": "QuantLib",
+  "func_name": "yield_to_call_ytc"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Yield to maturity (YTM)",
+  "math": "P = sum_t C/(1+YTM/m)^(mt) + F/(1+YTM/m)^(mT)",
+  "package": "QuantLib",
+  "func_name": "yield_to_maturity_ytm"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Yield to worst (YTW)",
+  "math": "YTW = min(YTM, YTC, YTP, ...)",
+  "package": "QuantLib",
+  "func_name": "yield_to_worst_ytw"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Zero-coupon bond price",
+  "math": "P = F/(1+r)^T",
+  "package": "QuantLib.BondFunctions.cleanPrice",
+  "func_name": "zero_coupon_bond_price"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Z-spread",
+  "math": "P = sum_t CF_t exp(-(r_t + z)t)",
+  "package": "QuantLib",
+  "func_name": "z_spread"
+ }
+]

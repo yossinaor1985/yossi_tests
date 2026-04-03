@@ -1,0 +1,716 @@
+[
+ {
+  "domain": "FX & international finance",
+  "name": "Currency basket index",
+  "math": "Index_t = prod_i S_{i,t}^{w_i}",
+  "package": "manual",
+  "func_name": "currency_basket_index"
+ },
+ {
+  "domain": "FX & international finance",
+  "name": "Currency carry return",
+  "math": "Carry = i_high - i_low + FX change",
+  "package": "manual",
+  "func_name": "currency_carry_return"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Current ratio",
+  "math": "Current Ratio = Current Assets / Current Liabilities",
+  "package": "manual",
+  "func_name": "current_ratio"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Current yield",
+  "math": "Current Yield = Annual Coupon / Bond Price",
+  "package": "manual",
+  "func_name": "current_yield"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Curtate expected future lifetime",
+  "math": "e_x^∘ = sum_{k>=1} {}_kp_x",
+  "package": "actuarialmath",
+  "func_name": "curtate_expected_future_lifetime"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "CVA capital proxy",
+  "math": "CVA Capital ~ sensitivity-based or standardized charge",
+  "package": "manual",
+  "func_name": "cva_capital_proxy"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "d1",
+  "math": "d1 = [ln(S/K) + (r + 0.5σ^2)T] / (σ√T)",
+  "package": "py-vollib-gen",
+  "func_name": "d1"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "d2",
+  "math": "d2 = d1 - σ√T",
+  "package": "py-vollib-gen",
+  "func_name": "d2"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Days inventory outstanding (DIO)",
+  "math": "DIO = 365 x Average Inventory / COGS",
+  "package": "manual",
+  "func_name": "days_inventory_outstanding_dio"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Days payables outstanding (DPO)",
+  "math": "DPO = 365 x Average AP / COGS",
+  "package": "manual",
+  "func_name": "days_payables_outstanding_dpo"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Days sales outstanding (DSO)",
+  "math": "DSO = 365 x Average AR / Revenue",
+  "package": "manual",
+  "func_name": "days_sales_outstanding_dso"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Days to liquidate",
+  "math": "DTL = Position Size / (ADV x Participation Limit)",
+  "package": "manual",
+  "func_name": "days_to_liquidate"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Death probability",
+  "math": "{}_tq_x = 1 - {}_tp_x",
+  "package": "actuarialmath",
+  "func_name": "death_probability"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Debt burden ratio",
+  "math": "Debt Burden = Total Debt Service / Gross Income",
+  "package": "manual",
+  "func_name": "debt_burden_ratio"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Debt service",
+  "math": "Debt Service = Interest + Scheduled Principal + Lease/Rent if included",
+  "package": "manual",
+  "func_name": "debt_service"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Debt service coverage ratio (DSCR)",
+  "math": "DSCR = Net Operating Income  / Debt Service",
+  "package": "manual",
+  "func_name": "debt_service_coverage_ratio_dscr"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Debt yield",
+  "math": "Debt Yield = Net Operating Income/ Loan Amount",
+  "package": "manual",
+  "func_name": "debt_yield"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Debt-to-assets",
+  "math": "Debt_to_assets = Debt / Assets",
+  "package": "manual",
+  "func_name": "debt_to_assets"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Debt-to-equity",
+  "math": "Debt_to_equity = Debt / Equity",
+  "package": "manual",
+  "func_name": "debt_to_equity"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Debt-to-income residual",
+  "math": "Residual Income = Net Income - Taxes - Housing Costs - Other Debt Payments",
+  "package": "manual",
+  "func_name": "debt_to_income_residual"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Decreasing annuity",
+  "math": "(Da)_{x:n} = E[sum_{k=1}^n (n-k+1) v^k 1(T_x>=k)]",
+  "package": "actuarialmath",
+  "func_name": "decreasing_annuity"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Default rate",
+  "math": "Default Rate = Defaults / Current or Original Balance",
+  "package": "manual",
+  "func_name": "default_rate"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Delinquency ratio",
+  "math": "Delinquency Ratio = Delinquent Loans / Gross Loans",
+  "package": "manual",
+  "func_name": "delinquency_ratio"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Delinquency trigger",
+  "math": "Trigger breached if delinquency ratio > threshold",
+  "package": "manual",
+  "func_name": "delinquency_trigger"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Delta (call)",
+  "math": "Delta = e^{-qT}N(d1)",
+  "package": "py-vollib-gen.greeks",
+  "func_name": "delta_call"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Delta (put)",
+  "math": "Delta = -e^{-qT}N(-d1)",
+  "package": "py-vollib-gen.greeks",
+  "func_name": "delta_put"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Delta-normal VaR",
+  "math": "VaR = z_alpha sqrt(Delta' Sigma Delta)",
+  "package": "manual",
+  "func_name": "delta_normal_var"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Deposit beta",
+  "math": "Deposit Beta = Delta Deposit Rate / Delta Market Rate",
+  "package": "statsmodels.OLS",
+  "func_name": "deposit_beta"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Detrended price oscillator (DPO)",
+  "math": "DPO = Price shifted - SMA",
+  "package": "TA-Lib",
+  "func_name": "detrended_price_oscillator_dpo"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Digital call price",
+  "math": "Digital = e^{-rT} N(d2)",
+  "package": "QuantLib",
+  "func_name": "digital_call_price"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Digital put price",
+  "math": "Digital = e^{-rT} N(-d2)",
+  "package": "QuantLib",
+  "func_name": "digital_put_price"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Diluted EPS",
+  "math": "Diluted EPS = Diluted Net Income Available to Common / Diluted Shares",
+  "package": "manual",
+  "func_name": "diluted_eps"
+ },
+ {
+  "domain": "Fixed income & bond math",
+  "name": "Dirty price",
+  "math": "Dirty Price = Clean Price + Accrued Interest",
+  "package": "QuantLib.Bond.dirtyPrice",
+  "func_name": "dirty_price"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Discount factor",
+  "math": "DF_t = 1 / (1+r)^t",
+  "package": "manual",
+  "func_name": "discount_factor"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Discount yield (T-bill)",
+  "math": "Discount Yield = (F-P)/F x 360/d",
+  "package": "manual",
+  "func_name": "discount_yield_t_bill"
+ },
+ {
+  "domain": "Corporate finance & capital budgeting",
+  "name": "Discounted payback period",
+  "math": "Discounted Payback = min{t : Σ_{i≤t} CF_i/(1+r)^i ≥ Initial Outlay}",
+  "package": "manual",
+  "func_name": "discounted_payback_period"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Distance to default (DD)",
+  "math": "DD = [ln(V_A/D) + (mu_A - 0.5 sigma_A^2)T] / (sigma_A sqrt(T))",
+  "package": "manual",
+  "func_name": "distance_to_default_dd"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Diversification ratio",
+  "math": "DR = w_i (Sigma w)_i / sigma_p",
+  "package": "Riskfolio-Lib.Portfolio.optimization",
+  "func_name": "diversification_ratio"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Dividend coverage",
+  "math": "Coverage = EPS / DPS",
+  "package": "manual",
+  "func_name": "dividend_coverage"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Dividend discount model (DDM)",
+  "math": "P_0 = sum_t D_t/(1+r)^t",
+  "package": "manual",
+  "func_name": "dividend_discount_model_ddm"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Dividend discount model (Gordon growth)",
+  "math": "P_0 = D_1 / (r - g)",
+  "package": "manual",
+  "func_name": "dividend_discount_model_gordon_growth"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Dividend payout ratio",
+  "math": "Payout = Dividends / Net Income",
+  "package": "manual",
+  "func_name": "dividend_payout_ratio"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Dividend yield",
+  "math": "Dividend Yield = Annual Dividend per Share / Price per Share",
+  "package": "manual",
+  "func_name": "dividend_yield"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Dollar duration",
+  "math": "Dollar Duration = Modified Duration x Price",
+  "package": "QuantLib.BondFunctions.duration",
+  "func_name": "dollar_duration"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Dollar volume",
+  "math": "Dollar Volume = Price x Shares Traded",
+  "package": "manual",
+  "func_name": "dollar_volume"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Donchian channel lower",
+  "math": "Lower = rolling min(L,n)",
+  "package": "TA-Lib.volatility.DonchianChannel",
+  "func_name": "donchian_channel_lower"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Donchian channel upper",
+  "math": "Upper = rolling max(H,n)",
+  "package": "TA-Lib.volatility.DonchianChannel",
+  "func_name": "donchian_channel_upper"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Downside capture",
+  "math": "Downside Capture = Avg(R_p | R_b<0) / Avg(R_b | R_b<0)",
+  "package": "quantstats.stats",
+  "func_name": "downside_capture"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Downside deviation",
+  "math": "DD = sqrt(E[min(R-MAR,0)^2])",
+  "package": "empyrical-reloaded",
+  "func_name": "downside_deviation"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "DPI",
+  "math": "DPI = Distributions / Paid-In Capital",
+  "package": "manual",
+  "func_name": "dpi"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Drawdown",
+  "math": "DD_t = V_t/peak_t - 1",
+  "package": "empyrical-reloaded.max_drawdown",
+  "func_name": "drawdown"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Drawdown duration",
+  "math": "Duration = consecutive periods below prior high",
+  "package": "quantstats.stats",
+  "func_name": "drawdown_duration"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Duration gap",
+  "math": "DGAP = D_A - (L/A) D_L",
+  "package": "manual",
+  "func_name": "duration_gap"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Duration times spread (DTS)",
+  "math": "DTS = Spread x Spread Duration",
+  "package": "manual",
+  "func_name": "duration_times_spread_dts"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Duration-neutral hedge ratio",
+  "math": "h = DV01_asset / DV01_hedge",
+  "package": "QuantLib.BondFunctions.duration",
+  "func_name": "duration_neutral_hedge_ratio"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "Durbin-Watson",
+  "math": "DW = sum_t(e_t-e_{t-1})^2 / sum_t e_t^2",
+  "package": "statsmodels",
+  "func_name": "durbin_watson"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "DV01 / PVBP",
+  "math": "DV01 = -dP/dy x 0.0001",
+  "package": "QuantLib",
+  "func_name": "dv01_over_pvbp"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Earnings at risk",
+  "math": "EaR_alpha = quantile_alpha(future earnings shortfall)",
+  "package": "manual",
+  "func_name": "earnings_at_risk"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Earnings yield",
+  "math": "E/P = EPS / Price",
+  "package": "manual",
+  "func_name": "earnings_yield"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "EBIT",
+  "math": "EBIT = Revenue - Operating Expenses",
+  "package": "manual",
+  "func_name": "ebit"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "EBITDA",
+  "math": "EBITDA = EBIT + D&A",
+  "package": "manual",
+  "func_name": "ebitda"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "EBITDA margin",
+  "math": "EBITDA Margin = EBITDA / Revenue",
+  "package": "manual",
+  "func_name": "ebitda_margin"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Economic value added (EVA)",
+  "math": "EVA = NOPAT - WACC x Invested Capital",
+  "package": "manual",
+  "func_name": "economic_value_added_eva"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Economic value of equity (EVE)",
+  "math": "EVE = PV(Assets) - PV(Liabilities)",
+  "package": "QuantLib",
+  "func_name": "economic_value_of_equity_eve"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Economic value of equity sensitivity",
+  "math": "ΔEVE ≈ -DGAP × A × Δy / (1+y)",
+  "package": "QuantLib.BondFunctions.duration",
+  "func_name": "economic_value_of_equity_sensitivity"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Effective annual rate (EAR)",
+  "math": "EAR = (1+r/m)^m - 1",
+  "package": "manual",
+  "func_name": "effective_annual_rate_ear"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Effective convexity",
+  "math": "EffConv = (P_- + P_+ - 2P_0)/(P_0 (Delta y)^2)",
+  "package": "QuantLib.BondFunctions.convexity",
+  "func_name": "effective_convexity"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Effective duration",
+  "math": "EffDur = (P_- - P_+) / (2P_0 Delta y)",
+  "package": "QuantLib.BondFunctions.duration",
+  "func_name": "effective_duration"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Effective gross income",
+  "math": "EGI = Potential Gross Income - Vacancy/Credit Loss + Other Income",
+  "package": "manual",
+  "func_name": "effective_gross_income"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Effective spread",
+  "math": "EffSpread = 2 x |Trade Price - Mid|",
+  "package": "manual",
+  "func_name": "effective_spread"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Efficient frontier problem",
+  "math": "min_w w'Sigma w s.t. mu'w >= r* and 1'w=1",
+  "package": "PyPortfolioOpt.EfficientFrontier",
+  "func_name": "efficient_frontier_problem"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "EGARCH",
+  "math": "ln sigma_t^2 = omega + alpha(|e_{t-1}|-E|e|) + gamma e_{t-1} + beta ln sigma_{t-1}^2",
+  "package": "arch.univariate.EGARCH",
+  "func_name": "egarch"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "EGARCH(1,1)",
+  "math": "lnσ_t^2 = ω + α(|e_{t-1}|-E|e|) + γ e_{t-1} + β lnσ_{t-1}^2",
+  "package": "arch.univariate.EGARCH",
+  "func_name": "egarch_11"
+ },
+ {
+  "domain": "Quantitative forecasting & machine learning in finance",
+  "name": "Elastic net",
+  "math": "beta_hat = argmin ||y-X beta||^2 + lambda[(1-alpha)||beta||_2^2/2 + alpha||beta||_1]",
+  "package": "sklearn.ElasticNet",
+  "func_name": "elastic_net"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Encumbrance ratio",
+  "math": "Encumbrance = Encumbered Assets / Total Assets",
+  "package": "manual",
+  "func_name": "encumbrance_ratio"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Endowment insurance APV",
+  "math": "Abar_{x:n} + {}_nE_x",
+  "package": "actuarialmath",
+  "func_name": "endowment_insurance_apv"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Enterprise value",
+  "math": "EV = Equity Value + Net Debt + Preferred + Minority Interest",
+  "package": "manual",
+  "func_name": "enterprise_value"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Enterprise value in LBO",
+  "math": "EV = Entry EBITDA x Entry Multiple",
+  "package": "manual",
+  "func_name": "enterprise_value_in_lbo"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "EPS",
+  "math": "EPS = Net Income / Weighted Avg Shares",
+  "package": "manual",
+  "func_name": "eps"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Equal risk contribution",
+  "math": "Choose w such that RC_i are equal",
+  "package": "Riskfolio-Lib.Portfolio.optimization",
+  "func_name": "equal_risk_contribution"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Equal-weight portfolio",
+  "math": "w_i = 1/N",
+  "package": "manual",
+  "func_name": "equal_weight_portfolio"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Equated monthly installment (EMI)",
+  "math": "EMI = P r (1+r)^n / ((1+r)^n - 1)",
+  "package": "numpy_financial.pmt",
+  "func_name": "equated_monthly_installment_emi"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Equity check multiple of EBITDA",
+  "math": "Equity / EBITDA",
+  "package": "manual",
+  "func_name": "equity_check_multiple_of_ebitda"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Equity contribution",
+  "math": "Sponsor Equity = Uses - Debt - Existing Cash",
+  "package": "manual",
+  "func_name": "equity_contribution"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Equity multiple",
+  "math": "EM = Total Equity Distributions / Equity Invested",
+  "package": "manual",
+  "func_name": "equity_multiple"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Equity ratio",
+  "math": "Equity Ratio = Total Equity / Total Assets",
+  "package": "manual",
+  "func_name": "equity_ratio"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Equity rollover percentage",
+  "math": "Rollover = Management Rollover Equity / Total Equity",
+  "package": "manual",
+  "func_name": "equity_rollover_percentage"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Equity value at exit",
+  "math": "Equity_exit = EV_exit - Net Debt_exit",
+  "package": "manual",
+  "func_name": "equity_value_at_exit"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Equity value bridge",
+  "math": "Equity Value = EV - Net Debt - Preferred - Minority Interest + Non-operating Assets",
+  "package": "manual",
+  "func_name": "equity_value_bridge"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Equivalent annual annuity (EAA)",
+  "math": "EAA = NPV x r / (1-(1+r)^-n)",
+  "package": "manual",
+  "func_name": "equivalent_annual_annuity_eaa"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "Error correction model",
+  "math": "Delta y_t = alpha + beta Delta x_t + lambda(y_{t-1} - theta x_{t-1}) + epsilon_t",
+  "package": "statsmodels.tsa.VECM",
+  "func_name": "error_correction_model"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "EV/EBIT",
+  "math": "EV / EBIT",
+  "package": "manual",
+  "func_name": "ev_over_ebit"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "EV/EBITDA",
+  "math": "Enterprise Value / EBITDA",
+  "package": "manual",
+  "func_name": "ev_over_ebitda"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "EV/Sales",
+  "math": "Enterprise Value / Revenue",
+  "package": "manual",
+  "func_name": "ev_over_sales"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "EVE sensitivity",
+  "math": "Delta EVE / EVE approx -DGAP x Delta y",
+  "package": "manual",
+  "func_name": "eve_sensitivity"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "EWMA volatility",
+  "math": "sigma_t^2 = lambda sigma_{t-1}^2 + (1-lambda) r_{t-1}^2",
+  "package": "manual",
+  "func_name": "ewma_volatility"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Ex-ante tracking error",
+  "math": "TE = sqrt((w-w_b)' Sigma (w-w_b))",
+  "package": "PyPortfolioOpt.EfficientFrontier",
+  "func_name": "ex_ante_tracking_error"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Excess kurtosis",
+  "math": "Kurt = E[(R-mu)^4]/sigma^4 - 3",
+  "package": "scipy.stats",
+  "func_name": "excess_kurtosis"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Excess return",
+  "math": "ER = R_p - R_b",
+  "package": "empyrical-reloaded",
+  "func_name": "excess_return"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Excess spread",
+  "math": "Excess Spread = Asset Yield - Funding Cost - Servicing Fee - Charge-offs",
+  "package": "manual",
+  "func_name": "excess_spread"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Exit enterprise value",
+  "math": "Exit EV = Exit EBITDA × Exit Multiple",
+  "package": "manual",
+  "func_name": "exit_enterprise_value"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Expected credit loss (IFRS 9/CECL)",
+  "math": "ECL = sum_t PD_t x LGD_t x EAD_t x DF_t",
+  "package": "manual",
+  "func_name": "expected_credit_loss_ifrs_9_over_cecl"
+ }
+]

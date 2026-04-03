@@ -1,0 +1,716 @@
+[
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Ichimoku leading span A",
+  "math": "SpanA = (Tenkan + Kijun)/2 shifted forward",
+  "package": "TA-Lib.trend.IchimokuIndicator",
+  "func_name": "ichimoku_leading_span_a"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Ichimoku leading span B",
+  "math": "SpanB = (52-period high + 52-period low)/2 shifted forward",
+  "package": "TA-Lib.trend.IchimokuIndicator",
+  "func_name": "ichimoku_leading_span_b"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Idiosyncratic volatility",
+  "math": "IVOL = std(residuals from factor model)",
+  "package": "statsmodels.OLS",
+  "func_name": "idiosyncratic_volatility"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Implementation shortfall",
+  "math": "IS = (Execution Price - Arrival Price) x Side x Quantity",
+  "package": "manual",
+  "func_name": "implementation_shortfall"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Implied cost of equity (simple)",
+  "math": "r = D_1/P_0 + g",
+  "package": "manual",
+  "func_name": "implied_cost_of_equity_simple"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Implied volatility",
+  "math": "Find σ such that ModelPrice(σ) = MarketPrice",
+  "package": "py-vollib-gen.implied_volatility",
+  "func_name": "implied_volatility"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "Impulse response function",
+  "math": "IRF_h = d y_{t+h} / d u_t",
+  "package": "statsmodels.tsa.VAR",
+  "func_name": "impulse_response_function"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Increasing annuity",
+  "math": "(Ia)_x = E[sum_{k>=1} k v^k 1(T_x>=k)]",
+  "package": "actuarialmath",
+  "func_name": "increasing_annuity"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Incremental VaR",
+  "math": "IVaR_i = VaR(portfolio) - VaR(portfolio without i)",
+  "package": "manual",
+  "func_name": "incremental_var"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Incurred but not reported (IBNR)",
+  "math": "IBNR = Ultimate Loss - Reported Loss",
+  "package": "manual",
+  "func_name": "incurred_but_not_reported_ibnr"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Inflation accretion",
+  "math": "Indexed Principal_t = Principal x CPI_t/CPI_base",
+  "package": "QuantLib",
+  "func_name": "inflation_accretion"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Information ratio",
+  "math": "IR = mean(R_p-R_b) / std(R_p-R_b)",
+  "package": "empyrical-reloaded",
+  "func_name": "information_ratio"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Installment-to-income ratio",
+  "math": "ITI = Installment Payment / Income",
+  "package": "manual",
+  "func_name": "installment_to_income_ratio"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Instantaneous forward rate",
+  "math": "f(t,T) = -d ln P(t,T)/dT",
+  "package": "QuantLib",
+  "func_name": "instantaneous_forward_rate"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Instantaneous short rate from discount curve",
+  "math": "r(t) = -d ln P(0,t)/dt",
+  "package": "QuantLib.PiecewiseYieldCurve",
+  "func_name": "instantaneous_short_rate_from_discount_curve"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "Instrumental variables / 2SLS",
+  "math": "beta_2SLS = (X'P_Z X)^-1 X'P_Z y",
+  "package": "linearmodels.IV2SLS",
+  "func_name": "instrumental_variables_over_2sls"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Interaction effect",
+  "math": "Interaction_i = (w_i^P - w_i^B)(r_i^P - r_i^B)",
+  "package": "manual",
+  "func_name": "interaction_effect"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Interest coverage",
+  "math": "Interest Coverage = EBIT / Interest Expense",
+  "package": "manual",
+  "func_name": "interest_coverage"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Interest coverage ratio",
+  "math": "ICR = EBIT / Interest Expense",
+  "package": "manual",
+  "func_name": "interest_coverage_ratio"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Interest coverage ratio (tranche)",
+  "math": "IC = Interest Collections / Note Interest Due",
+  "package": "manual",
+  "func_name": "interest_coverage_ratio_tranche"
+ },
+ {
+  "domain": "Banking, lending & project finance",
+  "name": "Interest payment",
+  "math": "IPMT_t = r × Balance_(t-1)",
+  "package": "numpy_financial.ipmt",
+  "func_name": "interest_payment"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Interest-only payment",
+  "math": "IOP = loan amount x annual interest rate/12",
+  "package": "manual",
+  "func_name": "interest_only_payment"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Interest-rate hedge ratio",
+  "math": "Hedge Ratio = DV01_exposure / DV01_hedge",
+  "package": "QuantLib",
+  "func_name": "interest_rate_hedge_ratio"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Internal rate of return (IRR)",
+  "math": "0 = sum_t CF_t / (1+IRR)^t",
+  "package": "numpy_financial.irr",
+  "func_name": "internal_rate_of_return_irr"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Internal rate of return since inception",
+  "math": "0 = MV_T + sum_t CF_t/(1+r)^{T-t} - MV_0(1+r)^T",
+  "package": "numpy_financial.irr",
+  "func_name": "internal_rate_of_return_since_inception"
+ },
+ {
+  "domain": "FX & international finance",
+  "name": "International Fisher effect",
+  "math": "Expected FX change approx i_d - i_f",
+  "package": "manual",
+  "func_name": "international_fisher_effect"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Intrinsic value call",
+  "math": "IV = max(S-K,0)",
+  "package": "manual",
+  "func_name": "intrinsic_value_call"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Inventory turnover",
+  "math": "Inventory Turnover = COGS / Average Inventory",
+  "package": "manual",
+  "func_name": "inventory_turnover"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "IO strip value",
+  "math": "PV_IO = sum_t interest_only_cf_t DF_t",
+  "package": "absbox",
+  "func_name": "io_strip_value"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "Johansen cointegration",
+  "math": "Test rank of Π in VECM",
+  "package": "statsmodels.tsa.vector_ar.vecm.coint_johansen",
+  "func_name": "johansen_cointegration"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "Johansen trace statistic",
+  "math": "Trace = -T sum_{i=r+1}^k ln(1-hat lambda_i)",
+  "package": "statsmodels.tsa.vector_ar.vecm",
+  "func_name": "johansen_trace_statistic"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Kelly criterion",
+  "math": "f* = (bp - q)/b",
+  "package": "Riskfolio-Lib.Portfolio.optimization",
+  "func_name": "kelly_criterion"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Keltner channel lower",
+  "math": "Lower = EMA - multiplier x ATR",
+  "package": "TA-Lib.volatility.KeltnerChannel",
+  "func_name": "keltner_channel_lower"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Keltner channel upper",
+  "math": "Upper = EMA + multiplier x ATR",
+  "package": "TA-Lib.volatility.KeltnerChannel",
+  "func_name": "keltner_channel_upper"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "KMV expected default frequency",
+  "math": "EDF = Phi(-DD)",
+  "package": "scipy.stats",
+  "func_name": "kmv_expected_default_frequency"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "KPSS stationarity test",
+  "math": "y_t = r_t + epsilon_t; LM statistic from partial sums",
+  "package": "statsmodels.tsa.stattools.kpss",
+  "func_name": "kpss_stationarity_test"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Kupiec POF likelihood ratio",
+  "math": "LR_pof = -2 ln[(1-p)^(T-x) p^x / ((1-x/T)^(T-x)(x/T)^x)]",
+  "package": "scipy.stats",
+  "func_name": "kupiec_pof_likelihood_ratio"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Kyle lambda",
+  "math": "Delta p_t = lambda q_t + epsilon_t",
+  "package": "statsmodels.OLS",
+  "func_name": "kyle_lambda"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Large exposure ratio",
+  "math": "Large Exposure = Exposure to counterparty / Tier 1 Capital",
+  "package": "manual",
+  "func_name": "large_exposure_ratio"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "LBO debt paydown schedule",
+  "math": "Debt_t = Debt_{t-1} - Mandatory Amortization - Cash Sweep",
+  "package": "manual",
+  "func_name": "lbo_debt_paydown_schedule"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "LBO equity IRR",
+  "math": "0 = -Equity_0 + Σ_t CashToEquity_t/(1+IRR)^t + ExitEquity/(1+IRR)^T",
+  "package": "numpy_financial.irr",
+  "func_name": "lbo_equity_irr"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Ledoit-Wolf covariance shrinkage",
+  "math": "Sigma_hat = (1-delta)S + delta F",
+  "package": "sklearn.covariance.LedoitWolf",
+  "func_name": "ledoit_wolf_covariance_shrinkage"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Leverage constraint",
+  "math": "||w||_1 <= L_max",
+  "package": "cvxpy.Problem.solve",
+  "func_name": "leverage_constraint"
+ },
+ {
+  "domain": "Banking, lending & project finance",
+  "name": "Leverage ratio",
+  "math": "Leverage Ratio = Tier 1 Capital / Exposure Measure",
+  "package": "manual",
+  "func_name": "leverage_ratio"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Levered beta (Hamada)",
+  "math": "beta_L = beta_U[1 + (1-T)D/E]",
+  "package": "manual",
+  "func_name": "levered_beta_hamada"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Levered yield",
+  "math": "Levered Yield = Cash Flow After Debt Service / Equity",
+  "package": "manual",
+  "func_name": "levered_yield"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "LGD downturn adjustment",
+  "math": "LGD_downturn = LGD_base + stress add-on",
+  "package": "manual",
+  "func_name": "lgd_downturn_adjustment"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "LIBOR market model (LMM)",
+  "math": "dL_i/L_i = mu_i dt + sigma_i dW_t",
+  "package": "QuantLib",
+  "func_name": "libor_market_model_lmm"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Life annuity-immediate",
+  "math": "a_x = Σ_k v^(k+1)·_k p_x",
+  "package": "actuarialmath.Annuity",
+  "func_name": "life_annuity_immediate"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Lifetime ECL",
+  "math": "Lifetime ECL = sum_{t=1}^T marginal PD_t x LGD_t x EAD_t x DF_t",
+  "package": "manual",
+  "func_name": "lifetime_ecl"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Liquidity coverage ratio (LCR)",
+  "math": "LCR = HQLA / Net Cash Outflows over 30 days",
+  "package": "manual",
+  "func_name": "liquidity_coverage_ratio_lcr"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Liquidity gap",
+  "math": "Liquidity Gap_t = Cash Inflows_t - Cash Outflows_t",
+  "package": "manual",
+  "func_name": "liquidity_gap"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Liquidity-adjusted VaR",
+  "math": "LVaR = VaR + liquidation cost add-on",
+  "package": "manual",
+  "func_name": "liquidity_adjusted_var"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Loan amortization schedule identity",
+  "math": "Beginning Balance - Principal Paid = Ending Balance",
+  "package": "manual",
+  "func_name": "loan_amortization_schedule_identity"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Loan constant / mortgage constant",
+  "math": "Loan Constant = Annual Debt Service / Original Loan Amount",
+  "package": "numpy_financial.pmt",
+  "func_name": "loan_constant_over_mortgage_constant"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Loan life coverage ratio",
+  "math": "LLCR = NPV / Outstanding Debt",
+  "package": "manual",
+  "func_name": "loan_life_coverage_ratio"
+ },
+ {
+  "domain": "Banking, lending & project finance",
+  "name": "Loan loss coverage ratio",
+  "math": "Coverage Ratio = Loan Loss Reserves / Non-Performing Loans",
+  "package": "manual",
+  "func_name": "loan_loss_coverage_ratio"
+ },
+ {
+  "domain": "Banking, lending & project finance",
+  "name": "Loan payment (annuity)",
+  "math": "PMT = r·PV / [1 - (1+r)^(-n)]",
+  "package": "numpy_financial.pmt",
+  "func_name": "loan_payment_annuity"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Loan-to-cost",
+  "math": "LTC = Loan Amount / Project Cost",
+  "package": "manual",
+  "func_name": "loan_to_cost"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Loan-to-deposit ratio",
+  "math": "LDR = Gross Loans / Deposits",
+  "package": "manual",
+  "func_name": "loan_to_deposit_ratio"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Loan-to-value",
+  "math": "LTV = Loan Amount / Collateral Value",
+  "package": "manual",
+  "func_name": "loan_to_value"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Local volatility (Dupire)",
+  "math": "sigma_loc^2(K,T) = [dC/dT] / [0.5 K^2 d^2C/dK^2]",
+  "package": "QuantLib",
+  "func_name": "local_volatility_dupire"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Local/stochastic volatility surface interpolation",
+  "math": "σ(K,T) = Interpolate observed vol surface",
+  "package": "QuantLib Black variance surface",
+  "func_name": "local_over_stochastic_volatility_surface_interpolation"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Log return",
+  "math": "r_t = ln(P_t/P_{t-1})",
+  "package": "manual",
+  "func_name": "log_return"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Long-only constraint",
+  "math": "w_i >= 0",
+  "package": "cvxpy.Problem.solve",
+  "func_name": "long_only_constraint"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Lookback option price",
+  "math": "V = E_Q[e^{-rT}(max(S)-K)^+]",
+  "package": "QuantLib",
+  "func_name": "lookback_option_price"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Loss given default",
+  "math": "LGD = 1 - Recovery Rate",
+  "package": "manual",
+  "func_name": "loss_given_default"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Loss random variable",
+  "math": "L = PV(Benefits + Expenses) - PV(Premiums)",
+  "package": "actuarialmath",
+  "func_name": "loss_random_variable"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Loss rate",
+  "math": "Loss Rate = Net Credit Losses / Average Loans",
+  "package": "manual",
+  "func_name": "loss_rate"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Loss ratio",
+  "math": "Loss Ratio = Incurred Losses / Earned Premiums",
+  "package": "manual",
+  "func_name": "loss_ratio"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "LTV for mortgage",
+  "math": "Mortgage Balance / Property Value",
+  "package": "manual",
+  "func_name": "ltv_for_mortgage"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "MA(q)",
+  "math": "x_t = mu + epsilon_t + sum_{i=1}^q theta_i epsilon_{t-i}",
+  "package": "statsmodels.tsa.ARIMA",
+  "func_name": "ma_q"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Macaulay duration",
+  "math": "D_M = (1/P) sum_t t x PV(CF_t)",
+  "package": "QuantLib.BondFunctions.duration",
+  "func_name": "macaulay_duration"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Macaulay spread duration",
+  "math": "SD = -(1/P) dP/ds",
+  "package": "QuantLib.BondFunctions.duration",
+  "func_name": "macaulay_spread_duration"
+ },
+ {
+  "domain": "Technical analysis",
+  "name": "MACD",
+  "math": "MACD = EMA_fast - EMA_slow",
+  "package": "TA-Lib.trend.MACD",
+  "func_name": "macd"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "MACD histogram",
+  "math": "Hist = MACD - Signal",
+  "package": "TA-Lib.MACD",
+  "func_name": "macd_histogram"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Management option value",
+  "math": "Option Value = BS or lattice value of management options",
+  "package": "py-vollib-gen",
+  "func_name": "management_option_value"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Marginal risk contribution",
+  "math": "MRC_i = (Σw)_i / σ_p",
+  "package": "Riskfolio-Lib.Portfolio.optimization",
+  "func_name": "marginal_risk_contribution"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Marginal VaR",
+  "math": "MVaR_i = ∂VaR/∂w_i",
+  "package": "Riskfolio-Lib.Portfolio.optimization",
+  "func_name": "marginal_var"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Margrabe exchange option",
+  "math": "C = S1 e^{-q1T}N(d1) - S2 e^{-q2T}N(d2)",
+  "package": "QuantLib",
+  "func_name": "margrabe_exchange_option"
+ },
+ {
+  "domain": "Liquidity risk & market liquidity",
+  "name": "Market depth",
+  "math": "Depth = Σ executable quantity within price band",
+  "package": "manual",
+  "func_name": "market_depth"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Market impact breakeven",
+  "math": "alpha_breakeven = total execution cost / notional",
+  "package": "manual",
+  "func_name": "market_impact_breakeven"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Market value added (MVA)",
+  "math": "MVA = Market Value of Firm - Invested Capital",
+  "package": "manual",
+  "func_name": "market_value_added_mva"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Market-neutral constraint",
+  "math": "Σ beta_i w_i = 0",
+  "package": "cvxpy.Problem.solve",
+  "func_name": "market_neutral_constraint"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Maximum drawdown",
+  "math": "MDD = min_t[(V_t - peak_t)/peak_t]",
+  "package": "empyrical-reloaded.max_drawdown",
+  "func_name": "maximum_drawdown"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Maximum Sharpe portfolio",
+  "math": "max_w (w^Tμ - r_f)/√(w^TΣw)",
+  "package": "PyPortfolioOpt.EfficientFrontier",
+  "func_name": "maximum_sharpe_portfolio"
+ },
+ {
+  "domain": "Quantitative forecasting & machine learning in finance",
+  "name": "Mean absolute error",
+  "math": "MAE = (1/n) sum_i |y_i - yhat_i|",
+  "package": "sklearn.metrics.mean_absolute_error",
+  "func_name": "mean_absolute_error"
+ },
+ {
+  "domain": "Quantitative forecasting & machine learning in finance",
+  "name": "Mean squared error",
+  "math": "MSE = (1/n) sum_i (y_i - yhat_i)^2",
+  "package": "sklearn.metrics.mean_squared_error",
+  "func_name": "mean_squared_error"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Mean-CVaR optimization",
+  "math": "max or min subject to CVaR constraints",
+  "package": "Riskfolio-Lib.Portfolio.optimization",
+  "func_name": "mean_cvar_optimization"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Mean-variance utility",
+  "math": "U = mu' w - (gamma/2) w' Sigma w",
+  "package": "cvxpy.Problem.solve",
+  "func_name": "mean_variance_utility"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Merton asset value model",
+  "math": "E = V_A N(d1) - D e^{-rT} N(d2)",
+  "package": "QuantLib",
+  "func_name": "merton_asset_value_model"
+ },
+ {
+  "domain": "Credit risk",
+  "name": "Merton distance to default",
+  "math": "DD = [ln(V_A/D) + (μ_A - 0.5σ_A^2)T] / (σ_A√T)",
+  "package": "manual",
+  "func_name": "merton_distance_to_default"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Merton jump diffusion asset process",
+  "math": "dS_t/S_t = (mu - lambda k)dt + sigma dW_t + dJ_t",
+  "package": "QuantLib",
+  "func_name": "merton_jump_diffusion_asset_process"
+ },
+ {
+  "domain": "Credit risk",
+  "name": "Merton structural PD",
+  "math": "PD = N(-DD)",
+  "package": "scipy.stats.norm.cdf",
+  "func_name": "merton_structural_pd"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Metallurgical gross margin",
+  "math": "Margin = Metal Selling Price - Input Cost Bundle",
+  "package": "manual",
+  "func_name": "metallurgical_gross_margin"
+ },
+ {
+  "domain": "Liquidity risk & market liquidity",
+  "name": "Mid price",
+  "math": "Mid = (Bid + Ask)/2",
+  "package": "manual",
+  "func_name": "mid_price"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Minimum-variance hedge ratio",
+  "math": "h* = Cov(Delta S, Delta F) / Var(Delta F)",
+  "package": "statsmodels.OLS",
+  "func_name": "minimum_variance_hedge_ratio"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Minimum-variance hedged return",
+  "math": "R_H = R_S - h* R_F",
+  "package": "manual",
+  "func_name": "minimum_variance_hedged_return"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Minus directional indicator (-DI)",
+  "math": "-DI = 100 x smoothed -DM / ATR",
+  "package": "TA-Lib.MINUS_DI",
+  "func_name": "minus_directional_indicator_di"
+ },
+ {
+  "domain": "Fixed income & bond math",
+  "name": "Modified duration",
+  "math": "D_mod = D_M / (1+y/m)",
+  "package": "QuantLib.BondFunctions.duration",
+  "func_name": "modified_duration"
+ },
+ {
+  "domain": "Corporate finance & capital budgeting",
+  "name": "Modified IRR (MIRR)",
+  "math": "MIRR = (FV_positive / |PV_negative|)^(1/n) - 1",
+  "package": "numpy_financial.mirr",
+  "func_name": "modified_irr_mirr"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Momentum",
+  "math": "MOM = P_t - P_{t-n}",
+  "package": "TA-Lib.MOM",
+  "func_name": "momentum"
+ }
+]

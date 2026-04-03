@@ -1,0 +1,716 @@
+[
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Break-even inflation",
+  "math": "BEI = Nominal Yield - Real Yield",
+  "package": "manual",
+  "func_name": "break_even_inflation"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Break-even occupancy",
+  "math": "BEO = (Operating Expenses + Debt Service) / Gross Potential Income",
+  "package": "manual",
+  "func_name": "break_even_occupancy"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Break-even quantity",
+  "math": "Q_BE = Fixed Costs / (Price - Variable Cost per unit)",
+  "package": "manual",
+  "func_name": "break_even_quantity"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Break-even revenue",
+  "math": "Sales_BE = Fixed Costs / Contribution Margin Ratio",
+  "package": "manual",
+  "func_name": "break_even_revenue"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "Breusch-Pagan test",
+  "math": "LM = nR^2 from auxiliary regression of e^2 on X",
+  "package": "statsmodels",
+  "func_name": "breusch_pagan_test"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Brinson allocation effect",
+  "math": "Allocation_i = (w_{p,i}-w_{b,i})·(R_{b,i}-R_b)",
+  "package": "manual",
+  "func_name": "brinson_allocation_effect"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Brinson selection effect",
+  "math": "Selection_i = w_{b,i}·(R_{p,i}-R_{b,i})",
+  "package": "manual",
+  "func_name": "brinson_selection_effect"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Bühlmann credibility factor",
+  "math": "Z = n/(n+K)",
+  "package": "actuarialmath",
+  "func_name": "buhlmann_credibility_factor"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Burke ratio",
+  "math": "Burke = Excess Return / sqrt(sum Drawdown_i^2)",
+  "package": "quantstats.stats",
+  "func_name": "burke_ratio"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Butterfly payoff",
+  "math": "Payoff = max(S-K1,0)-2max(S-K2,0)+max(S-K3,0)",
+  "package": "manual",
+  "func_name": "butterfly_payoff"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Calendar spread",
+  "math": "Spread = F_near - F_far",
+  "package": "manual",
+  "func_name": "calendar_spread"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Call payoff",
+  "math": "C_T = max(S_T - K, 0)",
+  "package": "manual",
+  "func_name": "call_payoff"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Call spread payoff",
+  "math": "Payoff = max(S-K1,0) - max(S-K2,0)",
+  "package": "manual",
+  "func_name": "call_spread_payoff"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Calmar ratio",
+  "math": "Calmar = CAGR / Max Drawdown",
+  "package": "empyrical-reloaded.calmar_ratio",
+  "func_name": "calmar_ratio"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Cancel-to-trade ratio",
+  "math": "CTR = Number of cancellations / Number of trades",
+  "package": "manual",
+  "func_name": "cancel_to_trade_ratio"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Capital conservation buffer",
+  "math": "CCB = CET1 Ratio - minimum CET1 requirement",
+  "package": "manual",
+  "func_name": "capital_conservation_buffer"
+ },
+ {
+  "domain": "Real estate finance",
+  "name": "Capitalization rate",
+  "math": "Cap Rate = NOI / Property Value",
+  "package": "manual",
+  "func_name": "capitalization_rate"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "CAPM expected return",
+  "math": "E[R_i] = R_f + beta_i(E[R_m]-R_f)",
+  "package": "manual",
+  "func_name": "capm_expected_return"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Carhart 4-factor model",
+  "math": "R_i-R_f = alpha + b MKT + s SMB + h HML + m MOM + epsilon",
+  "package": "linearmodels",
+  "func_name": "carhart_4_factor_model"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Cash conversion cycle (CCC)",
+  "math": "CCC = DSO + DIO - DPO",
+  "package": "manual",
+  "func_name": "cash_conversion_cycle_ccc"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Cash flow at risk (CFaR)",
+  "math": "CFaR_alpha = quantile_alpha(future cash flow shortfall)",
+  "package": "manual",
+  "func_name": "cash_flow_at_risk_cfar"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Cash flow margin",
+  "math": "CF Margin = Operating Cash Flow / Revenue",
+  "package": "manual",
+  "func_name": "cash_flow_margin"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Cash interest coverage",
+  "math": "(EBITDA - Capex) / Cash Interest",
+  "package": "manual",
+  "func_name": "cash_interest_coverage"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Cash ratio",
+  "math": "Cash Ratio = (Cash + Marketable Securities) / Current Liabilities",
+  "package": "manual",
+  "func_name": "cash_ratio"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Cash sweep",
+  "math": "Debt Paydown_t = max(FCF_t - Required Cash,0)",
+  "package": "manual",
+  "func_name": "cash_sweep"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Cash-on-cash return",
+  "math": "CoC = Before-tax Cash Flow / Equity Invested",
+  "package": "manual",
+  "func_name": "cash_on_cash_return"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Cash-out refinance LTV",
+  "math": "Max Refi Proceeds = Appraised Value x Max LTV",
+  "package": "manual",
+  "func_name": "cash_out_refinance_ltv"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Catch-up distribution",
+  "math": "Catch-up = distribute until GP achieves target carry split",
+  "package": "manual",
+  "func_name": "catch_up_distribution"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "CDO tranche loss",
+  "math": "Loss_tranche = min(max(PoolLoss-Attach,0), Detach-Attach)",
+  "package": "manual",
+  "func_name": "cdo_tranche_loss"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "CDS par spread",
+  "math": "S* = PV_protection / PV01",
+  "package": "QuantLib",
+  "func_name": "cds_par_spread"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "CDS premium leg",
+  "math": "PV_prem = S sum_i alpha_i DF_i Survival(t_i)",
+  "package": "QuantLib",
+  "func_name": "cds_premium_leg"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "CDS protection leg",
+  "math": "PV_prot = LGD integral DF(t) dQ(t)",
+  "package": "QuantLib",
+  "func_name": "cds_protection_leg"
+ },
+ {
+  "domain": "Credit risk",
+  "name": "CDS spread approximation",
+  "math": "s ≈ λ(1-R)",
+  "package": "QuantLib.CreditDefaultSwap",
+  "func_name": "cds_spread_approximation"
+ },
+ {
+  "domain": "Banking, lending & project finance",
+  "name": "CET1 ratio",
+  "math": "CET1 Ratio = CET1 Capital / Risk-Weighted Assets",
+  "package": "manual",
+  "func_name": "cet1_ratio"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Chaikin money flow (CMF)",
+  "math": "CMF = sum(MFM x Volume)/sum Volume over n",
+  "package": "TA-Lib.volume.ChaikinMoneyFlowIndicator",
+  "func_name": "chaikin_money_flow_cmf"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Chaikin oscillator",
+  "math": "CHO = EMA_3(ADL) - EMA_10(ADL)",
+  "package": "TA-Lib.ADOSC",
+  "func_name": "chaikin_oscillator"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Chain-ladder development",
+  "math": "Ultimate_i = Latest_i x CDF_i",
+  "package": "manual",
+  "func_name": "chain_ladder_development"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Charm",
+  "math": "Charm = d(Delta)/dt",
+  "package": "QuantLib",
+  "func_name": "charm"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Chooser option value",
+  "math": "V = value of right to choose call or put at decision time",
+  "package": "QuantLib",
+  "func_name": "chooser_option_value"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Christoffersen independence test",
+  "math": "LR_ind = -2 ln(L_restricted/L_unrestricted)",
+  "package": "scipy.stats",
+  "func_name": "christoffersen_independence_test"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "CIR short-rate model",
+  "math": "dr_t = κ(θ-r_t)dt + σ√(r_t)dW_t",
+  "package": "QuantLib.CoxIngersollRoss",
+  "func_name": "cir_short_rate_model"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "CIR zero-coupon bond price",
+  "math": "P(t,T) = A(t,T) exp(-B(t,T)r_t)",
+  "package": "QuantLib.BondFunctions.cleanPrice",
+  "func_name": "cir_zero_coupon_bond_price"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Claims ratio",
+  "math": "Claims Ratio = Claims Incurred / Earned Premium",
+  "package": "manual",
+  "func_name": "claims_ratio"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Clean price",
+  "math": "Clean Price = Dirty Price - Accrued Interest",
+  "package": "QuantLib",
+  "func_name": "clean_price"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "CLTV for mortgage",
+  "math": "All Secured Debt / Property Value",
+  "package": "manual",
+  "func_name": "cltv_for_mortgage"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "Cointegration regression",
+  "math": "y_t = alpha + beta x_t + u_t with u_t stationary",
+  "package": "statsmodels.tsa.stattools.coint",
+  "func_name": "cointegration_regression"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Collateral haircut",
+  "math": "Haircut = 1 - Lending Value / Market Value",
+  "package": "manual",
+  "func_name": "collateral_haircut"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Color",
+  "math": "Color = d(Gamma)/dt",
+  "package": "QuantLib",
+  "func_name": "color"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Combined leverage",
+  "math": "DCL = DOL x DFL",
+  "package": "manual",
+  "func_name": "combined_leverage"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Combined loan-to-value (CLTV)",
+  "math": "CLTV = Total Secured Debt / Collateral Value",
+  "package": "manual",
+  "func_name": "combined_loan_to_value_cltv"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Combined ratio",
+  "math": "Combined Ratio = Loss Ratio + Expense Ratio",
+  "package": "manual",
+  "func_name": "combined_ratio"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Commodity carry return",
+  "math": "Carry = collateral yield + roll yield + spot return",
+  "package": "manual",
+  "func_name": "commodity_carry_return"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Commodity channel index (CCI)",
+  "math": "CCI = (TP - SMA(TP)) / (0.015 x MeanDeviation)",
+  "package": "TA-Lib.CCI",
+  "func_name": "commodity_channel_index_cci"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Commodity storage arbitrage",
+  "math": "Arbitrage if F_0 > S_0 e^{(r+u-y)T}",
+  "package": "manual",
+  "func_name": "commodity_storage_arbitrage"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Component risk contribution",
+  "math": "CRC_i = w_i·MRC_i",
+  "package": "Riskfolio-Lib.Portfolio.optimization",
+  "func_name": "component_risk_contribution"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Component VaR",
+  "math": "CVaR_i = w_i × MVaR_i",
+  "package": "Riskfolio-Lib.Portfolio.optimization",
+  "func_name": "component_var"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Component VaR",
+  "math": "CVaR_i = w_i dVaR/dw_i",
+  "package": "manual",
+  "func_name": "component_var_v2"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Compounded forward rate",
+  "math": "1+F tau = DF(t1)/DF(t2)",
+  "package": "QuantLib",
+  "func_name": "compounded_forward_rate"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Conditional prepayment rate (CPR)",
+  "math": "CPR = 1 - (1 - SMM)^12",
+  "package": "manual",
+  "func_name": "conditional_prepayment_rate_cpr"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Conditional prepayment rate (CPR)",
+  "math": "CPR = 1 - (1-SMM)^12",
+  "package": "manual",
+  "func_name": "conditional_prepayment_rate_cpr_v2"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Constant force survival",
+  "math": "{}_tp_x = e^{-mu t}",
+  "package": "actuarialmath",
+  "func_name": "constant_force_survival"
+ },
+ {
+  "domain": "Macroeconomics, inflation & price indices",
+  "name": "Consumer Price Index (Laspeyres form)",
+  "math": "CPI_t = (Σ_i p_(i,t) q_(i,0) / Σ_i p_(i,0) q_(i,0)) × 100",
+  "package": "manual",
+  "func_name": "consumer_price_index_laspeyres_form"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Contango slope",
+  "math": "Contango = F_long / F_short - 1",
+  "package": "manual",
+  "func_name": "contango_slope"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Continuous compounding",
+  "math": "FV = PV·e^{rt}",
+  "package": "QuantLib.InterestRate",
+  "func_name": "continuous_compounding"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Contribution margin",
+  "math": "CM = Revenue - Variable Costs",
+  "package": "manual",
+  "func_name": "contribution_margin"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Contribution margin ratio",
+  "math": "CMR = Contribution Margin / Revenue",
+  "package": "manual",
+  "func_name": "contribution_margin_ratio"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Contribution to return",
+  "math": "CTR_i = w_i x r_i",
+  "package": "manual",
+  "func_name": "contribution_to_return"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Convenience yield",
+  "math": "y = r + u - (1/T)ln(F_0/S_0)",
+  "package": "manual",
+  "func_name": "convenience_yield"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Convenience yield from futures curve",
+  "math": "y = r + u - ln(F/S)/T",
+  "package": "manual",
+  "func_name": "convenience_yield_from_futures_curve"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Convexity",
+  "math": "Convexity = (1/P) d^2P/dy^2",
+  "package": "QuantLib.BondFunctions.convexity",
+  "func_name": "convexity"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Convexity-adjusted futures rate",
+  "math": "F_adj approx F + 0.5 sigma^2 T1 T2",
+  "package": "QuantLib.BondFunctions.convexity",
+  "func_name": "convexity_adjusted_futures_rate"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Cornish-Fisher VaR",
+  "math": "VaR_CF = μ + σ[z + (z^2-1)S/6 + (z^3-3z)K/24 - (2z^3-5z)S^2/36]",
+  "package": "Riskfolio-Lib.Portfolio.optimization",
+  "func_name": "cornish_fisher_var"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Cost of equity (CAPM)",
+  "math": "R_e = R_f + beta(E[R_m]-R_f)",
+  "package": "manual",
+  "func_name": "cost_of_equity_capm"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Cost of equity (Dividend growth)",
+  "math": "R_e = D_1/P_0 + g",
+  "package": "manual",
+  "func_name": "cost_of_equity_dividend_growth"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Cost of risk",
+  "math": "Cost of Risk = Loan Loss Provision / Average Gross Loans",
+  "package": "manual",
+  "func_name": "cost_of_risk"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Cost-of-carry futures price",
+  "math": "F_0 = S_0 e^{(r + u - y)T}",
+  "package": "manual",
+  "func_name": "cost_of_carry_futures_price"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Countercyclical capital buffer",
+  "math": "CCyB = jurisdiction-specific add-on to CET1 requirement",
+  "package": "manual",
+  "func_name": "countercyclical_capital_buffer"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Covariance matrix",
+  "math": "Σ = E[(R-μ)(R-μ)^T]",
+  "package": "PyPortfolioOpt.risk_models.sample_cov",
+  "func_name": "covariance_matrix"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Coverage ratio",
+  "math": "Allowance / Nonperforming Assets",
+  "package": "manual",
+  "func_name": "coverage_ratio"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Covered call payoff",
+  "math": "Payoff = S_T - max(S_T-K,0) + Premium",
+  "package": "manual",
+  "func_name": "covered_call_payoff"
+ },
+ {
+  "domain": "FX & international finance",
+  "name": "Covered interest parity (CIP)",
+  "math": "F/S = (1+i_d)/(1+i_f) ",
+  "package": "QuantLib",
+  "func_name": "covered_interest_parity_cip"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "Cox proportional hazards",
+  "math": "h(t|x)=h_0(t)exp(beta'x)",
+  "package": "lifelines.CoxPHFitter",
+  "func_name": "cox_proportional_hazards"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Cox-Ingersoll-Ross (CIR) process",
+  "math": "dr_t = a(b-r_t)dt + sigma sqrt(r_t)dW_t",
+  "package": "QuantLib.CoxIngersollRoss",
+  "func_name": "cox_ingersoll_ross_cir_process"
+ },
+ {
+  "domain": "Macroeconomics, inflation & price indices",
+  "name": "CPI inflation (month over month)",
+  "math": "π_t^(CPI,MoM) = CPI_t / CPI_(t-1) - 1",
+  "package": "manual",
+  "func_name": "cpi_inflation_month_over_month"
+ },
+ {
+  "domain": "Macroeconomics, inflation & price indices",
+  "name": "CPI inflation (year over year)",
+  "math": "π_t^(CPI,YoY) = CPI_t / CPI_(t-12) - 1",
+  "package": "manual",
+  "func_name": "cpi_inflation_year_over_year"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Crack spread",
+  "math": "Crack Spread = Product Futures Value - Crude Futures Cost",
+  "package": "manual",
+  "func_name": "crack_spread"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Credibility premium",
+  "math": "Premium = Z x Experience Mean + (1-Z) x Manual Mean",
+  "package": "actuarialmath",
+  "func_name": "credibility_premium"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Credit conversion factor (CCF)",
+  "math": "CCF = (EAD - Outstanding) / Undrawn",
+  "package": "manual",
+  "func_name": "credit_conversion_factor_ccf"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Credit portfolio variance (independent defaults)",
+  "math": "Var(L) = sum_i EAD_i^2 LGD_i^2 PD_i(1-PD_i)",
+  "package": "manual",
+  "func_name": "credit_portfolio_variance_independent_defaults"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Credit RWA under standardized approach",
+  "math": "Credit_RWA = EAD x supervisory risk weight",
+  "package": "manual",
+  "func_name": "credit_rwa_under_standardized_approach"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Credit spread",
+  "math": "Credit Spread = Corporate Yield - Risk-free Yield",
+  "package": "manual",
+  "func_name": "credit_spread"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Credit VaR",
+  "math": "CreditVaR = quantile_alpha(loss distribution) - expected loss",
+  "package": "manual",
+  "func_name": "credit_var"
+ },
+ {
+  "domain": "FX & international finance",
+  "name": "Cross exchange rate",
+  "math": "S_{A/C} = S_{A/B} × S_{B/C}",
+  "package": "manual",
+  "func_name": "cross_exchange_rate"
+ },
+ {
+  "domain": "FX & international finance",
+  "name": "Cross-currency basis",
+  "math": "Basis = quoted basis spread that equalizes swap PV",
+  "package": "QuantLib",
+  "func_name": "cross_currency_basis"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Cross-hedge ratio",
+  "math": "h_x = rho (sigma_S / sigma_F)",
+  "package": "manual",
+  "func_name": "cross_hedge_ratio"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Cumulative gap",
+  "math": "CumGap_T = sum_{t<=T} Gap_t",
+  "package": "manual",
+  "func_name": "cumulative_gap"
+ },
+ {
+  "domain": "Macroeconomics, inflation & price indices",
+  "name": "Cumulative inflation factor from CPI",
+  "math": "Inflation Factor_(0→t) = CPI_t / CPI_0",
+  "package": "manual",
+  "func_name": "cumulative_inflation_factor_from_cpi"
+ },
+ {
+  "domain": "Macroeconomics, inflation & price indices",
+  "name": "Cumulative inflation factor from PPI",
+  "math": "Inflation Factor_(0→t) = PPI_t / PPI_0",
+  "package": "manual",
+  "func_name": "cumulative_inflation_factor_from_ppi"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Cumulative liquidity gap",
+  "math": "CumLiquidityGap_T = sum_{t<=T} (Inflows_t - Outflows_t)",
+  "package": "manual",
+  "func_name": "cumulative_liquidity_gap"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Cumulative net loss",
+  "math": "CNL = cumulative(net charge-offs) / original balance",
+  "package": "manual",
+  "func_name": "cumulative_net_loss"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Cumulative return",
+  "math": "R_cum = Π_t (1+r_t) - 1",
+  "package": "empyrical-reloaded",
+  "func_name": "cumulative_return"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Cure rate",
+  "math": "Cure Rate = cured delinquent accounts / delinquent accounts",
+  "package": "manual",
+  "func_name": "cure_rate"
+ }
+]

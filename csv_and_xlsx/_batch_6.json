@@ -1,0 +1,716 @@
+[
+ {
+  "domain": "Technical analysis",
+  "name": "Money flow index (MFI)",
+  "math": "MFI = 100 - 100/(1 + MoneyFlowRatio)",
+  "package": "TA-Lib.volume.MFIIndicator",
+  "func_name": "money_flow_index_mfi"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Money flow index (MFI)",
+  "math": "MFI = 100 - 100/(1+MoneyRatio)",
+  "package": "TA-Lib.MFI",
+  "func_name": "money_flow_index_mfi_v2"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Money market yield",
+  "math": "MMY = (F-P)/P x 360/d",
+  "package": "manual",
+  "func_name": "money_market_yield"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Money multiple (MOIC)",
+  "math": "MOIC = Total Value / Invested Capital",
+  "package": "manual",
+  "func_name": "money_multiple_moic"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Money-market account",
+  "math": "B_t = exp(int_0^t r_s ds)",
+  "package": "QuantLib",
+  "func_name": "money_market_account"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Money-weighted return (MWRR)",
+  "math": "0 = sum_t CF_t/(1+IRR)^t",
+  "package": "numpy_financial.irr",
+  "func_name": "money_weighted_return_mwrr"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Monte Carlo VaR",
+  "math": "VaR_alpha = -quantile_alpha(simulated P&L)",
+  "package": "manual",
+  "func_name": "monte_carlo_var"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Mortality rate",
+  "math": "q_x = d_x / l_x",
+  "package": "actuarialmath.LifeTable",
+  "func_name": "mortality_rate"
+ },
+ {
+  "domain": "Real estate finance",
+  "name": "Mortgage constant",
+  "math": "Mortgage Constant = Annual Debt Service / Loan Amount",
+  "package": "numpy_financial.pmt",
+  "func_name": "mortgage_constant"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Moving average convergence divergence (MACD)",
+  "math": "MACD = EMA_{12} - EMA_{26}; Signal = EMA_9(MACD)",
+  "package": "TA-Lib.MACD",
+  "func_name": "moving_average_convergence_divergence_macd"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "MREL / TLAC ratio",
+  "math": "TLAC Ratio = Eligible Liabilities and Capital / RWA or Leverage Exposure",
+  "package": "manual",
+  "func_name": "mrel_over_tlac_ratio"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "M-squared (Modigliani)",
+  "math": "M2 = Sharpe x sigma_m + R_f",
+  "package": "empyrical-reloaded",
+  "func_name": "m_squared_modigliani"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Multi-stage DDM",
+  "math": "P_0 = sum_t D_t/(1+r)^t + TV/(1+r)^T",
+  "package": "manual",
+  "func_name": "multi_stage_ddm"
+ },
+ {
+  "domain": "Quantitative forecasting & machine learning in finance",
+  "name": "Naive Bayes classifier",
+  "math": "P(y|x) proportional P(y) prod_j P(x_j|y)",
+  "package": "sklearn.naive_bayes",
+  "func_name": "naive_bayes_classifier"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Nelson-Siegel yield curve",
+  "math": "y(t)=beta0 + beta1[(1-e^{-t/tau})/(t/tau)] + beta2([(1-e^{-t/tau})/(t/tau)]-e^{-t/tau})",
+  "package": "QuantLib.PiecewiseYieldCurve",
+  "func_name": "nelson_siegel_yield_curve"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Nelson-Siegel-Svensson curve",
+  "math": "y(t)=beta0 + beta1 L1 + beta2(L1-e^{-t/tau1}) + beta3(L2-e^{-t/tau2})",
+  "package": "QuantLib.PiecewiseYieldCurve",
+  "func_name": "nelson_siegel_svensson_curve"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Net charge-off ratio",
+  "math": "NCO Ratio = (Charge-offs - Recoveries) / Average Loans",
+  "package": "manual",
+  "func_name": "net_charge_off_ratio"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Net convenience yield",
+  "math": "Net Convenience Yield = y - storage cost",
+  "package": "manual",
+  "func_name": "net_convenience_yield"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Net debt at entry",
+  "math": "Net Debt = Debt Assumed + New Debt - Cash Acquired",
+  "package": "manual",
+  "func_name": "net_debt_at_entry"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Net income",
+  "math": "Net Income = Revenue - Expenses - Taxes",
+  "package": "manual",
+  "func_name": "net_income"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Net interest income (NII)",
+  "math": "NII = Interest Income - Interest Expense",
+  "package": "manual",
+  "func_name": "net_interest_income_nii"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Net interest margin (NIM)",
+  "math": "NIM = NII / Average Earning Assets",
+  "package": "manual",
+  "func_name": "net_interest_margin_nim"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Net IRR to LP",
+  "math": "IRR on LP cash flows after fees and carry",
+  "package": "numpy_financial.irr",
+  "func_name": "net_irr_to_lp"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Net margin",
+  "math": "Net Margin = Net Income / Revenue",
+  "package": "manual",
+  "func_name": "net_margin"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Net operating income (NOI)",
+  "math": "NOI = Rental Revenue + Other Income - Operating Expenses",
+  "package": "manual",
+  "func_name": "net_operating_income_noi"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Net premium",
+  "math": "P = PV(Benefits) / PV(Premium annuity)",
+  "package": "actuarialmath.Premiums",
+  "func_name": "net_premium"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Net premium equivalence principle",
+  "math": "Premium x APV(premium annuity) = APV(benefits)",
+  "package": "actuarialmath",
+  "func_name": "net_premium_equivalence_principle"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Net present value (NPV)",
+  "math": "NPV = sum_t CF_t / (1+r)^t",
+  "package": "numpy_financial.npv",
+  "func_name": "net_present_value_npv"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Net stable funding ratio (NSFR)",
+  "math": "NSFR = Available Stable Funding / Required Stable Funding",
+  "package": "manual",
+  "func_name": "net_stable_funding_ratio_nsfr"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Net weighted average spread",
+  "math": "NWAS = weighted avg asset spread - funding spread",
+  "package": "manual",
+  "func_name": "net_weighted_average_spread"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "Newey-West HAC covariance",
+  "math": "Var(beta_hat)_HAC = (X'X)^-1 X' S X (X'X)^-1",
+  "package": "statsmodels.tsa.VAR",
+  "func_name": "newey_west_hac_covariance"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "NII sensitivity",
+  "math": "Delta NII = sum_i Balance_i x Delta Rate_i x Repricing Fraction_i",
+  "package": "manual",
+  "func_name": "nii_sensitivity"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "NOI margin",
+  "math": "NOI Margin = NOI / Effective Gross Income",
+  "package": "manual",
+  "func_name": "noi_margin"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "NPL ratio",
+  "math": "NPL Ratio = Nonperforming Loans / Gross Loans",
+  "package": "manual",
+  "func_name": "npl_ratio"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Number of periods",
+  "math": "n = -ln(1-rPV/PMT) / ln(1+r)",
+  "package": "numpy_financial.nper",
+  "func_name": "number_of_periods"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "OC trigger",
+  "math": "Trigger breached if OC ratio < trigger level",
+  "package": "manual",
+  "func_name": "oc_trigger"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Omega ratio",
+  "math": "Omega = int_r^∞ (1-F(x))dx / int_-∞^r F(x)dx",
+  "package": "empyrical-reloaded",
+  "func_name": "omega_ratio"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "On-balance volume (OBV)",
+  "math": "OBV_t = OBV_{t-1} +/- Volume_t based on price direction",
+  "package": "TA-Lib.OBV",
+  "func_name": "on_balance_volume_obv"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "One-year death probability",
+  "math": "q_x = P[x dies within 1 year]",
+  "package": "actuarialmath",
+  "func_name": "one_year_death_probability"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "One-year survival probability",
+  "math": "p_x = 1 - q_x",
+  "package": "actuarialmath",
+  "func_name": "one_year_survival_probability"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Operating cash flow ratio",
+  "math": "OCF Ratio = Operating Cash Flow / Current Liabilities",
+  "package": "manual",
+  "func_name": "operating_cash_flow_ratio"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Operating expense ratio",
+  "math": "OER = Operating Expenses / Effective Gross Income",
+  "package": "manual",
+  "func_name": "operating_expense_ratio"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Operating leverage",
+  "math": "DOL = %Delta EBIT / %Delta Sales",
+  "package": "manual",
+  "func_name": "operating_leverage"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Operating margin",
+  "math": "Operating Margin = EBIT / Revenue",
+  "package": "manual",
+  "func_name": "operating_margin"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Operational risk capital (SMA)",
+  "math": "ORC = BIC x ILM",
+  "package": "manual",
+  "func_name": "operational_risk_capital_sma"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Optimal number of contracts",
+  "math": "N* = h* x Exposure Value / Futures Contract Value",
+  "package": "manual",
+  "func_name": "optimal_number_of_contracts"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Option delta-hedged P&L",
+  "math": "dPi approx 0.5 Gamma (dS)^2 + Theta dt + Vega d sigma",
+  "package": "manual",
+  "func_name": "option_delta_hedged_pandl"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Option pool dilution",
+  "math": "Fully Diluted Ownership = Shares_owned / (Existing + New + Option Pool)",
+  "package": "manual",
+  "func_name": "option_pool_dilution"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Option-adjusted spread (OAS)",
+  "math": "P = E_Q[ sum_t CF_t(path) exp(-(r_t + OAS)t) ]",
+  "package": "QuantLib",
+  "func_name": "option_adjusted_spread_oas"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Oracle Approximating Shrinkage (OAS)",
+  "math": "Sigma_hat = (1-delta)S + delta mu I",
+  "package": "sklearn.covariance.OAS",
+  "func_name": "oracle_approximating_shrinkage_oas"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Order imbalance",
+  "math": "OI = (Buy Volume - Sell Volume)/(Buy Volume + Sell Volume)",
+  "package": "manual",
+  "func_name": "order_imbalance"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Outstanding balance after k payments",
+  "math": "B_k = PV(1+r)^k - PMT((1+r)^k-1)/r",
+  "package": "numpy_financial.fv",
+  "func_name": "outstanding_balance_after_k_payments"
+ },
+ {
+  "domain": "Banking, lending & project finance",
+  "name": "Outstanding loan balance",
+  "math": "Balance_t = PV·(1+r)^t - PMT·[((1+r)^t - 1)/r]",
+  "package": "numpy_financial.fv",
+  "func_name": "outstanding_loan_balance"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Overcollateralization ratio",
+  "math": "OC Ratio = Collateral Balance / Notes Outstanding",
+  "package": "manual",
+  "func_name": "overcollateralization_ratio"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Ownership percentage",
+  "math": "Ownership = Investment / Post-money Valuation",
+  "package": "manual",
+  "func_name": "ownership_percentage"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "P/B ratio",
+  "math": "P/B = Price per Share / Book Value per Share",
+  "package": "manual",
+  "func_name": "p_over_b_ratio"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "P/E ratio",
+  "math": "P/E = Price per Share / EPS",
+  "package": "manual",
+  "func_name": "p_over_e_ratio"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Pain index",
+  "math": "Pain Index = average drawdown",
+  "package": "quantstats.stats",
+  "func_name": "pain_index"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Par swap rate",
+  "math": "K* = (1-DF(T_n)) / (Σ_i α_i·DF(t_i))",
+  "package": "QuantLib.SwapRateHelper",
+  "func_name": "par_swap_rate"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Par yield",
+  "math": "Par = (1-DF_n) / sum_i alpha_i DF_i",
+  "package": "QuantLib",
+  "func_name": "par_yield"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Parabolic SAR",
+  "math": "SAR_t = SAR_{t-1} + AF(EP - SAR_{t-1})",
+  "package": "TA-Lib.SAR",
+  "func_name": "parabolic_sar"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Parametric ES under normality",
+  "math": "ES = -(mu - sigma phi(z_alpha)/(alpha))",
+  "package": "manual",
+  "func_name": "parametric_es_under_normality"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Parametric normal VaR",
+  "math": "VaR_alpha = -(mu + z_alpha sigma)V",
+  "package": "empyrical-reloaded",
+  "func_name": "parametric_normal_var"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Parametric VaR",
+  "math": "VaR_α = -(μ + z_α σ)",
+  "package": "Riskfolio-Lib.Portfolio.optimization",
+  "func_name": "parametric_var"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Parkinson volatility",
+  "math": "sigma_P^2 = [1/(4 ln2)n] sum [ln(H/L)]^2",
+  "package": "manual",
+  "func_name": "parkinson_volatility"
+ },
+ {
+  "domain": "Trading, execution & market microstructure",
+  "name": "Participation rate",
+  "math": "Participation = Executed Volume / Market Volume",
+  "package": "manual",
+  "func_name": "participation_rate"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Pastor-Stambaugh liquidity",
+  "math": "r_{i,t+1} = ... + gamma_i sign(r_i,t,excess) volume_i,t + epsilon",
+  "package": "statsmodels.OLS",
+  "func_name": "pastor_stambaugh_liquidity"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Payables turnover",
+  "math": "Payables Turnover = COGS / Average AP",
+  "package": "manual",
+  "func_name": "payables_turnover"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Payback period",
+  "math": "Payback = smallest t such that cumulative CF_t >= initial outlay",
+  "package": "manual",
+  "func_name": "payback_period"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Payment shock ratio",
+  "math": "Payment Shock = New Payment / Old Payment - 1",
+  "package": "manual",
+  "func_name": "payment_shock_ratio"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "PEG ratio",
+  "math": "PEG = (P/E) / Earnings Growth",
+  "package": "manual",
+  "func_name": "peg_ratio"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Percentage price oscillator (PPO)",
+  "math": "PPO = (EMA_fast - EMA_slow)/EMA_slow",
+  "package": "TA-Lib.PPO",
+  "func_name": "percentage_price_oscillator_ppo"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Perpetuity value",
+  "math": "PV = CF / r",
+  "package": "manual",
+  "func_name": "perpetuity_value"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Piotroski F-score",
+  "math": "F = sum of 9 binary accounting signals, according to the following rules:\n1.Return on Assets (ROA) (1 point if it is positive in the current year, 0 otherwise);\n2.Operating Cash Flow (1 point if it is positive in the current year, 0 otherwise);\n3.Change in Return of Assets (ROA) (1 point if ROA is higher in the current year compared to the previous one, 0 otherwise);\n4.Accruals (1 point if Operating Cash Flow/Total Assets is higher than ROA/Total Assets in the current year, 0 otherwise);\n5.Change in Leverage (long-term) ratio (1 point if the ratio is lower this year compared to the previous one, 0 otherwise);\n6.Change in Current ratio (1 point if it is higher in the current year compared to the previous one, 0 otherwise);\n7.Change in the number of shares (1 point if no new shares were issued during the last year);\n8.Change in Gross Margin (1 point if it is higher in the current year compared to the previous one, 0 otherwise);\n9.Change in Asset Turnover ratio (1 point if it is higher in the current year compared to the previous one, 0 otherwise);",
+  "package": "manual",
+  "func_name": "piotroski_f_score"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Plus directional indicator (+DI)",
+  "math": "+DI = 100 x smoothed +DM / ATR",
+  "package": "TA-Lib.PLUS_DI",
+  "func_name": "plus_directional_indicator_plusdi"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "PME (Kaplan-Schoar)",
+  "math": "KS PME = (FV of distributions + NAV adjusted by index)/(FV of contributions)",
+  "package": "manual",
+  "func_name": "pme_kaplan_schoar"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "PO strip value",
+  "math": "PV_PO = sum_t principal_only_cf_t DF_t",
+  "package": "absbox",
+  "func_name": "po_strip_value"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Point-in-time PD",
+  "math": "PD_PIT = conditional default probability given current macro state",
+  "package": "statsmodels.Logit",
+  "func_name": "point_in_time_pd"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Portfolio covariance contribution",
+  "math": "MC_i = (Sigma w)_i",
+  "package": "PyPortfolioOpt.risk_models.sample_cov",
+  "func_name": "portfolio_covariance_contribution"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Portfolio return",
+  "math": "E[R_p] = w' mu",
+  "package": "PyPortfolioOpt.EfficientFrontier",
+  "func_name": "portfolio_return"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Portfolio variance",
+  "math": "sigma_p^2 = w' Sigma w",
+  "package": "PyPortfolioOpt.EfficientFrontier",
+  "func_name": "portfolio_variance"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Portfolio volatility",
+  "math": "sigma_p = sqrt(w' Sigma w)",
+  "package": "PyPortfolioOpt.risk_models.sample_cov",
+  "func_name": "portfolio_volatility"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Post-money valuation",
+  "math": "Post-money = Pre-money + New Investment",
+  "package": "manual",
+  "func_name": "post_money_valuation"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Potential future exposure (PFE)",
+  "math": "PFE_alpha(t) = quantile_alpha(exposure_t)",
+  "package": "manual",
+  "func_name": "potential_future_exposure_pfe"
+ },
+ {
+  "domain": "Macroeconomics, inflation & price indices",
+  "name": "PPI inflation (month over month)",
+  "math": "π_t^(PPI,MoM) = PPI_t / PPI_(t-1) - 1",
+  "package": "manual",
+  "func_name": "ppi_inflation_month_over_month"
+ },
+ {
+  "domain": "Macroeconomics, inflation & price indices",
+  "name": "PPI inflation (year over year)",
+  "math": "π_t^(PPI,YoY) = PPI_t / PPI_(t-12) - 1",
+  "package": "manual",
+  "func_name": "ppi_inflation_year_over_year"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Preferred return hurdle",
+  "math": "Hurdle FV = Contributed Capital x (1+h)^t",
+  "package": "numpy_financial.fv",
+  "func_name": "preferred_return_hurdle"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Pre-money valuation",
+  "math": "Pre-money = Post-money - New Investment",
+  "package": "manual",
+  "func_name": "pre_money_valuation"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Prepayment speed (PSA)",
+  "math": "CPR_t = min(0.06, 0.002t) × PSA%",
+  "package": "manual",
+  "func_name": "prepayment_speed_psa"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Present value (PV)",
+  "math": "PV = sum_t CF_t / (1+r)^t",
+  "package": "numpy_financial.pv",
+  "func_name": "present_value_pv"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Present value random variable",
+  "math": "Z = b_T v^T",
+  "package": "actuarialmath",
+  "func_name": "present_value_random_variable"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Price impact",
+  "math": "Impact = (execution price/Mid price-1)*100",
+  "package": "manual",
+  "func_name": "price_impact"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Price-to-book",
+  "math": "P/B = Price / Book value per share",
+  "package": "manual",
+  "func_name": "price_to_book"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Price-to-earnings ratio",
+  "math": "P/E = Price per share / EPS",
+  "package": "manual",
+  "func_name": "price_to_earnings_ratio"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Price-to-sales",
+  "math": "P/S = Market Cap / Revenue",
+  "package": "manual",
+  "func_name": "price_to_sales"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Principal payment portion (PPMT)",
+  "math": "PPMT_t = PMT - IPMT_t",
+  "package": "numpy_financial.ppmt",
+  "func_name": "principal_payment_portion_ppmt"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Probability of default from hazard rate",
+  "math": "PD(0,T) = 1 - exp(-int_0^T lambda(t) dt)",
+  "package": "QuantLib",
+  "func_name": "probability_of_default_from_hazard_rate"
+ },
+ {
+  "domain": "Credit risk",
+  "name": "Probability of default from logit",
+  "math": "PD = 1 / (1 + e^{-Xβ})",
+  "package": "sklearn.LogisticRegression",
+  "func_name": "probability_of_default_from_logit"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Probability of default scorecard logit",
+  "math": "logit(PD) = beta0 + beta'x",
+  "package": "sklearn.linear_model.LogisticRegression",
+  "func_name": "probability_of_default_scorecard_logit"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Probit default model",
+  "math": "Phi^-1(PD_i) = beta0 + beta'x_i",
+  "package": "statsmodels.Probit",
+  "func_name": "probit_default_model"
+ },
+ {
+  "domain": "Quantitative forecasting & machine learning in finance",
+  "name": "Probit score",
+  "math": "P(y=1|x)=Phi(beta'x)",
+  "package": "statsmodels.Probit",
+  "func_name": "probit_score"
+ },
+ {
+  "domain": "Macroeconomics, inflation & price indices",
+  "name": "Producer Price Index (Laspeyres-style index)",
+  "math": "PPI_t = (Σ_i p_(i,t) q_(i,0) / Σ_i p_(i,0) q_(i,0)) × 100",
+  "package": "manual",
+  "func_name": "producer_price_index_laspeyres_style_index"
+ }
+]

@@ -1,0 +1,716 @@
+[
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Abnormal earnings growth",
+  "math": "P_0 = capitalized next earnings + PV abnormal earnings growth",
+  "package": "manual",
+  "func_name": "abnormal_earnings_growth"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "ABS pool factor",
+  "math": "Factor_t = Current Pool Balance / Original Pool Balance",
+  "package": "manual",
+  "func_name": "abs_pool_factor"
+ },
+ {
+  "domain": "FX & international finance",
+  "name": "Absolute PPP",
+  "math": "S = P / P^*",
+  "package": "manual",
+  "func_name": "absolute_ppp"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Accounting identity",
+  "math": "Assets = Liabilities + Equity",
+  "package": "manual",
+  "func_name": "accounting_identity"
+ },
+ {
+  "domain": "Fixed income & bond math",
+  "name": "Accrued interest",
+  "math": "AI = Coupon × DayCountFraction",
+  "package": "QuantLib.Bond.accruedAmount",
+  "func_name": "accrued_interest"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Accumulation/distribution line",
+  "math": "ADL = ADL_{t-1} + MFM_t x Volume_t",
+  "package": "TA-Lib.AD",
+  "func_name": "accumulation_over_distribution_line"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Active return",
+  "math": "AR = R_p - R_b",
+  "package": "manual",
+  "func_name": "active_return"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Active risk budget",
+  "math": "IR = IC x sqrt(Breadth)",
+  "package": "manual",
+  "func_name": "active_risk_budget"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Active share",
+  "math": "Active Share = 0.5 sum_i |w_i - w_{b,i}|",
+  "package": "manual",
+  "func_name": "active_share"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "ADF unit-root test",
+  "math": "Delta y_t = alpha + beta t + gamma y_{t-1} + sum_i delta_i Delta y_{t-i} + epsilon_t",
+  "package": "statsmodels.tsa.stattools.adfuller",
+  "func_name": "adf_unit_root_test"
+ },
+ {
+  "domain": "Corporate finance & capital budgeting",
+  "name": "Adjusted present value (APV)",
+  "math": "APV = NPV_unlevered + PV(financing side effects)",
+  "package": "manual",
+  "func_name": "adjusted_present_value_apv"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "Adjusted R-squared",
+  "math": "Adj R^2 = 1 - (1-R^2)(n-1)/(n-k-1)",
+  "package": "statsmodels.OLS",
+  "func_name": "adjusted_r_squared"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Advance rate",
+  "math": "Advance Rate = Loan Amount / Eligible Collateral Base",
+  "package": "manual",
+  "func_name": "advance_rate"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Adverse selection cost",
+  "math": "ASC = Effective Spread - Realized Spread",
+  "package": "manual",
+  "func_name": "adverse_selection_cost"
+ },
+ {
+  "domain": "Technical analysis",
+  "name": "ADX",
+  "math": "ADX = EMA(Directional Movement Index)",
+  "package": "TA-Lib.trend.ADXIndicator",
+  "func_name": "adx"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Affine term structure bond price",
+  "math": "P(t,T)=exp(A(t,T)+B(t,T)'X_t)",
+  "package": "QuantLib.BondFunctions.cleanPrice",
+  "func_name": "affine_term_structure_bond_price"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "After-tax cost of debt",
+  "math": "R_d,aftertax = R_d(1-T)",
+  "package": "manual",
+  "func_name": "after_tax_cost_of_debt"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Aggregate loss distribution",
+  "math": "S = sum_{i=1}^N X_i",
+  "package": "scipy.stats",
+  "func_name": "aggregate_loss_distribution"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Allocation effect (Brinson-Fachler)",
+  "math": "Allocation_i = (w_i^P - w_i^B)(r_i^B - r^B)",
+  "package": "manual",
+  "func_name": "allocation_effect_brinson_fachler"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Alpha",
+  "math": "alpha_i = E[R_i] - [R_f + beta_i(E[R_m]-R_f)]",
+  "package": "empyrical-reloaded",
+  "func_name": "alpha"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Alpha from regression",
+  "math": "R_p-R_f = alpha + beta(R_b-R_f) + epsilon",
+  "package": "statsmodels.OLS",
+  "func_name": "alpha_from_regression"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Altman Z-score",
+  "math": "Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5",
+  "package": "manual",
+  "func_name": "altman_z_score"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "American option binomial pricing",
+  "math": "V = max(intrinsic, discounted expected continuation)",
+  "package": "QuantLib",
+  "func_name": "american_option_binomial_pricing"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Amihud illiquidity",
+  "math": "ILLIQ = mean(|R_t|/DollarVolume_t)",
+  "package": "manual",
+  "func_name": "amihud_illiquidity"
+ },
+ {
+  "domain": "Trading, execution & market microstructure",
+  "name": "Amivest liquidity ratio",
+  "math": "Amivest = Volume / |Return|",
+  "package": "manual",
+  "func_name": "amivest_liquidity_ratio"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Amortization factor",
+  "math": "AF = r(1+r)^n / ((1+r)^n - 1)",
+  "package": "numpy_financial.pmt",
+  "func_name": "amortization_factor"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Annual percentage rate (APR)",
+  "math": "APR = periodic rate x periods per year",
+  "package": "manual",
+  "func_name": "annual_percentage_rate_apr"
+ },
+ {
+  "domain": "Macroeconomics, inflation & price indices",
+  "name": "Annualized CPI inflation from monthly CPI",
+  "math": "π_t^(ann) = (CPI_t / CPI_(t-1))^12 - 1",
+  "package": "manual",
+  "func_name": "annualized_cpi_inflation_from_monthly_cpi"
+ },
+ {
+  "domain": "Macroeconomics, inflation & price indices",
+  "name": "Annualized PPI inflation from monthly PPI",
+  "math": "π_t^(ann) = (PPI_t / PPI_(t-1))^12 - 1",
+  "package": "manual",
+  "func_name": "annualized_ppi_inflation_from_monthly_ppi"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Annualized return (CAGR)",
+  "math": "CAGR = (Ending Value / Beginning Value)^(1/n) - 1",
+  "package": "empyrical-reloaded.annual_return",
+  "func_name": "annualized_return_cagr"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Annualized volatility",
+  "math": "σ_ann = σ_period × √m",
+  "package": "empyrical-reloaded.annual_volatility",
+  "func_name": "annualized_volatility"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Annuity future value",
+  "math": "FV_annuity = PMT x ((1+r)^n - 1) / r",
+  "package": "numpy_financial.fv",
+  "func_name": "annuity_future_value"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Annuity present value",
+  "math": "PV_annuity = PMT x (1-(1+r)^-n) / r",
+  "package": "numpy_financial.pv",
+  "func_name": "annuity_present_value"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "APARCH",
+  "math": "sigma_t^delta = omega + alpha(|eps_{t-1}|-gamma eps_{t-1})^delta + beta sigma_{t-1}^delta",
+  "package": "arch.arch_model",
+  "func_name": "aparch"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Appraisal ratio",
+  "math": "Appraisal = alpha / Residual Risk",
+  "package": "manual",
+  "func_name": "appraisal_ratio"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Approximate price change",
+  "math": "Delta P / P approx -D_mod Delta y + 0.5 Convexity (Delta y)^2",
+  "package": "manual",
+  "func_name": "approximate_price_change"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "AR(1)",
+  "math": "y_t = c + φ y_{t-1} + ε_t",
+  "package": "statsmodels.tsa.AutoReg",
+  "func_name": "ar_1"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "AR(1)",
+  "math": "x_t = c + phi x_{t-1} + epsilon_t",
+  "package": "statsmodels.tsa.AutoReg",
+  "func_name": "ar_1_v2"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "AR(p)",
+  "math": "x_t = c + sum_{i=1}^p phi_i x_{t-i} + epsilon_t",
+  "package": "statsmodels.tsa.AutoReg",
+  "func_name": "ar_p"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Arbitrage pricing theory (APT)",
+  "math": "E[R_i] = R_f + sum_k beta_{ik} lambda_k",
+  "package": "linearmodels",
+  "func_name": "arbitrage_pricing_theory_apt"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "ARCH(q)",
+  "math": "sigma_t^2 = omega + sum_{i=1}^q alpha_i epsilon_{t-i}^2",
+  "package": "arch.arch_model",
+  "func_name": "arch_q"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "ARIMA(p,d,q)",
+  "math": "phi(L)(1-L)^d x_t = c + theta(L)epsilon_t",
+  "package": "statsmodels.tsa.ARIMA",
+  "func_name": "arima_pdq"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "ARIMAX / dynamic regression",
+  "math": "y_t = beta' x_t + ARIMA errors",
+  "package": "statsmodels.tsa.SARIMAX",
+  "func_name": "arimax_over_dynamic_regression"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "ARMA(p,q)",
+  "math": "x_t = c + sum phi_i x_{t-i} + epsilon_t + sum theta_i epsilon_{t-i}",
+  "package": "statsmodels.tsa.ARIMA",
+  "func_name": "arma_pq"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Aroon Down",
+  "math": "AroonDown = 100(n - periods since n-period low)/n",
+  "package": "TA-Lib.AROON",
+  "func_name": "aroon_down"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Aroon oscillator",
+  "math": "Aroon Osc = AroonUp - AroonDown",
+  "package": "TA-Lib.AROONOSC",
+  "func_name": "aroon_oscillator"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Aroon Up",
+  "math": "AroonUp = 100(n - periods since n-period high)/n",
+  "package": "TA-Lib.AROON",
+  "func_name": "aroon_up"
+ },
+ {
+  "domain": "Trading, execution & market microstructure",
+  "name": "Arrival price slippage",
+  "math": "Slippage = Executed Price - Arrival Price",
+  "package": "manual",
+  "func_name": "arrival_price_slippage"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Asian option price",
+  "math": "V = E_Q[e^{-rT}(average(S)-K)^+]",
+  "package": "QuantLib",
+  "func_name": "asian_option_price"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Asset swap spread",
+  "math": "ASW = bond coupon spread that sets package PV to par",
+  "package": "QuantLib.VanillaSwap",
+  "func_name": "asset_swap_spread"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Asset turnover",
+  "math": "Asset Turnover = Revenue / Average Assets",
+  "package": "manual",
+  "func_name": "asset_turnover"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Average directional index (ADX)",
+  "math": "ADX = EMA of directional movement index",
+  "package": "TA-Lib.ADX",
+  "func_name": "average_directional_index_adx"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Average loan age",
+  "math": "ALA = weighted average seasoning of loans",
+  "package": "manual",
+  "func_name": "average_loan_age"
+ },
+ {
+  "domain": "Technical analysis",
+  "name": "Average true range (ATR)",
+  "math": "ATR = EMA(True Range)",
+  "package": "TA-Lib.volatility.AverageTrueRange",
+  "func_name": "average_true_range_atr"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Awesome oscillator",
+  "math": "AO = SMA_5(MedianPrice) - SMA_34(MedianPrice)",
+  "package": "TA-Lib.momentum.AwesomeOscillatorIndicator",
+  "func_name": "awesome_oscillator"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Bachelier option price",
+  "math": "Price = DF[(F-K)N(d) + sigma sqrt(T)n(d)]",
+  "package": "QuantLib",
+  "func_name": "bachelier_option_price"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Back-end DTI (gross income)",
+  "math": "DTI_gross = Total Monthly Debt Payments / Gross Monthly Income",
+  "package": "manual",
+  "func_name": "back_end_dti_gross_income"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Back-end DTI (net income)",
+  "math": "DTI_net = Total Monthly Debt Payments / Net Monthly Income",
+  "package": null,
+  "func_name": "back_end_dti_net_income"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Backtesting exception rate",
+  "math": "Exception Rate = exceptions / observations",
+  "package": "manual",
+  "func_name": "backtesting_exception_rate"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Backwardation slope",
+  "math": "Backwardation = 1 - F_long / F_short",
+  "package": "manual",
+  "func_name": "backwardation_slope"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Balloon payment",
+  "math": "Balloon = Outstanding Balance at maturity",
+  "package": "numpy_financial.fv",
+  "func_name": "balloon_payment"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Barrier option price",
+  "math": "V = BS closed form with reflection terms / lattice / MC",
+  "package": "QuantLib",
+  "func_name": "barrier_option_price"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Basel IRB capital requirement",
+  "math": "K = LGD[Phi((Phi^-1(PD)+sqrt(R)Phi^-1(0.999))/sqrt(1-R)) - PD] x MA",
+  "package": "manual",
+  "func_name": "basel_irb_capital_requirement"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Basel standardized capital requirement",
+  "math": "Capital = 8% x RWA",
+  "package": "manual",
+  "func_name": "basel_standardized_capital_requirement"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Basis",
+  "math": "Basis = S_t - F_t",
+  "package": "manual",
+  "func_name": "basis"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Basis convergence",
+  "math": "Basis_T = 0 at maturity (ignoring delivery frictions)",
+  "package": "manual",
+  "func_name": "basis_convergence"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Batting average",
+  "math": "BA = count(alpha_t > 0)/T",
+  "package": "quantstats.stats",
+  "func_name": "batting_average"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Bayesian shrinkage return forecast",
+  "math": "mu_hat = lambda mu_prior + (1-lambda) mu_sample",
+  "package": "manual",
+  "func_name": "bayesian_shrinkage_return_forecast"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Behavioral duration of deposits",
+  "math": "D_beh = sensitivity-derived effective duration of non-maturity deposits",
+  "package": "statsmodels",
+  "func_name": "behavioral_duration_of_deposits"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Benchmark-relative optimization",
+  "math": "min_w (w-w_b)'Sigma(w-w_b) - lambda mu'(w-w_b)",
+  "package": "cvxpy.Problem.solve",
+  "func_name": "benchmark_relative_optimization"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Benefit reserve recursion",
+  "math": "(V_t + P)(1+i) = q Benefit + p V_{t+1}",
+  "package": "actuarialmath",
+  "func_name": "benefit_reserve_recursion"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Beneish M-score",
+  "math": "M = -4.84 + 0.92DSRI + 0.528GMI + 0.404AQI + 0.892SGI + 0.115DEPI - 0.172SGAI + 4.679TATA - 0.327LVGI",
+  "package": "manual",
+  "func_name": "beneish_m_score"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Beta",
+  "math": "beta_i = Cov(R_i,R_m)/Var(R_m)",
+  "package": "empyrical-reloaded",
+  "func_name": "beta"
+ },
+ {
+  "domain": "Liquidity risk & market liquidity",
+  "name": "Bid-ask spread",
+  "math": "Spread = Ask - Bid",
+  "package": "manual",
+  "func_name": "bid_ask_spread"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Binary asset-or-nothing call",
+  "math": "AON = S e^{-qT} N(d1)",
+  "package": "QuantLib",
+  "func_name": "binary_asset_or_nothing_call"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Binomial down factor",
+  "math": "d = 1/u",
+  "package": "manual",
+  "func_name": "binomial_down_factor"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Binomial option pricing",
+  "math": "V = e^{-rΔt}[pV_u + (1-p)V_d]",
+  "package": "QuantLib.BinomialVanillaEngine",
+  "func_name": "binomial_option_pricing"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Binomial up factor",
+  "math": "u = e^{sigma sqrt(Delta t)}",
+  "package": "manual",
+  "func_name": "binomial_up_factor"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Bipower variation",
+  "math": "BV_t = mu_1^-2 sum |r_i||r_{i-1}|",
+  "package": "manual",
+  "func_name": "bipower_variation"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Black 76 option price",
+  "math": "Price = DF[F N(d1) - K N(d2)] for call",
+  "package": "py-vollib-gen.black",
+  "func_name": "black_76_option_price"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Black caplet price",
+  "math": "Caplet = DF x tau [F N(d1) - K N(d2)]",
+  "package": "QuantLib",
+  "func_name": "black_caplet_price"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Black swaption price",
+  "math": "Swaption = A x [S N(d1) - K N(d2)]",
+  "package": "QuantLib.VanillaSwap",
+  "func_name": "black_swaption_price"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Black-76 commodity option",
+  "math": "C = e^{-rT}[F N(d1)-K N(d2)]",
+  "package": "py-vollib-gen.black.black",
+  "func_name": "black_76_commodity_option"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Black-Litterman implied equilibrium returns",
+  "math": "Pi = delta Sigma w_mkt",
+  "package": "PyPortfolioOpt.EfficientFrontier",
+  "func_name": "black_litterman_implied_equilibrium_returns"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Black-Litterman posterior mean",
+  "math": "μ_BL = [(τΣ)^(-1)+P^TΩ^(-1)P]^(-1)[(τΣ)^(-1)π + P^TΩ^(-1)Q]",
+  "package": "PyPortfolioOpt.EfficientFrontier",
+  "func_name": "black_litterman_posterior_mean"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Black-Scholes call",
+  "math": "C = S_0 e^{-qT}N(d1) - K e^{-rT}N(d2)",
+  "package": "py-vollib-gen.black_scholes",
+  "func_name": "black_scholes_call"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Black-Scholes put",
+  "math": "P = K e^{-rT}N(-d2) - S_0 e^{-qT}N(-d1)",
+  "package": "py-vollib-gen.black_scholes",
+  "func_name": "black_scholes_put"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Black-Scholes-Merton d1",
+  "math": "d1 = [ln(S/K)+(r-q+0.5 sigma^2)T]/(sigma sqrt(T))",
+  "package": "py-vollib-gen",
+  "func_name": "black_scholes_merton_d1"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Black-Scholes-Merton d2",
+  "math": "d2 = d1 - sigma sqrt(T)",
+  "package": "py-vollib-gen",
+  "func_name": "black_scholes_merton_d2"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Bollinger %B",
+  "math": "%B = (P-Lower)/(Upper-Lower)",
+  "package": "TA-Lib.BBANDS",
+  "func_name": "bollinger_pctb"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Bollinger Bands lower",
+  "math": "Lower = SMA_n - k sigma_n",
+  "package": "TA-Lib.BBANDS",
+  "func_name": "bollinger_bands_lower"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Bollinger Bands middle",
+  "math": "Middle = SMA_n(P)",
+  "package": "TA-Lib.BBANDS",
+  "func_name": "bollinger_bands_middle"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Bollinger Bands upper",
+  "math": "Upper = SMA_n + k sigma_n",
+  "package": "TA-Lib.BBANDS",
+  "func_name": "bollinger_bands_upper"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Bollinger bandwidth",
+  "math": "Bandwidth = (Upper-Lower)/Middle",
+  "package": "TA-Lib.BBANDS",
+  "func_name": "bollinger_bandwidth"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Bond carry and roll",
+  "math": "Carry+Roll = coupon income + financing + curve roll-down",
+  "package": "manual",
+  "func_name": "bond_carry_and_roll"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Bond equivalent yield (BEY)",
+  "math": "BEY = 2[(1+HPY)^(182/d) - 1]",
+  "package": "manual",
+  "func_name": "bond_equivalent_yield_bey"
+ },
+ {
+  "domain": "Fixed income & bond math",
+  "name": "Bond price",
+  "math": "P = Σ_{t=1}^n C_t/(1+y/m)^(mt) + FV/(1+y/m)^(mn)",
+  "package": "QuantLib.Bond",
+  "func_name": "bond_price"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Bond price from yield",
+  "math": "P = sum_t C/(1+y/m)^(mt) + F/(1+y/m)^(mT)",
+  "package": "QuantLib.BondFunctions.bondYield",
+  "func_name": "bond_price_from_yield"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Book value per share",
+  "math": "BVPS = Equity / Shares Outstanding",
+  "package": "manual",
+  "func_name": "book_value_per_share"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Book-to-market ratio",
+  "math": "Book-to-market = Book Equity / Market Cap",
+  "package": "manual",
+  "func_name": "book_to_market_ratio"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Bornhuetter-Ferguson reserve",
+  "math": "Ultimate = Reported + (Expected Ultimate x %Unreported)",
+  "package": "manual",
+  "func_name": "bornhuetter_ferguson_reserve"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Borrowing base",
+  "math": "Borrowing Base = sum_i Eligible Collateral_i x Advance Rate_i",
+  "package": "manual",
+  "func_name": "borrowing_base"
+ }
+]

@@ -1,0 +1,716 @@
+[
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Profit factor",
+  "math": "Profit Factor = sum positive returns / |sum negative returns|",
+  "package": "quantstats.stats",
+  "func_name": "profit_factor"
+ },
+ {
+  "domain": "Corporate finance & capital budgeting",
+  "name": "Profitability index",
+  "math": "PI = PV of future cash flows / Initial Investment",
+  "package": "manual",
+  "func_name": "profitability_index"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Property IRR",
+  "math": "0 = -Equity_0 + sum_t CF_t/(1+IRR)^t + SaleProceeds/(1+IRR)^T",
+  "package": "numpy_financial.irr",
+  "func_name": "property_irr"
+ },
+ {
+  "domain": "Real estate finance",
+  "name": "Property value from cap rate",
+  "math": "Value = NOI / Cap Rate",
+  "package": "manual",
+  "func_name": "property_value_from_cap_rate"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Prospective reserve",
+  "math": "V_t = PV_t(Future Benefits) - PV_t(Future Premiums)",
+  "package": "actuarialmath.PolicyValues",
+  "func_name": "prospective_reserve"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Protective put payoff",
+  "math": "Payoff = S_T + max(K-S_T,0) - Premium",
+  "package": "manual",
+  "func_name": "protective_put_payoff"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Provision coverage ratio",
+  "math": "Coverage = Loan Loss Reserves / Nonperforming Loans",
+  "package": "manual",
+  "func_name": "provision_coverage_ratio"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Provision coverage ratio",
+  "math": "Coverage Ratio = Allowance for Credit Losses / Nonperforming Loans",
+  "package": "manual",
+  "func_name": "provision_coverage_ratio_v2"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "PSA prepayment benchmark",
+  "math": "CPR_PSA = min(0.06, 0.002 x month) for 100% PSA",
+  "package": "manual",
+  "func_name": "psa_prepayment_benchmark"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "PTI payment-to-income",
+  "math": "Monthly Mortgage Payment / Income",
+  "package": "manual",
+  "func_name": "pti_payment_to_income"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "PTI payment-to-income (gross)",
+  "math": "PTI_gross = Monthly Loan Payment / Gross Monthly Income",
+  "package": "manual",
+  "func_name": "pti_payment_to_income_gross"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "PTI payment-to-income (net)",
+  "math": "PTI_net = Monthly Loan Payment / Net Monthly Income",
+  "package": "manual",
+  "func_name": "pti_payment_to_income_net"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Public market equivalent (PME)",
+  "math": "PME = FV(distributions indexed to public benchmark) / FV(capital calls indexed to public benchmark)",
+  "package": "manual",
+  "func_name": "public_market_equivalent_pme"
+ },
+ {
+  "domain": "FX & international finance",
+  "name": "Purchasing power parity (PPP)",
+  "math": "S = P / P*",
+  "package": "manual",
+  "func_name": "purchasing_power_parity_ppp"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Pure endowment APV",
+  "math": "{}_nE_x = v^n {}_np_x",
+  "package": "actuarialmath",
+  "func_name": "pure_endowment_apv"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Pure premium",
+  "math": "Pure Premium = Frequency x Severity",
+  "package": "manual",
+  "func_name": "pure_premium"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Put payoff",
+  "math": "P_T = max(K - S_T, 0)",
+  "package": "numpy.maximum",
+  "func_name": "put_payoff"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Put spread payoff",
+  "math": "Payoff = max(K2-S,0) - max(K1-S,0)",
+  "package": "manual",
+  "func_name": "put_spread_payoff"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Put-call parity",
+  "math": "C - P = S_0 - K e^{-rT}",
+  "package": "py-vollib-gen",
+  "func_name": "put_call_parity"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Put-call parity (equity)",
+  "math": "C - P = S_0 e^{-qT} - K e^{-rT}",
+  "package": "py-vollib-gen",
+  "func_name": "put_call_parity_equity"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Put-call parity (futures options)",
+  "math": "C - P = DF(F_0 - K)",
+  "package": "py-vollib-gen",
+  "func_name": "put_call_parity_futures_options"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "PV of tax shield",
+  "math": "PV(TS) = sum_t Tax Shield_t / (1+r_TS)^t",
+  "package": "manual",
+  "func_name": "pv_of_tax_shield"
+ },
+ {
+  "domain": "Quantitative forecasting & machine learning in finance",
+  "name": "Quadratic program",
+  "math": "min_x 1/2 x^T P x + q^T x  s.t. Gx≤h, Ax=b",
+  "package": "cvxpy.Problem.solve",
+  "func_name": "quadratic_program"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Quick ratio",
+  "math": "Quick Ratio = (Cash + Marketable Securities + AR) / Current Liabilities",
+  "package": "manual",
+  "func_name": "quick_ratio"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Quoted spread (%)",
+  "math": "Quoted Spread = (Ask-Bid)/Mid",
+  "package": "manual",
+  "func_name": "quoted_spread_pct"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Rate of change (ROC)",
+  "math": "ROC = P_t/P_{t-n} - 1",
+  "package": "TA-Lib.ROC",
+  "func_name": "rate_of_change_roc"
+ },
+ {
+  "domain": "Real estate finance",
+  "name": "Real estate DCF",
+  "math": "Value = Σ_t NOI_t/(1+r)^t + TV/(1+r)^T",
+  "package": "numpy_financial.npv",
+  "func_name": "real_estate_dcf"
+ },
+ {
+  "domain": "FX & international finance",
+  "name": "Real exchange rate",
+  "math": "q = S·P* / P",
+  "package": "manual",
+  "func_name": "real_exchange_rate"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Real yield bond pricing",
+  "math": "P = sum_t Real CF_t /(1+real y)^t",
+  "package": "QuantLib.BondFunctions.bondYield",
+  "func_name": "real_yield_bond_pricing"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Realized beta",
+  "math": "beta_realized = Cov_intraday(asset,market)/Var_intraday(market)",
+  "package": "manual",
+  "func_name": "realized_beta"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Realized hedge effectiveness",
+  "math": "HE = 1 - Var(Hedged Position)/Var(Unhedged Position)",
+  "package": "manual",
+  "func_name": "realized_hedge_effectiveness"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Realized spread",
+  "math": "Realized Spread = 2 x side x (Trade Price - Mid_{t+Delta})",
+  "package": "manual",
+  "func_name": "realized_spread"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Realized variance",
+  "math": "RV_t = sum_{i=1}^n r_{t,i}^2",
+  "package": "manual",
+  "func_name": "realized_variance"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Realized volatility",
+  "math": "RVOL = sqrt(sum intraday returns^2)",
+  "package": "manual",
+  "func_name": "realized_volatility"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Receivables turnover",
+  "math": "Receivables Turnover = Revenue / Average AR",
+  "package": "manual",
+  "func_name": "receivables_turnover"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Recovery factor",
+  "math": "Recovery Factor = Net Profit / |Max Drawdown|",
+  "package": "quantstats.stats",
+  "func_name": "recovery_factor"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Recovery rate",
+  "math": "Recovery = 1 - LGD",
+  "package": "manual",
+  "func_name": "recovery_rate"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Reduced-form CDS hazard relation",
+  "math": "CDS Spread approx lambda x LGD",
+  "package": "QuantLib",
+  "func_name": "reduced_form_cds_hazard_relation"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Refinance proceeds",
+  "math": "Refi Proceeds = New Loan - Old Loan - Fees",
+  "package": "manual",
+  "func_name": "refinance_proceeds"
+ },
+ {
+  "domain": "FX & international finance",
+  "name": "Relative PPP",
+  "math": "Delta S / S approx pi_d - pi_f",
+  "package": "manual",
+  "func_name": "relative_ppp"
+ },
+ {
+  "domain": "Liquidity risk & market liquidity",
+  "name": "Relative spread",
+  "math": "Relative Spread = (Ask - Bid) / Mid",
+  "package": "manual",
+  "func_name": "relative_spread"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Relative strength index (RSI)",
+  "math": "RSI = 100 - 100/(1+RS), RS=AvgGain/AvgLoss",
+  "package": "TA-Lib.RSI",
+  "func_name": "relative_strength_index_rsi"
+ },
+ {
+  "domain": "Real estate finance & mortgages",
+  "name": "Rent coverage ratio",
+  "math": "Rent Coverage = Gross Monthly Income / Monthly Rent",
+  "package": "manual",
+  "func_name": "rent_coverage_ratio"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Repricing gap",
+  "math": "Gap_t = Rate Sensitive Assets_t - Rate Sensitive Liabilities_t",
+  "package": "manual",
+  "func_name": "repricing_gap"
+ },
+ {
+  "domain": "Corporate finance, valuation & capital budgeting",
+  "name": "Residual income",
+  "math": "RI = Net Income - R_e x Beginning Equity",
+  "package": "manual",
+  "func_name": "residual_income"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Residual income valuation",
+  "math": "V_0 = B_0 + sum_t RI_t/(1+r)^t",
+  "package": "manual",
+  "func_name": "residual_income_valuation"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Retention ratio",
+  "math": "Retention = 1 - Dividend Payout Ratio",
+  "package": "manual",
+  "func_name": "retention_ratio"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Retrospective reserve",
+  "math": "V_t = Accumulated Value(Past Premiums - Past Benefits - Expenses)",
+  "package": "actuarialmath",
+  "func_name": "retrospective_reserve"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Return on assets (ROA)",
+  "math": "ROA = Net Income / Average Assets",
+  "package": "manual",
+  "func_name": "return_on_assets_roa"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Return on capital employed (ROCE)",
+  "math": "ROCE = EBIT / Capital Employed",
+  "package": "manual",
+  "func_name": "return_on_capital_employed_roce"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Return on equity (ROE)",
+  "math": "ROE = Net Income / Average Equity",
+  "package": "manual",
+  "func_name": "return_on_equity_roe"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Return on invested capital (ROIC)",
+  "math": "ROIC = NOPAT / Average Invested Capital",
+  "package": "manual",
+  "func_name": "return_on_invested_capital_roic"
+ },
+ {
+  "domain": "Banking, consumer lending & project finance",
+  "name": "Return on regulatory capital (RORC)",
+  "math": "RORC = Expected Profit / Economic or Regulatory Capital",
+  "package": "manual",
+  "func_name": "return_on_regulatory_capital_rorc"
+ },
+ {
+  "domain": "Accounting & financial statement analysis",
+  "name": "Revenue growth",
+  "math": "g_t = Revenue_t / Revenue_(t-1) - 1",
+  "package": "manual",
+  "func_name": "revenue_growth"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Rho",
+  "math": "Rho = K T e^{-rT} N(d2)",
+  "package": "py-vollib-gen.greeks",
+  "func_name": "rho"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Risk parity objective",
+  "math": "min_w sum_i sum_j (RC_i-RC_j)^2",
+  "package": "Riskfolio-Lib.Portfolio.optimization",
+  "func_name": "risk_parity_objective"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "RiskMetrics covariance",
+  "math": "Sigma_t = lambda Sigma_{t-1} + (1-lambda) r_{t-1} r_{t-1}'",
+  "package": "manual",
+  "func_name": "riskmetrics_covariance"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Risk-neutral probability",
+  "math": "p = (e^{(r-q)Delta t} - d)/(u-d)",
+  "package": "manual",
+  "func_name": "risk_neutral_probability"
+ },
+ {
+  "domain": "Bank regulation, Basel & prudential ratios",
+  "name": "Risk-weighted assets (RWA)",
+  "math": "RWA = sum_i Exposure_i x RiskWeight_i",
+  "package": "manual",
+  "func_name": "risk_weighted_assets_rwa"
+ },
+ {
+  "domain": "Quantitative forecasting & machine learning in finance",
+  "name": "ROC AUC",
+  "math": "AUC = integral_0^1 TPR(FPR^{-1}(u)) du",
+  "package": "sklearn.metrics.roc_auc_score",
+  "func_name": "roc_auc"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Rogers-Satchell volatility",
+  "math": "sigma_RS^2 = (ln(H/O))(ln(H/C)) + (ln(L/O))(ln(L/C))",
+  "package": "manual",
+  "func_name": "rogers_satchell_volatility"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Roll implied spread",
+  "math": "Spread_Roll = 2 sqrt(-Cov(Delta p_t, Delta p_{t-1}))",
+  "package": "manual",
+  "func_name": "roll_implied_spread"
+ },
+ {
+  "domain": "Credit risk, default modeling & credit portfolio",
+  "name": "Roll rate",
+  "math": "Roll Rate = balances migrating to worse delinquency bucket / prior bucket balance",
+  "package": "manual",
+  "func_name": "roll_rate"
+ },
+ {
+  "domain": "Liquidity risk & market liquidity",
+  "name": "Roll spread estimator",
+  "math": "Spread_Roll = 2√[-Cov(ΔP_t, ΔP_{t-1})]",
+  "package": "manual",
+  "func_name": "roll_spread_estimator"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Roll yield",
+  "math": "Roll Yield = Futures Return - Spot Return - Collateral Return",
+  "package": "manual",
+  "func_name": "roll_yield"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Roll-down return",
+  "math": "Roll-down approx -Duration x Delta Yield from curve slide",
+  "package": "manual",
+  "func_name": "roll_down_return"
+ },
+ {
+  "domain": "Technical analysis",
+  "name": "RSI",
+  "math": "RSI = 100 - 100/(1 + RS)",
+  "package": "TA-Lib.momentum.RSIIndicator",
+  "func_name": "rsi"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "RVPI",
+  "math": "RVPI = Residual Value (NAV of unrealized investments) / Paid-In Capital",
+  "package": "manual",
+  "func_name": "rvpi"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "SABR implied vol",
+  "math": "sigma_BS = SABR(F,K,alpha,beta,rho,nu,T)",
+  "package": "QuantLib",
+  "func_name": "sabr_implied_vol"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "SARIMA",
+  "math": "Phi(L^s)phi(L)(1-L)^d(1-L^s)^D x_t = Theta(L^s)theta(L)epsilon_t",
+  "package": "statsmodels.tsa.SARIMAX",
+  "func_name": "sarima"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Security market line",
+  "math": "E[R] = R_f + beta(E[R_m]-R_f)",
+  "package": "manual",
+  "func_name": "security_market_line"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Selection effect (Brinson-Fachler)",
+  "math": "Selection_i = w_i^B(r_i^P - r_i^B)",
+  "package": "manual",
+  "func_name": "selection_effect_brinson_fachler"
+ },
+ {
+  "domain": "Market risk & volatility modeling",
+  "name": "Semivariance",
+  "math": "SemiVar = E[min(R-mu,0)^2]",
+  "package": "Riskfolio-Lib.Portfolio.optimization",
+  "func_name": "semivariance"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Severity",
+  "math": "Severity = Net Loss / Defaulted Balance",
+  "package": "manual",
+  "func_name": "severity"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Sharpe ratio",
+  "math": "Sharpe = (E[R_p]-R_f)/sigma_p",
+  "package": "empyrical-reloaded.sharpe_ratio",
+  "func_name": "sharpe_ratio"
+ },
+ {
+  "domain": "Equity valuation & asset pricing",
+  "name": "Sharpe-Lintner beta regression",
+  "math": "R_i-R_f = alpha + beta(R_m-R_f)+epsilon",
+  "package": "statsmodels.OLS",
+  "func_name": "sharpe_lintner_beta_regression"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Short-rate bond pricing PDE",
+  "math": "dP/dt + a(r,t)dP/dr + 0.5 b(r,t)^2 d^2P/dr^2 - rP = 0",
+  "package": "QuantLib",
+  "func_name": "short_rate_bond_pricing_pde"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Simple compounding",
+  "math": "FV = PV·(1+r·t)",
+  "package": "QuantLib.InterestRate",
+  "func_name": "simple_compounding"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Simple forward rate",
+  "math": "F = (1/DF(T)-1)/tau",
+  "package": "QuantLib",
+  "func_name": "simple_forward_rate"
+ },
+ {
+  "domain": "Performance measurement & attribution",
+  "name": "Simple return",
+  "math": "R_t = P_t/P_{t-1} - 1",
+  "package": "manual",
+  "func_name": "simple_return"
+ },
+ {
+  "domain": "Structured finance & securitization",
+  "name": "Single monthly mortality (SMM)",
+  "math": "SMM = 1 - (1 - CPR)^(1/12)",
+  "package": "manual",
+  "func_name": "single_monthly_mortality_smm"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Slippage",
+  "math": "Slippage = Actual Execution Price - Expected Price",
+  "package": "manual",
+  "func_name": "slippage"
+ },
+ {
+  "domain": "Interest-rate modeling & term structures",
+  "name": "Smith-Wilson extrapolation",
+  "math": "P(u)=e^{-UFR u}+ sum_j zeta_j W(u_j,u)",
+  "package": "QuantLib",
+  "func_name": "smith_wilson_extrapolation"
+ },
+ {
+  "domain": "Actuarial science & insurance",
+  "name": "Solvency ratio",
+  "math": "Solvency Ratio = Available Capital / Required Capital",
+  "package": "manual",
+  "func_name": "solvency_ratio"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Sortino ratio",
+  "math": "Sortino = (E[R_p]-MAR)/DownsideDeviation",
+  "package": "empyrical-reloaded.sortino_ratio",
+  "func_name": "sortino_ratio"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Sources and uses balance",
+  "math": "Total Sources = Total Uses",
+  "package": "manual",
+  "func_name": "sources_and_uses_balance"
+ },
+ {
+  "domain": "Commodities, futures & hedging",
+  "name": "Spark spread",
+  "math": "Spark Spread = Electricity Price - Heat Rate x Fuel Price",
+  "package": "manual",
+  "func_name": "spark_spread"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Speed",
+  "math": "Speed = d(Gamma)/dS",
+  "package": "QuantLib",
+  "func_name": "speed"
+ },
+ {
+  "domain": "Private equity, venture capital & LBO",
+  "name": "Sponsor cash-on-cash return",
+  "math": "CoC = Cumulative Cash to Sponsor / Sponsor Equity Invested",
+  "package": "manual",
+  "func_name": "sponsor_cash_on_cash_return"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Spot rate bootstrapping",
+  "math": "P_n = sum_{i=1}^{n-1} C_i DF_i + (C_n+F)DF_n",
+  "package": "QuantLib.PiecewiseYieldCurve",
+  "func_name": "spot_rate_bootstrapping"
+ },
+ {
+  "domain": "Fixed income & bond math",
+  "name": "Spot rate from discount factor",
+  "math": "z(t) = -ln(DF(t))/t",
+  "package": "QuantLib yield term structures",
+  "func_name": "spot_rate_from_discount_factor"
+ },
+ {
+  "domain": "Fixed income, bonds & credit markets",
+  "name": "Spread duration",
+  "math": "Spread Duration = -dP/ds / P",
+  "package": "QuantLib.BondFunctions.duration",
+  "func_name": "spread_duration"
+ },
+ {
+  "domain": "Derivatives, options & volatility",
+  "name": "Spread option (Kirk approximation)",
+  "math": "C approx DF[F1 N(d1) - (F2+K)N(d2)]",
+  "package": "QuantLib",
+  "func_name": "spread_option_kirk_approximation"
+ },
+ {
+  "domain": "Liquidity risk, market liquidity & execution cost",
+  "name": "Square-root impact law",
+  "math": "Impact = Y sigma sqrt(Q/V)",
+  "package": "manual",
+  "func_name": "square_root_impact_law"
+ },
+ {
+  "domain": "Treasury, ALM & balance-sheet management",
+  "name": "Stable funding gap",
+  "math": "Required Stable Funding - Available Stable Funding",
+  "package": "manual",
+  "func_name": "stable_funding_gap"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "State-space measurement equation",
+  "math": "y_t = Z_t alpha_t + epsilon_t",
+  "package": "statsmodels.statespace",
+  "func_name": "state_space_measurement_equation"
+ },
+ {
+  "domain": "Econometrics & time-series finance",
+  "name": "State-space transition equation",
+  "math": "alpha_{t+1} = T_t alpha_t + R_t eta_t",
+  "package": "statsmodels.statespace",
+  "func_name": "state_space_transition_equation"
+ },
+ {
+  "domain": "Asset management & portfolio optimization",
+  "name": "Sterling ratio",
+  "math": "Sterling = CAGR / Average Drawdown",
+  "package": "quantstats.stats",
+  "func_name": "sterling_ratio"
+ },
+ {
+  "domain": "Technical analysis",
+  "name": "Stochastic oscillator",
+  "math": "%K = 100·(C-L_n)/(H_n-L_n)",
+  "package": "TA-Lib.momentum.StochasticOscillator",
+  "func_name": "stochastic_oscillator"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Stochastic oscillator %D",
+  "math": "%D = SMA_3(%K)",
+  "package": "TA-Lib.STOCH",
+  "func_name": "stochastic_oscillator_pctd"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Stochastic oscillator %K",
+  "math": "%K = 100 (C-L_n)/(H_n-L_n)",
+  "package": "TA-Lib.STOCH",
+  "func_name": "stochastic_oscillator_pctk"
+ },
+ {
+  "domain": "Technical analysis & chart-based indicators",
+  "name": "Stochastic RSI",
+  "math": "StochRSI = (RSI - min RSI_n)/(max RSI_n - min RSI_n)",
+  "package": "TA-Lib.momentum.StochRSIIndicator",
+  "func_name": "stochastic_rsi"
+ }
+]
