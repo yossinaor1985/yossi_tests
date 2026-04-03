@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(dir \"C:\\\\Users\\\\ISR831\\\\Documents\\\\git\\\\instltns\")",
+      "Bash(python3 -c ':*)",
+      "Bash(py --version)",
+      "Bash(ls -la C:/Users/ISR831/Documents/git/instltns/batch_*.json)"
+    ]
+  }
+}

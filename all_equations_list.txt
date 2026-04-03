@@ -1,0 +1,824 @@
+1|Abnormal earnings growth|P_0 = capitalized next earnings + PV abnormal earnings growth|manual|Equity valuation & asset pricing
+2|ABS pool factor|Factor_t = Current Pool Balance / Original Pool Balance|manual|Structured finance & securitization
+3|Absolute PPP|S = P / P^*|manual|FX & international finance
+4|Accounting identity|Assets = Liabilities + Equity|manual|Accounting & financial statement analysis
+5|Accrued interest|AI = Coupon × DayCountFraction|QuantLib.Bond.accruedAmount|Fixed income & bond math
+6|Accumulation/distribution line|ADL = ADL_{t-1} + MFM_t x Volume_t|TA-Lib.AD|Technical analysis & chart-based indicators
+7|Active return|AR = R_p - R_b|manual|Asset management & portfolio optimization
+8|Active risk budget|IR = IC x sqrt(Breadth)|manual|Performance measurement & attribution
+9|Active share|Active Share = 0.5 sum_i |w_i - w_{b,i}||manual|Asset management & portfolio optimization
+10|ADF unit-root test|Delta y_t = alpha + beta t + gamma y_{t-1} + sum_i delta_i Delta y_{t-i} + epsilon_t|statsmodels.tsa.stattools.adfuller|Econometrics & time-series finance
+11|Adjusted present value (APV)|APV = NPV_unlevered + PV(financing side effects)|manual|Corporate finance & capital budgeting
+12|Adjusted R-squared|Adj R^2 = 1 - (1-R^2)(n-1)/(n-k-1)|statsmodels.OLS|Econometrics & time-series finance
+13|Advance rate|Advance Rate = Loan Amount / Eligible Collateral Base|manual|Banking, consumer lending & project finance
+14|Adverse selection cost|ASC = Effective Spread - Realized Spread|manual|Liquidity risk, market liquidity & execution cost
+15|ADX|ADX = EMA(Directional Movement Index)|TA-Lib.trend.ADXIndicator|Technical analysis
+16|Affine term structure bond price|P(t,T)=exp(A(t,T)+B(t,T)'X_t)|QuantLib.BondFunctions.cleanPrice|Interest-rate modeling & term structures
+17|After-tax cost of debt|R_d,aftertax = R_d(1-T)|manual|Corporate finance, valuation & capital budgeting
+18|Aggregate loss distribution|S = sum_{i=1}^N X_i|scipy.stats|Actuarial science & insurance
+19|Allocation effect (Brinson-Fachler)|Allocation_i = (w_i^P - w_i^B)(r_i^B - r^B)|manual|Performance measurement & attribution
+20|Alpha|alpha_i = E[R_i] - [R_f + beta_i(E[R_m]-R_f)]|empyrical-reloaded|Equity valuation & asset pricing
+21|Alpha from regression|R_p-R_f = alpha + beta(R_b-R_f) + epsilon|statsmodels.OLS|Performance measurement & attribution
+22|Altman Z-score|Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5|manual|Accounting & financial statement analysis
+23|American option binomial pricing|V = max(intrinsic, discounted expected continuation)|QuantLib|Derivatives, options & volatility
+24|Amihud illiquidity|ILLIQ = mean(|R_t|/DollarVolume_t)|manual|Liquidity risk, market liquidity & execution cost
+25|Amivest liquidity ratio|Amivest = Volume / |Return||manual|Trading, execution & market microstructure
+26|Amortization factor|AF = r(1+r)^n / ((1+r)^n - 1)|numpy_financial.pmt|Banking, consumer lending & project finance
+27|Annual percentage rate (APR)|APR = periodic rate x periods per year|manual|Banking, consumer lending & project finance
+28|Annualized CPI inflation from monthly CPI|π_t^(ann) = (CPI_t / CPI_(t-1))^12 - 1|manual|Macroeconomics, inflation & price indices
+29|Annualized PPI inflation from monthly PPI|π_t^(ann) = (PPI_t / PPI_(t-1))^12 - 1|manual|Macroeconomics, inflation & price indices
+30|Annualized return (CAGR)|CAGR = (Ending Value / Beginning Value)^(1/n) - 1|empyrical-reloaded.annual_return|Performance measurement & attribution
+31|Annualized volatility|σ_ann = σ_period × √m|empyrical-reloaded.annual_volatility|Performance measurement & attribution
+32|Annuity future value|FV_annuity = PMT x ((1+r)^n - 1) / r|numpy_financial.fv|Corporate finance, valuation & capital budgeting
+33|Annuity present value|PV_annuity = PMT x (1-(1+r)^-n) / r|numpy_financial.pv|Corporate finance, valuation & capital budgeting
+34|APARCH|sigma_t^delta = omega + alpha(|eps_{t-1}|-gamma eps_{t-1})^delta + beta sigma_{t-1}^delta|arch.arch_model|Market risk & volatility modeling
+35|Appraisal ratio|Appraisal = alpha / Residual Risk|manual|Asset management & portfolio optimization
+36|Approximate price change|Delta P / P approx -D_mod Delta y + 0.5 Convexity (Delta y)^2|manual|Fixed income, bonds & credit markets
+37|AR(1)|y_t = c + φ y_{t-1} + ε_t|statsmodels.tsa.AutoReg|Econometrics & time-series finance
+38|AR(1)|x_t = c + phi x_{t-1} + epsilon_t|statsmodels.tsa.AutoReg|Econometrics & time-series finance
+39|AR(p)|x_t = c + sum_{i=1}^p phi_i x_{t-i} + epsilon_t|statsmodels.tsa.AutoReg|Econometrics & time-series finance
+40|Arbitrage pricing theory (APT)|E[R_i] = R_f + sum_k beta_{ik} lambda_k|linearmodels|Equity valuation & asset pricing
+41|ARCH(q)|sigma_t^2 = omega + sum_{i=1}^q alpha_i epsilon_{t-i}^2|arch.arch_model|Market risk & volatility modeling
+42|ARIMA(p,d,q)|phi(L)(1-L)^d x_t = c + theta(L)epsilon_t|statsmodels.tsa.ARIMA|Econometrics & time-series finance
+43|ARIMAX / dynamic regression|y_t = beta' x_t + ARIMA errors|statsmodels.tsa.SARIMAX|Econometrics & time-series finance
+44|ARMA(p,q)|x_t = c + sum phi_i x_{t-i} + epsilon_t + sum theta_i epsilon_{t-i}|statsmodels.tsa.ARIMA|Econometrics & time-series finance
+45|Aroon Down|AroonDown = 100(n - periods since n-period low)/n|TA-Lib.AROON|Technical analysis & chart-based indicators
+46|Aroon oscillator|Aroon Osc = AroonUp - AroonDown|TA-Lib.AROONOSC|Technical analysis & chart-based indicators
+47|Aroon Up|AroonUp = 100(n - periods since n-period high)/n|TA-Lib.AROON|Technical analysis & chart-based indicators
+48|Arrival price slippage|Slippage = Executed Price - Arrival Price|manual|Trading, execution & market microstructure
+49|Asian option price|V = E_Q[e^{-rT}(average(S)-K)^+]|QuantLib|Derivatives, options & volatility
+50|Asset swap spread|ASW = bond coupon spread that sets package PV to par|QuantLib.VanillaSwap|Fixed income, bonds & credit markets
+51|Asset turnover|Asset Turnover = Revenue / Average Assets|manual|Accounting & financial statement analysis
+52|Average directional index (ADX)|ADX = EMA of directional movement index|TA-Lib.ADX|Technical analysis & chart-based indicators
+53|Average loan age|ALA = weighted average seasoning of loans|manual|Structured finance & securitization
+54|Average true range (ATR)|ATR = EMA(True Range)|TA-Lib.volatility.AverageTrueRange|Technical analysis
+55|Awesome oscillator|AO = SMA_5(MedianPrice) - SMA_34(MedianPrice)|TA-Lib.momentum.AwesomeOscillatorIndicator|Technical analysis & chart-based indicators
+56|Bachelier option price|Price = DF[(F-K)N(d) + sigma sqrt(T)n(d)]|QuantLib|Interest-rate modeling & term structures
+57|Back-end DTI (gross income)|DTI_gross = Total Monthly Debt Payments / Gross Monthly Income|manual|Banking, consumer lending & project finance
+58|Back-end DTI (net income)|DTI_net = Total Monthly Debt Payments / Net Monthly Income|manual|Banking, consumer lending & project finance
+59|Backtesting exception rate|Exception Rate = exceptions / observations|manual|Market risk & volatility modeling
+60|Backwardation slope|Backwardation = 1 - F_long / F_short|manual|Commodities, futures & hedging
+61|Balloon payment|Balloon = Outstanding Balance at maturity|numpy_financial.fv|Banking, consumer lending & project finance
+62|Barrier option price|V = BS closed form with reflection terms / lattice / MC|QuantLib|Derivatives, options & volatility
+63|Basel IRB capital requirement|K = LGD[Phi((Phi^-1(PD)+sqrt(R)Phi^-1(0.999))/sqrt(1-R)) - PD] x MA|manual|Credit risk, default modeling & credit portfolio
+64|Basel standardized capital requirement|Capital = 8% x RWA|manual|Bank regulation, Basel & prudential ratios
+65|Basis|Basis = S_t - F_t|manual|Commodities, futures & hedging
+66|Basis convergence|Basis_T = 0 at maturity (ignoring delivery frictions)|manual|Commodities, futures & hedging
+67|Batting average|BA = count(alpha_t > 0)/T|quantstats.stats|Performance measurement & attribution
+68|Bayesian shrinkage return forecast|mu_hat = lambda mu_prior + (1-lambda) mu_sample|manual|Asset management & portfolio optimization
+69|Behavioral duration of deposits|D_beh = sensitivity-derived effective duration of non-maturity deposits|statsmodels|Treasury, ALM & balance-sheet management
+70|Benchmark-relative optimization|min_w (w-w_b)'Sigma(w-w_b) - lambda mu'(w-w_b)|cvxpy.Problem.solve|Asset management & portfolio optimization
+71|Benefit reserve recursion|(V_t + P)(1+i) = q Benefit + p V_{t+1}|actuarialmath|Actuarial science & insurance
+72|Beneish M-score|M = -4.84 + 0.92DSRI + 0.528GMI + 0.404AQI + 0.892SGI + 0.115DEPI - 0.172SGAI + 4.679TATA - 0.327LVGI|manual|Accounting & financial statement analysis
+73|Beta|beta_i = Cov(R_i,R_m)/Var(R_m)|empyrical-reloaded|Equity valuation & asset pricing
+74|Bid-ask spread|Spread = Ask - Bid|manual|Liquidity risk & market liquidity
+75|Binary asset-or-nothing call|AON = S e^{-qT} N(d1)|QuantLib|Derivatives, options & volatility
+76|Binomial down factor|d = 1/u|manual|Derivatives, options & volatility
+77|Binomial option pricing|V = e^{-rΔt}[pV_u + (1-p)V_d]|QuantLib.BinomialVanillaEngine|Derivatives, options & volatility
+78|Binomial up factor|u = e^{sigma sqrt(Delta t)}|manual|Derivatives, options & volatility
+79|Bipower variation|BV_t = mu_1^-2 sum |r_i||r_{i-1}||manual|Market risk & volatility modeling
+80|Black 76 option price|Price = DF[F N(d1) - K N(d2)] for call|py-vollib-gen.black|Derivatives, options & volatility
+81|Black caplet price|Caplet = DF x tau [F N(d1) - K N(d2)]|QuantLib|Interest-rate modeling & term structures
+82|Black swaption price|Swaption = A x [S N(d1) - K N(d2)]|QuantLib.VanillaSwap|Interest-rate modeling & term structures
+83|Black-76 commodity option|C = e^{-rT}[F N(d1)-K N(d2)]|py-vollib-gen.black.black|Commodities, futures & hedging
+84|Black-Litterman implied equilibrium returns|Pi = delta Sigma w_mkt|PyPortfolioOpt.EfficientFrontier|Asset management & portfolio optimization
+85|Black-Litterman posterior mean|μ_BL = [(τΣ)^(-1)+P^TΩ^(-1)P]^(-1)[(τΣ)^(-1)π + P^TΩ^(-1)Q]|PyPortfolioOpt.EfficientFrontier|Asset management & portfolio optimization
+86|Black-Scholes call|C = S_0 e^{-qT}N(d1) - K e^{-rT}N(d2)|py-vollib-gen.black_scholes|Derivatives, options & volatility
+87|Black-Scholes put|P = K e^{-rT}N(-d2) - S_0 e^{-qT}N(-d1)|py-vollib-gen.black_scholes|Derivatives, options & volatility
+88|Black-Scholes-Merton d1|d1 = [ln(S/K)+(r-q+0.5 sigma^2)T]/(sigma sqrt(T))|py-vollib-gen|Derivatives, options & volatility
+89|Black-Scholes-Merton d2|d2 = d1 - sigma sqrt(T)|py-vollib-gen|Derivatives, options & volatility
+90|Bollinger %B|%B = (P-Lower)/(Upper-Lower)|TA-Lib.BBANDS|Technical analysis & chart-based indicators
+91|Bollinger Bands lower|Lower = SMA_n - k sigma_n|TA-Lib.BBANDS|Technical analysis & chart-based indicators
+92|Bollinger Bands middle|Middle = SMA_n(P)|TA-Lib.BBANDS|Technical analysis & chart-based indicators
+93|Bollinger Bands upper|Upper = SMA_n + k sigma_n|TA-Lib.BBANDS|Technical analysis & chart-based indicators
+94|Bollinger bandwidth|Bandwidth = (Upper-Lower)/Middle|TA-Lib.BBANDS|Technical analysis & chart-based indicators
+95|Bond carry and roll|Carry+Roll = coupon income + financing + curve roll-down|manual|Fixed income, bonds & credit markets
+96|Bond equivalent yield (BEY)|BEY = 2[(1+HPY)^(182/d) - 1]|manual|Fixed income, bonds & credit markets
+97|Bond price|P = Σ_{t=1}^n C_t/(1+y/m)^(mt) + FV/(1+y/m)^(mn)|QuantLib.Bond|Fixed income & bond math
+98|Bond price from yield|P = sum_t C/(1+y/m)^(mt) + F/(1+y/m)^(mT)|QuantLib.BondFunctions.bondYield|Fixed income, bonds & credit markets
+99|Book value per share|BVPS = Equity / Shares Outstanding|manual|Accounting & financial statement analysis
+100|Book-to-market ratio|Book-to-market = Book Equity / Market Cap|manual|Equity valuation & asset pricing
+101|Bornhuetter-Ferguson reserve|Ultimate = Reported + (Expected Ultimate x %Unreported)|manual|Actuarial science & insurance
+102|Borrowing base|Borrowing Base = sum_i Eligible Collateral_i x Advance Rate_i|manual|Banking, consumer lending & project finance
+103|Break-even inflation|BEI = Nominal Yield - Real Yield|manual|Fixed income, bonds & credit markets
+104|Break-even occupancy|BEO = (Operating Expenses + Debt Service) / Gross Potential Income|manual|Real estate finance & mortgages
+105|Break-even quantity|Q_BE = Fixed Costs / (Price - Variable Cost per unit)|manual|Corporate finance, valuation & capital budgeting
+106|Break-even revenue|Sales_BE = Fixed Costs / Contribution Margin Ratio|manual|Corporate finance, valuation & capital budgeting
+107|Breusch-Pagan test|LM = nR^2 from auxiliary regression of e^2 on X|statsmodels|Econometrics & time-series finance
+108|Brinson allocation effect|Allocation_i = (w_{p,i}-w_{b,i})·(R_{b,i}-R_b)|manual|Performance measurement & attribution
+109|Brinson selection effect|Selection_i = w_{b,i}·(R_{p,i}-R_{b,i})|manual|Performance measurement & attribution
+110|Bühlmann credibility factor|Z = n/(n+K)|actuarialmath|Actuarial science & insurance
+111|Burke ratio|Burke = Excess Return / sqrt(sum Drawdown_i^2)|quantstats.stats|Asset management & portfolio optimization
+112|Butterfly payoff|Payoff = max(S-K1,0)-2max(S-K2,0)+max(S-K3,0)|manual|Derivatives, options & volatility
+113|Calendar spread|Spread = F_near - F_far|manual|Commodities, futures & hedging
+114|Call payoff|C_T = max(S_T - K, 0)|manual|Derivatives, options & volatility
+115|Call spread payoff|Payoff = max(S-K1,0) - max(S-K2,0)|manual|Derivatives, options & volatility
+116|Calmar ratio|Calmar = CAGR / Max Drawdown|empyrical-reloaded.calmar_ratio|Asset management & portfolio optimization
+117|Cancel-to-trade ratio|CTR = Number of cancellations / Number of trades|manual|Liquidity risk, market liquidity & execution cost
+118|Capital conservation buffer|CCB = CET1 Ratio - minimum CET1 requirement|manual|Bank regulation, Basel & prudential ratios
+119|Capitalization rate|Cap Rate = NOI / Property Value|manual|Real estate finance
+120|CAPM expected return|E[R_i] = R_f + beta_i(E[R_m]-R_f)|manual|Equity valuation & asset pricing
+121|Carhart 4-factor model|R_i-R_f = alpha + b MKT + s SMB + h HML + m MOM + epsilon|linearmodels|Equity valuation & asset pricing
+122|Cash conversion cycle (CCC)|CCC = DSO + DIO - DPO|manual|Accounting & financial statement analysis
+123|Cash flow at risk (CFaR)|CFaR_alpha = quantile_alpha(future cash flow shortfall)|manual|Treasury, ALM & balance-sheet management
+124|Cash flow margin|CF Margin = Operating Cash Flow / Revenue|manual|Accounting & financial statement analysis
+125|Cash interest coverage|(EBITDA - Capex) / Cash Interest|manual|Private equity, venture capital & LBO
+126|Cash ratio|Cash Ratio = (Cash + Marketable Securities) / Current Liabilities|manual|Accounting & financial statement analysis
+127|Cash sweep|Debt Paydown_t = max(FCF_t - Required Cash,0)|manual|Private equity, venture capital & LBO
+128|Cash-on-cash return|CoC = Before-tax Cash Flow / Equity Invested|manual|Real estate finance & mortgages
+129|Cash-out refinance LTV|Max Refi Proceeds = Appraised Value x Max LTV|manual|Real estate finance & mortgages
+130|Catch-up distribution|Catch-up = distribute until GP achieves target carry split|manual|Private equity, venture capital & LBO
+131|CDO tranche loss|Loss_tranche = min(max(PoolLoss-Attach,0), Detach-Attach)|manual|Structured finance & securitization
+132|CDS par spread|S* = PV_protection / PV01|QuantLib|Fixed income, bonds & credit markets
+133|CDS premium leg|PV_prem = S sum_i alpha_i DF_i Survival(t_i)|QuantLib|Fixed income, bonds & credit markets
+134|CDS protection leg|PV_prot = LGD integral DF(t) dQ(t)|QuantLib|Fixed income, bonds & credit markets
+135|CDS spread approximation|s ≈ λ(1-R)|QuantLib.CreditDefaultSwap|Credit risk
+136|CET1 ratio|CET1 Ratio = CET1 Capital / Risk-Weighted Assets|manual|Banking, lending & project finance
+137|Chaikin money flow (CMF)|CMF = sum(MFM x Volume)/sum Volume over n|TA-Lib.volume.ChaikinMoneyFlowIndicator|Technical analysis & chart-based indicators
+138|Chaikin oscillator|CHO = EMA_3(ADL) - EMA_10(ADL)|TA-Lib.ADOSC|Technical analysis & chart-based indicators
+139|Chain-ladder development|Ultimate_i = Latest_i x CDF_i|manual|Actuarial science & insurance
+140|Charm|Charm = d(Delta)/dt|QuantLib|Derivatives, options & volatility
+141|Chooser option value|V = value of right to choose call or put at decision time|QuantLib|Derivatives, options & volatility
+142|Christoffersen independence test|LR_ind = -2 ln(L_restricted/L_unrestricted)|scipy.stats|Market risk & volatility modeling
+143|CIR short-rate model|dr_t = κ(θ-r_t)dt + σ√(r_t)dW_t|QuantLib.CoxIngersollRoss|Interest-rate modeling & term structures
+144|CIR zero-coupon bond price|P(t,T) = A(t,T) exp(-B(t,T)r_t)|QuantLib.BondFunctions.cleanPrice|Interest-rate modeling & term structures
+145|Claims ratio|Claims Ratio = Claims Incurred / Earned Premium|manual|Actuarial science & insurance
+146|Clean price|Clean Price = Dirty Price - Accrued Interest|QuantLib|Fixed income, bonds & credit markets
+147|CLTV for mortgage|All Secured Debt / Property Value|manual|Real estate finance & mortgages
+148|Cointegration regression|y_t = alpha + beta x_t + u_t with u_t stationary|statsmodels.tsa.stattools.coint|Econometrics & time-series finance
+149|Collateral haircut|Haircut = 1 - Lending Value / Market Value|manual|Credit risk, default modeling & credit portfolio
+150|Color|Color = d(Gamma)/dt|QuantLib|Derivatives, options & volatility
+151|Combined leverage|DCL = DOL x DFL|manual|Corporate finance, valuation & capital budgeting
+152|Combined loan-to-value (CLTV)|CLTV = Total Secured Debt / Collateral Value|manual|Banking, consumer lending & project finance
+153|Combined ratio|Combined Ratio = Loss Ratio + Expense Ratio|manual|Actuarial science & insurance
+154|Commodity carry return|Carry = collateral yield + roll yield + spot return|manual|Commodities, futures & hedging
+155|Commodity channel index (CCI)|CCI = (TP - SMA(TP)) / (0.015 x MeanDeviation)|TA-Lib.CCI|Technical analysis & chart-based indicators
+156|Commodity storage arbitrage|Arbitrage if F_0 > S_0 e^{(r+u-y)T}|manual|Commodities, futures & hedging
+157|Component risk contribution|CRC_i = w_i·MRC_i|Riskfolio-Lib.Portfolio.optimization|Asset management & portfolio optimization
+158|Component VaR|CVaR_i = w_i × MVaR_i|Riskfolio-Lib.Portfolio.optimization|Market risk & volatility modeling
+159|Component VaR|CVaR_i = w_i dVaR/dw_i|manual|Market risk & volatility modeling
+160|Compounded forward rate|1+F tau = DF(t1)/DF(t2)|QuantLib|Interest-rate modeling & term structures
+161|Conditional prepayment rate (CPR)|CPR = 1 - (1 - SMM)^12|manual|Structured finance & securitization
+162|Conditional prepayment rate (CPR)|CPR = 1 - (1-SMM)^12|manual|Structured finance & securitization
+163|Constant force survival|{}_tp_x = e^{-mu t}|actuarialmath|Actuarial science & insurance
+164|Consumer Price Index (Laspeyres form)|CPI_t = (Σ_i p_(i,t) q_(i,0) / Σ_i p_(i,0) q_(i,0)) × 100|manual|Macroeconomics, inflation & price indices
+165|Contango slope|Contango = F_long / F_short - 1|manual|Commodities, futures & hedging
+166|Continuous compounding|FV = PV·e^{rt}|QuantLib.InterestRate|Interest-rate modeling & term structures
+167|Contribution margin|CM = Revenue - Variable Costs|manual|Corporate finance, valuation & capital budgeting
+168|Contribution margin ratio|CMR = Contribution Margin / Revenue|manual|Corporate finance, valuation & capital budgeting
+169|Contribution to return|CTR_i = w_i x r_i|manual|Performance measurement & attribution
+170|Convenience yield|y = r + u - (1/T)ln(F_0/S_0)|manual|Commodities, futures & hedging
+171|Convenience yield from futures curve|y = r + u - ln(F/S)/T|manual|Commodities, futures & hedging
+172|Convexity|Convexity = (1/P) d^2P/dy^2|QuantLib.BondFunctions.convexity|Fixed income, bonds & credit markets
+173|Convexity-adjusted futures rate|F_adj approx F + 0.5 sigma^2 T1 T2|QuantLib.BondFunctions.convexity|Interest-rate modeling & term structures
+174|Cornish-Fisher VaR|VaR_CF = μ + σ[z + (z^2-1)S/6 + (z^3-3z)K/24 - (2z^3-5z)S^2/36]|Riskfolio-Lib.Portfolio.optimization|Market risk & volatility modeling
+175|Cost of equity (CAPM)|R_e = R_f + beta(E[R_m]-R_f)|manual|Corporate finance, valuation & capital budgeting
+176|Cost of equity (Dividend growth)|R_e = D_1/P_0 + g|manual|Corporate finance, valuation & capital budgeting
+177|Cost of risk|Cost of Risk = Loan Loss Provision / Average Gross Loans|manual|Banking, consumer lending & project finance
+178|Cost-of-carry futures price|F_0 = S_0 e^{(r + u - y)T}|manual|Commodities, futures & hedging
+179|Countercyclical capital buffer|CCyB = jurisdiction-specific add-on to CET1 requirement|manual|Bank regulation, Basel & prudential ratios
+180|Covariance matrix|Σ = E[(R-μ)(R-μ)^T]|PyPortfolioOpt.risk_models.sample_cov|Asset management & portfolio optimization
+181|Coverage ratio|Allowance / Nonperforming Assets|manual|Credit risk, default modeling & credit portfolio
+182|Covered call payoff|Payoff = S_T - max(S_T-K,0) + Premium|manual|Derivatives, options & volatility
+183|Covered interest parity (CIP)|F/S = (1+i_d)/(1+i_f) |QuantLib|FX & international finance
+184|Cox proportional hazards|h(t|x)=h_0(t)exp(beta'x)|lifelines.CoxPHFitter|Econometrics & time-series finance
+185|Cox-Ingersoll-Ross (CIR) process|dr_t = a(b-r_t)dt + sigma sqrt(r_t)dW_t|QuantLib.CoxIngersollRoss|Interest-rate modeling & term structures
+186|CPI inflation (month over month)|π_t^(CPI,MoM) = CPI_t / CPI_(t-1) - 1|manual|Macroeconomics, inflation & price indices
+187|CPI inflation (year over year)|π_t^(CPI,YoY) = CPI_t / CPI_(t-12) - 1|manual|Macroeconomics, inflation & price indices
+188|Crack spread|Crack Spread = Product Futures Value - Crude Futures Cost|manual|Commodities, futures & hedging
+189|Credibility premium|Premium = Z x Experience Mean + (1-Z) x Manual Mean|actuarialmath|Actuarial science & insurance
+190|Credit conversion factor (CCF)|CCF = (EAD - Outstanding) / Undrawn|manual|Banking, consumer lending & project finance
+191|Credit portfolio variance (independent defaults)|Var(L) = sum_i EAD_i^2 LGD_i^2 PD_i(1-PD_i)|manual|Credit risk, default modeling & credit portfolio
+192|Credit RWA under standardized approach|Credit_RWA = EAD x supervisory risk weight|manual|Bank regulation, Basel & prudential ratios
+193|Credit spread|Credit Spread = Corporate Yield - Risk-free Yield|manual|Credit risk, default modeling & credit portfolio
+194|Credit VaR|CreditVaR = quantile_alpha(loss distribution) - expected loss|manual|Credit risk, default modeling & credit portfolio
+195|Cross exchange rate|S_{A/C} = S_{A/B} × S_{B/C}|manual|FX & international finance
+196|Cross-currency basis|Basis = quoted basis spread that equalizes swap PV|QuantLib|FX & international finance
+197|Cross-hedge ratio|h_x = rho (sigma_S / sigma_F)|manual|Commodities, futures & hedging
+198|Cumulative gap|CumGap_T = sum_{t<=T} Gap_t|manual|Treasury, ALM & balance-sheet management
+199|Cumulative inflation factor from CPI|Inflation Factor_(0→t) = CPI_t / CPI_0|manual|Macroeconomics, inflation & price indices
+200|Cumulative inflation factor from PPI|Inflation Factor_(0→t) = PPI_t / PPI_0|manual|Macroeconomics, inflation & price indices
+201|Cumulative liquidity gap|CumLiquidityGap_T = sum_{t<=T} (Inflows_t - Outflows_t)|manual|Treasury, ALM & balance-sheet management
+202|Cumulative net loss|CNL = cumulative(net charge-offs) / original balance|manual|Structured finance & securitization
+203|Cumulative return|R_cum = Π_t (1+r_t) - 1|empyrical-reloaded|Performance measurement & attribution
+204|Cure rate|Cure Rate = cured delinquent accounts / delinquent accounts|manual|Credit risk, default modeling & credit portfolio
+205|Currency basket index|Index_t = prod_i S_{i,t}^{w_i}|manual|FX & international finance
+206|Currency carry return|Carry = i_high - i_low + FX change|manual|FX & international finance
+207|Current ratio|Current Ratio = Current Assets / Current Liabilities|manual|Accounting & financial statement analysis
+208|Current yield|Current Yield = Annual Coupon / Bond Price|manual|Fixed income, bonds & credit markets
+209|Curtate expected future lifetime|e_x^∘ = sum_{k>=1} {}_kp_x|actuarialmath|Actuarial science & insurance
+210|CVA capital proxy|CVA Capital ~ sensitivity-based or standardized charge|manual|Bank regulation, Basel & prudential ratios
+211|d1|d1 = [ln(S/K) + (r + 0.5σ^2)T] / (σ√T)|py-vollib-gen|Derivatives, options & volatility
+212|d2|d2 = d1 - σ√T|py-vollib-gen|Derivatives, options & volatility
+213|Days inventory outstanding (DIO)|DIO = 365 x Average Inventory / COGS|manual|Accounting & financial statement analysis
+214|Days payables outstanding (DPO)|DPO = 365 x Average AP / COGS|manual|Accounting & financial statement analysis
+215|Days sales outstanding (DSO)|DSO = 365 x Average AR / Revenue|manual|Accounting & financial statement analysis
+216|Days to liquidate|DTL = Position Size / (ADV x Participation Limit)|manual|Liquidity risk, market liquidity & execution cost
+217|Death probability|{}_tq_x = 1 - {}_tp_x|actuarialmath|Actuarial science & insurance
+218|Debt burden ratio|Debt Burden = Total Debt Service / Gross Income|manual|Banking, consumer lending & project finance
+219|Debt service|Debt Service = Interest + Scheduled Principal + Lease/Rent if included|manual|Banking, consumer lending & project finance
+220|Debt service coverage ratio (DSCR)|DSCR = Net Operating Income  / Debt Service|manual|Banking, consumer lending & project finance
+221|Debt yield|Debt Yield = Net Operating Income/ Loan Amount|manual|Banking, consumer lending & project finance
+222|Debt-to-assets|Debt_to_assets = Debt / Assets|manual|Accounting & financial statement analysis
+223|Debt-to-equity|Debt_to_equity = Debt / Equity|manual|Accounting & financial statement analysis
+224|Debt-to-income residual|Residual Income = Net Income - Taxes - Housing Costs - Other Debt Payments|manual|Banking, consumer lending & project finance
+225|Decreasing annuity|(Da)_{x:n} = E[sum_{k=1}^n (n-k+1) v^k 1(T_x>=k)]|actuarialmath|Actuarial science & insurance
+226|Default rate|Default Rate = Defaults / Current or Original Balance|manual|Structured finance & securitization
+227|Delinquency ratio|Delinquency Ratio = Delinquent Loans / Gross Loans|manual|Banking, consumer lending & project finance
+228|Delinquency trigger|Trigger breached if delinquency ratio > threshold|manual|Structured finance & securitization
+229|Delta (call)|Delta = e^{-qT}N(d1)|py-vollib-gen.greeks|Derivatives, options & volatility
+230|Delta (put)|Delta = -e^{-qT}N(-d1)|py-vollib-gen.greeks|Derivatives, options & volatility
+231|Delta-normal VaR|VaR = z_alpha sqrt(Delta' Sigma Delta)|manual|Market risk & volatility modeling
+232|Deposit beta|Deposit Beta = Delta Deposit Rate / Delta Market Rate|statsmodels.OLS|Treasury, ALM & balance-sheet management
+233|Detrended price oscillator (DPO)|DPO = Price shifted - SMA|TA-Lib|Technical analysis & chart-based indicators
+234|Digital call price|Digital = e^{-rT} N(d2)|QuantLib|Derivatives, options & volatility
+235|Digital put price|Digital = e^{-rT} N(-d2)|QuantLib|Derivatives, options & volatility
+236|Diluted EPS|Diluted EPS = Diluted Net Income Available to Common / Diluted Shares|manual|Accounting & financial statement analysis
+237|Dirty price|Dirty Price = Clean Price + Accrued Interest|QuantLib.Bond.dirtyPrice|Fixed income & bond math
+238|Discount factor|DF_t = 1 / (1+r)^t|manual|Corporate finance, valuation & capital budgeting
+239|Discount yield (T-bill)|Discount Yield = (F-P)/F x 360/d|manual|Fixed income, bonds & credit markets
+240|Discounted payback period|Discounted Payback = min{t : Σ_{i≤t} CF_i/(1+r)^i ≥ Initial Outlay}|manual|Corporate finance & capital budgeting
+241|Distance to default (DD)|DD = [ln(V_A/D) + (mu_A - 0.5 sigma_A^2)T] / (sigma_A sqrt(T))|manual|Credit risk, default modeling & credit portfolio
+242|Diversification ratio|DR = w_i (Sigma w)_i / sigma_p|Riskfolio-Lib.Portfolio.optimization|Asset management & portfolio optimization
+243|Dividend coverage|Coverage = EPS / DPS|manual|Equity valuation & asset pricing
+244|Dividend discount model (DDM)|P_0 = sum_t D_t/(1+r)^t|manual|Corporate finance, valuation & capital budgeting
+245|Dividend discount model (Gordon growth)|P_0 = D_1 / (r - g)|manual|Equity valuation & asset pricing
+246|Dividend payout ratio|Payout = Dividends / Net Income|manual|Accounting & financial statement analysis
+247|Dividend yield|Dividend Yield = Annual Dividend per Share / Price per Share|manual|Corporate finance, valuation & capital budgeting
+248|Dollar duration|Dollar Duration = Modified Duration x Price|QuantLib.BondFunctions.duration|Fixed income, bonds & credit markets
+249|Dollar volume|Dollar Volume = Price x Shares Traded|manual|Liquidity risk, market liquidity & execution cost
+250|Donchian channel lower|Lower = rolling min(L,n)|TA-Lib.volatility.DonchianChannel|Technical analysis & chart-based indicators
+251|Donchian channel upper|Upper = rolling max(H,n)|TA-Lib.volatility.DonchianChannel|Technical analysis & chart-based indicators
+252|Downside capture|Downside Capture = Avg(R_p | R_b<0) / Avg(R_b | R_b<0)|quantstats.stats|Performance measurement & attribution
+253|Downside deviation|DD = sqrt(E[min(R-MAR,0)^2])|empyrical-reloaded|Market risk & volatility modeling
+254|DPI|DPI = Distributions / Paid-In Capital|manual|Private equity, venture capital & LBO
+255|Drawdown|DD_t = V_t/peak_t - 1|empyrical-reloaded.max_drawdown|Market risk & volatility modeling
+256|Drawdown duration|Duration = consecutive periods below prior high|quantstats.stats|Performance measurement & attribution
+257|Duration gap|DGAP = D_A - (L/A) D_L|manual|Treasury, ALM & balance-sheet management
+258|Duration times spread (DTS)|DTS = Spread x Spread Duration|manual|Fixed income, bonds & credit markets
+259|Duration-neutral hedge ratio|h = DV01_asset / DV01_hedge|QuantLib.BondFunctions.duration|Interest-rate modeling & term structures
+260|Durbin-Watson|DW = sum_t(e_t-e_{t-1})^2 / sum_t e_t^2|statsmodels|Econometrics & time-series finance
+261|DV01 / PVBP|DV01 = -dP/dy x 0.0001|QuantLib|Fixed income, bonds & credit markets
+262|Earnings at risk|EaR_alpha = quantile_alpha(future earnings shortfall)|manual|Treasury, ALM & balance-sheet management
+263|Earnings yield|E/P = EPS / Price|manual|Equity valuation & asset pricing
+264|EBIT|EBIT = Revenue - Operating Expenses|manual|Accounting & financial statement analysis
+265|EBITDA|EBITDA = EBIT + D&A|manual|Accounting & financial statement analysis
+266|EBITDA margin|EBITDA Margin = EBITDA / Revenue|manual|Accounting & financial statement analysis
+267|Economic value added (EVA)|EVA = NOPAT - WACC x Invested Capital|manual|Corporate finance, valuation & capital budgeting
+268|Economic value of equity (EVE)|EVE = PV(Assets) - PV(Liabilities)|QuantLib|Treasury, ALM & balance-sheet management
+269|Economic value of equity sensitivity|ΔEVE ≈ -DGAP × A × Δy / (1+y)|QuantLib.BondFunctions.duration|Treasury, ALM & balance-sheet management
+270|Effective annual rate (EAR)|EAR = (1+r/m)^m - 1|manual|Banking, consumer lending & project finance
+271|Effective convexity|EffConv = (P_- + P_+ - 2P_0)/(P_0 (Delta y)^2)|QuantLib.BondFunctions.convexity|Fixed income, bonds & credit markets
+272|Effective duration|EffDur = (P_- - P_+) / (2P_0 Delta y)|QuantLib.BondFunctions.duration|Fixed income, bonds & credit markets
+273|Effective gross income|EGI = Potential Gross Income - Vacancy/Credit Loss + Other Income|manual|Real estate finance & mortgages
+274|Effective spread|EffSpread = 2 x |Trade Price - Mid||manual|Liquidity risk, market liquidity & execution cost
+275|Efficient frontier problem|min_w w'Sigma w s.t. mu'w >= r* and 1'w=1|PyPortfolioOpt.EfficientFrontier|Asset management & portfolio optimization
+276|EGARCH|ln sigma_t^2 = omega + alpha(|e_{t-1}|-E|e|) + gamma e_{t-1} + beta ln sigma_{t-1}^2|arch.univariate.EGARCH|Market risk & volatility modeling
+277|EGARCH(1,1)|lnσ_t^2 = ω + α(|e_{t-1}|-E|e|) + γ e_{t-1} + β lnσ_{t-1}^2|arch.univariate.EGARCH|Market risk & volatility modeling
+278|Elastic net|beta_hat = argmin ||y-X beta||^2 + lambda[(1-alpha)||beta||_2^2/2 + alpha||beta||_1]|sklearn.ElasticNet|Quantitative forecasting & machine learning in finance
+279|Encumbrance ratio|Encumbrance = Encumbered Assets / Total Assets|manual|Bank regulation, Basel & prudential ratios
+280|Endowment insurance APV|Abar_{x:n} + {}_nE_x|actuarialmath|Actuarial science & insurance
+281|Enterprise value|EV = Equity Value + Net Debt + Preferred + Minority Interest|manual|Corporate finance, valuation & capital budgeting
+282|Enterprise value in LBO|EV = Entry EBITDA x Entry Multiple|manual|Private equity, venture capital & LBO
+283|EPS|EPS = Net Income / Weighted Avg Shares|manual|Accounting & financial statement analysis
+284|Equal risk contribution|Choose w such that RC_i are equal|Riskfolio-Lib.Portfolio.optimization|Asset management & portfolio optimization
+285|Equal-weight portfolio|w_i = 1/N|manual|Asset management & portfolio optimization
+286|Equated monthly installment (EMI)|EMI = P r (1+r)^n / ((1+r)^n - 1)|numpy_financial.pmt|Banking, consumer lending & project finance
+287|Equity check multiple of EBITDA|Equity / EBITDA|manual|Private equity, venture capital & LBO
+288|Equity contribution|Sponsor Equity = Uses - Debt - Existing Cash|manual|Private equity, venture capital & LBO
+289|Equity multiple|EM = Total Equity Distributions / Equity Invested|manual|Real estate finance & mortgages
+290|Equity ratio|Equity Ratio = Total Equity / Total Assets|manual|Accounting & financial statement analysis
+291|Equity rollover percentage|Rollover = Management Rollover Equity / Total Equity|manual|Private equity, venture capital & LBO
+292|Equity value at exit|Equity_exit = EV_exit - Net Debt_exit|manual|Private equity, venture capital & LBO
+293|Equity value bridge|Equity Value = EV - Net Debt - Preferred - Minority Interest + Non-operating Assets|manual|Corporate finance, valuation & capital budgeting
+294|Equivalent annual annuity (EAA)|EAA = NPV x r / (1-(1+r)^-n)|manual|Corporate finance, valuation & capital budgeting
+295|Error correction model|Delta y_t = alpha + beta Delta x_t + lambda(y_{t-1} - theta x_{t-1}) + epsilon_t|statsmodels.tsa.VECM|Econometrics & time-series finance
+296|EV/EBIT|EV / EBIT|manual|Equity valuation & asset pricing
+297|EV/EBITDA|Enterprise Value / EBITDA|manual|Corporate finance, valuation & capital budgeting
+298|EV/Sales|Enterprise Value / Revenue|manual|Corporate finance, valuation & capital budgeting
+299|EVE sensitivity|Delta EVE / EVE approx -DGAP x Delta y|manual|Treasury, ALM & balance-sheet management
+300|EWMA volatility|sigma_t^2 = lambda sigma_{t-1}^2 + (1-lambda) r_{t-1}^2|manual|Market risk & volatility modeling
+301|Ex-ante tracking error|TE = sqrt((w-w_b)' Sigma (w-w_b))|PyPortfolioOpt.EfficientFrontier|Asset management & portfolio optimization
+302|Excess kurtosis|Kurt = E[(R-mu)^4]/sigma^4 - 3|scipy.stats|Market risk & volatility modeling
+303|Excess return|ER = R_p - R_b|empyrical-reloaded|Performance measurement & attribution
+304|Excess spread|Excess Spread = Asset Yield - Funding Cost - Servicing Fee - Charge-offs|manual|Structured finance & securitization
+305|Exit enterprise value|Exit EV = Exit EBITDA × Exit Multiple|manual|Private equity, venture capital & LBO
+306|Expected credit loss (IFRS 9/CECL)|ECL = sum_t PD_t x LGD_t x EAD_t x DF_t|manual|Credit risk, default modeling & credit portfolio
+307|Expected drawdown|EDD = E[max_{t<=T} drawdown_t]|manual|Market risk & volatility modeling
+308|Expected exposure (EE)|EE_t = E[max(V_t,0)]|QuantLib|Credit risk, default modeling & credit portfolio
+309|Expected future lifetime|e_x = E[T_x] = int_0^∞ {}_tp_x dt|actuarialmath|Actuarial science & insurance
+310|Expected loss|EL = PD × LGD × EAD|manual|Credit risk
+311|Expected positive exposure (EPE)|EPE = (1/T) int_0^T EE_t dt|QuantLib|Credit risk, default modeling & credit portfolio
+312|Expected principal collection|Principal_t = Scheduled_t + Prepayment_t - Defaults_t + Recoveries_t|absbox|Structured finance & securitization
+313|Expected shortfall (CVaR)|ES_α = -E[R | R ≤ Quantile_α(R)]|Riskfolio-Lib.Portfolio.optimization|Market risk & volatility modeling
+314|Expense ratio|Expense Ratio = Underwriting Expenses / Net Premiums Earned|manual|Actuarial science & insurance
+315|Explained variance ratio|EVR_i = lambda_i / sum_j lambda_j|sklearn.decomposition.PCA|Quantitative forecasting & machine learning in finance
+316|Exposure at default (EAD)|EAD = Outstanding + CCF x Undrawn|manual|Banking, consumer lending & project finance
+317|Exposure weighted average rating factor|WARF = sum_i w_i RatingFactor_i|manual|Credit risk, default modeling & credit portfolio
+318|Factor model decomposition|X approx F B' + U|sklearn.decomposition.PCA|Quantitative forecasting & machine learning in finance
+319|Fama-French 3-factor model|R_i-R_f = alpha + beta_MKT MKT + beta_SMB SMB + beta_HML HML + epsilon|linearmodels|Equity valuation & asset pricing
+320|Fama-French 5-factor model|R_i-R_f = alpha + b MKT + s SMB + h HML + r RMW + c CMA + epsilon|linearmodels|Equity valuation & asset pricing
+321|Fama-MacBeth cross-sectional regression|R_{i,t} = λ_{0,t} + λ_t^T β_i + ε_{i,t}|linearmodels.panel.FamaMacBeth|Econometrics & time-series finance
+322|FCF yield|FCF Yield = Free Cash Flow / Market Cap or EV|manual|Equity valuation & asset pricing
+323|FCFE|FCFE = Net Income + D&A - Capex - ΔNWC + Net Borrowing|manual|Corporate finance & capital budgeting
+324|FCFE DCF intrinsic value|Equity Value = sum_t FCFE_t/(1+R_e)^t + TV/(1+R_e)^T|manual|Equity valuation & asset pricing
+325|FCFF|FCFF = EBIT·(1-T) + D&A - Capex - ΔNWC|manual|Corporate finance & capital budgeting
+326|FCFF DCF intrinsic value|EV = sum_t FCFF_t/(1+WACC)^t + TV/(1+WACC)^T|manual|Equity valuation & asset pricing
+327|Fill ratio|Fill Ratio = Executed Quantity / Submitted Quantity|manual|Liquidity risk, market liquidity & execution cost
+328|Financial leverage|DFL = %Delta EPS / %Delta EBIT|manual|Corporate finance, valuation & capital budgeting
+329|Fixed asset turnover|Fixed Asset Turnover = Revenue / Average Net PP&E|manual|Accounting & financial statement analysis
+330|Fixed effects panel model|y_it = alpha_i + x_it' beta + u_it|linearmodels.PanelOLS|Econometrics & time-series finance
+331|Fixed-charge coverage|(EBITDA - Capex - Cash Taxes) / (Interest + Scheduled Amortization + Lease)|manual|Private equity, venture capital & LBO
+332|Floating-rate note coupon|Coupon_t = Reference Rate_t + Spread|QuantLib|Fixed income, bonds & credit markets
+333|Force of mortality|mu_x = f_x / S_x = -d ln S_x / dx|actuarialmath|Actuarial science & insurance
+334|Forward FX outright|F = S e^{(r_d-r_f)T}|QuantLib|FX & international finance
+335|Forward P/E|Forward P/E = Price / Next-12m EPS|manual|Equity valuation & asset pricing
+336|Forward price on non-dividend asset|F_0 = S_0 e^{rT}|py-vollib-gen|Derivatives, options & volatility
+337|Forward price with carry|F_0 = S_0 e^{(r+u-y)T}|QuantLib|Derivatives, options & volatility
+338|Forward rate|f_{t1,t2} = (DF(t1)/DF(t2) - 1)/(t2 - t1)|QuantLib forwardRate|Fixed income & bond math
+339|Forward rate from discount factors|f(t1,t2) = DF(t1)/DF(t2) - 1 over year fraction|QuantLib|Fixed income, bonds & credit markets
+340|Forward rate from spot rates|f_{1,2} = [(1+z_2)^2/(1+z_1)] - 1|QuantLib|Fixed income, bonds & credit markets
+341|FRA payoff|Payoff = N(R_fix - R_ref)tau / (1+R_ref tau)|QuantLib.ForwardRateAgreement|Fixed income, bonds & credit markets
+342|FRA rate|FRA = (DF(t1)/DF(t2)-1)/τ|QuantLib.ForwardRateAgreement|Interest-rate modeling & term structures
+343|Free cash flow|FCF = Operating Cash Flow - Capex|manual|Accounting & financial statement analysis
+344|Free cash flow margin|FCF Margin = FCF / Revenue|manual|Accounting & financial statement analysis
+345|Free cash flow to equity (FCFE)|FCFE = Net Income + D&A - Capex - DeltaNWC + Net Borrowing|manual|Corporate finance, valuation & capital budgeting
+346|Free cash flow to firm (FCFF)|FCFF = EBIT(1-T) + D&A - Capex - DeltaNWC|manual|Corporate finance, valuation & capital budgeting
+347|FRN discount margin|Price = sum_t CF_t/(1+Ref_t+DM)^t|QuantLib|Fixed income, bonds & credit markets
+348|Front-end housing ratio|Housing Expense / Gross Income|manual|Real estate finance & mortgages
+349|Front-end ratio / housing expense ratio|Front-End = Housing Expense / Gross Monthly Income|manual|Banking, consumer lending & project finance
+350|Fund carried interest|Carry = max(0, Distributions - Capital Return - Hurdle) x Carry %|manual|Private equity, venture capital & LBO
+351|Funding liquidity spread|Funding Liquidity = unsecured rate - OIS or Treasury|manual|Liquidity risk, market liquidity & execution cost
+352|Funding spread|Funding Spread = Loan Yield - Funding Cost|manual|Banking, consumer lending & project finance
+353|Funds transfer pricing spread|FTP Spread = Transfer Rate - Reference Curve Rate|QuantLib yield-curve tools|Treasury, ALM & balance-sheet management
+354|Funds transfer pricing spread|FTP Spread = Customer Rate - Internal Transfer Rate|manual|Treasury, ALM & balance-sheet management
+355|Future value|FV = PV × (1+r)^n|numpy_financial.fv|Corporate finance & capital budgeting
+356|FX cross rate|S_{A/C} = S_{A/B} x S_{B/C}|manual|FX & international finance
+357|FX forward points|Points = F - S|manual|FX & international finance
+358|FX forward points annualized|Annualized Points = (F/S - 1)/T|manual|FX & international finance
+359|FX hedge ratio|h = Foreign Currency Exposure / Hedge Notional|manual|FX & international finance
+360|FX option (Garman-Kohlhagen)|C = S e^{-r_f T}N(d1) - K e^{-r_d T}N(d2)|QuantLib|Derivatives, options & volatility
+361|FX option Garman-Kohlhagen d1|d1 = [ln(S/K)+(r_d-r_f+0.5 sigma^2)T]/(sigma sqrt(T))|QuantLib|FX & international finance
+362|FX spot quote inversion|S_{A/B} = 1 / S_{B/A}|manual|FX & international finance
+363|FX swap points|Swap Points = F - S|manual|FX & international finance
+364|FX transaction exposure P&L|P&L = Foreign CF x (Spot_realized - Hedge Rate)|manual|FX & international finance
+365|FX translation effect|Translated Value = Local Currency Amount x FX Rate|manual|FX & international finance
+366|Gamma|Gamma = e^{-qT} n(d1)/(S sigma sqrt(T))|py-vollib-gen.greeks|Derivatives, options & volatility
+367|GARCH(1,1)|σ_t^2 = ω + α ε_{t-1}^2 + β σ_{t-1}^2|arch.arch_model|Market risk & volatility modeling
+368|GARCH(1,1)|sigma_t^2 = omega + alpha epsilon_{t-1}^2 + beta sigma_{t-1}^2|arch.arch_model|Market risk & volatility modeling
+369|Garman-Klass volatility|sigma_GK^2 = 0.5[ln(H/L)]^2 - (2ln2-1)[ln(C/O)]^2|manual|Market risk & volatility modeling
+370|Gaussian mixture likelihood|p(x)=sum_k pi_k N(x|mu_k,Sigma_k)|sklearn.mixture.GaussianMixture|Quantitative forecasting & machine learning in finance
+371|GJR-GARCH|sigma_t^2 = omega + alpha eps_{t-1}^2 + gamma I_{eps<0} eps_{t-1}^2 + beta sigma_{t-1}^2|arch.arch_model|Market risk & volatility modeling
+372|Global minimum variance portfolio|min_w w^TΣw  s.t. 1^T w = 1|PyPortfolioOpt.EfficientFrontier|Asset management & portfolio optimization
+373|Global minimum variance weights|w* = Sigma^{-1}1 / (1' Sigma^{-1}1)|PyPortfolioOpt.EfficientFrontier|Asset management & portfolio optimization
+374|GMM moment condition|E[g(z_t,theta)] = 0; theta_hat = argmin gbar' W gbar|linearmodels.IVGMM|Econometrics & time-series finance
+375|Gordon growth DDM|P_0 = D_1/(r-g)|manual|Equity valuation & asset pricing
+376|Gordon growth model|P_0 = D_1 / (r-g)|manual|Corporate finance, valuation & capital budgeting
+377|Gordon terminal value|TV = FCF_(t+1) / (WACC - g)|manual|Corporate finance & capital budgeting
+378|Gradient boosting|F_m(x)=F_{m-1}(x)+nu h_m(x)|sklearn.GradientBoostingRegressor|Quantitative forecasting & machine learning in finance
+379|Granger causality|X Granger-causes Y if lagged X terms improve prediction of Y|statsmodels.tsa.stattools|Econometrics & time-series finance
+380|Gross IRR|0 = -Equity_0 + sum_t Distribution_t/(1+IRR)^t + Terminal Equity/(1+IRR)^T|numpy_financial.irr|Private equity, venture capital & LBO
+381|Gross margin|Gross Margin = Gross Profit / Revenue|manual|Accounting & financial statement analysis
+382|Gross premium principle|Gross Premium = (PV Benefits + PV Expenses) / PV Premium Annuity|actuarialmath|Actuarial science & insurance
+383|Gross profit|Gross Profit = Revenue - COGS|manual|Accounting & financial statement analysis
+384|Gross rent multiplier|GRM = Property Price / Gross Annual Rent|manual|Real estate finance & mortgages
+385|Growing annuity value|PV = PMT_1 x [1-((1+g)/(1+r))^n] / (r-g)|manual|Corporate finance, valuation & capital budgeting
+386|Growing perpetuity value|PV = CF_1 / (r-g)|manual|Corporate finance, valuation & capital budgeting
+387|GSIB surcharge|GSIB Capital Requirement = base capital + surcharge|manual|Bank regulation, Basel & prudential ratios
+388|Haircut-adjusted liquidation value|LV = Market Value x (1-Haircut)|manual|Liquidity risk, market liquidity & execution cost
+389|Hasbrouck lambda|r_t = lambda sqrt(VolSigned_t) + epsilon_t|statsmodels.OLS|Liquidity risk, market liquidity & execution cost
+390|Hazard-rate survival|S(t) = e^{-λ t}|QuantLib.FlatHazardRate|Credit risk
+391|Hedge ratio (naive)|h = Exposure / Contract Size|manual|Commodities, futures & hedging
+392|Hedged commodity revenue|Hedged Revenue = Spot Revenue + Futures P&L|manual|Commodities, futures & hedging
+393|Henriksson-Merton timing|R_p-R_f = alpha + beta(R_m-R_f) + gamma max(R_m-R_f,0) + epsilon|statsmodels.OLS|Performance measurement & attribution
+394|Herfindahl concentration index|HHI = sum_i w_i^2|manual|Asset management & portfolio optimization
+395|Heston asset process|dS_t = (r-q)S_t dt + sqrt(v_t)S_t dW_t^S|QuantLib|Derivatives, options & volatility
+396|Heston variance process|dv_t = kappa(theta-v_t)dt + xi sqrt(v_t)dW_t^v|QuantLib|Derivatives, options & volatility
+397|Historical VaR|VaR_alpha = -quantile_alpha(R)|empyrical-reloaded|Market risk & volatility modeling
+398|Hit ratio|Hit Ratio = profitable periods / total periods|quantstats.stats|Performance measurement & attribution
+399|HJM drift restriction|alpha(t,T) = sigma(t,T) integral_t^T sigma(t,u) du|QuantLib|Interest-rate modeling & term structures
+400|HJM forward-rate dynamics|df(t,T) = alpha(t,T)dt + sigma(t,T)dW_t|QuantLib|Interest-rate modeling & term structures
+401|Holding period return (HPR)|HPR = (P_1 - P_0 + D_1)/P_0|manual|Performance measurement & attribution
+402|Holt trend method|l_t = alpha y_t + (1-alpha)(l_{t-1}+b_{t-1}); b_t = beta(l_t-l_{t-1}) + (1-beta)b_{t-1}|statsmodels.tsa.ExponentialSmoothing|Econometrics & time-series finance
+403|Holt-Winters seasonality|Seasonal add/mult update with alpha, beta, gamma|statsmodels.tsa.ExponentialSmoothing|Econometrics & time-series finance
+404|Hull-White 1F process|dr_t = [theta(t)-a r_t]dt + sigma dW_t|QuantLib.HullWhite|Interest-rate modeling & term structures
+405|Hull-White bond option (Jamshidian)|Option value = sum_i option on each cash flow under HW decomposition|QuantLib.HullWhite|Interest-rate modeling & term structures
+406|Hull-White model|dr_t = [θ(t)-a r_t]dt + σ dW_t|QuantLib.HullWhite|Interest-rate modeling & term structures
+407|Ichimoku base line|Kijun = (26-period high + 26-period low)/2|TA-Lib.trend.IchimokuIndicator|Technical analysis & chart-based indicators
+408|Ichimoku conversion line|Tenkan = (9-period high + 9-period low)/2|TA-Lib.trend.IchimokuIndicator|Technical analysis & chart-based indicators
+409|Ichimoku leading span A|SpanA = (Tenkan + Kijun)/2 shifted forward|TA-Lib.trend.IchimokuIndicator|Technical analysis & chart-based indicators
+410|Ichimoku leading span B|SpanB = (52-period high + 52-period low)/2 shifted forward|TA-Lib.trend.IchimokuIndicator|Technical analysis & chart-based indicators
+411|Idiosyncratic volatility|IVOL = std(residuals from factor model)|statsmodels.OLS|Equity valuation & asset pricing
+412|Implementation shortfall|IS = (Execution Price - Arrival Price) x Side x Quantity|manual|Liquidity risk, market liquidity & execution cost
+413|Implied cost of equity (simple)|r = D_1/P_0 + g|manual|Equity valuation & asset pricing
+414|Implied volatility|Find σ such that ModelPrice(σ) = MarketPrice|py-vollib-gen.implied_volatility|Derivatives, options & volatility
+415|Impulse response function|IRF_h = d y_{t+h} / d u_t|statsmodels.tsa.VAR|Econometrics & time-series finance
+416|Increasing annuity|(Ia)_x = E[sum_{k>=1} k v^k 1(T_x>=k)]|actuarialmath|Actuarial science & insurance
+417|Incremental VaR|IVaR_i = VaR(portfolio) - VaR(portfolio without i)|manual|Market risk & volatility modeling
+418|Incurred but not reported (IBNR)|IBNR = Ultimate Loss - Reported Loss|manual|Actuarial science & insurance
+419|Inflation accretion|Indexed Principal_t = Principal x CPI_t/CPI_base|QuantLib|Fixed income, bonds & credit markets
+420|Information ratio|IR = mean(R_p-R_b) / std(R_p-R_b)|empyrical-reloaded|Asset management & portfolio optimization
+421|Installment-to-income ratio|ITI = Installment Payment / Income|manual|Banking, consumer lending & project finance
+422|Instantaneous forward rate|f(t,T) = -d ln P(t,T)/dT|QuantLib|Interest-rate modeling & term structures
+423|Instantaneous short rate from discount curve|r(t) = -d ln P(0,t)/dt|QuantLib.PiecewiseYieldCurve|Interest-rate modeling & term structures
+424|Instrumental variables / 2SLS|beta_2SLS = (X'P_Z X)^-1 X'P_Z y|linearmodels.IV2SLS|Econometrics & time-series finance
+425|Interaction effect|Interaction_i = (w_i^P - w_i^B)(r_i^P - r_i^B)|manual|Performance measurement & attribution
+426|Interest coverage|Interest Coverage = EBIT / Interest Expense|manual|Accounting & financial statement analysis
+427|Interest coverage ratio|ICR = EBIT / Interest Expense|manual|Banking, consumer lending & project finance
+428|Interest coverage ratio (tranche)|IC = Interest Collections / Note Interest Due|manual|Structured finance & securitization
+429|Interest payment|IPMT_t = r × Balance_(t-1)|numpy_financial.ipmt|Banking, lending & project finance
+430|Interest-only payment|IOP = loan amount x annual interest rate/12|manual|Banking, consumer lending & project finance
+431|Interest-rate hedge ratio|Hedge Ratio = DV01_exposure / DV01_hedge|QuantLib|Treasury, ALM & balance-sheet management
+432|Internal rate of return (IRR)|0 = sum_t CF_t / (1+IRR)^t|numpy_financial.irr|Corporate finance, valuation & capital budgeting
+433|Internal rate of return since inception|0 = MV_T + sum_t CF_t/(1+r)^{T-t} - MV_0(1+r)^T|numpy_financial.irr|Performance measurement & attribution
+434|International Fisher effect|Expected FX change approx i_d - i_f|manual|FX & international finance
+435|Intrinsic value call|IV = max(S-K,0)|manual|Derivatives, options & volatility
+436|Inventory turnover|Inventory Turnover = COGS / Average Inventory|manual|Accounting & financial statement analysis
+437|IO strip value|PV_IO = sum_t interest_only_cf_t DF_t|absbox|Structured finance & securitization
+438|Jensen's alpha|alpha = R_p - [R_f + beta_p(R_m-R_f)]|empyrical-reloaded|Asset management & portfolio optimization
+439|Johansen cointegration|Test rank of Π in VECM|statsmodels.tsa.vector_ar.vecm.coint_johansen|Econometrics & time-series finance
+440|Johansen trace statistic|Trace = -T sum_{i=r+1}^k ln(1-hat lambda_i)|statsmodels.tsa.vector_ar.vecm|Econometrics & time-series finance
+441|Kelly criterion|f* = (bp - q)/b|Riskfolio-Lib.Portfolio.optimization|Asset management & portfolio optimization
+442|Keltner channel lower|Lower = EMA - multiplier x ATR|TA-Lib.volatility.KeltnerChannel|Technical analysis & chart-based indicators
+443|Keltner channel upper|Upper = EMA + multiplier x ATR|TA-Lib.volatility.KeltnerChannel|Technical analysis & chart-based indicators
+444|KMV expected default frequency|EDF = Phi(-DD)|scipy.stats|Credit risk, default modeling & credit portfolio
+445|KPSS stationarity test|y_t = r_t + epsilon_t; LM statistic from partial sums|statsmodels.tsa.stattools.kpss|Econometrics & time-series finance
+446|Kupiec POF likelihood ratio|LR_pof = -2 ln[(1-p)^(T-x) p^x / ((1-x/T)^(T-x)(x/T)^x)]|scipy.stats|Market risk & volatility modeling
+447|Kyle lambda|Delta p_t = lambda q_t + epsilon_t|statsmodels.OLS|Liquidity risk, market liquidity & execution cost
+448|Large exposure ratio|Large Exposure = Exposure to counterparty / Tier 1 Capital|manual|Bank regulation, Basel & prudential ratios
+449|LBO debt paydown schedule|Debt_t = Debt_{t-1} - Mandatory Amortization - Cash Sweep|manual|Private equity, venture capital & LBO
+450|LBO equity IRR|0 = -Equity_0 + Σ_t CashToEquity_t/(1+IRR)^t + ExitEquity/(1+IRR)^T|numpy_financial.irr|Private equity, venture capital & LBO
+451|Ledoit-Wolf covariance shrinkage|Sigma_hat = (1-delta)S + delta F|sklearn.covariance.LedoitWolf|Asset management & portfolio optimization
+452|Leverage constraint|||w||_1 <= L_max|cvxpy.Problem.solve|Asset management & portfolio optimization
+453|Leverage ratio|Leverage Ratio = Tier 1 Capital / Exposure Measure|manual|Banking, lending & project finance
+454|Levered beta (Hamada)|beta_L = beta_U[1 + (1-T)D/E]|manual|Corporate finance, valuation & capital budgeting
+455|Levered yield|Levered Yield = Cash Flow After Debt Service / Equity|manual|Real estate finance & mortgages
+456|LGD downturn adjustment|LGD_downturn = LGD_base + stress add-on|manual|Credit risk, default modeling & credit portfolio
+457|LIBOR market model (LMM)|dL_i/L_i = mu_i dt + sigma_i dW_t|QuantLib|Interest-rate modeling & term structures
+458|Life annuity-immediate|a_x = Σ_k v^(k+1)·_k p_x|actuarialmath.Annuity|Actuarial science & insurance
+459|Lifetime ECL|Lifetime ECL = sum_{t=1}^T marginal PD_t x LGD_t x EAD_t x DF_t|manual|Credit risk, default modeling & credit portfolio
+460|Liquidity coverage ratio (LCR)|LCR = HQLA / Net Cash Outflows over 30 days|manual|Bank regulation, Basel & prudential ratios
+461|Liquidity gap|Liquidity Gap_t = Cash Inflows_t - Cash Outflows_t|manual|Treasury, ALM & balance-sheet management
+462|Liquidity-adjusted VaR|LVaR = VaR + liquidation cost add-on|manual|Liquidity risk, market liquidity & execution cost
+463|Loan amortization schedule identity|Beginning Balance - Principal Paid = Ending Balance|manual|Banking, consumer lending & project finance
+464|Loan constant / mortgage constant|Loan Constant = Annual Debt Service / Original Loan Amount|numpy_financial.pmt|Real estate finance & mortgages
+465|Loan life coverage ratio|LLCR = NPV / Outstanding Debt|manual|Banking, consumer lending & project finance
+466|Loan loss coverage ratio|Coverage Ratio = Loan Loss Reserves / Non-Performing Loans|manual|Banking, lending & project finance
+467|Loan payment (annuity)|PMT = r·PV / [1 - (1+r)^(-n)]|numpy_financial.pmt|Banking, lending & project finance
+468|Loan-to-cost|LTC = Loan Amount / Project Cost|manual|Banking, consumer lending & project finance
+469|Loan-to-deposit ratio|LDR = Gross Loans / Deposits|manual|Treasury, ALM & balance-sheet management
+470|Loan-to-value|LTV = Loan Amount / Collateral Value|manual|Banking, consumer lending & project finance
+471|Local volatility (Dupire)|sigma_loc^2(K,T) = [dC/dT] / [0.5 K^2 d^2C/dK^2]|QuantLib|Derivatives, options & volatility
+472|Local/stochastic volatility surface interpolation|σ(K,T) = Interpolate observed vol surface|QuantLib Black variance surface|Derivatives, options & volatility
+473|Log return|r_t = ln(P_t/P_{t-1})|manual|Performance measurement & attribution
+474|Long-only constraint|w_i >= 0|cvxpy.Problem.solve|Asset management & portfolio optimization
+475|Lookback option price|V = E_Q[e^{-rT}(max(S)-K)^+]|QuantLib|Derivatives, options & volatility
+476|Loss given default|LGD = 1 - Recovery Rate|manual|Banking, consumer lending & project finance
+477|Loss random variable|L = PV(Benefits + Expenses) - PV(Premiums)|actuarialmath|Actuarial science & insurance
+478|Loss rate|Loss Rate = Net Credit Losses / Average Loans|manual|Credit risk, default modeling & credit portfolio
+479|Loss ratio|Loss Ratio = Incurred Losses / Earned Premiums|manual|Actuarial science & insurance
+480|LTV for mortgage|Mortgage Balance / Property Value|manual|Real estate finance & mortgages
+481|MA(q)|x_t = mu + epsilon_t + sum_{i=1}^q theta_i epsilon_{t-i}|statsmodels.tsa.ARIMA|Econometrics & time-series finance
+482|Macaulay duration|D_M = (1/P) sum_t t x PV(CF_t)|QuantLib.BondFunctions.duration|Fixed income, bonds & credit markets
+483|Macaulay spread duration|SD = -(1/P) dP/ds|QuantLib.BondFunctions.duration|Credit risk, default modeling & credit portfolio
+484|MACD|MACD = EMA_fast - EMA_slow|TA-Lib.trend.MACD|Technical analysis
+485|MACD histogram|Hist = MACD - Signal|TA-Lib.MACD|Technical analysis & chart-based indicators
+486|Management option value|Option Value = BS or lattice value of management options|py-vollib-gen|Private equity, venture capital & LBO
+487|Marginal risk contribution|MRC_i = (Σw)_i / σ_p|Riskfolio-Lib.Portfolio.optimization|Asset management & portfolio optimization
+488|Marginal VaR|MVaR_i = ∂VaR/∂w_i|Riskfolio-Lib.Portfolio.optimization|Market risk & volatility modeling
+489|Margrabe exchange option|C = S1 e^{-q1T}N(d1) - S2 e^{-q2T}N(d2)|QuantLib|Derivatives, options & volatility
+490|Market depth|Depth = Σ executable quantity within price band|manual|Liquidity risk & market liquidity
+491|Market impact breakeven|alpha_breakeven = total execution cost / notional|manual|Liquidity risk, market liquidity & execution cost
+492|Market value added (MVA)|MVA = Market Value of Firm - Invested Capital|manual|Corporate finance, valuation & capital budgeting
+493|Market-neutral constraint|Σ beta_i w_i = 0|cvxpy.Problem.solve|Asset management & portfolio optimization
+494|Maximum drawdown|MDD = min_t[(V_t - peak_t)/peak_t]|empyrical-reloaded.max_drawdown|Performance measurement & attribution
+495|Maximum Sharpe portfolio|max_w (w^Tμ - r_f)/√(w^TΣw)|PyPortfolioOpt.EfficientFrontier|Asset management & portfolio optimization
+496|Mean absolute error|MAE = (1/n) sum_i |y_i - yhat_i||sklearn.metrics.mean_absolute_error|Quantitative forecasting & machine learning in finance
+497|Mean squared error|MSE = (1/n) sum_i (y_i - yhat_i)^2|sklearn.metrics.mean_squared_error|Quantitative forecasting & machine learning in finance
+498|Mean-CVaR optimization|max or min subject to CVaR constraints|Riskfolio-Lib.Portfolio.optimization|Asset management & portfolio optimization
+499|Mean-variance utility|U = mu' w - (gamma/2) w' Sigma w|cvxpy.Problem.solve|Asset management & portfolio optimization
+500|Merton asset value model|E = V_A N(d1) - D e^{-rT} N(d2)|QuantLib|Credit risk, default modeling & credit portfolio
+501|Merton distance to default|DD = [ln(V_A/D) + (μ_A - 0.5σ_A^2)T] / (σ_A√T)|manual|Credit risk
+502|Merton jump diffusion asset process|dS_t/S_t = (mu - lambda k)dt + sigma dW_t + dJ_t|QuantLib|Derivatives, options & volatility
+503|Merton structural PD|PD = N(-DD)|scipy.stats.norm.cdf|Credit risk
+504|Metallurgical gross margin|Margin = Metal Selling Price - Input Cost Bundle|manual|Commodities, futures & hedging
+505|Mid price|Mid = (Bid + Ask)/2|manual|Liquidity risk & market liquidity
+506|Minimum-variance hedge ratio|h* = Cov(Delta S, Delta F) / Var(Delta F)|statsmodels.OLS|Commodities, futures & hedging
+507|Minimum-variance hedged return|R_H = R_S - h* R_F|manual|Commodities, futures & hedging
+508|Minus directional indicator (-DI)|-DI = 100 x smoothed -DM / ATR|TA-Lib.MINUS_DI|Technical analysis & chart-based indicators
+509|Modified duration|D_mod = D_M / (1+y/m)|QuantLib.BondFunctions.duration|Fixed income & bond math
+510|Modified IRR (MIRR)|MIRR = (FV_positive / |PV_negative|)^(1/n) - 1|numpy_financial.mirr|Corporate finance & capital budgeting
+511|Momentum|MOM = P_t - P_{t-n}|TA-Lib.MOM|Technical analysis & chart-based indicators
+512|Money flow index (MFI)|MFI = 100 - 100/(1 + MoneyFlowRatio)|TA-Lib.volume.MFIIndicator|Technical analysis
+513|Money flow index (MFI)|MFI = 100 - 100/(1+MoneyRatio)|TA-Lib.MFI|Technical analysis & chart-based indicators
+514|Money market yield|MMY = (F-P)/P x 360/d|manual|Fixed income, bonds & credit markets
+515|Money multiple (MOIC)|MOIC = Total Value / Invested Capital|manual|Private equity, venture capital & LBO
+516|Money-market account|B_t = exp(int_0^t r_s ds)|QuantLib|Interest-rate modeling & term structures
+517|Money-weighted return (MWRR)|0 = sum_t CF_t/(1+IRR)^t|numpy_financial.irr|Performance measurement & attribution
+518|Monte Carlo VaR|VaR_alpha = -quantile_alpha(simulated P&L)|manual|Market risk & volatility modeling
+519|Mortality rate|q_x = d_x / l_x|actuarialmath.LifeTable|Actuarial science & insurance
+520|Mortgage constant|Mortgage Constant = Annual Debt Service / Loan Amount|numpy_financial.pmt|Real estate finance
+521|Moving average convergence divergence (MACD)|MACD = EMA_{12} - EMA_{26}; Signal = EMA_9(MACD)|TA-Lib.MACD|Technical analysis & chart-based indicators
+522|MREL / TLAC ratio|TLAC Ratio = Eligible Liabilities and Capital / RWA or Leverage Exposure|manual|Bank regulation, Basel & prudential ratios
+523|M-squared (Modigliani)|M2 = Sharpe x sigma_m + R_f|empyrical-reloaded|Asset management & portfolio optimization
+524|Multi-stage DDM|P_0 = sum_t D_t/(1+r)^t + TV/(1+r)^T|manual|Equity valuation & asset pricing
+525|Naive Bayes classifier|P(y|x) proportional P(y) prod_j P(x_j|y)|sklearn.naive_bayes|Quantitative forecasting & machine learning in finance
+526|Nelson-Siegel yield curve|y(t)=beta0 + beta1[(1-e^{-t/tau})/(t/tau)] + beta2([(1-e^{-t/tau})/(t/tau)]-e^{-t/tau})|QuantLib.PiecewiseYieldCurve|Interest-rate modeling & term structures
+527|Nelson-Siegel-Svensson curve|y(t)=beta0 + beta1 L1 + beta2(L1-e^{-t/tau1}) + beta3(L2-e^{-t/tau2})|QuantLib.PiecewiseYieldCurve|Interest-rate modeling & term structures
+528|Net charge-off ratio|NCO Ratio = (Charge-offs - Recoveries) / Average Loans|manual|Banking, consumer lending & project finance
+529|Net convenience yield|Net Convenience Yield = y - storage cost|manual|Commodities, futures & hedging
+530|Net debt at entry|Net Debt = Debt Assumed + New Debt - Cash Acquired|manual|Private equity, venture capital & LBO
+531|Net income|Net Income = Revenue - Expenses - Taxes|manual|Accounting & financial statement analysis
+532|Net interest income (NII)|NII = Interest Income - Interest Expense|manual|Treasury, ALM & balance-sheet management
+533|Net interest margin (NIM)|NIM = NII / Average Earning Assets|manual|Treasury, ALM & balance-sheet management
+534|Net IRR to LP|IRR on LP cash flows after fees and carry|numpy_financial.irr|Private equity, venture capital & LBO
+535|Net margin|Net Margin = Net Income / Revenue|manual|Accounting & financial statement analysis
+536|Net operating income (NOI)|NOI = Rental Revenue + Other Income - Operating Expenses|manual|Real estate finance & mortgages
+537|Net premium|P = PV(Benefits) / PV(Premium annuity)|actuarialmath.Premiums|Actuarial science & insurance
+538|Net premium equivalence principle|Premium x APV(premium annuity) = APV(benefits)|actuarialmath|Actuarial science & insurance
+539|Net present value (NPV)|NPV = sum_t CF_t / (1+r)^t|numpy_financial.npv|Corporate finance, valuation & capital budgeting
+540|Net stable funding ratio (NSFR)|NSFR = Available Stable Funding / Required Stable Funding|manual|Bank regulation, Basel & prudential ratios
+541|Net weighted average spread|NWAS = weighted avg asset spread - funding spread|manual|Structured finance & securitization
+542|Newey-West HAC covariance|Var(beta_hat)_HAC = (X'X)^-1 X' S X (X'X)^-1|statsmodels.tsa.VAR|Econometrics & time-series finance
+543|NII sensitivity|Delta NII = sum_i Balance_i x Delta Rate_i x Repricing Fraction_i|manual|Treasury, ALM & balance-sheet management
+544|NOI margin|NOI Margin = NOI / Effective Gross Income|manual|Real estate finance & mortgages
+545|NPL ratio|NPL Ratio = Nonperforming Loans / Gross Loans|manual|Bank regulation, Basel & prudential ratios
+546|Number of periods|n = -ln(1-rPV/PMT) / ln(1+r)|numpy_financial.nper|Banking, consumer lending & project finance
+547|OC trigger|Trigger breached if OC ratio < trigger level|manual|Structured finance & securitization
+548|Omega ratio|Omega = int_r^∞ (1-F(x))dx / int_-∞^r F(x)dx|empyrical-reloaded|Asset management & portfolio optimization
+549|On-balance volume (OBV)|OBV_t = OBV_{t-1} +/- Volume_t based on price direction|TA-Lib.OBV|Technical analysis & chart-based indicators
+550|One-year death probability|q_x = P[x dies within 1 year]|actuarialmath|Actuarial science & insurance
+551|One-year survival probability|p_x = 1 - q_x|actuarialmath|Actuarial science & insurance
+552|Operating cash flow ratio|OCF Ratio = Operating Cash Flow / Current Liabilities|manual|Accounting & financial statement analysis
+553|Operating expense ratio|OER = Operating Expenses / Effective Gross Income|manual|Real estate finance & mortgages
+554|Operating leverage|DOL = %Delta EBIT / %Delta Sales|manual|Corporate finance, valuation & capital budgeting
+555|Operating margin|Operating Margin = EBIT / Revenue|manual|Accounting & financial statement analysis
+556|Operational risk capital (SMA)|ORC = BIC x ILM|manual|Bank regulation, Basel & prudential ratios
+557|Optimal number of contracts|N* = h* x Exposure Value / Futures Contract Value|manual|Commodities, futures & hedging
+558|Option delta-hedged P&L|dPi approx 0.5 Gamma (dS)^2 + Theta dt + Vega d sigma|manual|Derivatives, options & volatility
+559|Option pool dilution|Fully Diluted Ownership = Shares_owned / (Existing + New + Option Pool)|manual|Private equity, venture capital & LBO
+560|Option-adjusted spread (OAS)|P = E_Q[ sum_t CF_t(path) exp(-(r_t + OAS)t) ]|QuantLib|Fixed income, bonds & credit markets
+561|Oracle Approximating Shrinkage (OAS)|Sigma_hat = (1-delta)S + delta mu I|sklearn.covariance.OAS|Asset management & portfolio optimization
+562|Order imbalance|OI = (Buy Volume - Sell Volume)/(Buy Volume + Sell Volume)|manual|Liquidity risk, market liquidity & execution cost
+563|Outstanding balance after k payments|B_k = PV(1+r)^k - PMT((1+r)^k-1)/r|numpy_financial.fv|Banking, consumer lending & project finance
+564|Outstanding loan balance|Balance_t = PV·(1+r)^t - PMT·[((1+r)^t - 1)/r]|numpy_financial.fv|Banking, lending & project finance
+565|Overcollateralization ratio|OC Ratio = Collateral Balance / Notes Outstanding|manual|Structured finance & securitization
+566|Ownership percentage|Ownership = Investment / Post-money Valuation|manual|Private equity, venture capital & LBO
+567|P/B ratio|P/B = Price per Share / Book Value per Share|manual|Corporate finance, valuation & capital budgeting
+568|P/E ratio|P/E = Price per Share / EPS|manual|Corporate finance, valuation & capital budgeting
+569|Pain index|Pain Index = average drawdown|quantstats.stats|Performance measurement & attribution
+570|Par swap rate|K* = (1-DF(T_n)) / (Σ_i α_i·DF(t_i))|QuantLib.SwapRateHelper|Interest-rate modeling & term structures
+571|Par yield|Par = (1-DF_n) / sum_i alpha_i DF_i|QuantLib|Fixed income, bonds & credit markets
+572|Parabolic SAR|SAR_t = SAR_{t-1} + AF(EP - SAR_{t-1})|TA-Lib.SAR|Technical analysis & chart-based indicators
+573|Parametric ES under normality|ES = -(mu - sigma phi(z_alpha)/(alpha))|manual|Market risk & volatility modeling
+574|Parametric normal VaR|VaR_alpha = -(mu + z_alpha sigma)V|empyrical-reloaded|Market risk & volatility modeling
+575|Parametric VaR|VaR_α = -(μ + z_α σ)|Riskfolio-Lib.Portfolio.optimization|Market risk & volatility modeling
+576|Parkinson volatility|sigma_P^2 = [1/(4 ln2)n] sum [ln(H/L)]^2|manual|Market risk & volatility modeling
+577|Participation rate|Participation = Executed Volume / Market Volume|manual|Trading, execution & market microstructure
+578|Pastor-Stambaugh liquidity|r_{i,t+1} = ... + gamma_i sign(r_i,t,excess) volume_i,t + epsilon|statsmodels.OLS|Liquidity risk, market liquidity & execution cost
+579|Payables turnover|Payables Turnover = COGS / Average AP|manual|Accounting & financial statement analysis
+580|Payback period|Payback = smallest t such that cumulative CF_t >= initial outlay|manual|Corporate finance, valuation & capital budgeting
+581|Payment shock ratio|Payment Shock = New Payment / Old Payment - 1|manual|Banking, consumer lending & project finance
+582|PEG ratio|PEG = (P/E) / Earnings Growth|manual|Corporate finance, valuation & capital budgeting
+583|Percentage price oscillator (PPO)|PPO = (EMA_fast - EMA_slow)/EMA_slow|TA-Lib.PPO|Technical analysis & chart-based indicators
+584|Perpetuity value|PV = CF / r|manual|Corporate finance, valuation & capital budgeting
+585|Piotroski F-score|F = sum of 9 binary accounting signals, according to the following rules:
+1.Return on Assets (ROA) (1 point if it is positive in the current year, 0 otherwise);
+2.Operating Cash Flow (1 point if it is positive in the current year, 0 otherwise);
+3.Change in Return of Assets (ROA) (1 point if ROA is higher in the current year compared to the previous one, 0 otherwise);
+4.Accruals (1 point if Operating Cash Flow/Total Assets is higher than ROA/Total Assets in the current year, 0 otherwise);
+5.Change in Leverage (long-term) ratio (1 point if the ratio is lower this year compared to the previous one, 0 otherwise);
+6.Change in Current ratio (1 point if it is higher in the current year compared to the previous one, 0 otherwise);
+7.Change in the number of shares (1 point if no new shares were issued during the last year);
+8.Change in Gross Margin (1 point if it is higher in the current year compared to the previous one, 0 otherwise);
+9.Change in Asset Turnover ratio (1 point if it is higher in the current year compared to the previous one, 0 otherwise);|manual|Accounting & financial statement analysis
+586|Plus directional indicator (+DI)|+DI = 100 x smoothed +DM / ATR|TA-Lib.PLUS_DI|Technical analysis & chart-based indicators
+587|PME (Kaplan-Schoar)|KS PME = (FV of distributions + NAV adjusted by index)/(FV of contributions)|manual|Private equity, venture capital & LBO
+588|PO strip value|PV_PO = sum_t principal_only_cf_t DF_t|absbox|Structured finance & securitization
+589|Point-in-time PD|PD_PIT = conditional default probability given current macro state|statsmodels.Logit|Credit risk, default modeling & credit portfolio
+590|Portfolio covariance contribution|MC_i = (Sigma w)_i|PyPortfolioOpt.risk_models.sample_cov|Asset management & portfolio optimization
+591|Portfolio return|E[R_p] = w' mu|PyPortfolioOpt.EfficientFrontier|Asset management & portfolio optimization
+592|Portfolio variance|sigma_p^2 = w' Sigma w|PyPortfolioOpt.EfficientFrontier|Asset management & portfolio optimization
+593|Portfolio volatility|sigma_p = sqrt(w' Sigma w)|PyPortfolioOpt.risk_models.sample_cov|Asset management & portfolio optimization
+594|Post-money valuation|Post-money = Pre-money + New Investment|manual|Private equity, venture capital & LBO
+595|Potential future exposure (PFE)|PFE_alpha(t) = quantile_alpha(exposure_t)|manual|Credit risk, default modeling & credit portfolio
+596|PPI inflation (month over month)|π_t^(PPI,MoM) = PPI_t / PPI_(t-1) - 1|manual|Macroeconomics, inflation & price indices
+597|PPI inflation (year over year)|π_t^(PPI,YoY) = PPI_t / PPI_(t-12) - 1|manual|Macroeconomics, inflation & price indices
+598|Preferred return hurdle|Hurdle FV = Contributed Capital x (1+h)^t|numpy_financial.fv|Private equity, venture capital & LBO
+599|Pre-money valuation|Pre-money = Post-money - New Investment|manual|Private equity, venture capital & LBO
+600|Prepayment speed (PSA)|CPR_t = min(0.06, 0.002t) × PSA%|manual|Structured finance & securitization
+601|Present value (PV)|PV = sum_t CF_t / (1+r)^t|numpy_financial.pv|Corporate finance, valuation & capital budgeting
+602|Present value random variable|Z = b_T v^T|actuarialmath|Actuarial science & insurance
+603|Price impact|Impact = (execution price/Mid price-1)*100|manual|Liquidity risk, market liquidity & execution cost
+604|Price-to-book|P/B = Price / Book value per share|manual|Equity valuation & asset pricing
+605|Price-to-earnings ratio|P/E = Price per share / EPS|manual|Equity valuation & asset pricing
+606|Price-to-sales|P/S = Market Cap / Revenue|manual|Equity valuation & asset pricing
+607|Principal payment portion (PPMT)|PPMT_t = PMT - IPMT_t|numpy_financial.ppmt|Banking, consumer lending & project finance
+608|Probability of default from hazard rate|PD(0,T) = 1 - exp(-int_0^T lambda(t) dt)|QuantLib|Credit risk, default modeling & credit portfolio
+609|Probability of default from logit|PD = 1 / (1 + e^{-Xβ})|sklearn.LogisticRegression|Credit risk
+610|Probability of default scorecard logit|logit(PD) = beta0 + beta'x|sklearn.linear_model.LogisticRegression|Banking, consumer lending & project finance
+611|Probit default model|Phi^-1(PD_i) = beta0 + beta'x_i|statsmodels.Probit|Credit risk, default modeling & credit portfolio
+612|Probit score|P(y=1|x)=Phi(beta'x)|statsmodels.Probit|Quantitative forecasting & machine learning in finance
+613|Producer Price Index (Laspeyres-style index)|PPI_t = (Σ_i p_(i,t) q_(i,0) / Σ_i p_(i,0) q_(i,0)) × 100|manual|Macroeconomics, inflation & price indices
+614|Profit factor|Profit Factor = sum positive returns / |sum negative returns||quantstats.stats|Performance measurement & attribution
+615|Profitability index|PI = PV of future cash flows / Initial Investment|manual|Corporate finance & capital budgeting
+616|Property IRR|0 = -Equity_0 + sum_t CF_t/(1+IRR)^t + SaleProceeds/(1+IRR)^T|numpy_financial.irr|Real estate finance & mortgages
+617|Property value from cap rate|Value = NOI / Cap Rate|manual|Real estate finance
+618|Prospective reserve|V_t = PV_t(Future Benefits) - PV_t(Future Premiums)|actuarialmath.PolicyValues|Actuarial science & insurance
+619|Protective put payoff|Payoff = S_T + max(K-S_T,0) - Premium|manual|Derivatives, options & volatility
+620|Provision coverage ratio|Coverage = Loan Loss Reserves / Nonperforming Loans|manual|Bank regulation, Basel & prudential ratios
+621|Provision coverage ratio|Coverage Ratio = Allowance for Credit Losses / Nonperforming Loans|manual|Banking, consumer lending & project finance
+622|PSA prepayment benchmark|CPR_PSA = min(0.06, 0.002 x month) for 100% PSA|manual|Structured finance & securitization
+623|PTI payment-to-income|Monthly Mortgage Payment / Income|manual|Real estate finance & mortgages
+624|PTI payment-to-income (gross)|PTI_gross = Monthly Loan Payment / Gross Monthly Income|manual|Banking, consumer lending & project finance
+625|PTI payment-to-income (net)|PTI_net = Monthly Loan Payment / Net Monthly Income|manual|Banking, consumer lending & project finance
+626|Public market equivalent (PME)|PME = FV(distributions indexed to public benchmark) / FV(capital calls indexed to public benchmark)|manual|Private equity, venture capital & LBO
+627|Purchasing power parity (PPP)|S = P / P*|manual|FX & international finance
+628|Pure endowment APV|{}_nE_x = v^n {}_np_x|actuarialmath|Actuarial science & insurance
+629|Pure premium|Pure Premium = Frequency x Severity|manual|Actuarial science & insurance
+630|Put payoff|P_T = max(K - S_T, 0)|numpy.maximum|Derivatives, options & volatility
+631|Put spread payoff|Payoff = max(K2-S,0) - max(K1-S,0)|manual|Derivatives, options & volatility
+632|Put-call parity|C - P = S_0 - K e^{-rT}|py-vollib-gen|Derivatives, options & volatility
+633|Put-call parity (equity)|C - P = S_0 e^{-qT} - K e^{-rT}|py-vollib-gen|Derivatives, options & volatility
+634|Put-call parity (futures options)|C - P = DF(F_0 - K)|py-vollib-gen|Derivatives, options & volatility
+635|PV of tax shield|PV(TS) = sum_t Tax Shield_t / (1+r_TS)^t|manual|Corporate finance, valuation & capital budgeting
+636|Quadratic program|min_x 1/2 x^T P x + q^T x  s.t. Gx≤h, Ax=b|cvxpy.Problem.solve|Quantitative forecasting & machine learning in finance
+637|Quick ratio|Quick Ratio = (Cash + Marketable Securities + AR) / Current Liabilities|manual|Accounting & financial statement analysis
+638|Quoted spread (%)|Quoted Spread = (Ask-Bid)/Mid|manual|Liquidity risk, market liquidity & execution cost
+639|Rate of change (ROC)|ROC = P_t/P_{t-n} - 1|TA-Lib.ROC|Technical analysis & chart-based indicators
+640|Real estate DCF|Value = Σ_t NOI_t/(1+r)^t + TV/(1+r)^T|numpy_financial.npv|Real estate finance
+641|Real exchange rate|q = S·P* / P|manual|FX & international finance
+642|Real yield bond pricing|P = sum_t Real CF_t /(1+real y)^t|QuantLib.BondFunctions.bondYield|Fixed income, bonds & credit markets
+643|Realized beta|beta_realized = Cov_intraday(asset,market)/Var_intraday(market)|manual|Market risk & volatility modeling
+644|Realized hedge effectiveness|HE = 1 - Var(Hedged Position)/Var(Unhedged Position)|manual|Commodities, futures & hedging
+645|Realized spread|Realized Spread = 2 x side x (Trade Price - Mid_{t+Delta})|manual|Liquidity risk, market liquidity & execution cost
+646|Realized variance|RV_t = sum_{i=1}^n r_{t,i}^2|manual|Market risk & volatility modeling
+647|Realized volatility|RVOL = sqrt(sum intraday returns^2)|manual|Market risk & volatility modeling
+648|Receivables turnover|Receivables Turnover = Revenue / Average AR|manual|Accounting & financial statement analysis
+649|Recovery factor|Recovery Factor = Net Profit / |Max Drawdown||quantstats.stats|Performance measurement & attribution
+650|Recovery rate|Recovery = 1 - LGD|manual|Credit risk, default modeling & credit portfolio
+651|Reduced-form CDS hazard relation|CDS Spread approx lambda x LGD|QuantLib|Credit risk, default modeling & credit portfolio
+652|Refinance proceeds|Refi Proceeds = New Loan - Old Loan - Fees|manual|Real estate finance & mortgages
+653|Relative PPP|Delta S / S approx pi_d - pi_f|manual|FX & international finance
+654|Relative spread|Relative Spread = (Ask - Bid) / Mid|manual|Liquidity risk & market liquidity
+655|Relative strength index (RSI)|RSI = 100 - 100/(1+RS), RS=AvgGain/AvgLoss|TA-Lib.RSI|Technical analysis & chart-based indicators
+656|Rent coverage ratio|Rent Coverage = Gross Monthly Income / Monthly Rent|manual|Real estate finance & mortgages
+657|Repricing gap|Gap_t = Rate Sensitive Assets_t - Rate Sensitive Liabilities_t|manual|Treasury, ALM & balance-sheet management
+658|Residual income|RI = Net Income - R_e x Beginning Equity|manual|Corporate finance, valuation & capital budgeting
+659|Residual income valuation|V_0 = B_0 + sum_t RI_t/(1+r)^t|manual|Equity valuation & asset pricing
+660|Retention ratio|Retention = 1 - Dividend Payout Ratio|manual|Accounting & financial statement analysis
+661|Retrospective reserve|V_t = Accumulated Value(Past Premiums - Past Benefits - Expenses)|actuarialmath|Actuarial science & insurance
+662|Return on assets (ROA)|ROA = Net Income / Average Assets|manual|Accounting & financial statement analysis
+663|Return on capital employed (ROCE)|ROCE = EBIT / Capital Employed|manual|Accounting & financial statement analysis
+664|Return on equity (ROE)|ROE = Net Income / Average Equity|manual|Accounting & financial statement analysis
+665|Return on invested capital (ROIC)|ROIC = NOPAT / Average Invested Capital|manual|Accounting & financial statement analysis
+666|Return on regulatory capital (RORC)|RORC = Expected Profit / Economic or Regulatory Capital|manual|Banking, consumer lending & project finance
+667|Revenue growth|g_t = Revenue_t / Revenue_(t-1) - 1|manual|Accounting & financial statement analysis
+668|Rho|Rho = K T e^{-rT} N(d2)|py-vollib-gen.greeks|Derivatives, options & volatility
+669|Risk parity objective|min_w sum_i sum_j (RC_i-RC_j)^2|Riskfolio-Lib.Portfolio.optimization|Asset management & portfolio optimization
+670|RiskMetrics covariance|Sigma_t = lambda Sigma_{t-1} + (1-lambda) r_{t-1} r_{t-1}'|manual|Market risk & volatility modeling
+671|Risk-neutral probability|p = (e^{(r-q)Delta t} - d)/(u-d)|manual|Derivatives, options & volatility
+672|Risk-weighted assets (RWA)|RWA = sum_i Exposure_i x RiskWeight_i|manual|Bank regulation, Basel & prudential ratios
+673|ROC AUC|AUC = integral_0^1 TPR(FPR^{-1}(u)) du|sklearn.metrics.roc_auc_score|Quantitative forecasting & machine learning in finance
+674|Rogers-Satchell volatility|sigma_RS^2 = (ln(H/O))(ln(H/C)) + (ln(L/O))(ln(L/C))|manual|Market risk & volatility modeling
+675|Roll implied spread|Spread_Roll = 2 sqrt(-Cov(Delta p_t, Delta p_{t-1}))|manual|Liquidity risk, market liquidity & execution cost
+676|Roll rate|Roll Rate = balances migrating to worse delinquency bucket / prior bucket balance|manual|Credit risk, default modeling & credit portfolio
+677|Roll spread estimator|Spread_Roll = 2√[-Cov(ΔP_t, ΔP_{t-1})]|manual|Liquidity risk & market liquidity
+678|Roll yield|Roll Yield = Futures Return - Spot Return - Collateral Return|manual|Commodities, futures & hedging
+679|Roll-down return|Roll-down approx -Duration x Delta Yield from curve slide|manual|Fixed income, bonds & credit markets
+680|RSI|RSI = 100 - 100/(1 + RS)|TA-Lib.momentum.RSIIndicator|Technical analysis
+681|RVPI|RVPI = Residual Value (NAV of unrealized investments) / Paid-In Capital|manual|Private equity, venture capital & LBO
+682|SABR implied vol|sigma_BS = SABR(F,K,alpha,beta,rho,nu,T)|QuantLib|Derivatives, options & volatility
+683|SARIMA|Phi(L^s)phi(L)(1-L)^d(1-L^s)^D x_t = Theta(L^s)theta(L)epsilon_t|statsmodels.tsa.SARIMAX|Econometrics & time-series finance
+684|Security market line|E[R] = R_f + beta(E[R_m]-R_f)|manual|Equity valuation & asset pricing
+685|Selection effect (Brinson-Fachler)|Selection_i = w_i^B(r_i^P - r_i^B)|manual|Performance measurement & attribution
+686|Semivariance|SemiVar = E[min(R-mu,0)^2]|Riskfolio-Lib.Portfolio.optimization|Market risk & volatility modeling
+687|Severity|Severity = Net Loss / Defaulted Balance|manual|Structured finance & securitization
+688|Sharpe ratio|Sharpe = (E[R_p]-R_f)/sigma_p|empyrical-reloaded.sharpe_ratio|Asset management & portfolio optimization
+689|Sharpe-Lintner beta regression|R_i-R_f = alpha + beta(R_m-R_f)+epsilon|statsmodels.OLS|Equity valuation & asset pricing
+690|Short-rate bond pricing PDE|dP/dt + a(r,t)dP/dr + 0.5 b(r,t)^2 d^2P/dr^2 - rP = 0|QuantLib|Interest-rate modeling & term structures
+691|Simple compounding|FV = PV·(1+r·t)|QuantLib.InterestRate|Interest-rate modeling & term structures
+692|Simple forward rate|F = (1/DF(T)-1)/tau|QuantLib|Interest-rate modeling & term structures
+693|Simple return|R_t = P_t/P_{t-1} - 1|manual|Performance measurement & attribution
+694|Single monthly mortality (SMM)|SMM = 1 - (1 - CPR)^(1/12)|manual|Structured finance & securitization
+695|Slippage|Slippage = Actual Execution Price - Expected Price|manual|Liquidity risk, market liquidity & execution cost
+696|Smith-Wilson extrapolation|P(u)=e^{-UFR u}+ sum_j zeta_j W(u_j,u)|QuantLib|Interest-rate modeling & term structures
+697|Solvency ratio|Solvency Ratio = Available Capital / Required Capital|manual|Actuarial science & insurance
+698|Sortino ratio|Sortino = (E[R_p]-MAR)/DownsideDeviation|empyrical-reloaded.sortino_ratio|Asset management & portfolio optimization
+699|Sources and uses balance|Total Sources = Total Uses|manual|Private equity, venture capital & LBO
+700|Spark spread|Spark Spread = Electricity Price - Heat Rate x Fuel Price|manual|Commodities, futures & hedging
+701|Speed|Speed = d(Gamma)/dS|QuantLib|Derivatives, options & volatility
+702|Sponsor cash-on-cash return|CoC = Cumulative Cash to Sponsor / Sponsor Equity Invested|manual|Private equity, venture capital & LBO
+703|Spot rate bootstrapping|P_n = sum_{i=1}^{n-1} C_i DF_i + (C_n+F)DF_n|QuantLib.PiecewiseYieldCurve|Fixed income, bonds & credit markets
+704|Spot rate from discount factor|z(t) = -ln(DF(t))/t|QuantLib yield term structures|Fixed income & bond math
+705|Spread duration|Spread Duration = -dP/ds / P|QuantLib.BondFunctions.duration|Fixed income, bonds & credit markets
+706|Spread option (Kirk approximation)|C approx DF[F1 N(d1) - (F2+K)N(d2)]|QuantLib|Derivatives, options & volatility
+707|Square-root impact law|Impact = Y sigma sqrt(Q/V)|manual|Liquidity risk, market liquidity & execution cost
+708|Stable funding gap|Required Stable Funding - Available Stable Funding|manual|Treasury, ALM & balance-sheet management
+709|State-space measurement equation|y_t = Z_t alpha_t + epsilon_t|statsmodels.statespace|Econometrics & time-series finance
+710|State-space transition equation|alpha_{t+1} = T_t alpha_t + R_t eta_t|statsmodels.statespace|Econometrics & time-series finance
+711|Sterling ratio|Sterling = CAGR / Average Drawdown|quantstats.stats|Asset management & portfolio optimization
+712|Stochastic oscillator|%K = 100·(C-L_n)/(H_n-L_n)|TA-Lib.momentum.StochasticOscillator|Technical analysis
+713|Stochastic oscillator %D|%D = SMA_3(%K)|TA-Lib.STOCH|Technical analysis & chart-based indicators
+714|Stochastic oscillator %K|%K = 100 (C-L_n)/(H_n-L_n)|TA-Lib.STOCH|Technical analysis & chart-based indicators
+715|Stochastic RSI|StochRSI = (RSI - min RSI_n)/(max RSI_n - min RSI_n)|TA-Lib.momentum.StochRSIIndicator|Technical analysis & chart-based indicators
+716|Stop-loss premium|Pi(d) = E[(S-d)^+]|scipy.stats|Actuarial science & insurance
+717|Straddle payoff|Payoff = max(S-K,0)+max(K-S,0)-Premiums|manual|Derivatives, options & volatility
+718|Strangle payoff|Payoff = max(S-K_c,0)+max(K_p-S,0)-Premiums|manual|Derivatives, options & volatility
+719|Stress capital buffer|SCB = max(stress losses, regulatory floor) / RWA|manual|Bank regulation, Basel & prudential ratios
+720|Stress loss|Stress Loss = V(current market state) - V(stressed state)|QuantLib|Market risk & volatility modeling
+721|Stressed VaR|SVaR = VaR using stress-window parameters|manual|Market risk & volatility modeling
+722|Structural credit spread approximation|s approx -ln[(De^{-rT}+E)/V_A]/T|manual|Credit risk, default modeling & credit portfolio
+723|Survival function|S_x(t) = P[T_x > t] = 1 - F_x(t)|actuarialmath.Survival|Actuarial science & insurance
+724|Survival probability|Q(0,T) = exp(-int_0^T lambda(t) dt)|QuantLib|Credit risk, default modeling & credit portfolio
+725|Sustainable growth rate|g = ROE x Retention Ratio|manual|Accounting & financial statement analysis
+726|Swap annuity|A = sum_i alpha_i DF_i|QuantLib.VanillaSwap|Interest-rate modeling & term structures
+727|Swap fixed leg PV|PV_fixed = Σ_i N·K·α_i·DF(t_i)|QuantLib.VanillaSwap|Interest-rate modeling & term structures
+728|Swap fixed rate|K = (1 - DF_n) / sum_i alpha_i DF_i|QuantLib.VanillaSwap|Fixed income, bonds & credit markets
+729|Swap floating leg PV|PV_float = Σ_i N·L_i·α_i·DF(t_i)|QuantLib.VanillaSwap|Interest-rate modeling & term structures
+730|Swap present value|PV_swap = PV_fixed_leg - PV_float_leg|QuantLib.VanillaSwap|Fixed income, bonds & credit markets
+731|Tail hedge payoff|Tail Hedge = max(K-S_T,0) - Premium or futures P&L in stress|manual|Commodities, futures & hedging
+732|Tail ratio|Tail Ratio = |95th percentile| / |5th percentile||quantstats.stats|Market risk & volatility modeling
+733|Tangency portfolio weights|w* proportional Sigma^{-1}(mu-r_f 1)|PyPortfolioOpt.EfficientFrontier|Asset management & portfolio optimization
+734|Tax shield|Tax Shield = Interest Expense x Tax Rate|manual|Corporate finance, valuation & capital budgeting
+735|Temporary annuity|a_{x:n} = E[sum_{k=1}^n v^k 1(T_x>=k)]|actuarialmath|Actuarial science & insurance
+736|Term insurance APV|A_{x:n}^1 = E[v^{T_x} 1(T_x<=n)]|actuarialmath|Actuarial science & insurance
+737|Terminal capitalization value|Terminal Value = NOI_{T+1} / Exit Cap Rate|manual|Real estate finance & mortgages
+738|Terminal value (exit multiple)|TV = Metric_n x Exit Multiple|manual|Corporate finance, valuation & capital budgeting
+739|Terminal value (Gordon growth)|TV = FCF_(n+1) / (WACC-g)|manual|Corporate finance, valuation & capital budgeting
+740|Theta|Theta = -S e^{-qT} n(d1)sigma/(2sqrt(T)) - rKe^{-rT}N(d2) + qSe^{-qT}N(d1)|py-vollib-gen.greeks|Derivatives, options & volatility
+741|Through-the-cycle PD|PD_TTC = long-run default frequency estimate|manual|Credit risk, default modeling & credit portfolio
+742|Tier 1 capital ratio|Tier 1 Ratio = Tier 1 Capital / RWA|manual|Bank regulation, Basel & prudential ratios
+743|Time value option|Time Value = Option Premium - Intrinsic Value|manual|Derivatives, options & volatility
+744|Time-weighted return (TWRR)|TWRR = prod_i (1+r_i) - 1|manual|Performance measurement & attribution
+745|Tobin's Q|Q = Market Value of Assets / Replacement Cost of Assets|manual|Equity valuation & asset pricing
+746|Total capital ratio|Total Capital Ratio = Total Capital / RWA|manual|Bank regulation, Basel & prudential ratios
+747|Tracking error|TE = Std(E[R_p] - R_b)|empyrical-reloaded|Asset management & portfolio optimization
+748|Tranche attachment point|Attach = subordination below tranche / pool balance|manual|Structured finance & securitization
+749|Tranche credit enhancement|CE = Overcollateralization + Subordination + Excess Spread|manual|Structured finance & securitization
+750|Tranche detachment point|Detach = 1 - subordination above tranche / pool balance|manual|Structured finance & securitization
+751|Tranche WAL|WAL_tranche = sum_t t Principal_tranche,t / Total Principal_tranche|absbox|Structured finance & securitization
+752|Tranche yield|Solve y such that Tranche Price = PV(expected tranche cash flows)|absbox|Structured finance & securitization
+753|Transfer rate from curve|FTP_t = term matched funding curve + liquidity + optionality premium|QuantLib.PiecewiseYieldCurve|Treasury, ALM & balance-sheet management
+754|Transition matrix probability|P_{ij}(n) = [P^n]_{ij}|numpy.linalg.matrix_power|Credit risk, default modeling & credit portfolio
+755|Treynor ratio|Treynor = (E[R_p]-R_f)/beta_p|empyrical-reloaded|Asset management & portfolio optimization
+756|Treynor-Mazuy timing|R_p-R_f = alpha + beta(R_m-R_f) + gamma(R_m-R_f)^2 + epsilon|statsmodels.OLS|Performance measurement & attribution
+757|Triangular arbitrage condition|S_{A/B} × S_{B/C} × S_{C/A} = 1|manual|FX & international finance
+758|Trigger-based step-down|Step-down when delinquency, CNL, and OC/IC tests satisfied|absbox|Structured finance & securitization
+759|Trinomial tree option value|V = discounted expected value across three branches|QuantLib|Derivatives, options & volatility
+760|TRIX|TRIX = 1-period ROC of triple EMA|TA-Lib.TRIX|Technical analysis & chart-based indicators
+761|True range|TR = max(H-L, |H-C_{t-1}|, |L-C_{t-1}|)|TA-Lib.TRANGE|Technical analysis & chart-based indicators
+762|Turbo amortization amount|Turbo = excess cash after fees and note interest redirected to senior principal|absbox|Structured finance & securitization
+763|Turnover ratio|Turnover = Volume / Shares Outstanding|manual|Liquidity risk & market liquidity
+764|TVPI|TVPI = (Residual Value + Distributions) / Paid-In Capital|manual|Private equity, venture capital & LBO
+765|TWAP|TWAP = (1/n) Σ_i P_i|manual|Trading, execution & market microstructure
+766|Ulcer index|UI = sqrt(mean(drawdown^2))|quantstats.stats|Performance measurement & attribution
+767|Ultimate oscillator|UO = weighted avg of BP/TR over 7,14,28 periods|TA-Lib.momentum.UltimateOscillator|Technical analysis & chart-based indicators
+768|Uncovered interest parity (UIP)|E[S_{t+T}] / S_t approx (1+r_d T)/(1+r_f T)|manual|FX & international finance
+769|Unexpected loss|UL = sqrt(PD(1-PD)) x LGD x EAD|manual|Credit risk, default modeling & credit portfolio
+770|Unlevered beta|beta_U = beta_L / [1 + (1-T)D/E]|manual|Corporate finance, valuation & capital budgeting
+771|Unlevered yield|Unlevered Yield = NOI / Purchase Price|manual|Real estate finance & mortgages
+772|Up capture ratio|Up Capture = mean(R_p|R_b>0)/mean(R_b|R_b>0)|quantstats.stats|Performance measurement & attribution
+773|Upside capture|Upside Capture = Avg(R_p | R_b>0) / Avg(R_b | R_b>0)|quantstats.stats|Performance measurement & attribution
+774|Upside potential ratio|UPR = Upside Potential / Downside Deviation|manual|Asset management & portfolio optimization
+775|Utilization rate|Utilization = Outstanding Balance / Credit Limit|manual|Banking, consumer lending & project finance
+776|Vacancy rate|Vacancy Rate = Vacant Units or Lost Rent / Total Potential Units or Rent|manual|Real estate finance & mortgages
+777|Vanna|Vanna = -e^{-qT} n(d1) d2 / sigma|QuantLib|Derivatives, options & volatility
+778|VAR(p)|y_t = c + A_1 y_{t-1}+…+A_p y_{t-p}+u_t|statsmodels.tsa.api.VAR|Econometrics & time-series finance
+779|Variance of loss|Var(L) = E[L^2] - (E[L])^2|actuarialmath|Actuarial science & insurance
+780|Variance ratio test|VR(q) = Var(q-period returns)/(q Var(1-period returns))|statsmodels.tsa.VAR|Market risk & volatility modeling
+781|Variance swap fair strike|K_var = E_Q[ realized variance ]|QuantLib.VanillaSwap|Derivatives, options & volatility
+782|Vasicek one-factor portfolio loss quantile|L_alpha = LGD Phi((Phi^-1(PD)+sqrt(rho)Phi^-1(alpha))/sqrt(1-rho))|scipy.stats|Credit risk, default modeling & credit portfolio
+783|Vasicek short-rate process|dr_t = a(b-r_t)dt + sigma dW_t|QuantLib.Vasicek|Interest-rate modeling & term structures
+784|VC liquidation preference payout|Payout = max(Preference, Ownership x Exit Value) with participation rules|manual|Private equity, venture capital & LBO
+785|VECM|Delta y_t = Pi y_{t-1} + sum_i Gamma_i Delta y_{t-i} + u_t|statsmodels.tsa.VECM|Econometrics & time-series finance
+786|Vega|Vega = S e^{-qT} n(d1) sqrt(T)|py-vollib-gen.greeks|Derivatives, options & volatility
+787|Vintage cumulative loss|Vintage Loss_t = cumulative net losses / original balance|manual|Credit risk, default modeling & credit portfolio
+788|VIX variance relation|VIX^2 ~ expected 30-day risk-neutral variance x 100^2|manual|Derivatives, options & volatility
+789|Volatility clustering test|ACF of r_t^2 significantly positive|statsmodels.tsa.stattools|Market risk & volatility modeling
+790|Volume-weighted average price (VWAP)|VWAP = sum(P_t V_t) / sum(V_t) intraday|TA-Lib.volume.VolumeWeightedAveragePrice|Technical analysis & chart-based indicators
+791|Vomma / volga|Vomma = Vega d1 d2 / sigma|QuantLib|Derivatives, options & volatility
+792|VWAP|VWAP = Σ_i P_i V_i / Σ_i V_i|manual|Trading, execution & market microstructure
+793|VWAP benchmark|VWAP = sum_t P_t V_t / sum_t V_t|manual|Liquidity risk, market liquidity & execution cost
+794|Weighted average cost of capital (WACC)|WACC = E/V·R_e + D/V·R_d·(1-T)|manual|Corporate finance & capital budgeting
+795|Weighted average coupon (WAC)|WAC = sum_i w_i coupon_i|manual|Structured finance & securitization
+796|Weighted average life (WAL)|WAL = sum_t t Principal_t / Total Principal|manual|Structured finance & securitization
+797|Weighted average life of loan portfolio|WAL = sum_t t Principal_t / sum_t Principal_t|manual|Credit risk, default modeling & credit portfolio
+798|Weighted average maturity (WAM)|WAM = sum_i w_i maturity_i|manual|Structured finance & securitization
+799|Weighted least squares (WLS)|beta_hat = (X'WX)^-1 X'Wy|statsmodels.WLS|Econometrics & time-series finance
+800|Weighted moving average (WMA)|WMA = sum_i w_i P_{t-i} / sum_i w_i|TA-Lib.WMA|Technical analysis & chart-based indicators
+801|White heteroskedasticity test|LM = nR^2 from auxiliary regression on X, X^2, cross terms|statsmodels|Econometrics & time-series finance
+802|Whole life annuity-due|adot_x = E[sum_{k>=0} v^k 1(T_x>k)]|actuarialmath|Actuarial science & insurance
+803|Whole life annuity-immediate|a_x = E[sum_{k>=1} v^k 1(T_x>=k)]|actuarialmath|Actuarial science & insurance
+804|Whole life assurance|A_x = Σ_k v^(k+1)·_k p_x·q_(x+k)|actuarialmath.Insurance|Actuarial science & insurance
+805|Williams %R|%R = -100(H_n-C)/(H_n-L_n)|TA-Lib.WILLR|Technical analysis & chart-based indicators
+806|Win/loss ratio|Win/Loss = avg positive return / |avg negative return||quantstats.stats|Performance measurement & attribution
+807|Working capital|Working Capital = Current Assets - Current Liabilities|manual|Accounting & financial statement analysis
+808|Wrong-way risk adjustment|EPE_WWR > EPE due to positive dependence between exposure and PD|manual|Credit risk, default modeling & credit portfolio
+809|Yang-Zhang volatility|sigma_YZ^2 = sigma_o^2 + k sigma_c^2 + (1-k) sigma_RS^2|manual|Market risk & volatility modeling
+810|Yield curve carry|Carry approx Coupon + Roll-down + Financing|manual|Fixed income, bonds & credit markets
+811|Yield to call (YTC)|P = sum_t C/(1+y)^t + CallPrice/(1+y)^T_call|QuantLib|Fixed income, bonds & credit markets
+812|Yield to maturity (YTM)|P = sum_t C/(1+YTM/m)^(mt) + F/(1+YTM/m)^(mT)|QuantLib|Fixed income, bonds & credit markets
+813|Yield to worst (YTW)|YTW = min(YTM, YTC, YTP, ...)|QuantLib|Fixed income, bonds & credit markets
+814|Zero-coupon bond price|P = F/(1+r)^T|QuantLib.BondFunctions.cleanPrice|Fixed income, bonds & credit markets
+815|Z-spread|P = sum_t CF_t exp(-(r_t + z)t)|QuantLib|Credit risk, default modeling & credit portfolio

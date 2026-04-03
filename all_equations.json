@@ -1,0 +1,5707 @@
+[
+  {
+    "idx": 1,
+    "field": "Equity valuation & asset pricing",
+    "name": "Abnormal earnings growth",
+    "math": "P_0 = capitalized next earnings + PV abnormal earnings growth",
+    "pkg": "manual"
+  },
+  {
+    "idx": 2,
+    "field": "Structured finance & securitization",
+    "name": "ABS pool factor",
+    "math": "Factor_t = Current Pool Balance / Original Pool Balance",
+    "pkg": "manual"
+  },
+  {
+    "idx": 3,
+    "field": "FX & international finance",
+    "name": "Absolute PPP",
+    "math": "S = P / P^*",
+    "pkg": "manual"
+  },
+  {
+    "idx": 4,
+    "field": "Accounting & financial statement analysis",
+    "name": "Accounting identity",
+    "math": "Assets = Liabilities + Equity",
+    "pkg": "manual"
+  },
+  {
+    "idx": 5,
+    "field": "Fixed income & bond math",
+    "name": "Accrued interest",
+    "math": "AI = Coupon × DayCountFraction",
+    "pkg": "QuantLib.Bond.accruedAmount"
+  },
+  {
+    "idx": 6,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Accumulation/distribution line",
+    "math": "ADL = ADL_{t-1} + MFM_t x Volume_t",
+    "pkg": "TA-Lib.AD"
+  },
+  {
+    "idx": 7,
+    "field": "Asset management & portfolio optimization",
+    "name": "Active return",
+    "math": "AR = R_p - R_b",
+    "pkg": "manual"
+  },
+  {
+    "idx": 8,
+    "field": "Performance measurement & attribution",
+    "name": "Active risk budget",
+    "math": "IR = IC x sqrt(Breadth)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 9,
+    "field": "Asset management & portfolio optimization",
+    "name": "Active share",
+    "math": "Active Share = 0.5 sum_i |w_i - w_{b,i}|",
+    "pkg": "manual"
+  },
+  {
+    "idx": 10,
+    "field": "Econometrics & time-series finance",
+    "name": "ADF unit-root test",
+    "math": "Delta y_t = alpha + beta t + gamma y_{t-1} + sum_i delta_i Delta y_{t-i} + epsilon_t",
+    "pkg": "statsmodels.tsa.stattools.adfuller"
+  },
+  {
+    "idx": 11,
+    "field": "Corporate finance & capital budgeting",
+    "name": "Adjusted present value (APV)",
+    "math": "APV = NPV_unlevered + PV(financing side effects)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 12,
+    "field": "Econometrics & time-series finance",
+    "name": "Adjusted R-squared",
+    "math": "Adj R^2 = 1 - (1-R^2)(n-1)/(n-k-1)",
+    "pkg": "statsmodels.OLS"
+  },
+  {
+    "idx": 13,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Advance rate",
+    "math": "Advance Rate = Loan Amount / Eligible Collateral Base",
+    "pkg": "manual"
+  },
+  {
+    "idx": 14,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Adverse selection cost",
+    "math": "ASC = Effective Spread - Realized Spread",
+    "pkg": "manual"
+  },
+  {
+    "idx": 15,
+    "field": "Technical analysis",
+    "name": "ADX",
+    "math": "ADX = EMA(Directional Movement Index)",
+    "pkg": "TA-Lib.trend.ADXIndicator"
+  },
+  {
+    "idx": 16,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Affine term structure bond price",
+    "math": "P(t,T)=exp(A(t,T)+B(t,T)'X_t)",
+    "pkg": "QuantLib.BondFunctions.cleanPrice"
+  },
+  {
+    "idx": 17,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "After-tax cost of debt",
+    "math": "R_d,aftertax = R_d(1-T)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 18,
+    "field": "Actuarial science & insurance",
+    "name": "Aggregate loss distribution",
+    "math": "S = sum_{i=1}^N X_i",
+    "pkg": "scipy.stats"
+  },
+  {
+    "idx": 19,
+    "field": "Performance measurement & attribution",
+    "name": "Allocation effect (Brinson-Fachler)",
+    "math": "Allocation_i = (w_i^P - w_i^B)(r_i^B - r^B)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 20,
+    "field": "Equity valuation & asset pricing",
+    "name": "Alpha",
+    "math": "alpha_i = E[R_i] - [R_f + beta_i(E[R_m]-R_f)]",
+    "pkg": "empyrical-reloaded"
+  },
+  {
+    "idx": 21,
+    "field": "Performance measurement & attribution",
+    "name": "Alpha from regression",
+    "math": "R_p-R_f = alpha + beta(R_b-R_f) + epsilon",
+    "pkg": "statsmodels.OLS"
+  },
+  {
+    "idx": 22,
+    "field": "Accounting & financial statement analysis",
+    "name": "Altman Z-score",
+    "math": "Z = 1.2X1 + 1.4X2 + 3.3X3 + 0.6X4 + 1.0X5",
+    "pkg": "manual"
+  },
+  {
+    "idx": 23,
+    "field": "Derivatives, options & volatility",
+    "name": "American option binomial pricing",
+    "math": "V = max(intrinsic, discounted expected continuation)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 24,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Amihud illiquidity",
+    "math": "ILLIQ = mean(|R_t|/DollarVolume_t)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 25,
+    "field": "Trading, execution & market microstructure",
+    "name": "Amivest liquidity ratio",
+    "math": "Amivest = Volume / |Return|",
+    "pkg": "manual"
+  },
+  {
+    "idx": 26,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Amortization factor",
+    "math": "AF = r(1+r)^n / ((1+r)^n - 1)",
+    "pkg": "numpy_financial.pmt"
+  },
+  {
+    "idx": 27,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Annual percentage rate (APR)",
+    "math": "APR = periodic rate x periods per year",
+    "pkg": "manual"
+  },
+  {
+    "idx": 28,
+    "field": "Macroeconomics, inflation & price indices",
+    "name": "Annualized CPI inflation from monthly CPI",
+    "math": "π_t^(ann) = (CPI_t / CPI_(t-1))^12 - 1",
+    "pkg": "manual"
+  },
+  {
+    "idx": 29,
+    "field": "Macroeconomics, inflation & price indices",
+    "name": "Annualized PPI inflation from monthly PPI",
+    "math": "π_t^(ann) = (PPI_t / PPI_(t-1))^12 - 1",
+    "pkg": "manual"
+  },
+  {
+    "idx": 30,
+    "field": "Performance measurement & attribution",
+    "name": "Annualized return (CAGR)",
+    "math": "CAGR = (Ending Value / Beginning Value)^(1/n) - 1",
+    "pkg": "empyrical-reloaded.annual_return"
+  },
+  {
+    "idx": 31,
+    "field": "Performance measurement & attribution",
+    "name": "Annualized volatility",
+    "math": "σ_ann = σ_period × √m",
+    "pkg": "empyrical-reloaded.annual_volatility"
+  },
+  {
+    "idx": 32,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Annuity future value",
+    "math": "FV_annuity = PMT x ((1+r)^n - 1) / r",
+    "pkg": "numpy_financial.fv"
+  },
+  {
+    "idx": 33,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Annuity present value",
+    "math": "PV_annuity = PMT x (1-(1+r)^-n) / r",
+    "pkg": "numpy_financial.pv"
+  },
+  {
+    "idx": 34,
+    "field": "Market risk & volatility modeling",
+    "name": "APARCH",
+    "math": "sigma_t^delta = omega + alpha(|eps_{t-1}|-gamma eps_{t-1})^delta + beta sigma_{t-1}^delta",
+    "pkg": "arch.arch_model"
+  },
+  {
+    "idx": 35,
+    "field": "Asset management & portfolio optimization",
+    "name": "Appraisal ratio",
+    "math": "Appraisal = alpha / Residual Risk",
+    "pkg": "manual"
+  },
+  {
+    "idx": 36,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Approximate price change",
+    "math": "Delta P / P approx -D_mod Delta y + 0.5 Convexity (Delta y)^2",
+    "pkg": "manual"
+  },
+  {
+    "idx": 37,
+    "field": "Econometrics & time-series finance",
+    "name": "AR(1)",
+    "math": "y_t = c + φ y_{t-1} + ε_t",
+    "pkg": "statsmodels.tsa.AutoReg"
+  },
+  {
+    "idx": 38,
+    "field": "Econometrics & time-series finance",
+    "name": "AR(1)",
+    "math": "x_t = c + phi x_{t-1} + epsilon_t",
+    "pkg": "statsmodels.tsa.AutoReg"
+  },
+  {
+    "idx": 39,
+    "field": "Econometrics & time-series finance",
+    "name": "AR(p)",
+    "math": "x_t = c + sum_{i=1}^p phi_i x_{t-i} + epsilon_t",
+    "pkg": "statsmodels.tsa.AutoReg"
+  },
+  {
+    "idx": 40,
+    "field": "Equity valuation & asset pricing",
+    "name": "Arbitrage pricing theory (APT)",
+    "math": "E[R_i] = R_f + sum_k beta_{ik} lambda_k",
+    "pkg": "linearmodels"
+  },
+  {
+    "idx": 41,
+    "field": "Market risk & volatility modeling",
+    "name": "ARCH(q)",
+    "math": "sigma_t^2 = omega + sum_{i=1}^q alpha_i epsilon_{t-i}^2",
+    "pkg": "arch.arch_model"
+  },
+  {
+    "idx": 42,
+    "field": "Econometrics & time-series finance",
+    "name": "ARIMA(p,d,q)",
+    "math": "phi(L)(1-L)^d x_t = c + theta(L)epsilon_t",
+    "pkg": "statsmodels.tsa.ARIMA"
+  },
+  {
+    "idx": 43,
+    "field": "Econometrics & time-series finance",
+    "name": "ARIMAX / dynamic regression",
+    "math": "y_t = beta' x_t + ARIMA errors",
+    "pkg": "statsmodels.tsa.SARIMAX"
+  },
+  {
+    "idx": 44,
+    "field": "Econometrics & time-series finance",
+    "name": "ARMA(p,q)",
+    "math": "x_t = c + sum phi_i x_{t-i} + epsilon_t + sum theta_i epsilon_{t-i}",
+    "pkg": "statsmodels.tsa.ARIMA"
+  },
+  {
+    "idx": 45,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Aroon Down",
+    "math": "AroonDown = 100(n - periods since n-period low)/n",
+    "pkg": "TA-Lib.AROON"
+  },
+  {
+    "idx": 46,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Aroon oscillator",
+    "math": "Aroon Osc = AroonUp - AroonDown",
+    "pkg": "TA-Lib.AROONOSC"
+  },
+  {
+    "idx": 47,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Aroon Up",
+    "math": "AroonUp = 100(n - periods since n-period high)/n",
+    "pkg": "TA-Lib.AROON"
+  },
+  {
+    "idx": 48,
+    "field": "Trading, execution & market microstructure",
+    "name": "Arrival price slippage",
+    "math": "Slippage = Executed Price - Arrival Price",
+    "pkg": "manual"
+  },
+  {
+    "idx": 49,
+    "field": "Derivatives, options & volatility",
+    "name": "Asian option price",
+    "math": "V = E_Q[e^{-rT}(average(S)-K)^+]",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 50,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Asset swap spread",
+    "math": "ASW = bond coupon spread that sets package PV to par",
+    "pkg": "QuantLib.VanillaSwap"
+  },
+  {
+    "idx": 51,
+    "field": "Accounting & financial statement analysis",
+    "name": "Asset turnover",
+    "math": "Asset Turnover = Revenue / Average Assets",
+    "pkg": "manual"
+  },
+  {
+    "idx": 52,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Average directional index (ADX)",
+    "math": "ADX = EMA of directional movement index",
+    "pkg": "TA-Lib.ADX"
+  },
+  {
+    "idx": 53,
+    "field": "Structured finance & securitization",
+    "name": "Average loan age",
+    "math": "ALA = weighted average seasoning of loans",
+    "pkg": "manual"
+  },
+  {
+    "idx": 54,
+    "field": "Technical analysis",
+    "name": "Average true range (ATR)",
+    "math": "ATR = EMA(True Range)",
+    "pkg": "TA-Lib.volatility.AverageTrueRange"
+  },
+  {
+    "idx": 55,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Awesome oscillator",
+    "math": "AO = SMA_5(MedianPrice) - SMA_34(MedianPrice)",
+    "pkg": "TA-Lib.momentum.AwesomeOscillatorIndicator"
+  },
+  {
+    "idx": 56,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Bachelier option price",
+    "math": "Price = DF[(F-K)N(d) + sigma sqrt(T)n(d)]",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 57,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Back-end DTI (gross income)",
+    "math": "DTI_gross = Total Monthly Debt Payments / Gross Monthly Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 58,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Back-end DTI (net income)",
+    "math": "DTI_net = Total Monthly Debt Payments / Net Monthly Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 59,
+    "field": "Market risk & volatility modeling",
+    "name": "Backtesting exception rate",
+    "math": "Exception Rate = exceptions / observations",
+    "pkg": "manual"
+  },
+  {
+    "idx": 60,
+    "field": "Commodities, futures & hedging",
+    "name": "Backwardation slope",
+    "math": "Backwardation = 1 - F_long / F_short",
+    "pkg": "manual"
+  },
+  {
+    "idx": 61,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Balloon payment",
+    "math": "Balloon = Outstanding Balance at maturity",
+    "pkg": "numpy_financial.fv"
+  },
+  {
+    "idx": 62,
+    "field": "Derivatives, options & volatility",
+    "name": "Barrier option price",
+    "math": "V = BS closed form with reflection terms / lattice / MC",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 63,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Basel IRB capital requirement",
+    "math": "K = LGD[Phi((Phi^-1(PD)+sqrt(R)Phi^-1(0.999))/sqrt(1-R)) - PD] x MA",
+    "pkg": "manual"
+  },
+  {
+    "idx": 64,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Basel standardized capital requirement",
+    "math": "Capital = 8% x RWA",
+    "pkg": "manual"
+  },
+  {
+    "idx": 65,
+    "field": "Commodities, futures & hedging",
+    "name": "Basis",
+    "math": "Basis = S_t - F_t",
+    "pkg": "manual"
+  },
+  {
+    "idx": 66,
+    "field": "Commodities, futures & hedging",
+    "name": "Basis convergence",
+    "math": "Basis_T = 0 at maturity (ignoring delivery frictions)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 67,
+    "field": "Performance measurement & attribution",
+    "name": "Batting average",
+    "math": "BA = count(alpha_t > 0)/T",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 68,
+    "field": "Asset management & portfolio optimization",
+    "name": "Bayesian shrinkage return forecast",
+    "math": "mu_hat = lambda mu_prior + (1-lambda) mu_sample",
+    "pkg": "manual"
+  },
+  {
+    "idx": 69,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Behavioral duration of deposits",
+    "math": "D_beh = sensitivity-derived effective duration of non-maturity deposits",
+    "pkg": "statsmodels"
+  },
+  {
+    "idx": 70,
+    "field": "Asset management & portfolio optimization",
+    "name": "Benchmark-relative optimization",
+    "math": "min_w (w-w_b)'Sigma(w-w_b) - lambda mu'(w-w_b)",
+    "pkg": "cvxpy.Problem.solve"
+  },
+  {
+    "idx": 71,
+    "field": "Actuarial science & insurance",
+    "name": "Benefit reserve recursion",
+    "math": "(V_t + P)(1+i) = q Benefit + p V_{t+1}",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 72,
+    "field": "Accounting & financial statement analysis",
+    "name": "Beneish M-score",
+    "math": "M = -4.84 + 0.92DSRI + 0.528GMI + 0.404AQI + 0.892SGI + 0.115DEPI - 0.172SGAI + 4.679TATA - 0.327LVGI",
+    "pkg": "manual"
+  },
+  {
+    "idx": 73,
+    "field": "Equity valuation & asset pricing",
+    "name": "Beta",
+    "math": "beta_i = Cov(R_i,R_m)/Var(R_m)",
+    "pkg": "empyrical-reloaded"
+  },
+  {
+    "idx": 74,
+    "field": "Liquidity risk & market liquidity",
+    "name": "Bid-ask spread",
+    "math": "Spread = Ask - Bid",
+    "pkg": "manual"
+  },
+  {
+    "idx": 75,
+    "field": "Derivatives, options & volatility",
+    "name": "Binary asset-or-nothing call",
+    "math": "AON = S e^{-qT} N(d1)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 76,
+    "field": "Derivatives, options & volatility",
+    "name": "Binomial down factor",
+    "math": "d = 1/u",
+    "pkg": "manual"
+  },
+  {
+    "idx": 77,
+    "field": "Derivatives, options & volatility",
+    "name": "Binomial option pricing",
+    "math": "V = e^{-rΔt}[pV_u + (1-p)V_d]",
+    "pkg": "QuantLib.BinomialVanillaEngine"
+  },
+  {
+    "idx": 78,
+    "field": "Derivatives, options & volatility",
+    "name": "Binomial up factor",
+    "math": "u = e^{sigma sqrt(Delta t)}",
+    "pkg": "manual"
+  },
+  {
+    "idx": 79,
+    "field": "Market risk & volatility modeling",
+    "name": "Bipower variation",
+    "math": "BV_t = mu_1^-2 sum |r_i||r_{i-1}|",
+    "pkg": "manual"
+  },
+  {
+    "idx": 80,
+    "field": "Derivatives, options & volatility",
+    "name": "Black 76 option price",
+    "math": "Price = DF[F N(d1) - K N(d2)] for call",
+    "pkg": "py-vollib-gen.black"
+  },
+  {
+    "idx": 81,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Black caplet price",
+    "math": "Caplet = DF x tau [F N(d1) - K N(d2)]",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 82,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Black swaption price",
+    "math": "Swaption = A x [S N(d1) - K N(d2)]",
+    "pkg": "QuantLib.VanillaSwap"
+  },
+  {
+    "idx": 83,
+    "field": "Commodities, futures & hedging",
+    "name": "Black-76 commodity option",
+    "math": "C = e^{-rT}[F N(d1)-K N(d2)]",
+    "pkg": "py-vollib-gen.black.black"
+  },
+  {
+    "idx": 84,
+    "field": "Asset management & portfolio optimization",
+    "name": "Black-Litterman implied equilibrium returns",
+    "math": "Pi = delta Sigma w_mkt",
+    "pkg": "PyPortfolioOpt.EfficientFrontier"
+  },
+  {
+    "idx": 85,
+    "field": "Asset management & portfolio optimization",
+    "name": "Black-Litterman posterior mean",
+    "math": "μ_BL = [(τΣ)^(-1)+P^TΩ^(-1)P]^(-1)[(τΣ)^(-1)π + P^TΩ^(-1)Q]",
+    "pkg": "PyPortfolioOpt.EfficientFrontier"
+  },
+  {
+    "idx": 86,
+    "field": "Derivatives, options & volatility",
+    "name": "Black-Scholes call",
+    "math": "C = S_0 e^{-qT}N(d1) - K e^{-rT}N(d2)",
+    "pkg": "py-vollib-gen.black_scholes"
+  },
+  {
+    "idx": 87,
+    "field": "Derivatives, options & volatility",
+    "name": "Black-Scholes put",
+    "math": "P = K e^{-rT}N(-d2) - S_0 e^{-qT}N(-d1)",
+    "pkg": "py-vollib-gen.black_scholes"
+  },
+  {
+    "idx": 88,
+    "field": "Derivatives, options & volatility",
+    "name": "Black-Scholes-Merton d1",
+    "math": "d1 = [ln(S/K)+(r-q+0.5 sigma^2)T]/(sigma sqrt(T))",
+    "pkg": "py-vollib-gen"
+  },
+  {
+    "idx": 89,
+    "field": "Derivatives, options & volatility",
+    "name": "Black-Scholes-Merton d2",
+    "math": "d2 = d1 - sigma sqrt(T)",
+    "pkg": "py-vollib-gen"
+  },
+  {
+    "idx": 90,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Bollinger %B",
+    "math": "%B = (P-Lower)/(Upper-Lower)",
+    "pkg": "TA-Lib.BBANDS"
+  },
+  {
+    "idx": 91,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Bollinger Bands lower",
+    "math": "Lower = SMA_n - k sigma_n",
+    "pkg": "TA-Lib.BBANDS"
+  },
+  {
+    "idx": 92,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Bollinger Bands middle",
+    "math": "Middle = SMA_n(P)",
+    "pkg": "TA-Lib.BBANDS"
+  },
+  {
+    "idx": 93,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Bollinger Bands upper",
+    "math": "Upper = SMA_n + k sigma_n",
+    "pkg": "TA-Lib.BBANDS"
+  },
+  {
+    "idx": 94,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Bollinger bandwidth",
+    "math": "Bandwidth = (Upper-Lower)/Middle",
+    "pkg": "TA-Lib.BBANDS"
+  },
+  {
+    "idx": 95,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Bond carry and roll",
+    "math": "Carry+Roll = coupon income + financing + curve roll-down",
+    "pkg": "manual"
+  },
+  {
+    "idx": 96,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Bond equivalent yield (BEY)",
+    "math": "BEY = 2[(1+HPY)^(182/d) - 1]",
+    "pkg": "manual"
+  },
+  {
+    "idx": 97,
+    "field": "Fixed income & bond math",
+    "name": "Bond price",
+    "math": "P = Σ_{t=1}^n C_t/(1+y/m)^(mt) + FV/(1+y/m)^(mn)",
+    "pkg": "QuantLib.Bond"
+  },
+  {
+    "idx": 98,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Bond price from yield",
+    "math": "P = sum_t C/(1+y/m)^(mt) + F/(1+y/m)^(mT)",
+    "pkg": "QuantLib.BondFunctions.bondYield"
+  },
+  {
+    "idx": 99,
+    "field": "Accounting & financial statement analysis",
+    "name": "Book value per share",
+    "math": "BVPS = Equity / Shares Outstanding",
+    "pkg": "manual"
+  },
+  {
+    "idx": 100,
+    "field": "Equity valuation & asset pricing",
+    "name": "Book-to-market ratio",
+    "math": "Book-to-market = Book Equity / Market Cap",
+    "pkg": "manual"
+  },
+  {
+    "idx": 101,
+    "field": "Actuarial science & insurance",
+    "name": "Bornhuetter-Ferguson reserve",
+    "math": "Ultimate = Reported + (Expected Ultimate x %Unreported)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 102,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Borrowing base",
+    "math": "Borrowing Base = sum_i Eligible Collateral_i x Advance Rate_i",
+    "pkg": "manual"
+  },
+  {
+    "idx": 103,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Break-even inflation",
+    "math": "BEI = Nominal Yield - Real Yield",
+    "pkg": "manual"
+  },
+  {
+    "idx": 104,
+    "field": "Real estate finance & mortgages",
+    "name": "Break-even occupancy",
+    "math": "BEO = (Operating Expenses + Debt Service) / Gross Potential Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 105,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Break-even quantity",
+    "math": "Q_BE = Fixed Costs / (Price - Variable Cost per unit)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 106,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Break-even revenue",
+    "math": "Sales_BE = Fixed Costs / Contribution Margin Ratio",
+    "pkg": "manual"
+  },
+  {
+    "idx": 107,
+    "field": "Econometrics & time-series finance",
+    "name": "Breusch-Pagan test",
+    "math": "LM = nR^2 from auxiliary regression of e^2 on X",
+    "pkg": "statsmodels"
+  },
+  {
+    "idx": 108,
+    "field": "Performance measurement & attribution",
+    "name": "Brinson allocation effect",
+    "math": "Allocation_i = (w_{p,i}-w_{b,i})·(R_{b,i}-R_b)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 109,
+    "field": "Performance measurement & attribution",
+    "name": "Brinson selection effect",
+    "math": "Selection_i = w_{b,i}·(R_{p,i}-R_{b,i})",
+    "pkg": "manual"
+  },
+  {
+    "idx": 110,
+    "field": "Actuarial science & insurance",
+    "name": "Bühlmann credibility factor",
+    "math": "Z = n/(n+K)",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 111,
+    "field": "Asset management & portfolio optimization",
+    "name": "Burke ratio",
+    "math": "Burke = Excess Return / sqrt(sum Drawdown_i^2)",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 112,
+    "field": "Derivatives, options & volatility",
+    "name": "Butterfly payoff",
+    "math": "Payoff = max(S-K1,0)-2max(S-K2,0)+max(S-K3,0)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 113,
+    "field": "Commodities, futures & hedging",
+    "name": "Calendar spread",
+    "math": "Spread = F_near - F_far",
+    "pkg": "manual"
+  },
+  {
+    "idx": 114,
+    "field": "Derivatives, options & volatility",
+    "name": "Call payoff",
+    "math": "C_T = max(S_T - K, 0)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 115,
+    "field": "Derivatives, options & volatility",
+    "name": "Call spread payoff",
+    "math": "Payoff = max(S-K1,0) - max(S-K2,0)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 116,
+    "field": "Asset management & portfolio optimization",
+    "name": "Calmar ratio",
+    "math": "Calmar = CAGR / Max Drawdown",
+    "pkg": "empyrical-reloaded.calmar_ratio"
+  },
+  {
+    "idx": 117,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Cancel-to-trade ratio",
+    "math": "CTR = Number of cancellations / Number of trades",
+    "pkg": "manual"
+  },
+  {
+    "idx": 118,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Capital conservation buffer",
+    "math": "CCB = CET1 Ratio - minimum CET1 requirement",
+    "pkg": "manual"
+  },
+  {
+    "idx": 119,
+    "field": "Real estate finance",
+    "name": "Capitalization rate",
+    "math": "Cap Rate = NOI / Property Value",
+    "pkg": "manual"
+  },
+  {
+    "idx": 120,
+    "field": "Equity valuation & asset pricing",
+    "name": "CAPM expected return",
+    "math": "E[R_i] = R_f + beta_i(E[R_m]-R_f)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 121,
+    "field": "Equity valuation & asset pricing",
+    "name": "Carhart 4-factor model",
+    "math": "R_i-R_f = alpha + b MKT + s SMB + h HML + m MOM + epsilon",
+    "pkg": "linearmodels"
+  },
+  {
+    "idx": 122,
+    "field": "Accounting & financial statement analysis",
+    "name": "Cash conversion cycle (CCC)",
+    "math": "CCC = DSO + DIO - DPO",
+    "pkg": "manual"
+  },
+  {
+    "idx": 123,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Cash flow at risk (CFaR)",
+    "math": "CFaR_alpha = quantile_alpha(future cash flow shortfall)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 124,
+    "field": "Accounting & financial statement analysis",
+    "name": "Cash flow margin",
+    "math": "CF Margin = Operating Cash Flow / Revenue",
+    "pkg": "manual"
+  },
+  {
+    "idx": 125,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Cash interest coverage",
+    "math": "(EBITDA - Capex) / Cash Interest",
+    "pkg": "manual"
+  },
+  {
+    "idx": 126,
+    "field": "Accounting & financial statement analysis",
+    "name": "Cash ratio",
+    "math": "Cash Ratio = (Cash + Marketable Securities) / Current Liabilities",
+    "pkg": "manual"
+  },
+  {
+    "idx": 127,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Cash sweep",
+    "math": "Debt Paydown_t = max(FCF_t - Required Cash,0)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 128,
+    "field": "Real estate finance & mortgages",
+    "name": "Cash-on-cash return",
+    "math": "CoC = Before-tax Cash Flow / Equity Invested",
+    "pkg": "manual"
+  },
+  {
+    "idx": 129,
+    "field": "Real estate finance & mortgages",
+    "name": "Cash-out refinance LTV",
+    "math": "Max Refi Proceeds = Appraised Value x Max LTV",
+    "pkg": "manual"
+  },
+  {
+    "idx": 130,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Catch-up distribution",
+    "math": "Catch-up = distribute until GP achieves target carry split",
+    "pkg": "manual"
+  },
+  {
+    "idx": 131,
+    "field": "Structured finance & securitization",
+    "name": "CDO tranche loss",
+    "math": "Loss_tranche = min(max(PoolLoss-Attach,0), Detach-Attach)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 132,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "CDS par spread",
+    "math": "S* = PV_protection / PV01",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 133,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "CDS premium leg",
+    "math": "PV_prem = S sum_i alpha_i DF_i Survival(t_i)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 134,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "CDS protection leg",
+    "math": "PV_prot = LGD integral DF(t) dQ(t)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 135,
+    "field": "Credit risk",
+    "name": "CDS spread approximation",
+    "math": "s ≈ λ(1-R)",
+    "pkg": "QuantLib.CreditDefaultSwap"
+  },
+  {
+    "idx": 136,
+    "field": "Banking, lending & project finance",
+    "name": "CET1 ratio",
+    "math": "CET1 Ratio = CET1 Capital / Risk-Weighted Assets",
+    "pkg": "manual"
+  },
+  {
+    "idx": 137,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Chaikin money flow (CMF)",
+    "math": "CMF = sum(MFM x Volume)/sum Volume over n",
+    "pkg": "TA-Lib.volume.ChaikinMoneyFlowIndicator"
+  },
+  {
+    "idx": 138,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Chaikin oscillator",
+    "math": "CHO = EMA_3(ADL) - EMA_10(ADL)",
+    "pkg": "TA-Lib.ADOSC"
+  },
+  {
+    "idx": 139,
+    "field": "Actuarial science & insurance",
+    "name": "Chain-ladder development",
+    "math": "Ultimate_i = Latest_i x CDF_i",
+    "pkg": "manual"
+  },
+  {
+    "idx": 140,
+    "field": "Derivatives, options & volatility",
+    "name": "Charm",
+    "math": "Charm = d(Delta)/dt",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 141,
+    "field": "Derivatives, options & volatility",
+    "name": "Chooser option value",
+    "math": "V = value of right to choose call or put at decision time",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 142,
+    "field": "Market risk & volatility modeling",
+    "name": "Christoffersen independence test",
+    "math": "LR_ind = -2 ln(L_restricted/L_unrestricted)",
+    "pkg": "scipy.stats"
+  },
+  {
+    "idx": 143,
+    "field": "Interest-rate modeling & term structures",
+    "name": "CIR short-rate model",
+    "math": "dr_t = κ(θ-r_t)dt + σ√(r_t)dW_t",
+    "pkg": "QuantLib.CoxIngersollRoss"
+  },
+  {
+    "idx": 144,
+    "field": "Interest-rate modeling & term structures",
+    "name": "CIR zero-coupon bond price",
+    "math": "P(t,T) = A(t,T) exp(-B(t,T)r_t)",
+    "pkg": "QuantLib.BondFunctions.cleanPrice"
+  },
+  {
+    "idx": 145,
+    "field": "Actuarial science & insurance",
+    "name": "Claims ratio",
+    "math": "Claims Ratio = Claims Incurred / Earned Premium",
+    "pkg": "manual"
+  },
+  {
+    "idx": 146,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Clean price",
+    "math": "Clean Price = Dirty Price - Accrued Interest",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 147,
+    "field": "Real estate finance & mortgages",
+    "name": "CLTV for mortgage",
+    "math": "All Secured Debt / Property Value",
+    "pkg": "manual"
+  },
+  {
+    "idx": 148,
+    "field": "Econometrics & time-series finance",
+    "name": "Cointegration regression",
+    "math": "y_t = alpha + beta x_t + u_t with u_t stationary",
+    "pkg": "statsmodels.tsa.stattools.coint"
+  },
+  {
+    "idx": 149,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Collateral haircut",
+    "math": "Haircut = 1 - Lending Value / Market Value",
+    "pkg": "manual"
+  },
+  {
+    "idx": 150,
+    "field": "Derivatives, options & volatility",
+    "name": "Color",
+    "math": "Color = d(Gamma)/dt",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 151,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Combined leverage",
+    "math": "DCL = DOL x DFL",
+    "pkg": "manual"
+  },
+  {
+    "idx": 152,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Combined loan-to-value (CLTV)",
+    "math": "CLTV = Total Secured Debt / Collateral Value",
+    "pkg": "manual"
+  },
+  {
+    "idx": 153,
+    "field": "Actuarial science & insurance",
+    "name": "Combined ratio",
+    "math": "Combined Ratio = Loss Ratio + Expense Ratio",
+    "pkg": "manual"
+  },
+  {
+    "idx": 154,
+    "field": "Commodities, futures & hedging",
+    "name": "Commodity carry return",
+    "math": "Carry = collateral yield + roll yield + spot return",
+    "pkg": "manual"
+  },
+  {
+    "idx": 155,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Commodity channel index (CCI)",
+    "math": "CCI = (TP - SMA(TP)) / (0.015 x MeanDeviation)",
+    "pkg": "TA-Lib.CCI"
+  },
+  {
+    "idx": 156,
+    "field": "Commodities, futures & hedging",
+    "name": "Commodity storage arbitrage",
+    "math": "Arbitrage if F_0 > S_0 e^{(r+u-y)T}",
+    "pkg": "manual"
+  },
+  {
+    "idx": 157,
+    "field": "Asset management & portfolio optimization",
+    "name": "Component risk contribution",
+    "math": "CRC_i = w_i·MRC_i",
+    "pkg": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "idx": 158,
+    "field": "Market risk & volatility modeling",
+    "name": "Component VaR",
+    "math": "CVaR_i = w_i × MVaR_i",
+    "pkg": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "idx": 159,
+    "field": "Market risk & volatility modeling",
+    "name": "Component VaR",
+    "math": "CVaR_i = w_i dVaR/dw_i",
+    "pkg": "manual"
+  },
+  {
+    "idx": 160,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Compounded forward rate",
+    "math": "1+F tau = DF(t1)/DF(t2)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 161,
+    "field": "Structured finance & securitization",
+    "name": "Conditional prepayment rate (CPR)",
+    "math": "CPR = 1 - (1 - SMM)^12",
+    "pkg": "manual"
+  },
+  {
+    "idx": 162,
+    "field": "Structured finance & securitization",
+    "name": "Conditional prepayment rate (CPR)",
+    "math": "CPR = 1 - (1-SMM)^12",
+    "pkg": "manual"
+  },
+  {
+    "idx": 163,
+    "field": "Actuarial science & insurance",
+    "name": "Constant force survival",
+    "math": "{}_tp_x = e^{-mu t}",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 164,
+    "field": "Macroeconomics, inflation & price indices",
+    "name": "Consumer Price Index (Laspeyres form)",
+    "math": "CPI_t = (Σ_i p_(i,t) q_(i,0) / Σ_i p_(i,0) q_(i,0)) × 100",
+    "pkg": "manual"
+  },
+  {
+    "idx": 165,
+    "field": "Commodities, futures & hedging",
+    "name": "Contango slope",
+    "math": "Contango = F_long / F_short - 1",
+    "pkg": "manual"
+  },
+  {
+    "idx": 166,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Continuous compounding",
+    "math": "FV = PV·e^{rt}",
+    "pkg": "QuantLib.InterestRate"
+  },
+  {
+    "idx": 167,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Contribution margin",
+    "math": "CM = Revenue - Variable Costs",
+    "pkg": "manual"
+  },
+  {
+    "idx": 168,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Contribution margin ratio",
+    "math": "CMR = Contribution Margin / Revenue",
+    "pkg": "manual"
+  },
+  {
+    "idx": 169,
+    "field": "Performance measurement & attribution",
+    "name": "Contribution to return",
+    "math": "CTR_i = w_i x r_i",
+    "pkg": "manual"
+  },
+  {
+    "idx": 170,
+    "field": "Commodities, futures & hedging",
+    "name": "Convenience yield",
+    "math": "y = r + u - (1/T)ln(F_0/S_0)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 171,
+    "field": "Commodities, futures & hedging",
+    "name": "Convenience yield from futures curve",
+    "math": "y = r + u - ln(F/S)/T",
+    "pkg": "manual"
+  },
+  {
+    "idx": 172,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Convexity",
+    "math": "Convexity = (1/P) d^2P/dy^2",
+    "pkg": "QuantLib.BondFunctions.convexity"
+  },
+  {
+    "idx": 173,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Convexity-adjusted futures rate",
+    "math": "F_adj approx F + 0.5 sigma^2 T1 T2",
+    "pkg": "QuantLib.BondFunctions.convexity"
+  },
+  {
+    "idx": 174,
+    "field": "Market risk & volatility modeling",
+    "name": "Cornish-Fisher VaR",
+    "math": "VaR_CF = μ + σ[z + (z^2-1)S/6 + (z^3-3z)K/24 - (2z^3-5z)S^2/36]",
+    "pkg": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "idx": 175,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Cost of equity (CAPM)",
+    "math": "R_e = R_f + beta(E[R_m]-R_f)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 176,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Cost of equity (Dividend growth)",
+    "math": "R_e = D_1/P_0 + g",
+    "pkg": "manual"
+  },
+  {
+    "idx": 177,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Cost of risk",
+    "math": "Cost of Risk = Loan Loss Provision / Average Gross Loans",
+    "pkg": "manual"
+  },
+  {
+    "idx": 178,
+    "field": "Commodities, futures & hedging",
+    "name": "Cost-of-carry futures price",
+    "math": "F_0 = S_0 e^{(r + u - y)T}",
+    "pkg": "manual"
+  },
+  {
+    "idx": 179,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Countercyclical capital buffer",
+    "math": "CCyB = jurisdiction-specific add-on to CET1 requirement",
+    "pkg": "manual"
+  },
+  {
+    "idx": 180,
+    "field": "Asset management & portfolio optimization",
+    "name": "Covariance matrix",
+    "math": "Σ = E[(R-μ)(R-μ)^T]",
+    "pkg": "PyPortfolioOpt.risk_models.sample_cov"
+  },
+  {
+    "idx": 181,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Coverage ratio",
+    "math": "Allowance / Nonperforming Assets",
+    "pkg": "manual"
+  },
+  {
+    "idx": 182,
+    "field": "Derivatives, options & volatility",
+    "name": "Covered call payoff",
+    "math": "Payoff = S_T - max(S_T-K,0) + Premium",
+    "pkg": "manual"
+  },
+  {
+    "idx": 183,
+    "field": "FX & international finance",
+    "name": "Covered interest parity (CIP)",
+    "math": "F/S = (1+i_d)/(1+i_f) ",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 184,
+    "field": "Econometrics & time-series finance",
+    "name": "Cox proportional hazards",
+    "math": "h(t|x)=h_0(t)exp(beta'x)",
+    "pkg": "lifelines.CoxPHFitter"
+  },
+  {
+    "idx": 185,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Cox-Ingersoll-Ross (CIR) process",
+    "math": "dr_t = a(b-r_t)dt + sigma sqrt(r_t)dW_t",
+    "pkg": "QuantLib.CoxIngersollRoss"
+  },
+  {
+    "idx": 186,
+    "field": "Macroeconomics, inflation & price indices",
+    "name": "CPI inflation (month over month)",
+    "math": "π_t^(CPI,MoM) = CPI_t / CPI_(t-1) - 1",
+    "pkg": "manual"
+  },
+  {
+    "idx": 187,
+    "field": "Macroeconomics, inflation & price indices",
+    "name": "CPI inflation (year over year)",
+    "math": "π_t^(CPI,YoY) = CPI_t / CPI_(t-12) - 1",
+    "pkg": "manual"
+  },
+  {
+    "idx": 188,
+    "field": "Commodities, futures & hedging",
+    "name": "Crack spread",
+    "math": "Crack Spread = Product Futures Value - Crude Futures Cost",
+    "pkg": "manual"
+  },
+  {
+    "idx": 189,
+    "field": "Actuarial science & insurance",
+    "name": "Credibility premium",
+    "math": "Premium = Z x Experience Mean + (1-Z) x Manual Mean",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 190,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Credit conversion factor (CCF)",
+    "math": "CCF = (EAD - Outstanding) / Undrawn",
+    "pkg": "manual"
+  },
+  {
+    "idx": 191,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Credit portfolio variance (independent defaults)",
+    "math": "Var(L) = sum_i EAD_i^2 LGD_i^2 PD_i(1-PD_i)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 192,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Credit RWA under standardized approach",
+    "math": "Credit_RWA = EAD x supervisory risk weight",
+    "pkg": "manual"
+  },
+  {
+    "idx": 193,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Credit spread",
+    "math": "Credit Spread = Corporate Yield - Risk-free Yield",
+    "pkg": "manual"
+  },
+  {
+    "idx": 194,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Credit VaR",
+    "math": "CreditVaR = quantile_alpha(loss distribution) - expected loss",
+    "pkg": "manual"
+  },
+  {
+    "idx": 195,
+    "field": "FX & international finance",
+    "name": "Cross exchange rate",
+    "math": "S_{A/C} = S_{A/B} × S_{B/C}",
+    "pkg": "manual"
+  },
+  {
+    "idx": 196,
+    "field": "FX & international finance",
+    "name": "Cross-currency basis",
+    "math": "Basis = quoted basis spread that equalizes swap PV",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 197,
+    "field": "Commodities, futures & hedging",
+    "name": "Cross-hedge ratio",
+    "math": "h_x = rho (sigma_S / sigma_F)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 198,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Cumulative gap",
+    "math": "CumGap_T = sum_{t<=T} Gap_t",
+    "pkg": "manual"
+  },
+  {
+    "idx": 199,
+    "field": "Macroeconomics, inflation & price indices",
+    "name": "Cumulative inflation factor from CPI",
+    "math": "Inflation Factor_(0→t) = CPI_t / CPI_0",
+    "pkg": "manual"
+  },
+  {
+    "idx": 200,
+    "field": "Macroeconomics, inflation & price indices",
+    "name": "Cumulative inflation factor from PPI",
+    "math": "Inflation Factor_(0→t) = PPI_t / PPI_0",
+    "pkg": "manual"
+  },
+  {
+    "idx": 201,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Cumulative liquidity gap",
+    "math": "CumLiquidityGap_T = sum_{t<=T} (Inflows_t - Outflows_t)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 202,
+    "field": "Structured finance & securitization",
+    "name": "Cumulative net loss",
+    "math": "CNL = cumulative(net charge-offs) / original balance",
+    "pkg": "manual"
+  },
+  {
+    "idx": 203,
+    "field": "Performance measurement & attribution",
+    "name": "Cumulative return",
+    "math": "R_cum = Π_t (1+r_t) - 1",
+    "pkg": "empyrical-reloaded"
+  },
+  {
+    "idx": 204,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Cure rate",
+    "math": "Cure Rate = cured delinquent accounts / delinquent accounts",
+    "pkg": "manual"
+  },
+  {
+    "idx": 205,
+    "field": "FX & international finance",
+    "name": "Currency basket index",
+    "math": "Index_t = prod_i S_{i,t}^{w_i}",
+    "pkg": "manual"
+  },
+  {
+    "idx": 206,
+    "field": "FX & international finance",
+    "name": "Currency carry return",
+    "math": "Carry = i_high - i_low + FX change",
+    "pkg": "manual"
+  },
+  {
+    "idx": 207,
+    "field": "Accounting & financial statement analysis",
+    "name": "Current ratio",
+    "math": "Current Ratio = Current Assets / Current Liabilities",
+    "pkg": "manual"
+  },
+  {
+    "idx": 208,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Current yield",
+    "math": "Current Yield = Annual Coupon / Bond Price",
+    "pkg": "manual"
+  },
+  {
+    "idx": 209,
+    "field": "Actuarial science & insurance",
+    "name": "Curtate expected future lifetime",
+    "math": "e_x^∘ = sum_{k>=1} {}_kp_x",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 210,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "CVA capital proxy",
+    "math": "CVA Capital ~ sensitivity-based or standardized charge",
+    "pkg": "manual"
+  },
+  {
+    "idx": 211,
+    "field": "Derivatives, options & volatility",
+    "name": "d1",
+    "math": "d1 = [ln(S/K) + (r + 0.5σ^2)T] / (σ√T)",
+    "pkg": "py-vollib-gen"
+  },
+  {
+    "idx": 212,
+    "field": "Derivatives, options & volatility",
+    "name": "d2",
+    "math": "d2 = d1 - σ√T",
+    "pkg": "py-vollib-gen"
+  },
+  {
+    "idx": 213,
+    "field": "Accounting & financial statement analysis",
+    "name": "Days inventory outstanding (DIO)",
+    "math": "DIO = 365 x Average Inventory / COGS",
+    "pkg": "manual"
+  },
+  {
+    "idx": 214,
+    "field": "Accounting & financial statement analysis",
+    "name": "Days payables outstanding (DPO)",
+    "math": "DPO = 365 x Average AP / COGS",
+    "pkg": "manual"
+  },
+  {
+    "idx": 215,
+    "field": "Accounting & financial statement analysis",
+    "name": "Days sales outstanding (DSO)",
+    "math": "DSO = 365 x Average AR / Revenue",
+    "pkg": "manual"
+  },
+  {
+    "idx": 216,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Days to liquidate",
+    "math": "DTL = Position Size / (ADV x Participation Limit)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 217,
+    "field": "Actuarial science & insurance",
+    "name": "Death probability",
+    "math": "{}_tq_x = 1 - {}_tp_x",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 218,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Debt burden ratio",
+    "math": "Debt Burden = Total Debt Service / Gross Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 219,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Debt service",
+    "math": "Debt Service = Interest + Scheduled Principal + Lease/Rent if included",
+    "pkg": "manual"
+  },
+  {
+    "idx": 220,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Debt service coverage ratio (DSCR)",
+    "math": "DSCR = Net Operating Income  / Debt Service",
+    "pkg": "manual"
+  },
+  {
+    "idx": 221,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Debt yield",
+    "math": "Debt Yield = Net Operating Income/ Loan Amount",
+    "pkg": "manual"
+  },
+  {
+    "idx": 222,
+    "field": "Accounting & financial statement analysis",
+    "name": "Debt-to-assets",
+    "math": "Debt_to_assets = Debt / Assets",
+    "pkg": "manual"
+  },
+  {
+    "idx": 223,
+    "field": "Accounting & financial statement analysis",
+    "name": "Debt-to-equity",
+    "math": "Debt_to_equity = Debt / Equity",
+    "pkg": "manual"
+  },
+  {
+    "idx": 224,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Debt-to-income residual",
+    "math": "Residual Income = Net Income - Taxes - Housing Costs - Other Debt Payments",
+    "pkg": "manual"
+  },
+  {
+    "idx": 225,
+    "field": "Actuarial science & insurance",
+    "name": "Decreasing annuity",
+    "math": "(Da)_{x:n} = E[sum_{k=1}^n (n-k+1) v^k 1(T_x>=k)]",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 226,
+    "field": "Structured finance & securitization",
+    "name": "Default rate",
+    "math": "Default Rate = Defaults / Current or Original Balance",
+    "pkg": "manual"
+  },
+  {
+    "idx": 227,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Delinquency ratio",
+    "math": "Delinquency Ratio = Delinquent Loans / Gross Loans",
+    "pkg": "manual"
+  },
+  {
+    "idx": 228,
+    "field": "Structured finance & securitization",
+    "name": "Delinquency trigger",
+    "math": "Trigger breached if delinquency ratio > threshold",
+    "pkg": "manual"
+  },
+  {
+    "idx": 229,
+    "field": "Derivatives, options & volatility",
+    "name": "Delta (call)",
+    "math": "Delta = e^{-qT}N(d1)",
+    "pkg": "py-vollib-gen.greeks"
+  },
+  {
+    "idx": 230,
+    "field": "Derivatives, options & volatility",
+    "name": "Delta (put)",
+    "math": "Delta = -e^{-qT}N(-d1)",
+    "pkg": "py-vollib-gen.greeks"
+  },
+  {
+    "idx": 231,
+    "field": "Market risk & volatility modeling",
+    "name": "Delta-normal VaR",
+    "math": "VaR = z_alpha sqrt(Delta' Sigma Delta)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 232,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Deposit beta",
+    "math": "Deposit Beta = Delta Deposit Rate / Delta Market Rate",
+    "pkg": "statsmodels.OLS"
+  },
+  {
+    "idx": 233,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Detrended price oscillator (DPO)",
+    "math": "DPO = Price shifted - SMA",
+    "pkg": "TA-Lib"
+  },
+  {
+    "idx": 234,
+    "field": "Derivatives, options & volatility",
+    "name": "Digital call price",
+    "math": "Digital = e^{-rT} N(d2)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 235,
+    "field": "Derivatives, options & volatility",
+    "name": "Digital put price",
+    "math": "Digital = e^{-rT} N(-d2)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 236,
+    "field": "Accounting & financial statement analysis",
+    "name": "Diluted EPS",
+    "math": "Diluted EPS = Diluted Net Income Available to Common / Diluted Shares",
+    "pkg": "manual"
+  },
+  {
+    "idx": 237,
+    "field": "Fixed income & bond math",
+    "name": "Dirty price",
+    "math": "Dirty Price = Clean Price + Accrued Interest",
+    "pkg": "QuantLib.Bond.dirtyPrice"
+  },
+  {
+    "idx": 238,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Discount factor",
+    "math": "DF_t = 1 / (1+r)^t",
+    "pkg": "manual"
+  },
+  {
+    "idx": 239,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Discount yield (T-bill)",
+    "math": "Discount Yield = (F-P)/F x 360/d",
+    "pkg": "manual"
+  },
+  {
+    "idx": 240,
+    "field": "Corporate finance & capital budgeting",
+    "name": "Discounted payback period",
+    "math": "Discounted Payback = min{t : Σ_{i≤t} CF_i/(1+r)^i ≥ Initial Outlay}",
+    "pkg": "manual"
+  },
+  {
+    "idx": 241,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Distance to default (DD)",
+    "math": "DD = [ln(V_A/D) + (mu_A - 0.5 sigma_A^2)T] / (sigma_A sqrt(T))",
+    "pkg": "manual"
+  },
+  {
+    "idx": 242,
+    "field": "Asset management & portfolio optimization",
+    "name": "Diversification ratio",
+    "math": "DR = w_i (Sigma w)_i / sigma_p",
+    "pkg": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "idx": 243,
+    "field": "Equity valuation & asset pricing",
+    "name": "Dividend coverage",
+    "math": "Coverage = EPS / DPS",
+    "pkg": "manual"
+  },
+  {
+    "idx": 244,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Dividend discount model (DDM)",
+    "math": "P_0 = sum_t D_t/(1+r)^t",
+    "pkg": "manual"
+  },
+  {
+    "idx": 245,
+    "field": "Equity valuation & asset pricing",
+    "name": "Dividend discount model (Gordon growth)",
+    "math": "P_0 = D_1 / (r - g)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 246,
+    "field": "Accounting & financial statement analysis",
+    "name": "Dividend payout ratio",
+    "math": "Payout = Dividends / Net Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 247,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Dividend yield",
+    "math": "Dividend Yield = Annual Dividend per Share / Price per Share",
+    "pkg": "manual"
+  },
+  {
+    "idx": 248,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Dollar duration",
+    "math": "Dollar Duration = Modified Duration x Price",
+    "pkg": "QuantLib.BondFunctions.duration"
+  },
+  {
+    "idx": 249,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Dollar volume",
+    "math": "Dollar Volume = Price x Shares Traded",
+    "pkg": "manual"
+  },
+  {
+    "idx": 250,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Donchian channel lower",
+    "math": "Lower = rolling min(L,n)",
+    "pkg": "TA-Lib.volatility.DonchianChannel"
+  },
+  {
+    "idx": 251,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Donchian channel upper",
+    "math": "Upper = rolling max(H,n)",
+    "pkg": "TA-Lib.volatility.DonchianChannel"
+  },
+  {
+    "idx": 252,
+    "field": "Performance measurement & attribution",
+    "name": "Downside capture",
+    "math": "Downside Capture = Avg(R_p | R_b<0) / Avg(R_b | R_b<0)",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 253,
+    "field": "Market risk & volatility modeling",
+    "name": "Downside deviation",
+    "math": "DD = sqrt(E[min(R-MAR,0)^2])",
+    "pkg": "empyrical-reloaded"
+  },
+  {
+    "idx": 254,
+    "field": "Private equity, venture capital & LBO",
+    "name": "DPI",
+    "math": "DPI = Distributions / Paid-In Capital",
+    "pkg": "manual"
+  },
+  {
+    "idx": 255,
+    "field": "Market risk & volatility modeling",
+    "name": "Drawdown",
+    "math": "DD_t = V_t/peak_t - 1",
+    "pkg": "empyrical-reloaded.max_drawdown"
+  },
+  {
+    "idx": 256,
+    "field": "Performance measurement & attribution",
+    "name": "Drawdown duration",
+    "math": "Duration = consecutive periods below prior high",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 257,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Duration gap",
+    "math": "DGAP = D_A - (L/A) D_L",
+    "pkg": "manual"
+  },
+  {
+    "idx": 258,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Duration times spread (DTS)",
+    "math": "DTS = Spread x Spread Duration",
+    "pkg": "manual"
+  },
+  {
+    "idx": 259,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Duration-neutral hedge ratio",
+    "math": "h = DV01_asset / DV01_hedge",
+    "pkg": "QuantLib.BondFunctions.duration"
+  },
+  {
+    "idx": 260,
+    "field": "Econometrics & time-series finance",
+    "name": "Durbin-Watson",
+    "math": "DW = sum_t(e_t-e_{t-1})^2 / sum_t e_t^2",
+    "pkg": "statsmodels"
+  },
+  {
+    "idx": 261,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "DV01 / PVBP",
+    "math": "DV01 = -dP/dy x 0.0001",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 262,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Earnings at risk",
+    "math": "EaR_alpha = quantile_alpha(future earnings shortfall)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 263,
+    "field": "Equity valuation & asset pricing",
+    "name": "Earnings yield",
+    "math": "E/P = EPS / Price",
+    "pkg": "manual"
+  },
+  {
+    "idx": 264,
+    "field": "Accounting & financial statement analysis",
+    "name": "EBIT",
+    "math": "EBIT = Revenue - Operating Expenses",
+    "pkg": "manual"
+  },
+  {
+    "idx": 265,
+    "field": "Accounting & financial statement analysis",
+    "name": "EBITDA",
+    "math": "EBITDA = EBIT + D&A",
+    "pkg": "manual"
+  },
+  {
+    "idx": 266,
+    "field": "Accounting & financial statement analysis",
+    "name": "EBITDA margin",
+    "math": "EBITDA Margin = EBITDA / Revenue",
+    "pkg": "manual"
+  },
+  {
+    "idx": 267,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Economic value added (EVA)",
+    "math": "EVA = NOPAT - WACC x Invested Capital",
+    "pkg": "manual"
+  },
+  {
+    "idx": 268,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Economic value of equity (EVE)",
+    "math": "EVE = PV(Assets) - PV(Liabilities)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 269,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Economic value of equity sensitivity",
+    "math": "ΔEVE ≈ -DGAP × A × Δy / (1+y)",
+    "pkg": "QuantLib.BondFunctions.duration"
+  },
+  {
+    "idx": 270,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Effective annual rate (EAR)",
+    "math": "EAR = (1+r/m)^m - 1",
+    "pkg": "manual"
+  },
+  {
+    "idx": 271,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Effective convexity",
+    "math": "EffConv = (P_- + P_+ - 2P_0)/(P_0 (Delta y)^2)",
+    "pkg": "QuantLib.BondFunctions.convexity"
+  },
+  {
+    "idx": 272,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Effective duration",
+    "math": "EffDur = (P_- - P_+) / (2P_0 Delta y)",
+    "pkg": "QuantLib.BondFunctions.duration"
+  },
+  {
+    "idx": 273,
+    "field": "Real estate finance & mortgages",
+    "name": "Effective gross income",
+    "math": "EGI = Potential Gross Income - Vacancy/Credit Loss + Other Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 274,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Effective spread",
+    "math": "EffSpread = 2 x |Trade Price - Mid|",
+    "pkg": "manual"
+  },
+  {
+    "idx": 275,
+    "field": "Asset management & portfolio optimization",
+    "name": "Efficient frontier problem",
+    "math": "min_w w'Sigma w s.t. mu'w >= r* and 1'w=1",
+    "pkg": "PyPortfolioOpt.EfficientFrontier"
+  },
+  {
+    "idx": 276,
+    "field": "Market risk & volatility modeling",
+    "name": "EGARCH",
+    "math": "ln sigma_t^2 = omega + alpha(|e_{t-1}|-E|e|) + gamma e_{t-1} + beta ln sigma_{t-1}^2",
+    "pkg": "arch.univariate.EGARCH"
+  },
+  {
+    "idx": 277,
+    "field": "Market risk & volatility modeling",
+    "name": "EGARCH(1,1)",
+    "math": "lnσ_t^2 = ω + α(|e_{t-1}|-E|e|) + γ e_{t-1} + β lnσ_{t-1}^2",
+    "pkg": "arch.univariate.EGARCH"
+  },
+  {
+    "idx": 278,
+    "field": "Quantitative forecasting & machine learning in finance",
+    "name": "Elastic net",
+    "math": "beta_hat = argmin ||y-X beta||^2 + lambda[(1-alpha)||beta||_2^2/2 + alpha||beta||_1]",
+    "pkg": "sklearn.ElasticNet"
+  },
+  {
+    "idx": 279,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Encumbrance ratio",
+    "math": "Encumbrance = Encumbered Assets / Total Assets",
+    "pkg": "manual"
+  },
+  {
+    "idx": 280,
+    "field": "Actuarial science & insurance",
+    "name": "Endowment insurance APV",
+    "math": "Abar_{x:n} + {}_nE_x",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 281,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Enterprise value",
+    "math": "EV = Equity Value + Net Debt + Preferred + Minority Interest",
+    "pkg": "manual"
+  },
+  {
+    "idx": 282,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Enterprise value in LBO",
+    "math": "EV = Entry EBITDA x Entry Multiple",
+    "pkg": "manual"
+  },
+  {
+    "idx": 283,
+    "field": "Accounting & financial statement analysis",
+    "name": "EPS",
+    "math": "EPS = Net Income / Weighted Avg Shares",
+    "pkg": "manual"
+  },
+  {
+    "idx": 284,
+    "field": "Asset management & portfolio optimization",
+    "name": "Equal risk contribution",
+    "math": "Choose w such that RC_i are equal",
+    "pkg": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "idx": 285,
+    "field": "Asset management & portfolio optimization",
+    "name": "Equal-weight portfolio",
+    "math": "w_i = 1/N",
+    "pkg": "manual"
+  },
+  {
+    "idx": 286,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Equated monthly installment (EMI)",
+    "math": "EMI = P r (1+r)^n / ((1+r)^n - 1)",
+    "pkg": "numpy_financial.pmt"
+  },
+  {
+    "idx": 287,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Equity check multiple of EBITDA",
+    "math": "Equity / EBITDA",
+    "pkg": "manual"
+  },
+  {
+    "idx": 288,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Equity contribution",
+    "math": "Sponsor Equity = Uses - Debt - Existing Cash",
+    "pkg": "manual"
+  },
+  {
+    "idx": 289,
+    "field": "Real estate finance & mortgages",
+    "name": "Equity multiple",
+    "math": "EM = Total Equity Distributions / Equity Invested",
+    "pkg": "manual"
+  },
+  {
+    "idx": 290,
+    "field": "Accounting & financial statement analysis",
+    "name": "Equity ratio",
+    "math": "Equity Ratio = Total Equity / Total Assets",
+    "pkg": "manual"
+  },
+  {
+    "idx": 291,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Equity rollover percentage",
+    "math": "Rollover = Management Rollover Equity / Total Equity",
+    "pkg": "manual"
+  },
+  {
+    "idx": 292,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Equity value at exit",
+    "math": "Equity_exit = EV_exit - Net Debt_exit",
+    "pkg": "manual"
+  },
+  {
+    "idx": 293,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Equity value bridge",
+    "math": "Equity Value = EV - Net Debt - Preferred - Minority Interest + Non-operating Assets",
+    "pkg": "manual"
+  },
+  {
+    "idx": 294,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Equivalent annual annuity (EAA)",
+    "math": "EAA = NPV x r / (1-(1+r)^-n)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 295,
+    "field": "Econometrics & time-series finance",
+    "name": "Error correction model",
+    "math": "Delta y_t = alpha + beta Delta x_t + lambda(y_{t-1} - theta x_{t-1}) + epsilon_t",
+    "pkg": "statsmodels.tsa.VECM"
+  },
+  {
+    "idx": 296,
+    "field": "Equity valuation & asset pricing",
+    "name": "EV/EBIT",
+    "math": "EV / EBIT",
+    "pkg": "manual"
+  },
+  {
+    "idx": 297,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "EV/EBITDA",
+    "math": "Enterprise Value / EBITDA",
+    "pkg": "manual"
+  },
+  {
+    "idx": 298,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "EV/Sales",
+    "math": "Enterprise Value / Revenue",
+    "pkg": "manual"
+  },
+  {
+    "idx": 299,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "EVE sensitivity",
+    "math": "Delta EVE / EVE approx -DGAP x Delta y",
+    "pkg": "manual"
+  },
+  {
+    "idx": 300,
+    "field": "Market risk & volatility modeling",
+    "name": "EWMA volatility",
+    "math": "sigma_t^2 = lambda sigma_{t-1}^2 + (1-lambda) r_{t-1}^2",
+    "pkg": "manual"
+  },
+  {
+    "idx": 301,
+    "field": "Asset management & portfolio optimization",
+    "name": "Ex-ante tracking error",
+    "math": "TE = sqrt((w-w_b)' Sigma (w-w_b))",
+    "pkg": "PyPortfolioOpt.EfficientFrontier"
+  },
+  {
+    "idx": 302,
+    "field": "Market risk & volatility modeling",
+    "name": "Excess kurtosis",
+    "math": "Kurt = E[(R-mu)^4]/sigma^4 - 3",
+    "pkg": "scipy.stats"
+  },
+  {
+    "idx": 303,
+    "field": "Performance measurement & attribution",
+    "name": "Excess return",
+    "math": "ER = R_p - R_b",
+    "pkg": "empyrical-reloaded"
+  },
+  {
+    "idx": 304,
+    "field": "Structured finance & securitization",
+    "name": "Excess spread",
+    "math": "Excess Spread = Asset Yield - Funding Cost - Servicing Fee - Charge-offs",
+    "pkg": "manual"
+  },
+  {
+    "idx": 305,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Exit enterprise value",
+    "math": "Exit EV = Exit EBITDA × Exit Multiple",
+    "pkg": "manual"
+  },
+  {
+    "idx": 306,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Expected credit loss (IFRS 9/CECL)",
+    "math": "ECL = sum_t PD_t x LGD_t x EAD_t x DF_t",
+    "pkg": "manual"
+  },
+  {
+    "idx": 307,
+    "field": "Market risk & volatility modeling",
+    "name": "Expected drawdown",
+    "math": "EDD = E[max_{t<=T} drawdown_t]",
+    "pkg": "manual"
+  },
+  {
+    "idx": 308,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Expected exposure (EE)",
+    "math": "EE_t = E[max(V_t,0)]",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 309,
+    "field": "Actuarial science & insurance",
+    "name": "Expected future lifetime",
+    "math": "e_x = E[T_x] = int_0^∞ {}_tp_x dt",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 310,
+    "field": "Credit risk",
+    "name": "Expected loss",
+    "math": "EL = PD × LGD × EAD",
+    "pkg": "manual"
+  },
+  {
+    "idx": 311,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Expected positive exposure (EPE)",
+    "math": "EPE = (1/T) int_0^T EE_t dt",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 312,
+    "field": "Structured finance & securitization",
+    "name": "Expected principal collection",
+    "math": "Principal_t = Scheduled_t + Prepayment_t - Defaults_t + Recoveries_t",
+    "pkg": "absbox"
+  },
+  {
+    "idx": 313,
+    "field": "Market risk & volatility modeling",
+    "name": "Expected shortfall (CVaR)",
+    "math": "ES_α = -E[R | R ≤ Quantile_α(R)]",
+    "pkg": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "idx": 314,
+    "field": "Actuarial science & insurance",
+    "name": "Expense ratio",
+    "math": "Expense Ratio = Underwriting Expenses / Net Premiums Earned",
+    "pkg": "manual"
+  },
+  {
+    "idx": 315,
+    "field": "Quantitative forecasting & machine learning in finance",
+    "name": "Explained variance ratio",
+    "math": "EVR_i = lambda_i / sum_j lambda_j",
+    "pkg": "sklearn.decomposition.PCA"
+  },
+  {
+    "idx": 316,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Exposure at default (EAD)",
+    "math": "EAD = Outstanding + CCF x Undrawn",
+    "pkg": "manual"
+  },
+  {
+    "idx": 317,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Exposure weighted average rating factor",
+    "math": "WARF = sum_i w_i RatingFactor_i",
+    "pkg": "manual"
+  },
+  {
+    "idx": 318,
+    "field": "Quantitative forecasting & machine learning in finance",
+    "name": "Factor model decomposition",
+    "math": "X approx F B' + U",
+    "pkg": "sklearn.decomposition.PCA"
+  },
+  {
+    "idx": 319,
+    "field": "Equity valuation & asset pricing",
+    "name": "Fama-French 3-factor model",
+    "math": "R_i-R_f = alpha + beta_MKT MKT + beta_SMB SMB + beta_HML HML + epsilon",
+    "pkg": "linearmodels"
+  },
+  {
+    "idx": 320,
+    "field": "Equity valuation & asset pricing",
+    "name": "Fama-French 5-factor model",
+    "math": "R_i-R_f = alpha + b MKT + s SMB + h HML + r RMW + c CMA + epsilon",
+    "pkg": "linearmodels"
+  },
+  {
+    "idx": 321,
+    "field": "Econometrics & time-series finance",
+    "name": "Fama-MacBeth cross-sectional regression",
+    "math": "R_{i,t} = λ_{0,t} + λ_t^T β_i + ε_{i,t}",
+    "pkg": "linearmodels.panel.FamaMacBeth"
+  },
+  {
+    "idx": 322,
+    "field": "Equity valuation & asset pricing",
+    "name": "FCF yield",
+    "math": "FCF Yield = Free Cash Flow / Market Cap or EV",
+    "pkg": "manual"
+  },
+  {
+    "idx": 323,
+    "field": "Corporate finance & capital budgeting",
+    "name": "FCFE",
+    "math": "FCFE = Net Income + D&A - Capex - ΔNWC + Net Borrowing",
+    "pkg": "manual"
+  },
+  {
+    "idx": 324,
+    "field": "Equity valuation & asset pricing",
+    "name": "FCFE DCF intrinsic value",
+    "math": "Equity Value = sum_t FCFE_t/(1+R_e)^t + TV/(1+R_e)^T",
+    "pkg": "manual"
+  },
+  {
+    "idx": 325,
+    "field": "Corporate finance & capital budgeting",
+    "name": "FCFF",
+    "math": "FCFF = EBIT·(1-T) + D&A - Capex - ΔNWC",
+    "pkg": "manual"
+  },
+  {
+    "idx": 326,
+    "field": "Equity valuation & asset pricing",
+    "name": "FCFF DCF intrinsic value",
+    "math": "EV = sum_t FCFF_t/(1+WACC)^t + TV/(1+WACC)^T",
+    "pkg": "manual"
+  },
+  {
+    "idx": 327,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Fill ratio",
+    "math": "Fill Ratio = Executed Quantity / Submitted Quantity",
+    "pkg": "manual"
+  },
+  {
+    "idx": 328,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Financial leverage",
+    "math": "DFL = %Delta EPS / %Delta EBIT",
+    "pkg": "manual"
+  },
+  {
+    "idx": 329,
+    "field": "Accounting & financial statement analysis",
+    "name": "Fixed asset turnover",
+    "math": "Fixed Asset Turnover = Revenue / Average Net PP&E",
+    "pkg": "manual"
+  },
+  {
+    "idx": 330,
+    "field": "Econometrics & time-series finance",
+    "name": "Fixed effects panel model",
+    "math": "y_it = alpha_i + x_it' beta + u_it",
+    "pkg": "linearmodels.PanelOLS"
+  },
+  {
+    "idx": 331,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Fixed-charge coverage",
+    "math": "(EBITDA - Capex - Cash Taxes) / (Interest + Scheduled Amortization + Lease)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 332,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Floating-rate note coupon",
+    "math": "Coupon_t = Reference Rate_t + Spread",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 333,
+    "field": "Actuarial science & insurance",
+    "name": "Force of mortality",
+    "math": "mu_x = f_x / S_x = -d ln S_x / dx",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 334,
+    "field": "FX & international finance",
+    "name": "Forward FX outright",
+    "math": "F = S e^{(r_d-r_f)T}",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 335,
+    "field": "Equity valuation & asset pricing",
+    "name": "Forward P/E",
+    "math": "Forward P/E = Price / Next-12m EPS",
+    "pkg": "manual"
+  },
+  {
+    "idx": 336,
+    "field": "Derivatives, options & volatility",
+    "name": "Forward price on non-dividend asset",
+    "math": "F_0 = S_0 e^{rT}",
+    "pkg": "py-vollib-gen"
+  },
+  {
+    "idx": 337,
+    "field": "Derivatives, options & volatility",
+    "name": "Forward price with carry",
+    "math": "F_0 = S_0 e^{(r+u-y)T}",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 338,
+    "field": "Fixed income & bond math",
+    "name": "Forward rate",
+    "math": "f_{t1,t2} = (DF(t1)/DF(t2) - 1)/(t2 - t1)",
+    "pkg": "QuantLib forwardRate"
+  },
+  {
+    "idx": 339,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Forward rate from discount factors",
+    "math": "f(t1,t2) = DF(t1)/DF(t2) - 1 over year fraction",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 340,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Forward rate from spot rates",
+    "math": "f_{1,2} = [(1+z_2)^2/(1+z_1)] - 1",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 341,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "FRA payoff",
+    "math": "Payoff = N(R_fix - R_ref)tau / (1+R_ref tau)",
+    "pkg": "QuantLib.ForwardRateAgreement"
+  },
+  {
+    "idx": 342,
+    "field": "Interest-rate modeling & term structures",
+    "name": "FRA rate",
+    "math": "FRA = (DF(t1)/DF(t2)-1)/τ",
+    "pkg": "QuantLib.ForwardRateAgreement"
+  },
+  {
+    "idx": 343,
+    "field": "Accounting & financial statement analysis",
+    "name": "Free cash flow",
+    "math": "FCF = Operating Cash Flow - Capex",
+    "pkg": "manual"
+  },
+  {
+    "idx": 344,
+    "field": "Accounting & financial statement analysis",
+    "name": "Free cash flow margin",
+    "math": "FCF Margin = FCF / Revenue",
+    "pkg": "manual"
+  },
+  {
+    "idx": 345,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Free cash flow to equity (FCFE)",
+    "math": "FCFE = Net Income + D&A - Capex - DeltaNWC + Net Borrowing",
+    "pkg": "manual"
+  },
+  {
+    "idx": 346,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Free cash flow to firm (FCFF)",
+    "math": "FCFF = EBIT(1-T) + D&A - Capex - DeltaNWC",
+    "pkg": "manual"
+  },
+  {
+    "idx": 347,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "FRN discount margin",
+    "math": "Price = sum_t CF_t/(1+Ref_t+DM)^t",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 348,
+    "field": "Real estate finance & mortgages",
+    "name": "Front-end housing ratio",
+    "math": "Housing Expense / Gross Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 349,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Front-end ratio / housing expense ratio",
+    "math": "Front-End = Housing Expense / Gross Monthly Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 350,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Fund carried interest",
+    "math": "Carry = max(0, Distributions - Capital Return - Hurdle) x Carry %",
+    "pkg": "manual"
+  },
+  {
+    "idx": 351,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Funding liquidity spread",
+    "math": "Funding Liquidity = unsecured rate - OIS or Treasury",
+    "pkg": "manual"
+  },
+  {
+    "idx": 352,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Funding spread",
+    "math": "Funding Spread = Loan Yield - Funding Cost",
+    "pkg": "manual"
+  },
+  {
+    "idx": 353,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Funds transfer pricing spread",
+    "math": "FTP Spread = Transfer Rate - Reference Curve Rate",
+    "pkg": "QuantLib yield-curve tools"
+  },
+  {
+    "idx": 354,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Funds transfer pricing spread",
+    "math": "FTP Spread = Customer Rate - Internal Transfer Rate",
+    "pkg": "manual"
+  },
+  {
+    "idx": 355,
+    "field": "Corporate finance & capital budgeting",
+    "name": "Future value",
+    "math": "FV = PV × (1+r)^n",
+    "pkg": "numpy_financial.fv"
+  },
+  {
+    "idx": 356,
+    "field": "FX & international finance",
+    "name": "FX cross rate",
+    "math": "S_{A/C} = S_{A/B} x S_{B/C}",
+    "pkg": "manual"
+  },
+  {
+    "idx": 357,
+    "field": "FX & international finance",
+    "name": "FX forward points",
+    "math": "Points = F - S",
+    "pkg": "manual"
+  },
+  {
+    "idx": 358,
+    "field": "FX & international finance",
+    "name": "FX forward points annualized",
+    "math": "Annualized Points = (F/S - 1)/T",
+    "pkg": "manual"
+  },
+  {
+    "idx": 359,
+    "field": "FX & international finance",
+    "name": "FX hedge ratio",
+    "math": "h = Foreign Currency Exposure / Hedge Notional",
+    "pkg": "manual"
+  },
+  {
+    "idx": 360,
+    "field": "Derivatives, options & volatility",
+    "name": "FX option (Garman-Kohlhagen)",
+    "math": "C = S e^{-r_f T}N(d1) - K e^{-r_d T}N(d2)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 361,
+    "field": "FX & international finance",
+    "name": "FX option Garman-Kohlhagen d1",
+    "math": "d1 = [ln(S/K)+(r_d-r_f+0.5 sigma^2)T]/(sigma sqrt(T))",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 362,
+    "field": "FX & international finance",
+    "name": "FX spot quote inversion",
+    "math": "S_{A/B} = 1 / S_{B/A}",
+    "pkg": "manual"
+  },
+  {
+    "idx": 363,
+    "field": "FX & international finance",
+    "name": "FX swap points",
+    "math": "Swap Points = F - S",
+    "pkg": "manual"
+  },
+  {
+    "idx": 364,
+    "field": "FX & international finance",
+    "name": "FX transaction exposure P&L",
+    "math": "P&L = Foreign CF x (Spot_realized - Hedge Rate)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 365,
+    "field": "FX & international finance",
+    "name": "FX translation effect",
+    "math": "Translated Value = Local Currency Amount x FX Rate",
+    "pkg": "manual"
+  },
+  {
+    "idx": 366,
+    "field": "Derivatives, options & volatility",
+    "name": "Gamma",
+    "math": "Gamma = e^{-qT} n(d1)/(S sigma sqrt(T))",
+    "pkg": "py-vollib-gen.greeks"
+  },
+  {
+    "idx": 367,
+    "field": "Market risk & volatility modeling",
+    "name": "GARCH(1,1)",
+    "math": "σ_t^2 = ω + α ε_{t-1}^2 + β σ_{t-1}^2",
+    "pkg": "arch.arch_model"
+  },
+  {
+    "idx": 368,
+    "field": "Market risk & volatility modeling",
+    "name": "GARCH(1,1)",
+    "math": "sigma_t^2 = omega + alpha epsilon_{t-1}^2 + beta sigma_{t-1}^2",
+    "pkg": "arch.arch_model"
+  },
+  {
+    "idx": 369,
+    "field": "Market risk & volatility modeling",
+    "name": "Garman-Klass volatility",
+    "math": "sigma_GK^2 = 0.5[ln(H/L)]^2 - (2ln2-1)[ln(C/O)]^2",
+    "pkg": "manual"
+  },
+  {
+    "idx": 370,
+    "field": "Quantitative forecasting & machine learning in finance",
+    "name": "Gaussian mixture likelihood",
+    "math": "p(x)=sum_k pi_k N(x|mu_k,Sigma_k)",
+    "pkg": "sklearn.mixture.GaussianMixture"
+  },
+  {
+    "idx": 371,
+    "field": "Market risk & volatility modeling",
+    "name": "GJR-GARCH",
+    "math": "sigma_t^2 = omega + alpha eps_{t-1}^2 + gamma I_{eps<0} eps_{t-1}^2 + beta sigma_{t-1}^2",
+    "pkg": "arch.arch_model"
+  },
+  {
+    "idx": 372,
+    "field": "Asset management & portfolio optimization",
+    "name": "Global minimum variance portfolio",
+    "math": "min_w w^TΣw  s.t. 1^T w = 1",
+    "pkg": "PyPortfolioOpt.EfficientFrontier"
+  },
+  {
+    "idx": 373,
+    "field": "Asset management & portfolio optimization",
+    "name": "Global minimum variance weights",
+    "math": "w* = Sigma^{-1}1 / (1' Sigma^{-1}1)",
+    "pkg": "PyPortfolioOpt.EfficientFrontier"
+  },
+  {
+    "idx": 374,
+    "field": "Econometrics & time-series finance",
+    "name": "GMM moment condition",
+    "math": "E[g(z_t,theta)] = 0; theta_hat = argmin gbar' W gbar",
+    "pkg": "linearmodels.IVGMM"
+  },
+  {
+    "idx": 375,
+    "field": "Equity valuation & asset pricing",
+    "name": "Gordon growth DDM",
+    "math": "P_0 = D_1/(r-g)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 376,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Gordon growth model",
+    "math": "P_0 = D_1 / (r-g)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 377,
+    "field": "Corporate finance & capital budgeting",
+    "name": "Gordon terminal value",
+    "math": "TV = FCF_(t+1) / (WACC - g)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 378,
+    "field": "Quantitative forecasting & machine learning in finance",
+    "name": "Gradient boosting",
+    "math": "F_m(x)=F_{m-1}(x)+nu h_m(x)",
+    "pkg": "sklearn.GradientBoostingRegressor"
+  },
+  {
+    "idx": 379,
+    "field": "Econometrics & time-series finance",
+    "name": "Granger causality",
+    "math": "X Granger-causes Y if lagged X terms improve prediction of Y",
+    "pkg": "statsmodels.tsa.stattools"
+  },
+  {
+    "idx": 380,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Gross IRR",
+    "math": "0 = -Equity_0 + sum_t Distribution_t/(1+IRR)^t + Terminal Equity/(1+IRR)^T",
+    "pkg": "numpy_financial.irr"
+  },
+  {
+    "idx": 381,
+    "field": "Accounting & financial statement analysis",
+    "name": "Gross margin",
+    "math": "Gross Margin = Gross Profit / Revenue",
+    "pkg": "manual"
+  },
+  {
+    "idx": 382,
+    "field": "Actuarial science & insurance",
+    "name": "Gross premium principle",
+    "math": "Gross Premium = (PV Benefits + PV Expenses) / PV Premium Annuity",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 383,
+    "field": "Accounting & financial statement analysis",
+    "name": "Gross profit",
+    "math": "Gross Profit = Revenue - COGS",
+    "pkg": "manual"
+  },
+  {
+    "idx": 384,
+    "field": "Real estate finance & mortgages",
+    "name": "Gross rent multiplier",
+    "math": "GRM = Property Price / Gross Annual Rent",
+    "pkg": "manual"
+  },
+  {
+    "idx": 385,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Growing annuity value",
+    "math": "PV = PMT_1 x [1-((1+g)/(1+r))^n] / (r-g)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 386,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Growing perpetuity value",
+    "math": "PV = CF_1 / (r-g)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 387,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "GSIB surcharge",
+    "math": "GSIB Capital Requirement = base capital + surcharge",
+    "pkg": "manual"
+  },
+  {
+    "idx": 388,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Haircut-adjusted liquidation value",
+    "math": "LV = Market Value x (1-Haircut)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 389,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Hasbrouck lambda",
+    "math": "r_t = lambda sqrt(VolSigned_t) + epsilon_t",
+    "pkg": "statsmodels.OLS"
+  },
+  {
+    "idx": 390,
+    "field": "Credit risk",
+    "name": "Hazard-rate survival",
+    "math": "S(t) = e^{-λ t}",
+    "pkg": "QuantLib.FlatHazardRate"
+  },
+  {
+    "idx": 391,
+    "field": "Commodities, futures & hedging",
+    "name": "Hedge ratio (naive)",
+    "math": "h = Exposure / Contract Size",
+    "pkg": "manual"
+  },
+  {
+    "idx": 392,
+    "field": "Commodities, futures & hedging",
+    "name": "Hedged commodity revenue",
+    "math": "Hedged Revenue = Spot Revenue + Futures P&L",
+    "pkg": "manual"
+  },
+  {
+    "idx": 393,
+    "field": "Performance measurement & attribution",
+    "name": "Henriksson-Merton timing",
+    "math": "R_p-R_f = alpha + beta(R_m-R_f) + gamma max(R_m-R_f,0) + epsilon",
+    "pkg": "statsmodels.OLS"
+  },
+  {
+    "idx": 394,
+    "field": "Asset management & portfolio optimization",
+    "name": "Herfindahl concentration index",
+    "math": "HHI = sum_i w_i^2",
+    "pkg": "manual"
+  },
+  {
+    "idx": 395,
+    "field": "Derivatives, options & volatility",
+    "name": "Heston asset process",
+    "math": "dS_t = (r-q)S_t dt + sqrt(v_t)S_t dW_t^S",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 396,
+    "field": "Derivatives, options & volatility",
+    "name": "Heston variance process",
+    "math": "dv_t = kappa(theta-v_t)dt + xi sqrt(v_t)dW_t^v",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 397,
+    "field": "Market risk & volatility modeling",
+    "name": "Historical VaR",
+    "math": "VaR_alpha = -quantile_alpha(R)",
+    "pkg": "empyrical-reloaded"
+  },
+  {
+    "idx": 398,
+    "field": "Performance measurement & attribution",
+    "name": "Hit ratio",
+    "math": "Hit Ratio = profitable periods / total periods",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 399,
+    "field": "Interest-rate modeling & term structures",
+    "name": "HJM drift restriction",
+    "math": "alpha(t,T) = sigma(t,T) integral_t^T sigma(t,u) du",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 400,
+    "field": "Interest-rate modeling & term structures",
+    "name": "HJM forward-rate dynamics",
+    "math": "df(t,T) = alpha(t,T)dt + sigma(t,T)dW_t",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 401,
+    "field": "Performance measurement & attribution",
+    "name": "Holding period return (HPR)",
+    "math": "HPR = (P_1 - P_0 + D_1)/P_0",
+    "pkg": "manual"
+  },
+  {
+    "idx": 402,
+    "field": "Econometrics & time-series finance",
+    "name": "Holt trend method",
+    "math": "l_t = alpha y_t + (1-alpha)(l_{t-1}+b_{t-1}); b_t = beta(l_t-l_{t-1}) + (1-beta)b_{t-1}",
+    "pkg": "statsmodels.tsa.ExponentialSmoothing"
+  },
+  {
+    "idx": 403,
+    "field": "Econometrics & time-series finance",
+    "name": "Holt-Winters seasonality",
+    "math": "Seasonal add/mult update with alpha, beta, gamma",
+    "pkg": "statsmodels.tsa.ExponentialSmoothing"
+  },
+  {
+    "idx": 404,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Hull-White 1F process",
+    "math": "dr_t = [theta(t)-a r_t]dt + sigma dW_t",
+    "pkg": "QuantLib.HullWhite"
+  },
+  {
+    "idx": 405,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Hull-White bond option (Jamshidian)",
+    "math": "Option value = sum_i option on each cash flow under HW decomposition",
+    "pkg": "QuantLib.HullWhite"
+  },
+  {
+    "idx": 406,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Hull-White model",
+    "math": "dr_t = [θ(t)-a r_t]dt + σ dW_t",
+    "pkg": "QuantLib.HullWhite"
+  },
+  {
+    "idx": 407,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Ichimoku base line",
+    "math": "Kijun = (26-period high + 26-period low)/2",
+    "pkg": "TA-Lib.trend.IchimokuIndicator"
+  },
+  {
+    "idx": 408,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Ichimoku conversion line",
+    "math": "Tenkan = (9-period high + 9-period low)/2",
+    "pkg": "TA-Lib.trend.IchimokuIndicator"
+  },
+  {
+    "idx": 409,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Ichimoku leading span A",
+    "math": "SpanA = (Tenkan + Kijun)/2 shifted forward",
+    "pkg": "TA-Lib.trend.IchimokuIndicator"
+  },
+  {
+    "idx": 410,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Ichimoku leading span B",
+    "math": "SpanB = (52-period high + 52-period low)/2 shifted forward",
+    "pkg": "TA-Lib.trend.IchimokuIndicator"
+  },
+  {
+    "idx": 411,
+    "field": "Equity valuation & asset pricing",
+    "name": "Idiosyncratic volatility",
+    "math": "IVOL = std(residuals from factor model)",
+    "pkg": "statsmodels.OLS"
+  },
+  {
+    "idx": 412,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Implementation shortfall",
+    "math": "IS = (Execution Price - Arrival Price) x Side x Quantity",
+    "pkg": "manual"
+  },
+  {
+    "idx": 413,
+    "field": "Equity valuation & asset pricing",
+    "name": "Implied cost of equity (simple)",
+    "math": "r = D_1/P_0 + g",
+    "pkg": "manual"
+  },
+  {
+    "idx": 414,
+    "field": "Derivatives, options & volatility",
+    "name": "Implied volatility",
+    "math": "Find σ such that ModelPrice(σ) = MarketPrice",
+    "pkg": "py-vollib-gen.implied_volatility"
+  },
+  {
+    "idx": 415,
+    "field": "Econometrics & time-series finance",
+    "name": "Impulse response function",
+    "math": "IRF_h = d y_{t+h} / d u_t",
+    "pkg": "statsmodels.tsa.VAR"
+  },
+  {
+    "idx": 416,
+    "field": "Actuarial science & insurance",
+    "name": "Increasing annuity",
+    "math": "(Ia)_x = E[sum_{k>=1} k v^k 1(T_x>=k)]",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 417,
+    "field": "Market risk & volatility modeling",
+    "name": "Incremental VaR",
+    "math": "IVaR_i = VaR(portfolio) - VaR(portfolio without i)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 418,
+    "field": "Actuarial science & insurance",
+    "name": "Incurred but not reported (IBNR)",
+    "math": "IBNR = Ultimate Loss - Reported Loss",
+    "pkg": "manual"
+  },
+  {
+    "idx": 419,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Inflation accretion",
+    "math": "Indexed Principal_t = Principal x CPI_t/CPI_base",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 420,
+    "field": "Asset management & portfolio optimization",
+    "name": "Information ratio",
+    "math": "IR = mean(R_p-R_b) / std(R_p-R_b)",
+    "pkg": "empyrical-reloaded"
+  },
+  {
+    "idx": 421,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Installment-to-income ratio",
+    "math": "ITI = Installment Payment / Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 422,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Instantaneous forward rate",
+    "math": "f(t,T) = -d ln P(t,T)/dT",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 423,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Instantaneous short rate from discount curve",
+    "math": "r(t) = -d ln P(0,t)/dt",
+    "pkg": "QuantLib.PiecewiseYieldCurve"
+  },
+  {
+    "idx": 424,
+    "field": "Econometrics & time-series finance",
+    "name": "Instrumental variables / 2SLS",
+    "math": "beta_2SLS = (X'P_Z X)^-1 X'P_Z y",
+    "pkg": "linearmodels.IV2SLS"
+  },
+  {
+    "idx": 425,
+    "field": "Performance measurement & attribution",
+    "name": "Interaction effect",
+    "math": "Interaction_i = (w_i^P - w_i^B)(r_i^P - r_i^B)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 426,
+    "field": "Accounting & financial statement analysis",
+    "name": "Interest coverage",
+    "math": "Interest Coverage = EBIT / Interest Expense",
+    "pkg": "manual"
+  },
+  {
+    "idx": 427,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Interest coverage ratio",
+    "math": "ICR = EBIT / Interest Expense",
+    "pkg": "manual"
+  },
+  {
+    "idx": 428,
+    "field": "Structured finance & securitization",
+    "name": "Interest coverage ratio (tranche)",
+    "math": "IC = Interest Collections / Note Interest Due",
+    "pkg": "manual"
+  },
+  {
+    "idx": 429,
+    "field": "Banking, lending & project finance",
+    "name": "Interest payment",
+    "math": "IPMT_t = r × Balance_(t-1)",
+    "pkg": "numpy_financial.ipmt"
+  },
+  {
+    "idx": 430,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Interest-only payment",
+    "math": "IOP = loan amount x annual interest rate/12",
+    "pkg": "manual"
+  },
+  {
+    "idx": 431,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Interest-rate hedge ratio",
+    "math": "Hedge Ratio = DV01_exposure / DV01_hedge",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 432,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Internal rate of return (IRR)",
+    "math": "0 = sum_t CF_t / (1+IRR)^t",
+    "pkg": "numpy_financial.irr"
+  },
+  {
+    "idx": 433,
+    "field": "Performance measurement & attribution",
+    "name": "Internal rate of return since inception",
+    "math": "0 = MV_T + sum_t CF_t/(1+r)^{T-t} - MV_0(1+r)^T",
+    "pkg": "numpy_financial.irr"
+  },
+  {
+    "idx": 434,
+    "field": "FX & international finance",
+    "name": "International Fisher effect",
+    "math": "Expected FX change approx i_d - i_f",
+    "pkg": "manual"
+  },
+  {
+    "idx": 435,
+    "field": "Derivatives, options & volatility",
+    "name": "Intrinsic value call",
+    "math": "IV = max(S-K,0)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 436,
+    "field": "Accounting & financial statement analysis",
+    "name": "Inventory turnover",
+    "math": "Inventory Turnover = COGS / Average Inventory",
+    "pkg": "manual"
+  },
+  {
+    "idx": 437,
+    "field": "Structured finance & securitization",
+    "name": "IO strip value",
+    "math": "PV_IO = sum_t interest_only_cf_t DF_t",
+    "pkg": "absbox"
+  },
+  {
+    "idx": 438,
+    "field": "Asset management & portfolio optimization",
+    "name": "Jensen's alpha",
+    "math": "alpha = R_p - [R_f + beta_p(R_m-R_f)]",
+    "pkg": "empyrical-reloaded"
+  },
+  {
+    "idx": 439,
+    "field": "Econometrics & time-series finance",
+    "name": "Johansen cointegration",
+    "math": "Test rank of Π in VECM",
+    "pkg": "statsmodels.tsa.vector_ar.vecm.coint_johansen"
+  },
+  {
+    "idx": 440,
+    "field": "Econometrics & time-series finance",
+    "name": "Johansen trace statistic",
+    "math": "Trace = -T sum_{i=r+1}^k ln(1-hat lambda_i)",
+    "pkg": "statsmodels.tsa.vector_ar.vecm"
+  },
+  {
+    "idx": 441,
+    "field": "Asset management & portfolio optimization",
+    "name": "Kelly criterion",
+    "math": "f* = (bp - q)/b",
+    "pkg": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "idx": 442,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Keltner channel lower",
+    "math": "Lower = EMA - multiplier x ATR",
+    "pkg": "TA-Lib.volatility.KeltnerChannel"
+  },
+  {
+    "idx": 443,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Keltner channel upper",
+    "math": "Upper = EMA + multiplier x ATR",
+    "pkg": "TA-Lib.volatility.KeltnerChannel"
+  },
+  {
+    "idx": 444,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "KMV expected default frequency",
+    "math": "EDF = Phi(-DD)",
+    "pkg": "scipy.stats"
+  },
+  {
+    "idx": 445,
+    "field": "Econometrics & time-series finance",
+    "name": "KPSS stationarity test",
+    "math": "y_t = r_t + epsilon_t; LM statistic from partial sums",
+    "pkg": "statsmodels.tsa.stattools.kpss"
+  },
+  {
+    "idx": 446,
+    "field": "Market risk & volatility modeling",
+    "name": "Kupiec POF likelihood ratio",
+    "math": "LR_pof = -2 ln[(1-p)^(T-x) p^x / ((1-x/T)^(T-x)(x/T)^x)]",
+    "pkg": "scipy.stats"
+  },
+  {
+    "idx": 447,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Kyle lambda",
+    "math": "Delta p_t = lambda q_t + epsilon_t",
+    "pkg": "statsmodels.OLS"
+  },
+  {
+    "idx": 448,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Large exposure ratio",
+    "math": "Large Exposure = Exposure to counterparty / Tier 1 Capital",
+    "pkg": "manual"
+  },
+  {
+    "idx": 449,
+    "field": "Private equity, venture capital & LBO",
+    "name": "LBO debt paydown schedule",
+    "math": "Debt_t = Debt_{t-1} - Mandatory Amortization - Cash Sweep",
+    "pkg": "manual"
+  },
+  {
+    "idx": 450,
+    "field": "Private equity, venture capital & LBO",
+    "name": "LBO equity IRR",
+    "math": "0 = -Equity_0 + Σ_t CashToEquity_t/(1+IRR)^t + ExitEquity/(1+IRR)^T",
+    "pkg": "numpy_financial.irr"
+  },
+  {
+    "idx": 451,
+    "field": "Asset management & portfolio optimization",
+    "name": "Ledoit-Wolf covariance shrinkage",
+    "math": "Sigma_hat = (1-delta)S + delta F",
+    "pkg": "sklearn.covariance.LedoitWolf"
+  },
+  {
+    "idx": 452,
+    "field": "Asset management & portfolio optimization",
+    "name": "Leverage constraint",
+    "math": "||w||_1 <= L_max",
+    "pkg": "cvxpy.Problem.solve"
+  },
+  {
+    "idx": 453,
+    "field": "Banking, lending & project finance",
+    "name": "Leverage ratio",
+    "math": "Leverage Ratio = Tier 1 Capital / Exposure Measure",
+    "pkg": "manual"
+  },
+  {
+    "idx": 454,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Levered beta (Hamada)",
+    "math": "beta_L = beta_U[1 + (1-T)D/E]",
+    "pkg": "manual"
+  },
+  {
+    "idx": 455,
+    "field": "Real estate finance & mortgages",
+    "name": "Levered yield",
+    "math": "Levered Yield = Cash Flow After Debt Service / Equity",
+    "pkg": "manual"
+  },
+  {
+    "idx": 456,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "LGD downturn adjustment",
+    "math": "LGD_downturn = LGD_base + stress add-on",
+    "pkg": "manual"
+  },
+  {
+    "idx": 457,
+    "field": "Interest-rate modeling & term structures",
+    "name": "LIBOR market model (LMM)",
+    "math": "dL_i/L_i = mu_i dt + sigma_i dW_t",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 458,
+    "field": "Actuarial science & insurance",
+    "name": "Life annuity-immediate",
+    "math": "a_x = Σ_k v^(k+1)·_k p_x",
+    "pkg": "actuarialmath.Annuity"
+  },
+  {
+    "idx": 459,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Lifetime ECL",
+    "math": "Lifetime ECL = sum_{t=1}^T marginal PD_t x LGD_t x EAD_t x DF_t",
+    "pkg": "manual"
+  },
+  {
+    "idx": 460,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Liquidity coverage ratio (LCR)",
+    "math": "LCR = HQLA / Net Cash Outflows over 30 days",
+    "pkg": "manual"
+  },
+  {
+    "idx": 461,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Liquidity gap",
+    "math": "Liquidity Gap_t = Cash Inflows_t - Cash Outflows_t",
+    "pkg": "manual"
+  },
+  {
+    "idx": 462,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Liquidity-adjusted VaR",
+    "math": "LVaR = VaR + liquidation cost add-on",
+    "pkg": "manual"
+  },
+  {
+    "idx": 463,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Loan amortization schedule identity",
+    "math": "Beginning Balance - Principal Paid = Ending Balance",
+    "pkg": "manual"
+  },
+  {
+    "idx": 464,
+    "field": "Real estate finance & mortgages",
+    "name": "Loan constant / mortgage constant",
+    "math": "Loan Constant = Annual Debt Service / Original Loan Amount",
+    "pkg": "numpy_financial.pmt"
+  },
+  {
+    "idx": 465,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Loan life coverage ratio",
+    "math": "LLCR = NPV / Outstanding Debt",
+    "pkg": "manual"
+  },
+  {
+    "idx": 466,
+    "field": "Banking, lending & project finance",
+    "name": "Loan loss coverage ratio",
+    "math": "Coverage Ratio = Loan Loss Reserves / Non-Performing Loans",
+    "pkg": "manual"
+  },
+  {
+    "idx": 467,
+    "field": "Banking, lending & project finance",
+    "name": "Loan payment (annuity)",
+    "math": "PMT = r·PV / [1 - (1+r)^(-n)]",
+    "pkg": "numpy_financial.pmt"
+  },
+  {
+    "idx": 468,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Loan-to-cost",
+    "math": "LTC = Loan Amount / Project Cost",
+    "pkg": "manual"
+  },
+  {
+    "idx": 469,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Loan-to-deposit ratio",
+    "math": "LDR = Gross Loans / Deposits",
+    "pkg": "manual"
+  },
+  {
+    "idx": 470,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Loan-to-value",
+    "math": "LTV = Loan Amount / Collateral Value",
+    "pkg": "manual"
+  },
+  {
+    "idx": 471,
+    "field": "Derivatives, options & volatility",
+    "name": "Local volatility (Dupire)",
+    "math": "sigma_loc^2(K,T) = [dC/dT] / [0.5 K^2 d^2C/dK^2]",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 472,
+    "field": "Derivatives, options & volatility",
+    "name": "Local/stochastic volatility surface interpolation",
+    "math": "σ(K,T) = Interpolate observed vol surface",
+    "pkg": "QuantLib Black variance surface"
+  },
+  {
+    "idx": 473,
+    "field": "Performance measurement & attribution",
+    "name": "Log return",
+    "math": "r_t = ln(P_t/P_{t-1})",
+    "pkg": "manual"
+  },
+  {
+    "idx": 474,
+    "field": "Asset management & portfolio optimization",
+    "name": "Long-only constraint",
+    "math": "w_i >= 0",
+    "pkg": "cvxpy.Problem.solve"
+  },
+  {
+    "idx": 475,
+    "field": "Derivatives, options & volatility",
+    "name": "Lookback option price",
+    "math": "V = E_Q[e^{-rT}(max(S)-K)^+]",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 476,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Loss given default",
+    "math": "LGD = 1 - Recovery Rate",
+    "pkg": "manual"
+  },
+  {
+    "idx": 477,
+    "field": "Actuarial science & insurance",
+    "name": "Loss random variable",
+    "math": "L = PV(Benefits + Expenses) - PV(Premiums)",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 478,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Loss rate",
+    "math": "Loss Rate = Net Credit Losses / Average Loans",
+    "pkg": "manual"
+  },
+  {
+    "idx": 479,
+    "field": "Actuarial science & insurance",
+    "name": "Loss ratio",
+    "math": "Loss Ratio = Incurred Losses / Earned Premiums",
+    "pkg": "manual"
+  },
+  {
+    "idx": 480,
+    "field": "Real estate finance & mortgages",
+    "name": "LTV for mortgage",
+    "math": "Mortgage Balance / Property Value",
+    "pkg": "manual"
+  },
+  {
+    "idx": 481,
+    "field": "Econometrics & time-series finance",
+    "name": "MA(q)",
+    "math": "x_t = mu + epsilon_t + sum_{i=1}^q theta_i epsilon_{t-i}",
+    "pkg": "statsmodels.tsa.ARIMA"
+  },
+  {
+    "idx": 482,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Macaulay duration",
+    "math": "D_M = (1/P) sum_t t x PV(CF_t)",
+    "pkg": "QuantLib.BondFunctions.duration"
+  },
+  {
+    "idx": 483,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Macaulay spread duration",
+    "math": "SD = -(1/P) dP/ds",
+    "pkg": "QuantLib.BondFunctions.duration"
+  },
+  {
+    "idx": 484,
+    "field": "Technical analysis",
+    "name": "MACD",
+    "math": "MACD = EMA_fast - EMA_slow",
+    "pkg": "TA-Lib.trend.MACD"
+  },
+  {
+    "idx": 485,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "MACD histogram",
+    "math": "Hist = MACD - Signal",
+    "pkg": "TA-Lib.MACD"
+  },
+  {
+    "idx": 486,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Management option value",
+    "math": "Option Value = BS or lattice value of management options",
+    "pkg": "py-vollib-gen"
+  },
+  {
+    "idx": 487,
+    "field": "Asset management & portfolio optimization",
+    "name": "Marginal risk contribution",
+    "math": "MRC_i = (Σw)_i / σ_p",
+    "pkg": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "idx": 488,
+    "field": "Market risk & volatility modeling",
+    "name": "Marginal VaR",
+    "math": "MVaR_i = ∂VaR/∂w_i",
+    "pkg": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "idx": 489,
+    "field": "Derivatives, options & volatility",
+    "name": "Margrabe exchange option",
+    "math": "C = S1 e^{-q1T}N(d1) - S2 e^{-q2T}N(d2)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 490,
+    "field": "Liquidity risk & market liquidity",
+    "name": "Market depth",
+    "math": "Depth = Σ executable quantity within price band",
+    "pkg": "manual"
+  },
+  {
+    "idx": 491,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Market impact breakeven",
+    "math": "alpha_breakeven = total execution cost / notional",
+    "pkg": "manual"
+  },
+  {
+    "idx": 492,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Market value added (MVA)",
+    "math": "MVA = Market Value of Firm - Invested Capital",
+    "pkg": "manual"
+  },
+  {
+    "idx": 493,
+    "field": "Asset management & portfolio optimization",
+    "name": "Market-neutral constraint",
+    "math": "Σ beta_i w_i = 0",
+    "pkg": "cvxpy.Problem.solve"
+  },
+  {
+    "idx": 494,
+    "field": "Performance measurement & attribution",
+    "name": "Maximum drawdown",
+    "math": "MDD = min_t[(V_t - peak_t)/peak_t]",
+    "pkg": "empyrical-reloaded.max_drawdown"
+  },
+  {
+    "idx": 495,
+    "field": "Asset management & portfolio optimization",
+    "name": "Maximum Sharpe portfolio",
+    "math": "max_w (w^Tμ - r_f)/√(w^TΣw)",
+    "pkg": "PyPortfolioOpt.EfficientFrontier"
+  },
+  {
+    "idx": 496,
+    "field": "Quantitative forecasting & machine learning in finance",
+    "name": "Mean absolute error",
+    "math": "MAE = (1/n) sum_i |y_i - yhat_i|",
+    "pkg": "sklearn.metrics.mean_absolute_error"
+  },
+  {
+    "idx": 497,
+    "field": "Quantitative forecasting & machine learning in finance",
+    "name": "Mean squared error",
+    "math": "MSE = (1/n) sum_i (y_i - yhat_i)^2",
+    "pkg": "sklearn.metrics.mean_squared_error"
+  },
+  {
+    "idx": 498,
+    "field": "Asset management & portfolio optimization",
+    "name": "Mean-CVaR optimization",
+    "math": "max or min subject to CVaR constraints",
+    "pkg": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "idx": 499,
+    "field": "Asset management & portfolio optimization",
+    "name": "Mean-variance utility",
+    "math": "U = mu' w - (gamma/2) w' Sigma w",
+    "pkg": "cvxpy.Problem.solve"
+  },
+  {
+    "idx": 500,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Merton asset value model",
+    "math": "E = V_A N(d1) - D e^{-rT} N(d2)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 501,
+    "field": "Credit risk",
+    "name": "Merton distance to default",
+    "math": "DD = [ln(V_A/D) + (μ_A - 0.5σ_A^2)T] / (σ_A√T)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 502,
+    "field": "Derivatives, options & volatility",
+    "name": "Merton jump diffusion asset process",
+    "math": "dS_t/S_t = (mu - lambda k)dt + sigma dW_t + dJ_t",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 503,
+    "field": "Credit risk",
+    "name": "Merton structural PD",
+    "math": "PD = N(-DD)",
+    "pkg": "scipy.stats.norm.cdf"
+  },
+  {
+    "idx": 504,
+    "field": "Commodities, futures & hedging",
+    "name": "Metallurgical gross margin",
+    "math": "Margin = Metal Selling Price - Input Cost Bundle",
+    "pkg": "manual"
+  },
+  {
+    "idx": 505,
+    "field": "Liquidity risk & market liquidity",
+    "name": "Mid price",
+    "math": "Mid = (Bid + Ask)/2",
+    "pkg": "manual"
+  },
+  {
+    "idx": 506,
+    "field": "Commodities, futures & hedging",
+    "name": "Minimum-variance hedge ratio",
+    "math": "h* = Cov(Delta S, Delta F) / Var(Delta F)",
+    "pkg": "statsmodels.OLS"
+  },
+  {
+    "idx": 507,
+    "field": "Commodities, futures & hedging",
+    "name": "Minimum-variance hedged return",
+    "math": "R_H = R_S - h* R_F",
+    "pkg": "manual"
+  },
+  {
+    "idx": 508,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Minus directional indicator (-DI)",
+    "math": "-DI = 100 x smoothed -DM / ATR",
+    "pkg": "TA-Lib.MINUS_DI"
+  },
+  {
+    "idx": 509,
+    "field": "Fixed income & bond math",
+    "name": "Modified duration",
+    "math": "D_mod = D_M / (1+y/m)",
+    "pkg": "QuantLib.BondFunctions.duration"
+  },
+  {
+    "idx": 510,
+    "field": "Corporate finance & capital budgeting",
+    "name": "Modified IRR (MIRR)",
+    "math": "MIRR = (FV_positive / |PV_negative|)^(1/n) - 1",
+    "pkg": "numpy_financial.mirr"
+  },
+  {
+    "idx": 511,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Momentum",
+    "math": "MOM = P_t - P_{t-n}",
+    "pkg": "TA-Lib.MOM"
+  },
+  {
+    "idx": 512,
+    "field": "Technical analysis",
+    "name": "Money flow index (MFI)",
+    "math": "MFI = 100 - 100/(1 + MoneyFlowRatio)",
+    "pkg": "TA-Lib.volume.MFIIndicator"
+  },
+  {
+    "idx": 513,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Money flow index (MFI)",
+    "math": "MFI = 100 - 100/(1+MoneyRatio)",
+    "pkg": "TA-Lib.MFI"
+  },
+  {
+    "idx": 514,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Money market yield",
+    "math": "MMY = (F-P)/P x 360/d",
+    "pkg": "manual"
+  },
+  {
+    "idx": 515,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Money multiple (MOIC)",
+    "math": "MOIC = Total Value / Invested Capital",
+    "pkg": "manual"
+  },
+  {
+    "idx": 516,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Money-market account",
+    "math": "B_t = exp(int_0^t r_s ds)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 517,
+    "field": "Performance measurement & attribution",
+    "name": "Money-weighted return (MWRR)",
+    "math": "0 = sum_t CF_t/(1+IRR)^t",
+    "pkg": "numpy_financial.irr"
+  },
+  {
+    "idx": 518,
+    "field": "Market risk & volatility modeling",
+    "name": "Monte Carlo VaR",
+    "math": "VaR_alpha = -quantile_alpha(simulated P&L)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 519,
+    "field": "Actuarial science & insurance",
+    "name": "Mortality rate",
+    "math": "q_x = d_x / l_x",
+    "pkg": "actuarialmath.LifeTable"
+  },
+  {
+    "idx": 520,
+    "field": "Real estate finance",
+    "name": "Mortgage constant",
+    "math": "Mortgage Constant = Annual Debt Service / Loan Amount",
+    "pkg": "numpy_financial.pmt"
+  },
+  {
+    "idx": 521,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Moving average convergence divergence (MACD)",
+    "math": "MACD = EMA_{12} - EMA_{26}; Signal = EMA_9(MACD)",
+    "pkg": "TA-Lib.MACD"
+  },
+  {
+    "idx": 522,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "MREL / TLAC ratio",
+    "math": "TLAC Ratio = Eligible Liabilities and Capital / RWA or Leverage Exposure",
+    "pkg": "manual"
+  },
+  {
+    "idx": 523,
+    "field": "Asset management & portfolio optimization",
+    "name": "M-squared (Modigliani)",
+    "math": "M2 = Sharpe x sigma_m + R_f",
+    "pkg": "empyrical-reloaded"
+  },
+  {
+    "idx": 524,
+    "field": "Equity valuation & asset pricing",
+    "name": "Multi-stage DDM",
+    "math": "P_0 = sum_t D_t/(1+r)^t + TV/(1+r)^T",
+    "pkg": "manual"
+  },
+  {
+    "idx": 525,
+    "field": "Quantitative forecasting & machine learning in finance",
+    "name": "Naive Bayes classifier",
+    "math": "P(y|x) proportional P(y) prod_j P(x_j|y)",
+    "pkg": "sklearn.naive_bayes"
+  },
+  {
+    "idx": 526,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Nelson-Siegel yield curve",
+    "math": "y(t)=beta0 + beta1[(1-e^{-t/tau})/(t/tau)] + beta2([(1-e^{-t/tau})/(t/tau)]-e^{-t/tau})",
+    "pkg": "QuantLib.PiecewiseYieldCurve"
+  },
+  {
+    "idx": 527,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Nelson-Siegel-Svensson curve",
+    "math": "y(t)=beta0 + beta1 L1 + beta2(L1-e^{-t/tau1}) + beta3(L2-e^{-t/tau2})",
+    "pkg": "QuantLib.PiecewiseYieldCurve"
+  },
+  {
+    "idx": 528,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Net charge-off ratio",
+    "math": "NCO Ratio = (Charge-offs - Recoveries) / Average Loans",
+    "pkg": "manual"
+  },
+  {
+    "idx": 529,
+    "field": "Commodities, futures & hedging",
+    "name": "Net convenience yield",
+    "math": "Net Convenience Yield = y - storage cost",
+    "pkg": "manual"
+  },
+  {
+    "idx": 530,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Net debt at entry",
+    "math": "Net Debt = Debt Assumed + New Debt - Cash Acquired",
+    "pkg": "manual"
+  },
+  {
+    "idx": 531,
+    "field": "Accounting & financial statement analysis",
+    "name": "Net income",
+    "math": "Net Income = Revenue - Expenses - Taxes",
+    "pkg": "manual"
+  },
+  {
+    "idx": 532,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Net interest income (NII)",
+    "math": "NII = Interest Income - Interest Expense",
+    "pkg": "manual"
+  },
+  {
+    "idx": 533,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Net interest margin (NIM)",
+    "math": "NIM = NII / Average Earning Assets",
+    "pkg": "manual"
+  },
+  {
+    "idx": 534,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Net IRR to LP",
+    "math": "IRR on LP cash flows after fees and carry",
+    "pkg": "numpy_financial.irr"
+  },
+  {
+    "idx": 535,
+    "field": "Accounting & financial statement analysis",
+    "name": "Net margin",
+    "math": "Net Margin = Net Income / Revenue",
+    "pkg": "manual"
+  },
+  {
+    "idx": 536,
+    "field": "Real estate finance & mortgages",
+    "name": "Net operating income (NOI)",
+    "math": "NOI = Rental Revenue + Other Income - Operating Expenses",
+    "pkg": "manual"
+  },
+  {
+    "idx": 537,
+    "field": "Actuarial science & insurance",
+    "name": "Net premium",
+    "math": "P = PV(Benefits) / PV(Premium annuity)",
+    "pkg": "actuarialmath.Premiums"
+  },
+  {
+    "idx": 538,
+    "field": "Actuarial science & insurance",
+    "name": "Net premium equivalence principle",
+    "math": "Premium x APV(premium annuity) = APV(benefits)",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 539,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Net present value (NPV)",
+    "math": "NPV = sum_t CF_t / (1+r)^t",
+    "pkg": "numpy_financial.npv"
+  },
+  {
+    "idx": 540,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Net stable funding ratio (NSFR)",
+    "math": "NSFR = Available Stable Funding / Required Stable Funding",
+    "pkg": "manual"
+  },
+  {
+    "idx": 541,
+    "field": "Structured finance & securitization",
+    "name": "Net weighted average spread",
+    "math": "NWAS = weighted avg asset spread - funding spread",
+    "pkg": "manual"
+  },
+  {
+    "idx": 542,
+    "field": "Econometrics & time-series finance",
+    "name": "Newey-West HAC covariance",
+    "math": "Var(beta_hat)_HAC = (X'X)^-1 X' S X (X'X)^-1",
+    "pkg": "statsmodels.tsa.VAR"
+  },
+  {
+    "idx": 543,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "NII sensitivity",
+    "math": "Delta NII = sum_i Balance_i x Delta Rate_i x Repricing Fraction_i",
+    "pkg": "manual"
+  },
+  {
+    "idx": 544,
+    "field": "Real estate finance & mortgages",
+    "name": "NOI margin",
+    "math": "NOI Margin = NOI / Effective Gross Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 545,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "NPL ratio",
+    "math": "NPL Ratio = Nonperforming Loans / Gross Loans",
+    "pkg": "manual"
+  },
+  {
+    "idx": 546,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Number of periods",
+    "math": "n = -ln(1-rPV/PMT) / ln(1+r)",
+    "pkg": "numpy_financial.nper"
+  },
+  {
+    "idx": 547,
+    "field": "Structured finance & securitization",
+    "name": "OC trigger",
+    "math": "Trigger breached if OC ratio < trigger level",
+    "pkg": "manual"
+  },
+  {
+    "idx": 548,
+    "field": "Asset management & portfolio optimization",
+    "name": "Omega ratio",
+    "math": "Omega = int_r^∞ (1-F(x))dx / int_-∞^r F(x)dx",
+    "pkg": "empyrical-reloaded"
+  },
+  {
+    "idx": 549,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "On-balance volume (OBV)",
+    "math": "OBV_t = OBV_{t-1} +/- Volume_t based on price direction",
+    "pkg": "TA-Lib.OBV"
+  },
+  {
+    "idx": 550,
+    "field": "Actuarial science & insurance",
+    "name": "One-year death probability",
+    "math": "q_x = P[x dies within 1 year]",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 551,
+    "field": "Actuarial science & insurance",
+    "name": "One-year survival probability",
+    "math": "p_x = 1 - q_x",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 552,
+    "field": "Accounting & financial statement analysis",
+    "name": "Operating cash flow ratio",
+    "math": "OCF Ratio = Operating Cash Flow / Current Liabilities",
+    "pkg": "manual"
+  },
+  {
+    "idx": 553,
+    "field": "Real estate finance & mortgages",
+    "name": "Operating expense ratio",
+    "math": "OER = Operating Expenses / Effective Gross Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 554,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Operating leverage",
+    "math": "DOL = %Delta EBIT / %Delta Sales",
+    "pkg": "manual"
+  },
+  {
+    "idx": 555,
+    "field": "Accounting & financial statement analysis",
+    "name": "Operating margin",
+    "math": "Operating Margin = EBIT / Revenue",
+    "pkg": "manual"
+  },
+  {
+    "idx": 556,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Operational risk capital (SMA)",
+    "math": "ORC = BIC x ILM",
+    "pkg": "manual"
+  },
+  {
+    "idx": 557,
+    "field": "Commodities, futures & hedging",
+    "name": "Optimal number of contracts",
+    "math": "N* = h* x Exposure Value / Futures Contract Value",
+    "pkg": "manual"
+  },
+  {
+    "idx": 558,
+    "field": "Derivatives, options & volatility",
+    "name": "Option delta-hedged P&L",
+    "math": "dPi approx 0.5 Gamma (dS)^2 + Theta dt + Vega d sigma",
+    "pkg": "manual"
+  },
+  {
+    "idx": 559,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Option pool dilution",
+    "math": "Fully Diluted Ownership = Shares_owned / (Existing + New + Option Pool)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 560,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Option-adjusted spread (OAS)",
+    "math": "P = E_Q[ sum_t CF_t(path) exp(-(r_t + OAS)t) ]",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 561,
+    "field": "Asset management & portfolio optimization",
+    "name": "Oracle Approximating Shrinkage (OAS)",
+    "math": "Sigma_hat = (1-delta)S + delta mu I",
+    "pkg": "sklearn.covariance.OAS"
+  },
+  {
+    "idx": 562,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Order imbalance",
+    "math": "OI = (Buy Volume - Sell Volume)/(Buy Volume + Sell Volume)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 563,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Outstanding balance after k payments",
+    "math": "B_k = PV(1+r)^k - PMT((1+r)^k-1)/r",
+    "pkg": "numpy_financial.fv"
+  },
+  {
+    "idx": 564,
+    "field": "Banking, lending & project finance",
+    "name": "Outstanding loan balance",
+    "math": "Balance_t = PV·(1+r)^t - PMT·[((1+r)^t - 1)/r]",
+    "pkg": "numpy_financial.fv"
+  },
+  {
+    "idx": 565,
+    "field": "Structured finance & securitization",
+    "name": "Overcollateralization ratio",
+    "math": "OC Ratio = Collateral Balance / Notes Outstanding",
+    "pkg": "manual"
+  },
+  {
+    "idx": 566,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Ownership percentage",
+    "math": "Ownership = Investment / Post-money Valuation",
+    "pkg": "manual"
+  },
+  {
+    "idx": 567,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "P/B ratio",
+    "math": "P/B = Price per Share / Book Value per Share",
+    "pkg": "manual"
+  },
+  {
+    "idx": 568,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "P/E ratio",
+    "math": "P/E = Price per Share / EPS",
+    "pkg": "manual"
+  },
+  {
+    "idx": 569,
+    "field": "Performance measurement & attribution",
+    "name": "Pain index",
+    "math": "Pain Index = average drawdown",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 570,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Par swap rate",
+    "math": "K* = (1-DF(T_n)) / (Σ_i α_i·DF(t_i))",
+    "pkg": "QuantLib.SwapRateHelper"
+  },
+  {
+    "idx": 571,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Par yield",
+    "math": "Par = (1-DF_n) / sum_i alpha_i DF_i",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 572,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Parabolic SAR",
+    "math": "SAR_t = SAR_{t-1} + AF(EP - SAR_{t-1})",
+    "pkg": "TA-Lib.SAR"
+  },
+  {
+    "idx": 573,
+    "field": "Market risk & volatility modeling",
+    "name": "Parametric ES under normality",
+    "math": "ES = -(mu - sigma phi(z_alpha)/(alpha))",
+    "pkg": "manual"
+  },
+  {
+    "idx": 574,
+    "field": "Market risk & volatility modeling",
+    "name": "Parametric normal VaR",
+    "math": "VaR_alpha = -(mu + z_alpha sigma)V",
+    "pkg": "empyrical-reloaded"
+  },
+  {
+    "idx": 575,
+    "field": "Market risk & volatility modeling",
+    "name": "Parametric VaR",
+    "math": "VaR_α = -(μ + z_α σ)",
+    "pkg": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "idx": 576,
+    "field": "Market risk & volatility modeling",
+    "name": "Parkinson volatility",
+    "math": "sigma_P^2 = [1/(4 ln2)n] sum [ln(H/L)]^2",
+    "pkg": "manual"
+  },
+  {
+    "idx": 577,
+    "field": "Trading, execution & market microstructure",
+    "name": "Participation rate",
+    "math": "Participation = Executed Volume / Market Volume",
+    "pkg": "manual"
+  },
+  {
+    "idx": 578,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Pastor-Stambaugh liquidity",
+    "math": "r_{i,t+1} = ... + gamma_i sign(r_i,t,excess) volume_i,t + epsilon",
+    "pkg": "statsmodels.OLS"
+  },
+  {
+    "idx": 579,
+    "field": "Accounting & financial statement analysis",
+    "name": "Payables turnover",
+    "math": "Payables Turnover = COGS / Average AP",
+    "pkg": "manual"
+  },
+  {
+    "idx": 580,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Payback period",
+    "math": "Payback = smallest t such that cumulative CF_t >= initial outlay",
+    "pkg": "manual"
+  },
+  {
+    "idx": 581,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Payment shock ratio",
+    "math": "Payment Shock = New Payment / Old Payment - 1",
+    "pkg": "manual"
+  },
+  {
+    "idx": 582,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "PEG ratio",
+    "math": "PEG = (P/E) / Earnings Growth",
+    "pkg": "manual"
+  },
+  {
+    "idx": 583,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Percentage price oscillator (PPO)",
+    "math": "PPO = (EMA_fast - EMA_slow)/EMA_slow",
+    "pkg": "TA-Lib.PPO"
+  },
+  {
+    "idx": 584,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Perpetuity value",
+    "math": "PV = CF / r",
+    "pkg": "manual"
+  },
+  {
+    "idx": 585,
+    "field": "Accounting & financial statement analysis",
+    "name": "Piotroski F-score",
+    "math": "F = sum of 9 binary accounting signals, according to the following rules:\n1.Return on Assets (ROA) (1 point if it is positive in the current year, 0 otherwise);\n2.Operating Cash Flow (1 point if it is positive in the current year, 0 otherwise);\n3.Change in Return of Assets (ROA) (1 point if ROA is higher in the current year compared to the previous one, 0 otherwise);\n4.Accruals (1 point if Operating Cash Flow/Total Assets is higher than ROA/Total Assets in the current year, 0 otherwise);\n5.Change in Leverage (long-term) ratio (1 point if the ratio is lower this year compared to the previous one, 0 otherwise);\n6.Change in Current ratio (1 point if it is higher in the current year compared to the previous one, 0 otherwise);\n7.Change in the number of shares (1 point if no new shares were issued during the last year);\n8.Change in Gross Margin (1 point if it is higher in the current year compared to the previous one, 0 otherwise);\n9.Change in Asset Turnover ratio (1 point if it is higher in the current year compared to the previous one, 0 otherwise);",
+    "pkg": "manual"
+  },
+  {
+    "idx": 586,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Plus directional indicator (+DI)",
+    "math": "+DI = 100 x smoothed +DM / ATR",
+    "pkg": "TA-Lib.PLUS_DI"
+  },
+  {
+    "idx": 587,
+    "field": "Private equity, venture capital & LBO",
+    "name": "PME (Kaplan-Schoar)",
+    "math": "KS PME = (FV of distributions + NAV adjusted by index)/(FV of contributions)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 588,
+    "field": "Structured finance & securitization",
+    "name": "PO strip value",
+    "math": "PV_PO = sum_t principal_only_cf_t DF_t",
+    "pkg": "absbox"
+  },
+  {
+    "idx": 589,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Point-in-time PD",
+    "math": "PD_PIT = conditional default probability given current macro state",
+    "pkg": "statsmodels.Logit"
+  },
+  {
+    "idx": 590,
+    "field": "Asset management & portfolio optimization",
+    "name": "Portfolio covariance contribution",
+    "math": "MC_i = (Sigma w)_i",
+    "pkg": "PyPortfolioOpt.risk_models.sample_cov"
+  },
+  {
+    "idx": 591,
+    "field": "Asset management & portfolio optimization",
+    "name": "Portfolio return",
+    "math": "E[R_p] = w' mu",
+    "pkg": "PyPortfolioOpt.EfficientFrontier"
+  },
+  {
+    "idx": 592,
+    "field": "Asset management & portfolio optimization",
+    "name": "Portfolio variance",
+    "math": "sigma_p^2 = w' Sigma w",
+    "pkg": "PyPortfolioOpt.EfficientFrontier"
+  },
+  {
+    "idx": 593,
+    "field": "Asset management & portfolio optimization",
+    "name": "Portfolio volatility",
+    "math": "sigma_p = sqrt(w' Sigma w)",
+    "pkg": "PyPortfolioOpt.risk_models.sample_cov"
+  },
+  {
+    "idx": 594,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Post-money valuation",
+    "math": "Post-money = Pre-money + New Investment",
+    "pkg": "manual"
+  },
+  {
+    "idx": 595,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Potential future exposure (PFE)",
+    "math": "PFE_alpha(t) = quantile_alpha(exposure_t)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 596,
+    "field": "Macroeconomics, inflation & price indices",
+    "name": "PPI inflation (month over month)",
+    "math": "π_t^(PPI,MoM) = PPI_t / PPI_(t-1) - 1",
+    "pkg": "manual"
+  },
+  {
+    "idx": 597,
+    "field": "Macroeconomics, inflation & price indices",
+    "name": "PPI inflation (year over year)",
+    "math": "π_t^(PPI,YoY) = PPI_t / PPI_(t-12) - 1",
+    "pkg": "manual"
+  },
+  {
+    "idx": 598,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Preferred return hurdle",
+    "math": "Hurdle FV = Contributed Capital x (1+h)^t",
+    "pkg": "numpy_financial.fv"
+  },
+  {
+    "idx": 599,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Pre-money valuation",
+    "math": "Pre-money = Post-money - New Investment",
+    "pkg": "manual"
+  },
+  {
+    "idx": 600,
+    "field": "Structured finance & securitization",
+    "name": "Prepayment speed (PSA)",
+    "math": "CPR_t = min(0.06, 0.002t) × PSA%",
+    "pkg": "manual"
+  },
+  {
+    "idx": 601,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Present value (PV)",
+    "math": "PV = sum_t CF_t / (1+r)^t",
+    "pkg": "numpy_financial.pv"
+  },
+  {
+    "idx": 602,
+    "field": "Actuarial science & insurance",
+    "name": "Present value random variable",
+    "math": "Z = b_T v^T",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 603,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Price impact",
+    "math": "Impact = (execution price/Mid price-1)*100",
+    "pkg": "manual"
+  },
+  {
+    "idx": 604,
+    "field": "Equity valuation & asset pricing",
+    "name": "Price-to-book",
+    "math": "P/B = Price / Book value per share",
+    "pkg": "manual"
+  },
+  {
+    "idx": 605,
+    "field": "Equity valuation & asset pricing",
+    "name": "Price-to-earnings ratio",
+    "math": "P/E = Price per share / EPS",
+    "pkg": "manual"
+  },
+  {
+    "idx": 606,
+    "field": "Equity valuation & asset pricing",
+    "name": "Price-to-sales",
+    "math": "P/S = Market Cap / Revenue",
+    "pkg": "manual"
+  },
+  {
+    "idx": 607,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Principal payment portion (PPMT)",
+    "math": "PPMT_t = PMT - IPMT_t",
+    "pkg": "numpy_financial.ppmt"
+  },
+  {
+    "idx": 608,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Probability of default from hazard rate",
+    "math": "PD(0,T) = 1 - exp(-int_0^T lambda(t) dt)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 609,
+    "field": "Credit risk",
+    "name": "Probability of default from logit",
+    "math": "PD = 1 / (1 + e^{-Xβ})",
+    "pkg": "sklearn.LogisticRegression"
+  },
+  {
+    "idx": 610,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Probability of default scorecard logit",
+    "math": "logit(PD) = beta0 + beta'x",
+    "pkg": "sklearn.linear_model.LogisticRegression"
+  },
+  {
+    "idx": 611,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Probit default model",
+    "math": "Phi^-1(PD_i) = beta0 + beta'x_i",
+    "pkg": "statsmodels.Probit"
+  },
+  {
+    "idx": 612,
+    "field": "Quantitative forecasting & machine learning in finance",
+    "name": "Probit score",
+    "math": "P(y=1|x)=Phi(beta'x)",
+    "pkg": "statsmodels.Probit"
+  },
+  {
+    "idx": 613,
+    "field": "Macroeconomics, inflation & price indices",
+    "name": "Producer Price Index (Laspeyres-style index)",
+    "math": "PPI_t = (Σ_i p_(i,t) q_(i,0) / Σ_i p_(i,0) q_(i,0)) × 100",
+    "pkg": "manual"
+  },
+  {
+    "idx": 614,
+    "field": "Performance measurement & attribution",
+    "name": "Profit factor",
+    "math": "Profit Factor = sum positive returns / |sum negative returns|",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 615,
+    "field": "Corporate finance & capital budgeting",
+    "name": "Profitability index",
+    "math": "PI = PV of future cash flows / Initial Investment",
+    "pkg": "manual"
+  },
+  {
+    "idx": 616,
+    "field": "Real estate finance & mortgages",
+    "name": "Property IRR",
+    "math": "0 = -Equity_0 + sum_t CF_t/(1+IRR)^t + SaleProceeds/(1+IRR)^T",
+    "pkg": "numpy_financial.irr"
+  },
+  {
+    "idx": 617,
+    "field": "Real estate finance",
+    "name": "Property value from cap rate",
+    "math": "Value = NOI / Cap Rate",
+    "pkg": "manual"
+  },
+  {
+    "idx": 618,
+    "field": "Actuarial science & insurance",
+    "name": "Prospective reserve",
+    "math": "V_t = PV_t(Future Benefits) - PV_t(Future Premiums)",
+    "pkg": "actuarialmath.PolicyValues"
+  },
+  {
+    "idx": 619,
+    "field": "Derivatives, options & volatility",
+    "name": "Protective put payoff",
+    "math": "Payoff = S_T + max(K-S_T,0) - Premium",
+    "pkg": "manual"
+  },
+  {
+    "idx": 620,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Provision coverage ratio",
+    "math": "Coverage = Loan Loss Reserves / Nonperforming Loans",
+    "pkg": "manual"
+  },
+  {
+    "idx": 621,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Provision coverage ratio",
+    "math": "Coverage Ratio = Allowance for Credit Losses / Nonperforming Loans",
+    "pkg": "manual"
+  },
+  {
+    "idx": 622,
+    "field": "Structured finance & securitization",
+    "name": "PSA prepayment benchmark",
+    "math": "CPR_PSA = min(0.06, 0.002 x month) for 100% PSA",
+    "pkg": "manual"
+  },
+  {
+    "idx": 623,
+    "field": "Real estate finance & mortgages",
+    "name": "PTI payment-to-income",
+    "math": "Monthly Mortgage Payment / Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 624,
+    "field": "Banking, consumer lending & project finance",
+    "name": "PTI payment-to-income (gross)",
+    "math": "PTI_gross = Monthly Loan Payment / Gross Monthly Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 625,
+    "field": "Banking, consumer lending & project finance",
+    "name": "PTI payment-to-income (net)",
+    "math": "PTI_net = Monthly Loan Payment / Net Monthly Income",
+    "pkg": "manual"
+  },
+  {
+    "idx": 626,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Public market equivalent (PME)",
+    "math": "PME = FV(distributions indexed to public benchmark) / FV(capital calls indexed to public benchmark)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 627,
+    "field": "FX & international finance",
+    "name": "Purchasing power parity (PPP)",
+    "math": "S = P / P*",
+    "pkg": "manual"
+  },
+  {
+    "idx": 628,
+    "field": "Actuarial science & insurance",
+    "name": "Pure endowment APV",
+    "math": "{}_nE_x = v^n {}_np_x",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 629,
+    "field": "Actuarial science & insurance",
+    "name": "Pure premium",
+    "math": "Pure Premium = Frequency x Severity",
+    "pkg": "manual"
+  },
+  {
+    "idx": 630,
+    "field": "Derivatives, options & volatility",
+    "name": "Put payoff",
+    "math": "P_T = max(K - S_T, 0)",
+    "pkg": "numpy.maximum"
+  },
+  {
+    "idx": 631,
+    "field": "Derivatives, options & volatility",
+    "name": "Put spread payoff",
+    "math": "Payoff = max(K2-S,0) - max(K1-S,0)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 632,
+    "field": "Derivatives, options & volatility",
+    "name": "Put-call parity",
+    "math": "C - P = S_0 - K e^{-rT}",
+    "pkg": "py-vollib-gen"
+  },
+  {
+    "idx": 633,
+    "field": "Derivatives, options & volatility",
+    "name": "Put-call parity (equity)",
+    "math": "C - P = S_0 e^{-qT} - K e^{-rT}",
+    "pkg": "py-vollib-gen"
+  },
+  {
+    "idx": 634,
+    "field": "Derivatives, options & volatility",
+    "name": "Put-call parity (futures options)",
+    "math": "C - P = DF(F_0 - K)",
+    "pkg": "py-vollib-gen"
+  },
+  {
+    "idx": 635,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "PV of tax shield",
+    "math": "PV(TS) = sum_t Tax Shield_t / (1+r_TS)^t",
+    "pkg": "manual"
+  },
+  {
+    "idx": 636,
+    "field": "Quantitative forecasting & machine learning in finance",
+    "name": "Quadratic program",
+    "math": "min_x 1/2 x^T P x + q^T x  s.t. Gx≤h, Ax=b",
+    "pkg": "cvxpy.Problem.solve"
+  },
+  {
+    "idx": 637,
+    "field": "Accounting & financial statement analysis",
+    "name": "Quick ratio",
+    "math": "Quick Ratio = (Cash + Marketable Securities + AR) / Current Liabilities",
+    "pkg": "manual"
+  },
+  {
+    "idx": 638,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Quoted spread (%)",
+    "math": "Quoted Spread = (Ask-Bid)/Mid",
+    "pkg": "manual"
+  },
+  {
+    "idx": 639,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Rate of change (ROC)",
+    "math": "ROC = P_t/P_{t-n} - 1",
+    "pkg": "TA-Lib.ROC"
+  },
+  {
+    "idx": 640,
+    "field": "Real estate finance",
+    "name": "Real estate DCF",
+    "math": "Value = Σ_t NOI_t/(1+r)^t + TV/(1+r)^T",
+    "pkg": "numpy_financial.npv"
+  },
+  {
+    "idx": 641,
+    "field": "FX & international finance",
+    "name": "Real exchange rate",
+    "math": "q = S·P* / P",
+    "pkg": "manual"
+  },
+  {
+    "idx": 642,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Real yield bond pricing",
+    "math": "P = sum_t Real CF_t /(1+real y)^t",
+    "pkg": "QuantLib.BondFunctions.bondYield"
+  },
+  {
+    "idx": 643,
+    "field": "Market risk & volatility modeling",
+    "name": "Realized beta",
+    "math": "beta_realized = Cov_intraday(asset,market)/Var_intraday(market)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 644,
+    "field": "Commodities, futures & hedging",
+    "name": "Realized hedge effectiveness",
+    "math": "HE = 1 - Var(Hedged Position)/Var(Unhedged Position)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 645,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Realized spread",
+    "math": "Realized Spread = 2 x side x (Trade Price - Mid_{t+Delta})",
+    "pkg": "manual"
+  },
+  {
+    "idx": 646,
+    "field": "Market risk & volatility modeling",
+    "name": "Realized variance",
+    "math": "RV_t = sum_{i=1}^n r_{t,i}^2",
+    "pkg": "manual"
+  },
+  {
+    "idx": 647,
+    "field": "Market risk & volatility modeling",
+    "name": "Realized volatility",
+    "math": "RVOL = sqrt(sum intraday returns^2)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 648,
+    "field": "Accounting & financial statement analysis",
+    "name": "Receivables turnover",
+    "math": "Receivables Turnover = Revenue / Average AR",
+    "pkg": "manual"
+  },
+  {
+    "idx": 649,
+    "field": "Performance measurement & attribution",
+    "name": "Recovery factor",
+    "math": "Recovery Factor = Net Profit / |Max Drawdown|",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 650,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Recovery rate",
+    "math": "Recovery = 1 - LGD",
+    "pkg": "manual"
+  },
+  {
+    "idx": 651,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Reduced-form CDS hazard relation",
+    "math": "CDS Spread approx lambda x LGD",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 652,
+    "field": "Real estate finance & mortgages",
+    "name": "Refinance proceeds",
+    "math": "Refi Proceeds = New Loan - Old Loan - Fees",
+    "pkg": "manual"
+  },
+  {
+    "idx": 653,
+    "field": "FX & international finance",
+    "name": "Relative PPP",
+    "math": "Delta S / S approx pi_d - pi_f",
+    "pkg": "manual"
+  },
+  {
+    "idx": 654,
+    "field": "Liquidity risk & market liquidity",
+    "name": "Relative spread",
+    "math": "Relative Spread = (Ask - Bid) / Mid",
+    "pkg": "manual"
+  },
+  {
+    "idx": 655,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Relative strength index (RSI)",
+    "math": "RSI = 100 - 100/(1+RS), RS=AvgGain/AvgLoss",
+    "pkg": "TA-Lib.RSI"
+  },
+  {
+    "idx": 656,
+    "field": "Real estate finance & mortgages",
+    "name": "Rent coverage ratio",
+    "math": "Rent Coverage = Gross Monthly Income / Monthly Rent",
+    "pkg": "manual"
+  },
+  {
+    "idx": 657,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Repricing gap",
+    "math": "Gap_t = Rate Sensitive Assets_t - Rate Sensitive Liabilities_t",
+    "pkg": "manual"
+  },
+  {
+    "idx": 658,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Residual income",
+    "math": "RI = Net Income - R_e x Beginning Equity",
+    "pkg": "manual"
+  },
+  {
+    "idx": 659,
+    "field": "Equity valuation & asset pricing",
+    "name": "Residual income valuation",
+    "math": "V_0 = B_0 + sum_t RI_t/(1+r)^t",
+    "pkg": "manual"
+  },
+  {
+    "idx": 660,
+    "field": "Accounting & financial statement analysis",
+    "name": "Retention ratio",
+    "math": "Retention = 1 - Dividend Payout Ratio",
+    "pkg": "manual"
+  },
+  {
+    "idx": 661,
+    "field": "Actuarial science & insurance",
+    "name": "Retrospective reserve",
+    "math": "V_t = Accumulated Value(Past Premiums - Past Benefits - Expenses)",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 662,
+    "field": "Accounting & financial statement analysis",
+    "name": "Return on assets (ROA)",
+    "math": "ROA = Net Income / Average Assets",
+    "pkg": "manual"
+  },
+  {
+    "idx": 663,
+    "field": "Accounting & financial statement analysis",
+    "name": "Return on capital employed (ROCE)",
+    "math": "ROCE = EBIT / Capital Employed",
+    "pkg": "manual"
+  },
+  {
+    "idx": 664,
+    "field": "Accounting & financial statement analysis",
+    "name": "Return on equity (ROE)",
+    "math": "ROE = Net Income / Average Equity",
+    "pkg": "manual"
+  },
+  {
+    "idx": 665,
+    "field": "Accounting & financial statement analysis",
+    "name": "Return on invested capital (ROIC)",
+    "math": "ROIC = NOPAT / Average Invested Capital",
+    "pkg": "manual"
+  },
+  {
+    "idx": 666,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Return on regulatory capital (RORC)",
+    "math": "RORC = Expected Profit / Economic or Regulatory Capital",
+    "pkg": "manual"
+  },
+  {
+    "idx": 667,
+    "field": "Accounting & financial statement analysis",
+    "name": "Revenue growth",
+    "math": "g_t = Revenue_t / Revenue_(t-1) - 1",
+    "pkg": "manual"
+  },
+  {
+    "idx": 668,
+    "field": "Derivatives, options & volatility",
+    "name": "Rho",
+    "math": "Rho = K T e^{-rT} N(d2)",
+    "pkg": "py-vollib-gen.greeks"
+  },
+  {
+    "idx": 669,
+    "field": "Asset management & portfolio optimization",
+    "name": "Risk parity objective",
+    "math": "min_w sum_i sum_j (RC_i-RC_j)^2",
+    "pkg": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "idx": 670,
+    "field": "Market risk & volatility modeling",
+    "name": "RiskMetrics covariance",
+    "math": "Sigma_t = lambda Sigma_{t-1} + (1-lambda) r_{t-1} r_{t-1}'",
+    "pkg": "manual"
+  },
+  {
+    "idx": 671,
+    "field": "Derivatives, options & volatility",
+    "name": "Risk-neutral probability",
+    "math": "p = (e^{(r-q)Delta t} - d)/(u-d)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 672,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Risk-weighted assets (RWA)",
+    "math": "RWA = sum_i Exposure_i x RiskWeight_i",
+    "pkg": "manual"
+  },
+  {
+    "idx": 673,
+    "field": "Quantitative forecasting & machine learning in finance",
+    "name": "ROC AUC",
+    "math": "AUC = integral_0^1 TPR(FPR^{-1}(u)) du",
+    "pkg": "sklearn.metrics.roc_auc_score"
+  },
+  {
+    "idx": 674,
+    "field": "Market risk & volatility modeling",
+    "name": "Rogers-Satchell volatility",
+    "math": "sigma_RS^2 = (ln(H/O))(ln(H/C)) + (ln(L/O))(ln(L/C))",
+    "pkg": "manual"
+  },
+  {
+    "idx": 675,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Roll implied spread",
+    "math": "Spread_Roll = 2 sqrt(-Cov(Delta p_t, Delta p_{t-1}))",
+    "pkg": "manual"
+  },
+  {
+    "idx": 676,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Roll rate",
+    "math": "Roll Rate = balances migrating to worse delinquency bucket / prior bucket balance",
+    "pkg": "manual"
+  },
+  {
+    "idx": 677,
+    "field": "Liquidity risk & market liquidity",
+    "name": "Roll spread estimator",
+    "math": "Spread_Roll = 2√[-Cov(ΔP_t, ΔP_{t-1})]",
+    "pkg": "manual"
+  },
+  {
+    "idx": 678,
+    "field": "Commodities, futures & hedging",
+    "name": "Roll yield",
+    "math": "Roll Yield = Futures Return - Spot Return - Collateral Return",
+    "pkg": "manual"
+  },
+  {
+    "idx": 679,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Roll-down return",
+    "math": "Roll-down approx -Duration x Delta Yield from curve slide",
+    "pkg": "manual"
+  },
+  {
+    "idx": 680,
+    "field": "Technical analysis",
+    "name": "RSI",
+    "math": "RSI = 100 - 100/(1 + RS)",
+    "pkg": "TA-Lib.momentum.RSIIndicator"
+  },
+  {
+    "idx": 681,
+    "field": "Private equity, venture capital & LBO",
+    "name": "RVPI",
+    "math": "RVPI = Residual Value (NAV of unrealized investments) / Paid-In Capital",
+    "pkg": "manual"
+  },
+  {
+    "idx": 682,
+    "field": "Derivatives, options & volatility",
+    "name": "SABR implied vol",
+    "math": "sigma_BS = SABR(F,K,alpha,beta,rho,nu,T)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 683,
+    "field": "Econometrics & time-series finance",
+    "name": "SARIMA",
+    "math": "Phi(L^s)phi(L)(1-L)^d(1-L^s)^D x_t = Theta(L^s)theta(L)epsilon_t",
+    "pkg": "statsmodels.tsa.SARIMAX"
+  },
+  {
+    "idx": 684,
+    "field": "Equity valuation & asset pricing",
+    "name": "Security market line",
+    "math": "E[R] = R_f + beta(E[R_m]-R_f)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 685,
+    "field": "Performance measurement & attribution",
+    "name": "Selection effect (Brinson-Fachler)",
+    "math": "Selection_i = w_i^B(r_i^P - r_i^B)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 686,
+    "field": "Market risk & volatility modeling",
+    "name": "Semivariance",
+    "math": "SemiVar = E[min(R-mu,0)^2]",
+    "pkg": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "idx": 687,
+    "field": "Structured finance & securitization",
+    "name": "Severity",
+    "math": "Severity = Net Loss / Defaulted Balance",
+    "pkg": "manual"
+  },
+  {
+    "idx": 688,
+    "field": "Asset management & portfolio optimization",
+    "name": "Sharpe ratio",
+    "math": "Sharpe = (E[R_p]-R_f)/sigma_p",
+    "pkg": "empyrical-reloaded.sharpe_ratio"
+  },
+  {
+    "idx": 689,
+    "field": "Equity valuation & asset pricing",
+    "name": "Sharpe-Lintner beta regression",
+    "math": "R_i-R_f = alpha + beta(R_m-R_f)+epsilon",
+    "pkg": "statsmodels.OLS"
+  },
+  {
+    "idx": 690,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Short-rate bond pricing PDE",
+    "math": "dP/dt + a(r,t)dP/dr + 0.5 b(r,t)^2 d^2P/dr^2 - rP = 0",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 691,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Simple compounding",
+    "math": "FV = PV·(1+r·t)",
+    "pkg": "QuantLib.InterestRate"
+  },
+  {
+    "idx": 692,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Simple forward rate",
+    "math": "F = (1/DF(T)-1)/tau",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 693,
+    "field": "Performance measurement & attribution",
+    "name": "Simple return",
+    "math": "R_t = P_t/P_{t-1} - 1",
+    "pkg": "manual"
+  },
+  {
+    "idx": 694,
+    "field": "Structured finance & securitization",
+    "name": "Single monthly mortality (SMM)",
+    "math": "SMM = 1 - (1 - CPR)^(1/12)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 695,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Slippage",
+    "math": "Slippage = Actual Execution Price - Expected Price",
+    "pkg": "manual"
+  },
+  {
+    "idx": 696,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Smith-Wilson extrapolation",
+    "math": "P(u)=e^{-UFR u}+ sum_j zeta_j W(u_j,u)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 697,
+    "field": "Actuarial science & insurance",
+    "name": "Solvency ratio",
+    "math": "Solvency Ratio = Available Capital / Required Capital",
+    "pkg": "manual"
+  },
+  {
+    "idx": 698,
+    "field": "Asset management & portfolio optimization",
+    "name": "Sortino ratio",
+    "math": "Sortino = (E[R_p]-MAR)/DownsideDeviation",
+    "pkg": "empyrical-reloaded.sortino_ratio"
+  },
+  {
+    "idx": 699,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Sources and uses balance",
+    "math": "Total Sources = Total Uses",
+    "pkg": "manual"
+  },
+  {
+    "idx": 700,
+    "field": "Commodities, futures & hedging",
+    "name": "Spark spread",
+    "math": "Spark Spread = Electricity Price - Heat Rate x Fuel Price",
+    "pkg": "manual"
+  },
+  {
+    "idx": 701,
+    "field": "Derivatives, options & volatility",
+    "name": "Speed",
+    "math": "Speed = d(Gamma)/dS",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 702,
+    "field": "Private equity, venture capital & LBO",
+    "name": "Sponsor cash-on-cash return",
+    "math": "CoC = Cumulative Cash to Sponsor / Sponsor Equity Invested",
+    "pkg": "manual"
+  },
+  {
+    "idx": 703,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Spot rate bootstrapping",
+    "math": "P_n = sum_{i=1}^{n-1} C_i DF_i + (C_n+F)DF_n",
+    "pkg": "QuantLib.PiecewiseYieldCurve"
+  },
+  {
+    "idx": 704,
+    "field": "Fixed income & bond math",
+    "name": "Spot rate from discount factor",
+    "math": "z(t) = -ln(DF(t))/t",
+    "pkg": "QuantLib yield term structures"
+  },
+  {
+    "idx": 705,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Spread duration",
+    "math": "Spread Duration = -dP/ds / P",
+    "pkg": "QuantLib.BondFunctions.duration"
+  },
+  {
+    "idx": 706,
+    "field": "Derivatives, options & volatility",
+    "name": "Spread option (Kirk approximation)",
+    "math": "C approx DF[F1 N(d1) - (F2+K)N(d2)]",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 707,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "Square-root impact law",
+    "math": "Impact = Y sigma sqrt(Q/V)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 708,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Stable funding gap",
+    "math": "Required Stable Funding - Available Stable Funding",
+    "pkg": "manual"
+  },
+  {
+    "idx": 709,
+    "field": "Econometrics & time-series finance",
+    "name": "State-space measurement equation",
+    "math": "y_t = Z_t alpha_t + epsilon_t",
+    "pkg": "statsmodels.statespace"
+  },
+  {
+    "idx": 710,
+    "field": "Econometrics & time-series finance",
+    "name": "State-space transition equation",
+    "math": "alpha_{t+1} = T_t alpha_t + R_t eta_t",
+    "pkg": "statsmodels.statespace"
+  },
+  {
+    "idx": 711,
+    "field": "Asset management & portfolio optimization",
+    "name": "Sterling ratio",
+    "math": "Sterling = CAGR / Average Drawdown",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 712,
+    "field": "Technical analysis",
+    "name": "Stochastic oscillator",
+    "math": "%K = 100·(C-L_n)/(H_n-L_n)",
+    "pkg": "TA-Lib.momentum.StochasticOscillator"
+  },
+  {
+    "idx": 713,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Stochastic oscillator %D",
+    "math": "%D = SMA_3(%K)",
+    "pkg": "TA-Lib.STOCH"
+  },
+  {
+    "idx": 714,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Stochastic oscillator %K",
+    "math": "%K = 100 (C-L_n)/(H_n-L_n)",
+    "pkg": "TA-Lib.STOCH"
+  },
+  {
+    "idx": 715,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Stochastic RSI",
+    "math": "StochRSI = (RSI - min RSI_n)/(max RSI_n - min RSI_n)",
+    "pkg": "TA-Lib.momentum.StochRSIIndicator"
+  },
+  {
+    "idx": 716,
+    "field": "Actuarial science & insurance",
+    "name": "Stop-loss premium",
+    "math": "Pi(d) = E[(S-d)^+]",
+    "pkg": "scipy.stats"
+  },
+  {
+    "idx": 717,
+    "field": "Derivatives, options & volatility",
+    "name": "Straddle payoff",
+    "math": "Payoff = max(S-K,0)+max(K-S,0)-Premiums",
+    "pkg": "manual"
+  },
+  {
+    "idx": 718,
+    "field": "Derivatives, options & volatility",
+    "name": "Strangle payoff",
+    "math": "Payoff = max(S-K_c,0)+max(K_p-S,0)-Premiums",
+    "pkg": "manual"
+  },
+  {
+    "idx": 719,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Stress capital buffer",
+    "math": "SCB = max(stress losses, regulatory floor) / RWA",
+    "pkg": "manual"
+  },
+  {
+    "idx": 720,
+    "field": "Market risk & volatility modeling",
+    "name": "Stress loss",
+    "math": "Stress Loss = V(current market state) - V(stressed state)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 721,
+    "field": "Market risk & volatility modeling",
+    "name": "Stressed VaR",
+    "math": "SVaR = VaR using stress-window parameters",
+    "pkg": "manual"
+  },
+  {
+    "idx": 722,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Structural credit spread approximation",
+    "math": "s approx -ln[(De^{-rT}+E)/V_A]/T",
+    "pkg": "manual"
+  },
+  {
+    "idx": 723,
+    "field": "Actuarial science & insurance",
+    "name": "Survival function",
+    "math": "S_x(t) = P[T_x > t] = 1 - F_x(t)",
+    "pkg": "actuarialmath.Survival"
+  },
+  {
+    "idx": 724,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Survival probability",
+    "math": "Q(0,T) = exp(-int_0^T lambda(t) dt)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 725,
+    "field": "Accounting & financial statement analysis",
+    "name": "Sustainable growth rate",
+    "math": "g = ROE x Retention Ratio",
+    "pkg": "manual"
+  },
+  {
+    "idx": 726,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Swap annuity",
+    "math": "A = sum_i alpha_i DF_i",
+    "pkg": "QuantLib.VanillaSwap"
+  },
+  {
+    "idx": 727,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Swap fixed leg PV",
+    "math": "PV_fixed = Σ_i N·K·α_i·DF(t_i)",
+    "pkg": "QuantLib.VanillaSwap"
+  },
+  {
+    "idx": 728,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Swap fixed rate",
+    "math": "K = (1 - DF_n) / sum_i alpha_i DF_i",
+    "pkg": "QuantLib.VanillaSwap"
+  },
+  {
+    "idx": 729,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Swap floating leg PV",
+    "math": "PV_float = Σ_i N·L_i·α_i·DF(t_i)",
+    "pkg": "QuantLib.VanillaSwap"
+  },
+  {
+    "idx": 730,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Swap present value",
+    "math": "PV_swap = PV_fixed_leg - PV_float_leg",
+    "pkg": "QuantLib.VanillaSwap"
+  },
+  {
+    "idx": 731,
+    "field": "Commodities, futures & hedging",
+    "name": "Tail hedge payoff",
+    "math": "Tail Hedge = max(K-S_T,0) - Premium or futures P&L in stress",
+    "pkg": "manual"
+  },
+  {
+    "idx": 732,
+    "field": "Market risk & volatility modeling",
+    "name": "Tail ratio",
+    "math": "Tail Ratio = |95th percentile| / |5th percentile|",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 733,
+    "field": "Asset management & portfolio optimization",
+    "name": "Tangency portfolio weights",
+    "math": "w* proportional Sigma^{-1}(mu-r_f 1)",
+    "pkg": "PyPortfolioOpt.EfficientFrontier"
+  },
+  {
+    "idx": 734,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Tax shield",
+    "math": "Tax Shield = Interest Expense x Tax Rate",
+    "pkg": "manual"
+  },
+  {
+    "idx": 735,
+    "field": "Actuarial science & insurance",
+    "name": "Temporary annuity",
+    "math": "a_{x:n} = E[sum_{k=1}^n v^k 1(T_x>=k)]",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 736,
+    "field": "Actuarial science & insurance",
+    "name": "Term insurance APV",
+    "math": "A_{x:n}^1 = E[v^{T_x} 1(T_x<=n)]",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 737,
+    "field": "Real estate finance & mortgages",
+    "name": "Terminal capitalization value",
+    "math": "Terminal Value = NOI_{T+1} / Exit Cap Rate",
+    "pkg": "manual"
+  },
+  {
+    "idx": 738,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Terminal value (exit multiple)",
+    "math": "TV = Metric_n x Exit Multiple",
+    "pkg": "manual"
+  },
+  {
+    "idx": 739,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Terminal value (Gordon growth)",
+    "math": "TV = FCF_(n+1) / (WACC-g)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 740,
+    "field": "Derivatives, options & volatility",
+    "name": "Theta",
+    "math": "Theta = -S e^{-qT} n(d1)sigma/(2sqrt(T)) - rKe^{-rT}N(d2) + qSe^{-qT}N(d1)",
+    "pkg": "py-vollib-gen.greeks"
+  },
+  {
+    "idx": 741,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Through-the-cycle PD",
+    "math": "PD_TTC = long-run default frequency estimate",
+    "pkg": "manual"
+  },
+  {
+    "idx": 742,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Tier 1 capital ratio",
+    "math": "Tier 1 Ratio = Tier 1 Capital / RWA",
+    "pkg": "manual"
+  },
+  {
+    "idx": 743,
+    "field": "Derivatives, options & volatility",
+    "name": "Time value option",
+    "math": "Time Value = Option Premium - Intrinsic Value",
+    "pkg": "manual"
+  },
+  {
+    "idx": 744,
+    "field": "Performance measurement & attribution",
+    "name": "Time-weighted return (TWRR)",
+    "math": "TWRR = prod_i (1+r_i) - 1",
+    "pkg": "manual"
+  },
+  {
+    "idx": 745,
+    "field": "Equity valuation & asset pricing",
+    "name": "Tobin's Q",
+    "math": "Q = Market Value of Assets / Replacement Cost of Assets",
+    "pkg": "manual"
+  },
+  {
+    "idx": 746,
+    "field": "Bank regulation, Basel & prudential ratios",
+    "name": "Total capital ratio",
+    "math": "Total Capital Ratio = Total Capital / RWA",
+    "pkg": "manual"
+  },
+  {
+    "idx": 747,
+    "field": "Asset management & portfolio optimization",
+    "name": "Tracking error",
+    "math": "TE = Std(E[R_p] - R_b)",
+    "pkg": "empyrical-reloaded"
+  },
+  {
+    "idx": 748,
+    "field": "Structured finance & securitization",
+    "name": "Tranche attachment point",
+    "math": "Attach = subordination below tranche / pool balance",
+    "pkg": "manual"
+  },
+  {
+    "idx": 749,
+    "field": "Structured finance & securitization",
+    "name": "Tranche credit enhancement",
+    "math": "CE = Overcollateralization + Subordination + Excess Spread",
+    "pkg": "manual"
+  },
+  {
+    "idx": 750,
+    "field": "Structured finance & securitization",
+    "name": "Tranche detachment point",
+    "math": "Detach = 1 - subordination above tranche / pool balance",
+    "pkg": "manual"
+  },
+  {
+    "idx": 751,
+    "field": "Structured finance & securitization",
+    "name": "Tranche WAL",
+    "math": "WAL_tranche = sum_t t Principal_tranche,t / Total Principal_tranche",
+    "pkg": "absbox"
+  },
+  {
+    "idx": 752,
+    "field": "Structured finance & securitization",
+    "name": "Tranche yield",
+    "math": "Solve y such that Tranche Price = PV(expected tranche cash flows)",
+    "pkg": "absbox"
+  },
+  {
+    "idx": 753,
+    "field": "Treasury, ALM & balance-sheet management",
+    "name": "Transfer rate from curve",
+    "math": "FTP_t = term matched funding curve + liquidity + optionality premium",
+    "pkg": "QuantLib.PiecewiseYieldCurve"
+  },
+  {
+    "idx": 754,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Transition matrix probability",
+    "math": "P_{ij}(n) = [P^n]_{ij}",
+    "pkg": "numpy.linalg.matrix_power"
+  },
+  {
+    "idx": 755,
+    "field": "Asset management & portfolio optimization",
+    "name": "Treynor ratio",
+    "math": "Treynor = (E[R_p]-R_f)/beta_p",
+    "pkg": "empyrical-reloaded"
+  },
+  {
+    "idx": 756,
+    "field": "Performance measurement & attribution",
+    "name": "Treynor-Mazuy timing",
+    "math": "R_p-R_f = alpha + beta(R_m-R_f) + gamma(R_m-R_f)^2 + epsilon",
+    "pkg": "statsmodels.OLS"
+  },
+  {
+    "idx": 757,
+    "field": "FX & international finance",
+    "name": "Triangular arbitrage condition",
+    "math": "S_{A/B} × S_{B/C} × S_{C/A} = 1",
+    "pkg": "manual"
+  },
+  {
+    "idx": 758,
+    "field": "Structured finance & securitization",
+    "name": "Trigger-based step-down",
+    "math": "Step-down when delinquency, CNL, and OC/IC tests satisfied",
+    "pkg": "absbox"
+  },
+  {
+    "idx": 759,
+    "field": "Derivatives, options & volatility",
+    "name": "Trinomial tree option value",
+    "math": "V = discounted expected value across three branches",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 760,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "TRIX",
+    "math": "TRIX = 1-period ROC of triple EMA",
+    "pkg": "TA-Lib.TRIX"
+  },
+  {
+    "idx": 761,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "True range",
+    "math": "TR = max(H-L, |H-C_{t-1}|, |L-C_{t-1}|)",
+    "pkg": "TA-Lib.TRANGE"
+  },
+  {
+    "idx": 762,
+    "field": "Structured finance & securitization",
+    "name": "Turbo amortization amount",
+    "math": "Turbo = excess cash after fees and note interest redirected to senior principal",
+    "pkg": "absbox"
+  },
+  {
+    "idx": 763,
+    "field": "Liquidity risk & market liquidity",
+    "name": "Turnover ratio",
+    "math": "Turnover = Volume / Shares Outstanding",
+    "pkg": "manual"
+  },
+  {
+    "idx": 764,
+    "field": "Private equity, venture capital & LBO",
+    "name": "TVPI",
+    "math": "TVPI = (Residual Value + Distributions) / Paid-In Capital",
+    "pkg": "manual"
+  },
+  {
+    "idx": 765,
+    "field": "Trading, execution & market microstructure",
+    "name": "TWAP",
+    "math": "TWAP = (1/n) Σ_i P_i",
+    "pkg": "manual"
+  },
+  {
+    "idx": 766,
+    "field": "Performance measurement & attribution",
+    "name": "Ulcer index",
+    "math": "UI = sqrt(mean(drawdown^2))",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 767,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Ultimate oscillator",
+    "math": "UO = weighted avg of BP/TR over 7,14,28 periods",
+    "pkg": "TA-Lib.momentum.UltimateOscillator"
+  },
+  {
+    "idx": 768,
+    "field": "FX & international finance",
+    "name": "Uncovered interest parity (UIP)",
+    "math": "E[S_{t+T}] / S_t approx (1+r_d T)/(1+r_f T)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 769,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Unexpected loss",
+    "math": "UL = sqrt(PD(1-PD)) x LGD x EAD",
+    "pkg": "manual"
+  },
+  {
+    "idx": 770,
+    "field": "Corporate finance, valuation & capital budgeting",
+    "name": "Unlevered beta",
+    "math": "beta_U = beta_L / [1 + (1-T)D/E]",
+    "pkg": "manual"
+  },
+  {
+    "idx": 771,
+    "field": "Real estate finance & mortgages",
+    "name": "Unlevered yield",
+    "math": "Unlevered Yield = NOI / Purchase Price",
+    "pkg": "manual"
+  },
+  {
+    "idx": 772,
+    "field": "Performance measurement & attribution",
+    "name": "Up capture ratio",
+    "math": "Up Capture = mean(R_p|R_b>0)/mean(R_b|R_b>0)",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 773,
+    "field": "Performance measurement & attribution",
+    "name": "Upside capture",
+    "math": "Upside Capture = Avg(R_p | R_b>0) / Avg(R_b | R_b>0)",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 774,
+    "field": "Asset management & portfolio optimization",
+    "name": "Upside potential ratio",
+    "math": "UPR = Upside Potential / Downside Deviation",
+    "pkg": "manual"
+  },
+  {
+    "idx": 775,
+    "field": "Banking, consumer lending & project finance",
+    "name": "Utilization rate",
+    "math": "Utilization = Outstanding Balance / Credit Limit",
+    "pkg": "manual"
+  },
+  {
+    "idx": 776,
+    "field": "Real estate finance & mortgages",
+    "name": "Vacancy rate",
+    "math": "Vacancy Rate = Vacant Units or Lost Rent / Total Potential Units or Rent",
+    "pkg": "manual"
+  },
+  {
+    "idx": 777,
+    "field": "Derivatives, options & volatility",
+    "name": "Vanna",
+    "math": "Vanna = -e^{-qT} n(d1) d2 / sigma",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 778,
+    "field": "Econometrics & time-series finance",
+    "name": "VAR(p)",
+    "math": "y_t = c + A_1 y_{t-1}+…+A_p y_{t-p}+u_t",
+    "pkg": "statsmodels.tsa.api.VAR"
+  },
+  {
+    "idx": 779,
+    "field": "Actuarial science & insurance",
+    "name": "Variance of loss",
+    "math": "Var(L) = E[L^2] - (E[L])^2",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 780,
+    "field": "Market risk & volatility modeling",
+    "name": "Variance ratio test",
+    "math": "VR(q) = Var(q-period returns)/(q Var(1-period returns))",
+    "pkg": "statsmodels.tsa.VAR"
+  },
+  {
+    "idx": 781,
+    "field": "Derivatives, options & volatility",
+    "name": "Variance swap fair strike",
+    "math": "K_var = E_Q[ realized variance ]",
+    "pkg": "QuantLib.VanillaSwap"
+  },
+  {
+    "idx": 782,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Vasicek one-factor portfolio loss quantile",
+    "math": "L_alpha = LGD Phi((Phi^-1(PD)+sqrt(rho)Phi^-1(alpha))/sqrt(1-rho))",
+    "pkg": "scipy.stats"
+  },
+  {
+    "idx": 783,
+    "field": "Interest-rate modeling & term structures",
+    "name": "Vasicek short-rate process",
+    "math": "dr_t = a(b-r_t)dt + sigma dW_t",
+    "pkg": "QuantLib.Vasicek"
+  },
+  {
+    "idx": 784,
+    "field": "Private equity, venture capital & LBO",
+    "name": "VC liquidation preference payout",
+    "math": "Payout = max(Preference, Ownership x Exit Value) with participation rules",
+    "pkg": "manual"
+  },
+  {
+    "idx": 785,
+    "field": "Econometrics & time-series finance",
+    "name": "VECM",
+    "math": "Delta y_t = Pi y_{t-1} + sum_i Gamma_i Delta y_{t-i} + u_t",
+    "pkg": "statsmodels.tsa.VECM"
+  },
+  {
+    "idx": 786,
+    "field": "Derivatives, options & volatility",
+    "name": "Vega",
+    "math": "Vega = S e^{-qT} n(d1) sqrt(T)",
+    "pkg": "py-vollib-gen.greeks"
+  },
+  {
+    "idx": 787,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Vintage cumulative loss",
+    "math": "Vintage Loss_t = cumulative net losses / original balance",
+    "pkg": "manual"
+  },
+  {
+    "idx": 788,
+    "field": "Derivatives, options & volatility",
+    "name": "VIX variance relation",
+    "math": "VIX^2 ~ expected 30-day risk-neutral variance x 100^2",
+    "pkg": "manual"
+  },
+  {
+    "idx": 789,
+    "field": "Market risk & volatility modeling",
+    "name": "Volatility clustering test",
+    "math": "ACF of r_t^2 significantly positive",
+    "pkg": "statsmodels.tsa.stattools"
+  },
+  {
+    "idx": 790,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Volume-weighted average price (VWAP)",
+    "math": "VWAP = sum(P_t V_t) / sum(V_t) intraday",
+    "pkg": "TA-Lib.volume.VolumeWeightedAveragePrice"
+  },
+  {
+    "idx": 791,
+    "field": "Derivatives, options & volatility",
+    "name": "Vomma / volga",
+    "math": "Vomma = Vega d1 d2 / sigma",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 792,
+    "field": "Trading, execution & market microstructure",
+    "name": "VWAP",
+    "math": "VWAP = Σ_i P_i V_i / Σ_i V_i",
+    "pkg": "manual"
+  },
+  {
+    "idx": 793,
+    "field": "Liquidity risk, market liquidity & execution cost",
+    "name": "VWAP benchmark",
+    "math": "VWAP = sum_t P_t V_t / sum_t V_t",
+    "pkg": "manual"
+  },
+  {
+    "idx": 794,
+    "field": "Corporate finance & capital budgeting",
+    "name": "Weighted average cost of capital (WACC)",
+    "math": "WACC = E/V·R_e + D/V·R_d·(1-T)",
+    "pkg": "manual"
+  },
+  {
+    "idx": 795,
+    "field": "Structured finance & securitization",
+    "name": "Weighted average coupon (WAC)",
+    "math": "WAC = sum_i w_i coupon_i",
+    "pkg": "manual"
+  },
+  {
+    "idx": 796,
+    "field": "Structured finance & securitization",
+    "name": "Weighted average life (WAL)",
+    "math": "WAL = sum_t t Principal_t / Total Principal",
+    "pkg": "manual"
+  },
+  {
+    "idx": 797,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Weighted average life of loan portfolio",
+    "math": "WAL = sum_t t Principal_t / sum_t Principal_t",
+    "pkg": "manual"
+  },
+  {
+    "idx": 798,
+    "field": "Structured finance & securitization",
+    "name": "Weighted average maturity (WAM)",
+    "math": "WAM = sum_i w_i maturity_i",
+    "pkg": "manual"
+  },
+  {
+    "idx": 799,
+    "field": "Econometrics & time-series finance",
+    "name": "Weighted least squares (WLS)",
+    "math": "beta_hat = (X'WX)^-1 X'Wy",
+    "pkg": "statsmodels.WLS"
+  },
+  {
+    "idx": 800,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Weighted moving average (WMA)",
+    "math": "WMA = sum_i w_i P_{t-i} / sum_i w_i",
+    "pkg": "TA-Lib.WMA"
+  },
+  {
+    "idx": 801,
+    "field": "Econometrics & time-series finance",
+    "name": "White heteroskedasticity test",
+    "math": "LM = nR^2 from auxiliary regression on X, X^2, cross terms",
+    "pkg": "statsmodels"
+  },
+  {
+    "idx": 802,
+    "field": "Actuarial science & insurance",
+    "name": "Whole life annuity-due",
+    "math": "adot_x = E[sum_{k>=0} v^k 1(T_x>k)]",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 803,
+    "field": "Actuarial science & insurance",
+    "name": "Whole life annuity-immediate",
+    "math": "a_x = E[sum_{k>=1} v^k 1(T_x>=k)]",
+    "pkg": "actuarialmath"
+  },
+  {
+    "idx": 804,
+    "field": "Actuarial science & insurance",
+    "name": "Whole life assurance",
+    "math": "A_x = Σ_k v^(k+1)·_k p_x·q_(x+k)",
+    "pkg": "actuarialmath.Insurance"
+  },
+  {
+    "idx": 805,
+    "field": "Technical analysis & chart-based indicators",
+    "name": "Williams %R",
+    "math": "%R = -100(H_n-C)/(H_n-L_n)",
+    "pkg": "TA-Lib.WILLR"
+  },
+  {
+    "idx": 806,
+    "field": "Performance measurement & attribution",
+    "name": "Win/loss ratio",
+    "math": "Win/Loss = avg positive return / |avg negative return|",
+    "pkg": "quantstats.stats"
+  },
+  {
+    "idx": 807,
+    "field": "Accounting & financial statement analysis",
+    "name": "Working capital",
+    "math": "Working Capital = Current Assets - Current Liabilities",
+    "pkg": "manual"
+  },
+  {
+    "idx": 808,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Wrong-way risk adjustment",
+    "math": "EPE_WWR > EPE due to positive dependence between exposure and PD",
+    "pkg": "manual"
+  },
+  {
+    "idx": 809,
+    "field": "Market risk & volatility modeling",
+    "name": "Yang-Zhang volatility",
+    "math": "sigma_YZ^2 = sigma_o^2 + k sigma_c^2 + (1-k) sigma_RS^2",
+    "pkg": "manual"
+  },
+  {
+    "idx": 810,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Yield curve carry",
+    "math": "Carry approx Coupon + Roll-down + Financing",
+    "pkg": "manual"
+  },
+  {
+    "idx": 811,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Yield to call (YTC)",
+    "math": "P = sum_t C/(1+y)^t + CallPrice/(1+y)^T_call",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 812,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Yield to maturity (YTM)",
+    "math": "P = sum_t C/(1+YTM/m)^(mt) + F/(1+YTM/m)^(mT)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 813,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Yield to worst (YTW)",
+    "math": "YTW = min(YTM, YTC, YTP, ...)",
+    "pkg": "QuantLib"
+  },
+  {
+    "idx": 814,
+    "field": "Fixed income, bonds & credit markets",
+    "name": "Zero-coupon bond price",
+    "math": "P = F/(1+r)^T",
+    "pkg": "QuantLib.BondFunctions.cleanPrice"
+  },
+  {
+    "idx": 815,
+    "field": "Credit risk, default modeling & credit portfolio",
+    "name": "Z-spread",
+    "math": "P = sum_t CF_t exp(-(r_t + z)t)",
+    "pkg": "QuantLib"
+  }
+]

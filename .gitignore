@@ -1,0 +1,8 @@
+*.csv
+*.xlsx
+*.iml
+*.xml
+# IDE (JetBrains)
+.idea/shelf/
+.idea/workspace.xml
+.idea/httpRequests/

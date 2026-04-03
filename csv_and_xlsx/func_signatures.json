@@ -1,0 +1,3867 @@
+{
+  "abnormal_earnings_growth": [
+    "capitalized_next_earnings",
+    "pv_abnormal_earnings_growth"
+  ],
+  "abs_pool_factor": [
+    "current_pool_balance",
+    "original_pool_balance"
+  ],
+  "absolute_ppp": [
+    "p"
+  ],
+  "accounting_identity": [
+    "liabilities",
+    "equity"
+  ],
+  "accrued_interest": [
+    "coupon",
+    "daycountfraction"
+  ],
+  "accumulation_distribution_line": [
+    "adl_t",
+    "mfm_t_x_volume_t"
+  ],
+  "active_return": [
+    "r_p",
+    "r_b"
+  ],
+  "active_risk_budget": [
+    "ic_x_sqrt",
+    "breadth"
+  ],
+  "active_share": [
+    "weights_portfolio",
+    "weights_benchmark"
+  ],
+  "adf_unit_root_test": [
+    "t",
+    "y_t",
+    "sum_i_delta_i_delta_y_t",
+    "i",
+    "epsilon_t"
+  ],
+  "adjusted_present_value_apv": [
+    "npv_unlevered",
+    "pv_financing_side_effects"
+  ],
+  "adjusted_r_squared": [
+    "r",
+    "n",
+    "k"
+  ],
+  "advance_rate": [
+    "loan_amount",
+    "eligible_collateral_base"
+  ],
+  "adverse_selection_cost": [
+    "effective_spread",
+    "realized_spread"
+  ],
+  "adx": [
+    "directional_movement_index"
+  ],
+  "affine_term_structure_bond_price": [
+    "a_tT",
+    "b_tT",
+    "x_t"
+  ],
+  "after_tax_cost_of_debt": [
+    "r_d",
+    "t"
+  ],
+  "aggregate_loss_distribution": [
+    "sum_i",
+    "n_x_i"
+  ],
+  "allocation_effect_brinson_fachler": [
+    "w_i",
+    "p",
+    "b",
+    "r_i",
+    "r"
+  ],
+  "alpha": [
+    "r_i",
+    "r_f",
+    "beta_i",
+    "r_m"
+  ],
+  "alpha_from_regression": [
+    "r_b",
+    "r_f"
+  ],
+  "altman_z_score": [
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5"
+  ],
+  "american_option_binomial_pricing": [
+    "s",
+    "k",
+    "r",
+    "sigma",
+    "T",
+    "n_steps",
+    "is_call"
+  ],
+  "amihud_illiquidity": [
+    "r_t",
+    "dollarvolume_t"
+  ],
+  "amivest_liquidity_ratio": [
+    "volume",
+    "return_val"
+  ],
+  "amortization_factor": [
+    "r",
+    "n"
+  ],
+  "annual_percentage_rate_apr": [
+    "periodic_rate",
+    "periods_per_year"
+  ],
+  "annualized_cpi_inflation_from_monthly_cpi": [
+    "cpi_t",
+    "cpi",
+    "t"
+  ],
+  "annualized_ppi_inflation_from_monthly_ppi": [
+    "ppi_t",
+    "ppi",
+    "t"
+  ],
+  "annualized_return_cagr": [
+    "ending_value",
+    "beginning_value",
+    "n"
+  ],
+  "annualized_volatility": [
+    "period",
+    "m"
+  ],
+  "annuity_future_value": [
+    "pmt_x",
+    "r",
+    "n"
+  ],
+  "annuity_present_value": [
+    "pmt_x",
+    "r",
+    "n"
+  ],
+  "aparch": [
+    "omega",
+    "alpha",
+    "abs_eps_prev",
+    "gamma",
+    "eps_prev",
+    "delta",
+    "beta",
+    "sigma_prev_delta"
+  ],
+  "appraisal_ratio": [
+    "residual_risk"
+  ],
+  "approximate_price_change": [
+    "d_mod",
+    "delta_y",
+    "convexity"
+  ],
+  "ar1": [
+    "c",
+    "t"
+  ],
+  "ar1_2": [
+    "c",
+    "epsilon_t"
+  ],
+  "arp": [
+    "c",
+    "sum_i",
+    "p",
+    "phi_i",
+    "i",
+    "epsilon_t"
+  ],
+  "arbitrage_pricing_theory_apt": [
+    "r_f",
+    "betas",
+    "lambdas"
+  ],
+  "archq": [
+    "omega",
+    "alphas",
+    "epsilon_sq_lags"
+  ],
+  "arimapdq": [
+    "c",
+    "l",
+    "epsilon_t"
+  ],
+  "arimax_dynamic_regression": [
+    "x_t",
+    "arima_errors"
+  ],
+  "armapq": [
+    "c",
+    "phi_i",
+    "i",
+    "epsilon_t",
+    "theta_i"
+  ],
+  "aroon_down": [
+    "n",
+    "periods",
+    "since",
+    "period",
+    "low"
+  ],
+  "aroon_oscillator": [
+    "aroonup",
+    "aroondown"
+  ],
+  "aroon_up": [
+    "n",
+    "periods",
+    "since",
+    "period",
+    "high"
+  ],
+  "arrival_price_slippage": [
+    "executed_price",
+    "arrival_price"
+  ],
+  "asian_option_price": [
+    "s",
+    "k",
+    "r",
+    "sigma",
+    "T",
+    "n_obs",
+    "n_sims",
+    "is_call"
+  ],
+  "asset_swap_spread": [
+    "bond_coupon_spread_that_sets_package_pv_to_par"
+  ],
+  "asset_turnover": [
+    "revenue",
+    "average_assets"
+  ],
+  "average_directional_index_adx": [
+    "ema_of_directional_movement_index"
+  ],
+  "average_loan_age": [
+    "weights",
+    "seasonings"
+  ],
+  "average_true_range_atr": [
+    "true_range"
+  ],
+  "awesome_oscillator": [
+    "sma_5",
+    "medianprice",
+    "sma_34"
+  ],
+  "bachelier_option_price": [
+    "forward",
+    "strike",
+    "sigma_n",
+    "T",
+    "df",
+    "is_call"
+  ],
+  "back_end_dti_gross_income": [
+    "total_monthly_debt_payments",
+    "gross_monthly_income"
+  ],
+  "back_end_dti_net_income": [
+    "total_monthly_debt_payments",
+    "net_monthly_income"
+  ],
+  "backtesting_exception_rate": [
+    "exceptions",
+    "observations"
+  ],
+  "backwardation_slope": [
+    "f_long",
+    "f_short"
+  ],
+  "balloon_payment": [
+    "outstanding_balance_at_maturity"
+  ],
+  "barrier_option_price": [
+    "bs_closed_form_with_reflection_terms",
+    "lattice",
+    "mc"
+  ],
+  "basel_irb_capital_requirement": [
+    "lgd",
+    "pd",
+    "r",
+    "ma"
+  ],
+  "basel_standardized_capital_requirement": [
+    "rwa"
+  ],
+  "basis": [
+    "s_t",
+    "f_t"
+  ],
+  "basis_convergence": [],
+  "batting_average": [
+    "count",
+    "alpha_t",
+    "t"
+  ],
+  "bayesian_shrinkage_return_forecast": [
+    "lambda_val",
+    "mu_prior",
+    "mu_sample"
+  ],
+  "behavioral_duration_of_deposits": [
+    "sensitivity",
+    "derived",
+    "effective",
+    "duration",
+    "non",
+    "maturity",
+    "deposits"
+  ],
+  "benchmark_relative_optimization": [
+    "expected_returns",
+    "cov_matrix",
+    "benchmark_weights",
+    "risk_aversion"
+  ],
+  "benefit_reserve_recursion": [
+    "q_benefit",
+    "p_v_t"
+  ],
+  "beneish_m_score": [
+    "dsri",
+    "gmi",
+    "aqi",
+    "sgi",
+    "depi",
+    "sgai",
+    "tata",
+    "lvgi"
+  ],
+  "beta": [
+    "r_i",
+    "r_m"
+  ],
+  "bid_ask_spread": [
+    "ask",
+    "bid"
+  ],
+  "binary_asset_or_nothing_call": [
+    "s_e",
+    "qt_n",
+    "d1"
+  ],
+  "binomial_down_factor": [
+    "u"
+  ],
+  "binomial_option_pricing": [
+    "e",
+    "r",
+    "t",
+    "pv_u",
+    "p",
+    "v_d"
+  ],
+  "binomial_up_factor": [
+    "sigma",
+    "delta_t"
+  ],
+  "bipower_variation": [
+    "returns"
+  ],
+  "black_76_option_price": [
+    "dff_n",
+    "d1",
+    "k_n",
+    "d2",
+    "call"
+  ],
+  "black_caplet_price": [
+    "df",
+    "tau",
+    "forward",
+    "strike",
+    "sigma",
+    "T"
+  ],
+  "black_swaption_price": [
+    "annuity",
+    "forward_swap_rate",
+    "strike",
+    "sigma",
+    "T",
+    "is_payer"
+  ],
+  "black_76_commodity_option": [
+    "e",
+    "rtf_n",
+    "d1",
+    "k_n",
+    "d2"
+  ],
+  "black_litterman_implied_equilibrium_returns": [
+    "delta_sigma_w_mkt"
+  ],
+  "black_litterman_posterior_mean": [
+    "tau",
+    "sigma",
+    "P",
+    "omega",
+    "Q",
+    "pi"
+  ],
+  "black_scholes_call": [
+    "s_0_e",
+    "qtn",
+    "d1",
+    "k_e",
+    "rtn",
+    "d2"
+  ],
+  "black_scholes_put": [
+    "k_e",
+    "rtn",
+    "d2",
+    "s_0_e",
+    "qtn",
+    "d1"
+  ],
+  "black_scholes_merton_d1": [
+    "s",
+    "k",
+    "r",
+    "q",
+    "t"
+  ],
+  "black_scholes_merton_d2": [
+    "d1",
+    "t"
+  ],
+  "bollinger_pctb": [
+    "p",
+    "lower",
+    "upper"
+  ],
+  "bollinger_bands_lower": [
+    "sma_n",
+    "k",
+    "sigma_n"
+  ],
+  "bollinger_bands_middle": [
+    "sma_n",
+    "p"
+  ],
+  "bollinger_bands_upper": [
+    "sma_n",
+    "k",
+    "sigma_n"
+  ],
+  "bollinger_bandwidth": [
+    "upper",
+    "lower",
+    "middle"
+  ],
+  "bond_carry_and_roll": [
+    "coupon_income",
+    "financing",
+    "curve_roll_down"
+  ],
+  "bond_equivalent_yield_bey": [
+    "hpy",
+    "d"
+  ],
+  "bond_price": [
+    "coupon",
+    "face_value",
+    "yield_rate",
+    "n_periods",
+    "m"
+  ],
+  "bond_price_from_yield": [
+    "coupon",
+    "face_value",
+    "yield_rate",
+    "n_periods",
+    "m"
+  ],
+  "book_value_per_share": [
+    "equity",
+    "shares_outstanding"
+  ],
+  "book_to_market_ratio": [
+    "book_equity",
+    "market_cap"
+  ],
+  "bornhuetter_ferguson_reserve": [
+    "reported",
+    "expected_ultimate",
+    "pct_unreported"
+  ],
+  "borrowing_base": [
+    "eligible_collaterals",
+    "advance_rates"
+  ],
+  "break_even_inflation": [
+    "nominal_yield",
+    "real_yield"
+  ],
+  "break_even_occupancy": [
+    "operating_expenses",
+    "debt_service",
+    "gross_potential_income"
+  ],
+  "break_even_quantity": [
+    "fixed_costs",
+    "price",
+    "variable_cost_per_unit"
+  ],
+  "break_even_revenue": [
+    "fixed_costs",
+    "contribution_margin_ratio"
+  ],
+  "breusch_pagan_test": [
+    "nr",
+    "e",
+    "_2_on_x"
+  ],
+  "brinson_allocation_effect": [
+    "w_p",
+    "i",
+    "w_b",
+    "r_b"
+  ],
+  "brinson_selection_effect": [
+    "w_b",
+    "i",
+    "r_p",
+    "r_b"
+  ],
+  "bhlmann_credibility_factor": [
+    "n",
+    "k"
+  ],
+  "burke_ratio": [
+    "excess_return",
+    "sum_drawdown_i"
+  ],
+  "butterfly_payoff": [
+    "s",
+    "k1",
+    "k2",
+    "k3"
+  ],
+  "calendar_spread": [
+    "f_near",
+    "f_far"
+  ],
+  "call_payoff": [
+    "s_t",
+    "k"
+  ],
+  "call_spread_payoff": [
+    "s",
+    "k1",
+    "k2"
+  ],
+  "calmar_ratio": [
+    "cagr",
+    "max_drawdown"
+  ],
+  "cancel_to_trade_ratio": [
+    "number_of_cancellations",
+    "number_of_trades"
+  ],
+  "capital_conservation_buffer": [
+    "cet1_ratio",
+    "minimum_cet1_requirement"
+  ],
+  "capitalization_rate": [
+    "noi",
+    "property_value"
+  ],
+  "capm_expected_return": [
+    "r_f",
+    "beta_i",
+    "r_m"
+  ],
+  "carhart_4_factor_model": [
+    "b_mkt",
+    "s_smb",
+    "h_hml",
+    "m_mom"
+  ],
+  "cash_conversion_cycle_ccc": [
+    "dso",
+    "dio",
+    "dpo"
+  ],
+  "cash_flow_at_risk_cfar": [
+    "cash_flow_scenarios",
+    "alpha"
+  ],
+  "cash_flow_margin": [
+    "operating_cash_flow",
+    "revenue"
+  ],
+  "cash_interest_coverage": [
+    "ebitda",
+    "capex",
+    "cash_interest"
+  ],
+  "cash_ratio": [
+    "cash",
+    "marketable_securities",
+    "current_liabilities"
+  ],
+  "cash_sweep": [
+    "fcf_t",
+    "required_cash"
+  ],
+  "cash_on_cash_return": [
+    "before",
+    "tax_cash_flow",
+    "equity_invested"
+  ],
+  "cash_out_refinance_ltv": [
+    "appraised_value",
+    "max_ltv"
+  ],
+  "catch_up_distribution": [
+    "distribute_until_gp_achieves_target_carry_split"
+  ],
+  "cdo_tranche_loss": [
+    "poolloss",
+    "attach",
+    "detach"
+  ],
+  "cds_par_spread": [
+    "pv_protection",
+    "pv01"
+  ],
+  "cds_premium_leg": [
+    "s_sum_i_alpha_i_df_i_survival",
+    "t_i"
+  ],
+  "cds_protection_leg": [
+    "lgd",
+    "discount_factors",
+    "survival_probs"
+  ],
+  "cds_spread_approximation": [
+    "default_prob",
+    "recovery_rate"
+  ],
+  "cet1_ratio": [
+    "cet1_capital",
+    "risk",
+    "weighted_assets"
+  ],
+  "chaikin_money_flow_cmf": [
+    "mfm_x_volume",
+    "sum_volume_over_n"
+  ],
+  "chaikin_oscillator": [
+    "ema_3",
+    "adl",
+    "ema_10"
+  ],
+  "chain_ladder_development": [
+    "latest_i_x_cdf_i"
+  ],
+  "charm": [
+    "d",
+    "dt"
+  ],
+  "chooser_option_value": [
+    "s",
+    "k",
+    "r",
+    "sigma",
+    "T_choose",
+    "T_expire"
+  ],
+  "christoffersen_independence_test": [
+    "l_restricted",
+    "l_unrestricted"
+  ],
+  "cir_short_rate_model": [
+    "r_t",
+    "dt",
+    "dw_t"
+  ],
+  "cir_zero_coupon_bond_price": [
+    "kappa",
+    "theta",
+    "sigma",
+    "r_t",
+    "tau"
+  ],
+  "claims_ratio": [
+    "claims_incurred",
+    "earned_premium"
+  ],
+  "clean_price": [
+    "dirty_price",
+    "accrued_interest"
+  ],
+  "cltv_for_mortgage": [
+    "all_secured_debt",
+    "property_value"
+  ],
+  "cointegration_regression": [
+    "x_t",
+    "u_t",
+    "stationary"
+  ],
+  "collateral_haircut": [
+    "lending_value",
+    "market_value"
+  ],
+  "color": [
+    "d",
+    "dt"
+  ],
+  "combined_leverage": [
+    "dol_x_dfl"
+  ],
+  "combined_loan_to_value_cltv": [
+    "total_secured_debt",
+    "collateral_value"
+  ],
+  "combined_ratio": [
+    "loss_ratio",
+    "expense_ratio"
+  ],
+  "commodity_carry_return": [
+    "collateral_yield",
+    "roll_yield",
+    "spot_return"
+  ],
+  "commodity_channel_index_cci": [
+    "tp",
+    "_0015_x_meandeviation"
+  ],
+  "commodity_storage_arbitrage": [
+    "f_0",
+    "s_0",
+    "r",
+    "u",
+    "y",
+    "t"
+  ],
+  "component_risk_contribution": [
+    "w_i",
+    "mrc_i"
+  ],
+  "component_var": [
+    "w_i",
+    "d_var_dw_i"
+  ],
+  "component_var_2": [
+    "w_i",
+    "d_var_dw_i"
+  ],
+  "compounded_forward_rate": [
+    "df",
+    "t1",
+    "t2"
+  ],
+  "conditional_prepayment_rate_cpr": [
+    "smm"
+  ],
+  "conditional_prepayment_rate_cpr_2": [
+    "smm"
+  ],
+  "constant_force_survival": [
+    "mu",
+    "t"
+  ],
+  "consumer_price_index_laspeyres_form": [
+    "prices_current",
+    "quantities_base",
+    "prices_base"
+  ],
+  "contango_slope": [
+    "f_long",
+    "f_short"
+  ],
+  "continuous_compounding": [
+    "e",
+    "rt"
+  ],
+  "contribution_margin": [
+    "revenue",
+    "variable_costs"
+  ],
+  "contribution_margin_ratio": [
+    "contribution_margin",
+    "revenue"
+  ],
+  "contribution_to_return": [
+    "w_i",
+    "x",
+    "r_i"
+  ],
+  "convenience_yield": [
+    "r",
+    "u",
+    "t",
+    "f_0",
+    "s_0"
+  ],
+  "convenience_yield_from_futures_curve": [
+    "r",
+    "u",
+    "f",
+    "s",
+    "t"
+  ],
+  "convexity": [
+    "cash_flows",
+    "yield_rate",
+    "price",
+    "m"
+  ],
+  "convexity_adjusted_futures_rate": [
+    "futures_rate",
+    "convexity_adj"
+  ],
+  "cornish_fisher_var": [
+    "z",
+    "s",
+    "k"
+  ],
+  "cost_of_equity_capm": [
+    "r_f",
+    "beta",
+    "r_m"
+  ],
+  "cost_of_equity_dividend_growth": [
+    "d_1",
+    "p_0",
+    "g"
+  ],
+  "cost_of_risk": [
+    "loan_loss_provision",
+    "average_gross_loans"
+  ],
+  "cost_of_carry_futures_price": [
+    "s_0_e",
+    "r",
+    "u",
+    "y",
+    "t"
+  ],
+  "countercyclical_capital_buffer": [
+    "ccyb_addon"
+  ],
+  "covariance_matrix": [
+    "returns_matrix"
+  ],
+  "coverage_ratio": [
+    "allowance",
+    "nonperforming_assets"
+  ],
+  "covered_call_payoff": [
+    "s_t",
+    "k",
+    "premium"
+  ],
+  "covered_interest_parity_cip": [
+    "i_d",
+    "i_f"
+  ],
+  "cox_proportional_hazards": [
+    "baseline_hazard",
+    "betas",
+    "covariates"
+  ],
+  "cox_ingersoll_ross_cir_process": [
+    "kappa",
+    "theta",
+    "sigma",
+    "r_t",
+    "dt",
+    "dw_t"
+  ],
+  "cpi_inflation_month_over_month": [
+    "cpi_t",
+    "cpi",
+    "t"
+  ],
+  "cpi_inflation_year_over_year": [
+    "cpi_t",
+    "cpi",
+    "t"
+  ],
+  "crack_spread": [
+    "product_futures_value",
+    "crude_futures_cost"
+  ],
+  "credibility_premium": [
+    "z",
+    "experience_mean",
+    "manual_mean"
+  ],
+  "credit_conversion_factor_ccf": [
+    "ead",
+    "outstanding",
+    "undrawn"
+  ],
+  "credit_portfolio_variance_independent_defaults": [
+    "eads",
+    "lgds",
+    "pds"
+  ],
+  "credit_rwa_under_standardized_approach": [
+    "ead",
+    "supervisory_risk_weight"
+  ],
+  "credit_spread": [
+    "corporate_yield",
+    "risk",
+    "free_yield"
+  ],
+  "credit_var": [
+    "loss_distribution",
+    "alpha",
+    "expected_loss"
+  ],
+  "cross_exchange_rate": [
+    "s_a",
+    "b",
+    "s_b",
+    "c"
+  ],
+  "cross_currency_basis": [
+    "quoted_basis_spread_that_equalizes_swap_pv"
+  ],
+  "cross_hedge_ratio": [
+    "sigma_s",
+    "sigma_f"
+  ],
+  "cumulative_gap": [
+    "gaps",
+    "t"
+  ],
+  "cumulative_inflation_factor_from_cpi": [
+    "cpi_t",
+    "cpi_0"
+  ],
+  "cumulative_inflation_factor_from_ppi": [
+    "ppi_t",
+    "ppi_0"
+  ],
+  "cumulative_liquidity_gap": [
+    "inflows",
+    "outflows",
+    "t"
+  ],
+  "cumulative_net_loss": [
+    "cumulative_net_charge_offs",
+    "original_balance"
+  ],
+  "cumulative_return": [
+    "t",
+    "r_t"
+  ],
+  "cure_rate": [
+    "cured_delinquent_accounts",
+    "delinquent_accounts"
+  ],
+  "currency_basket_index": [
+    "prod_i_s_i",
+    "t",
+    "w_i"
+  ],
+  "currency_carry_return": [
+    "i_high",
+    "i_low",
+    "fx_change"
+  ],
+  "current_ratio": [
+    "current_assets",
+    "current_liabilities"
+  ],
+  "current_yield": [
+    "annual_coupon",
+    "bond_price"
+  ],
+  "curtate_expected_future_lifetime": [
+    "mortality_probs"
+  ],
+  "cva_capital_proxy": [
+    "cva_charge"
+  ],
+  "d1": [
+    "s",
+    "k",
+    "r",
+    "t"
+  ],
+  "d2": [
+    "d1",
+    "t"
+  ],
+  "days_inventory_outstanding_dio": [
+    "average_inventory",
+    "cogs"
+  ],
+  "days_payables_outstanding_dpo": [
+    "average_ap",
+    "cogs"
+  ],
+  "days_sales_outstanding_dso": [
+    "average_ar",
+    "revenue"
+  ],
+  "days_to_liquidate": [
+    "position_size",
+    "adv",
+    "participation_limit"
+  ],
+  "death_probability": [
+    "tp_x"
+  ],
+  "debt_burden_ratio": [
+    "total_debt_service",
+    "gross_income"
+  ],
+  "debt_service": [
+    "interest",
+    "scheduled_principal",
+    "lease",
+    "rent_if_included"
+  ],
+  "debt_service_coverage_ratio_dscr": [
+    "net_operating_income",
+    "debt_service"
+  ],
+  "debt_yield": [
+    "net_operating_income",
+    "loan_amount"
+  ],
+  "debt_to_assets": [
+    "debt",
+    "assets"
+  ],
+  "debt_to_equity": [
+    "debt",
+    "equity"
+  ],
+  "debt_to_income_residual": [
+    "net_income",
+    "taxes",
+    "housing_costs",
+    "other_debt_payments"
+  ],
+  "decreasing_annuity": [
+    "n",
+    "interest_rate",
+    "mortality_probs"
+  ],
+  "default_rate": [
+    "defaults",
+    "current_or_original_balance"
+  ],
+  "delinquency_ratio": [
+    "delinquent_loans",
+    "gross_loans"
+  ],
+  "delinquency_trigger": [
+    "delinquency_ratio",
+    "threshold"
+  ],
+  "delta_call": [
+    "e",
+    "qtn",
+    "d1"
+  ],
+  "delta_put": [
+    "e",
+    "qtn",
+    "d1"
+  ],
+  "delta_normal_var": [
+    "z_alpha",
+    "delta",
+    "sigma_matrix"
+  ],
+  "deposit_beta": [
+    "delta_deposit_rate",
+    "delta_market_rate"
+  ],
+  "detrended_price_oscillator_dpo": [
+    "price_shifted"
+  ],
+  "digital_call_price": [
+    "e",
+    "rt_n",
+    "d2"
+  ],
+  "digital_put_price": [
+    "e",
+    "rt_n",
+    "d2"
+  ],
+  "diluted_eps": [
+    "diluted_net_income_available_to_common",
+    "diluted_shares"
+  ],
+  "dirty_price": [
+    "clean_price",
+    "accrued_interest"
+  ],
+  "discount_factor": [
+    "r",
+    "t"
+  ],
+  "discount_yield_t_bill": [
+    "f",
+    "p",
+    "f_x_360",
+    "d"
+  ],
+  "discounted_payback_period": [
+    "mint___it_cf_i",
+    "r",
+    "i__initial_outlay"
+  ],
+  "distance_to_default_dd": [
+    "v_a",
+    "d",
+    "mu_a",
+    "sigma_a",
+    "t"
+  ],
+  "diversification_ratio": [
+    "w_i",
+    "sigma_w",
+    "i",
+    "sigma_p"
+  ],
+  "dividend_coverage": [
+    "eps",
+    "dps"
+  ],
+  "dividend_discount_model_ddm": [
+    "dividends",
+    "r"
+  ],
+  "dividend_discount_model_gordon_growth": [
+    "d_1",
+    "r",
+    "g"
+  ],
+  "dividend_payout_ratio": [
+    "dividends",
+    "net_income"
+  ],
+  "dividend_yield": [
+    "annual_dividend_per_share",
+    "price_per_share"
+  ],
+  "dollar_duration": [
+    "modified_duration",
+    "price"
+  ],
+  "dollar_volume": [
+    "price",
+    "shares_traded"
+  ],
+  "donchian_channel_lower": [
+    "rolling",
+    "l",
+    "n"
+  ],
+  "donchian_channel_upper": [
+    "rolling",
+    "h",
+    "n"
+  ],
+  "downside_capture": [
+    "avg",
+    "r_p",
+    "r_b"
+  ],
+  "downside_deviation": [
+    "returns",
+    "mar"
+  ],
+  "dpi": [
+    "distributions",
+    "paid",
+    "in_capital"
+  ],
+  "drawdown": [
+    "v_t",
+    "peak_t"
+  ],
+  "drawdown_duration": [
+    "consecutive",
+    "periods",
+    "below",
+    "prior",
+    "high"
+  ],
+  "duration_gap": [
+    "d_a",
+    "l",
+    "a",
+    "d_l"
+  ],
+  "duration_times_spread_dts": [
+    "spread",
+    "spread_duration"
+  ],
+  "duration_neutral_hedge_ratio": [
+    "dv01_asset",
+    "dv01_hedge"
+  ],
+  "durbin_watson": [
+    "sum_t",
+    "e_t"
+  ],
+  "dv01_pvbp": [
+    "dp",
+    "dy",
+    "x"
+  ],
+  "earnings_at_risk": [
+    "earnings_scenarios",
+    "alpha"
+  ],
+  "earnings_yield": [
+    "eps",
+    "price"
+  ],
+  "ebit": [
+    "revenue",
+    "operating_expenses"
+  ],
+  "ebitda": [
+    "ebit",
+    "d",
+    "a"
+  ],
+  "ebitda_margin": [
+    "ebitda",
+    "revenue"
+  ],
+  "economic_value_added_eva": [
+    "nopat",
+    "wacc",
+    "invested_capital"
+  ],
+  "economic_value_of_equity_eve": [
+    "assets",
+    "liabilities"
+  ],
+  "economic_value_of_equity_sensitivity": [
+    "eve",
+    "dgap",
+    "assets",
+    "delta_y"
+  ],
+  "effective_annual_rate_ear": [
+    "r",
+    "m"
+  ],
+  "effective_convexity": [
+    "p",
+    "p_0",
+    "delta_y"
+  ],
+  "effective_duration": [
+    "price_down",
+    "price_up",
+    "price_base",
+    "delta_y"
+  ],
+  "effective_gross_income": [
+    "potential_gross_income",
+    "vacancy",
+    "credit_loss",
+    "other_income"
+  ],
+  "effective_spread": [
+    "x",
+    "trade_price",
+    "mid"
+  ],
+  "efficient_frontier_problem": [
+    "expected_returns",
+    "cov_matrix",
+    "target_return"
+  ],
+  "egarch": [
+    "omega",
+    "alpha",
+    "gamma",
+    "z_prev",
+    "beta",
+    "log_sigma_prev_sq"
+  ],
+  "egarch11": [
+    "omega",
+    "alpha",
+    "gamma",
+    "z_prev",
+    "beta",
+    "log_sigma_prev_sq"
+  ],
+  "elastic_net": [
+    "y",
+    "x_beta",
+    "_2",
+    "_1"
+  ],
+  "encumbrance_ratio": [
+    "encumbered_assets",
+    "total_assets"
+  ],
+  "endowment_insurance_apv": [
+    "n",
+    "interest_rate",
+    "mortality_probs"
+  ],
+  "enterprise_value": [
+    "equity_value",
+    "net_debt",
+    "preferred",
+    "minority_interest"
+  ],
+  "enterprise_value_in_lbo": [
+    "entry_ebitda",
+    "entry_multiple"
+  ],
+  "eps": [
+    "net_income",
+    "weighted_avg_shares"
+  ],
+  "equal_risk_contribution": [
+    "cov_matrix"
+  ],
+  "equal_weight_portfolio": [
+    "n"
+  ],
+  "equated_monthly_installment_emi": [
+    "p_r",
+    "r",
+    "n"
+  ],
+  "equity_check_multiple_of_ebitda": [
+    "equity",
+    "ebitda"
+  ],
+  "equity_contribution": [
+    "uses",
+    "debt",
+    "existing_cash"
+  ],
+  "equity_multiple": [
+    "total_equity_distributions",
+    "equity_invested"
+  ],
+  "equity_ratio": [
+    "total_equity",
+    "total_assets"
+  ],
+  "equity_rollover_percentage": [
+    "management_rollover_equity",
+    "total_equity"
+  ],
+  "equity_value_at_exit": [
+    "ev_exit",
+    "net_debt_exit"
+  ],
+  "equity_value_bridge": [
+    "ev",
+    "net_debt",
+    "preferred",
+    "minority_interest",
+    "non",
+    "operating_assets"
+  ],
+  "equivalent_annual_annuity_eaa": [
+    "npv_x_r",
+    "r",
+    "n"
+  ],
+  "error_correction_model": [
+    "beta_delta_x_t",
+    "y_t",
+    "x_t",
+    "epsilon_t"
+  ],
+  "ev_ebit": [
+    "ev",
+    "ebit"
+  ],
+  "ev_ebitda": [
+    "enterprise_value",
+    "ebitda"
+  ],
+  "ev_sales": [
+    "enterprise_value",
+    "revenue"
+  ],
+  "eve_sensitivity": [
+    "dgap",
+    "delta_y"
+  ],
+  "ewma_volatility": [
+    "lambda_val",
+    "sigma_prev_sq",
+    "r_prev_sq"
+  ],
+  "ex_ante_tracking_error": [
+    "weights",
+    "benchmark_weights",
+    "cov_matrix"
+  ],
+  "excess_kurtosis": [
+    "returns",
+    "mu",
+    "sigma"
+  ],
+  "excess_return": [
+    "r_p",
+    "r_b"
+  ],
+  "excess_spread": [
+    "asset_yield",
+    "funding_cost",
+    "servicing_fee",
+    "charge",
+    "offs"
+  ],
+  "exit_enterprise_value": [
+    "exit_ebitda",
+    "exit_multiple"
+  ],
+  "expected_credit_loss_ifrs_9_cecl": [
+    "pds",
+    "lgds",
+    "eads",
+    "discount_factors"
+  ],
+  "expected_drawdown": [
+    "emax_tt_drawdown_t"
+  ],
+  "expected_exposure_ee": [
+    "exposures"
+  ],
+  "expected_future_lifetime": [
+    "mortality_probs",
+    "dt"
+  ],
+  "expected_loss": [
+    "pd",
+    "lgd",
+    "ead"
+  ],
+  "expected_positive_exposure_epe": [
+    "ee_values",
+    "time_points"
+  ],
+  "expected_principal_collection": [
+    "scheduled_t",
+    "prepayment_t",
+    "defaults_t",
+    "recoveries_t"
+  ],
+  "expected_shortfall_cvar": [
+    "returns",
+    "alpha"
+  ],
+  "expense_ratio": [
+    "underwriting_expenses",
+    "net_premiums_earned"
+  ],
+  "explained_variance_ratio": [
+    "lambda_i",
+    "sum_j",
+    "lambda_j"
+  ],
+  "exposure_at_default_ead": [
+    "outstanding",
+    "ccf_x_undrawn"
+  ],
+  "exposure_weighted_average_rating_factor": [
+    "weights",
+    "rating_factors"
+  ],
+  "factor_model_decomposition": [
+    "x_approx_f_b",
+    "u"
+  ],
+  "fama_french_3_factor_model": [
+    "beta_mkt_mkt",
+    "beta_smb_smb",
+    "beta_hml_hml"
+  ],
+  "fama_french_5_factor_model": [
+    "b_mkt",
+    "s_smb",
+    "h_hml",
+    "r_rmw",
+    "c_cma"
+  ],
+  "fama_macbeth_cross_sectional_regression": [
+    "_0",
+    "t",
+    "t__i",
+    "i"
+  ],
+  "fcf_yield": [
+    "free_cash_flow",
+    "market_cap_or_ev"
+  ],
+  "fcfe": [
+    "net_income",
+    "d",
+    "a",
+    "capex",
+    "nwc",
+    "net_borrowing"
+  ],
+  "fcfe_dcf_intrinsic_value": [
+    "fcfes",
+    "r_e",
+    "terminal_value"
+  ],
+  "fcff": [
+    "ebit",
+    "t",
+    "d",
+    "a",
+    "capex",
+    "nwc"
+  ],
+  "fcff_dcf_intrinsic_value": [
+    "fcffs",
+    "wacc",
+    "terminal_value"
+  ],
+  "fill_ratio": [
+    "executed_quantity",
+    "submitted_quantity"
+  ],
+  "financial_leverage": [
+    "pctdelta_eps",
+    "pctdelta_ebit"
+  ],
+  "fixed_asset_turnover": [
+    "revenue",
+    "average_net_ppande"
+  ],
+  "fixed_effects_panel_model": [
+    "alpha_i",
+    "x_it",
+    "betas"
+  ],
+  "fixed_charge_coverage": [
+    "ebitda",
+    "capex",
+    "cash_taxes",
+    "interest",
+    "scheduled_amortization",
+    "lease"
+  ],
+  "floating_rate_note_coupon": [
+    "reference_rate_t",
+    "spread"
+  ],
+  "force_of_mortality": [
+    "f_x",
+    "s_x",
+    "d_ln_s_x",
+    "dx"
+  ],
+  "forward_fx_outright": [
+    "s_e",
+    "r_d",
+    "r_f",
+    "t"
+  ],
+  "forward_p_e": [
+    "price",
+    "next_val",
+    "_12m_eps"
+  ],
+  "forward_price_on_non_dividend_asset": [
+    "s_0_e",
+    "rt"
+  ],
+  "forward_price_with_carry": [
+    "s_0_e",
+    "r",
+    "u",
+    "y",
+    "t"
+  ],
+  "forward_rate": [
+    "df",
+    "t1",
+    "t2"
+  ],
+  "forward_rate_from_discount_factors": [
+    "df1",
+    "df2",
+    "year_fraction"
+  ],
+  "forward_rate_from_spot_rates": [
+    "z_2",
+    "z_1"
+  ],
+  "fra_payoff": [
+    "n",
+    "r_fix",
+    "r_ref",
+    "r_ref_tau"
+  ],
+  "fra_rate": [
+    "df",
+    "t1",
+    "t2"
+  ],
+  "free_cash_flow": [
+    "operating_cash_flow",
+    "capex"
+  ],
+  "free_cash_flow_margin": [
+    "fcf",
+    "revenue"
+  ],
+  "free_cash_flow_to_equity_fcfe": [
+    "net_income",
+    "d",
+    "a",
+    "capex",
+    "deltanwc",
+    "net_borrowing"
+  ],
+  "free_cash_flow_to_firm_fcff": [
+    "ebit",
+    "t",
+    "d",
+    "a",
+    "capex",
+    "deltanwc"
+  ],
+  "frn_discount_margin": [
+    "cash_flows",
+    "reference_rates",
+    "price"
+  ],
+  "front_end_housing_ratio": [
+    "housing_expense",
+    "gross_income"
+  ],
+  "front_end_ratio_housing_expense_ratio": [
+    "housing_expense",
+    "gross_monthly_income"
+  ],
+  "fund_carried_interest": [
+    "distributions",
+    "capital_return",
+    "hurdle",
+    "carry_pct"
+  ],
+  "funding_liquidity_spread": [
+    "unsecured_rate",
+    "ois_or_treasury"
+  ],
+  "funding_spread": [
+    "loan_yield",
+    "funding_cost"
+  ],
+  "funds_transfer_pricing_spread": [
+    "transfer_rate",
+    "reference_curve_rate"
+  ],
+  "funds_transfer_pricing_spread_2": [
+    "customer_rate",
+    "internal_transfer_rate"
+  ],
+  "future_value": [
+    "r",
+    "n"
+  ],
+  "fx_cross_rate": [
+    "s_a",
+    "b_x_s_b",
+    "c"
+  ],
+  "fx_forward_points": [
+    "f",
+    "s"
+  ],
+  "fx_forward_points_annualized": [
+    "f",
+    "s",
+    "t"
+  ],
+  "fx_hedge_ratio": [
+    "foreign_currency_exposure",
+    "hedge_notional"
+  ],
+  "fx_option_garman_kohlhagen": [
+    "s_e",
+    "r_f_tn",
+    "d1",
+    "k_e",
+    "r_d_tn",
+    "d2"
+  ],
+  "fx_option_garman_kohlhagen_d1": [
+    "s",
+    "k",
+    "r_d",
+    "r_f",
+    "sigma",
+    "T"
+  ],
+  "fx_spot_quote_inversion": [
+    "s_b",
+    "a"
+  ],
+  "fx_swap_points": [
+    "f",
+    "s"
+  ],
+  "fx_transaction_exposure_pandl": [
+    "foreign_cf",
+    "spot_realized",
+    "hedge_rate"
+  ],
+  "fx_translation_effect": [
+    "local_currency_amount",
+    "fx_rate"
+  ],
+  "gamma": [
+    "e",
+    "qt",
+    "n",
+    "d1",
+    "s_sigma_sqrt",
+    "t"
+  ],
+  "garch11": [
+    "omega",
+    "alpha",
+    "epsilon_prev_sq",
+    "beta",
+    "sigma_prev_sq"
+  ],
+  "garch11_2": [
+    "omega",
+    "alpha",
+    "epsilon_prev_sq",
+    "beta",
+    "sigma_prev_sq"
+  ],
+  "garman_klass_volatility": [
+    "h",
+    "l",
+    "ln2",
+    "c",
+    "o"
+  ],
+  "gaussian_mixture_likelihood": [
+    "sum_k_pi_k_n",
+    "x",
+    "mu_k",
+    "sigma_k"
+  ],
+  "gjr_garch": [
+    "omega",
+    "alpha",
+    "epsilon_prev_sq",
+    "gamma",
+    "epsilon_prev_sq_neg",
+    "beta",
+    "sigma_prev_sq"
+  ],
+  "global_minimum_variance_portfolio": [],
+  "global_minimum_variance_weights": [
+    "cov_matrix"
+  ],
+  "gmm_moment_condition": [
+    "moments",
+    "weight_matrix"
+  ],
+  "gordon_growth_ddm": [
+    "d_1",
+    "r",
+    "g"
+  ],
+  "gordon_growth_model": [
+    "d_1",
+    "r",
+    "g"
+  ],
+  "gordon_terminal_value": [
+    "fcf",
+    "t",
+    "wacc",
+    "g"
+  ],
+  "gradient_boosting": [
+    "f_m",
+    "x",
+    "h_m"
+  ],
+  "granger_causality": [
+    "x_granger",
+    "causes_y_if_lagged_x_terms_improve_prediction_of_y"
+  ],
+  "gross_irr": [
+    "equity_0",
+    "sum_t_distribution_t",
+    "irr",
+    "t",
+    "terminal_equity"
+  ],
+  "gross_margin": [
+    "gross_profit",
+    "revenue"
+  ],
+  "gross_premium_principle": [
+    "pv_benefits",
+    "pv_expenses",
+    "pv_premium_annuity"
+  ],
+  "gross_profit": [
+    "revenue",
+    "cogs"
+  ],
+  "gross_rent_multiplier": [
+    "property_price",
+    "gross_annual_rent"
+  ],
+  "growing_annuity_value": [
+    "pmt_1_x_1",
+    "g",
+    "r",
+    "n"
+  ],
+  "growing_perpetuity_value": [
+    "cf_1",
+    "r",
+    "g"
+  ],
+  "gsib_surcharge": [
+    "base_capital",
+    "surcharge"
+  ],
+  "haircut_adjusted_liquidation_value": [
+    "market_value",
+    "haircut"
+  ],
+  "hasbrouck_lambda": [
+    "volsigned_t",
+    "epsilon_t"
+  ],
+  "hazard_rate_survival": [
+    "e",
+    "t"
+  ],
+  "hedge_ratio_naive": [
+    "contract_size"
+  ],
+  "hedged_commodity_revenue": [
+    "spot_revenue",
+    "futures_pandl"
+  ],
+  "henriksson_merton_timing": [
+    "r_m",
+    "r_f"
+  ],
+  "herfindahl_concentration_index": [
+    "weights"
+  ],
+  "heston_asset_process": [
+    "r",
+    "q",
+    "s_t_dt",
+    "v_t",
+    "s_t_dw_t",
+    "s"
+  ],
+  "heston_variance_process": [
+    "kappa",
+    "theta",
+    "xi",
+    "v_t",
+    "dt",
+    "dw_t"
+  ],
+  "historical_var": [
+    "quantile_alpha",
+    "r"
+  ],
+  "hit_ratio": [
+    "profitable",
+    "periods",
+    "total"
+  ],
+  "hjm_drift_restriction": [
+    "sigma_func",
+    "t",
+    "T"
+  ],
+  "hjm_forward_rate_dynamics": [
+    "t",
+    "dt",
+    "dw_t"
+  ],
+  "holding_period_return_hpr": [
+    "p_1",
+    "p_0",
+    "d_1"
+  ],
+  "holt_trend_method": [
+    "y_t",
+    "b_t"
+  ],
+  "holt_winters_seasonality": [
+    "seasonal_add",
+    "mult",
+    "update"
+  ],
+  "hull_white_1f_process": [
+    "theta_t",
+    "a",
+    "r_t",
+    "sigma",
+    "dt",
+    "dw_t"
+  ],
+  "hull_white_bond_option_jamshidian": [
+    "bond_cash_flows",
+    "strike",
+    "a",
+    "sigma",
+    "r",
+    "t_option",
+    "t_bond_flows"
+  ],
+  "hull_white_model": [
+    "theta_t",
+    "a",
+    "r_t",
+    "sigma",
+    "dt",
+    "dw_t"
+  ],
+  "ichimoku_base_line": [
+    "period",
+    "high",
+    "low"
+  ],
+  "ichimoku_conversion_line": [
+    "period",
+    "high",
+    "low"
+  ],
+  "ichimoku_leading_span_a": [
+    "tenkan",
+    "kijun",
+    "shifted",
+    "forward"
+  ],
+  "ichimoku_leading_span_b": [
+    "period",
+    "high",
+    "low",
+    "shifted",
+    "forward"
+  ],
+  "idiosyncratic_volatility": [
+    "residuals",
+    "factor",
+    "model"
+  ],
+  "implementation_shortfall": [
+    "execution_price",
+    "arrival_price",
+    "x_side_x_quantity"
+  ],
+  "implied_cost_of_equity_simple": [
+    "d_1",
+    "p_0",
+    "g"
+  ],
+  "implied_volatility": [
+    "marketprice"
+  ],
+  "impulse_response_function": [
+    "d",
+    "y_t",
+    "h",
+    "u_t"
+  ],
+  "increasing_annuity": [
+    "n",
+    "interest_rate",
+    "mortality_probs"
+  ],
+  "incremental_var": [
+    "var_with",
+    "var_without"
+  ],
+  "incurred_but_not_reported_ibnr": [
+    "ultimate_loss",
+    "reported_loss"
+  ],
+  "inflation_accretion": [
+    "principal_x_cpi_t",
+    "cpi_base"
+  ],
+  "information_ratio": [
+    "r_p",
+    "r_b"
+  ],
+  "installment_to_income_ratio": [
+    "installment_payment",
+    "income"
+  ],
+  "instantaneous_forward_rate": [
+    "d_ln_p",
+    "t",
+    "dt"
+  ],
+  "instantaneous_short_rate_from_discount_curve": [
+    "d_ln_p",
+    "t",
+    "dt"
+  ],
+  "instrumental_variables_2sls": [
+    "xp_z_x",
+    "_1_xp_z_y"
+  ],
+  "interaction_effect": [
+    "w_i",
+    "p",
+    "b",
+    "r_i"
+  ],
+  "interest_coverage": [
+    "ebit",
+    "interest_expense"
+  ],
+  "interest_coverage_ratio": [
+    "ebit",
+    "interest_expense"
+  ],
+  "interest_coverage_ratio_tranche": [
+    "interest_collections",
+    "note_interest_due"
+  ],
+  "interest_payment": [
+    "r",
+    "balance",
+    "t"
+  ],
+  "interest_only_payment": [
+    "loan_amount",
+    "annual_interest_rate"
+  ],
+  "interest_rate_hedge_ratio": [
+    "dv01_exposure",
+    "dv01_hedge"
+  ],
+  "internal_rate_of_return_irr": [
+    "sum_t_cf_t",
+    "irr",
+    "t"
+  ],
+  "internal_rate_of_return_since_inception": [
+    "mv_t",
+    "sum_t_cf_t",
+    "r",
+    "t",
+    "mv_0"
+  ],
+  "international_fisher_effect": [
+    "i_d",
+    "i_f"
+  ],
+  "intrinsic_value_call": [
+    "s",
+    "k"
+  ],
+  "inventory_turnover": [
+    "cogs",
+    "average_inventory"
+  ],
+  "io_strip_value": [
+    "interest_cash_flows",
+    "discount_factors"
+  ],
+  "jensens_alpha": [
+    "r_p",
+    "r_f",
+    "beta_p",
+    "r_m"
+  ],
+  "johansen_cointegration": [
+    "test_rank_of__in_vecm"
+  ],
+  "johansen_trace_statistic": [
+    "t_sum_ir",
+    "k",
+    "hat",
+    "lambda_i"
+  ],
+  "kelly_criterion": [
+    "bp",
+    "q",
+    "b"
+  ],
+  "keltner_channel_lower": [
+    "multiplier_x_atr"
+  ],
+  "keltner_channel_upper": [
+    "multiplier_x_atr"
+  ],
+  "kmv_expected_default_frequency": [
+    "dd"
+  ],
+  "kpss_stationarity_test": [
+    "r_t",
+    "epsilon_t",
+    "lm_statistic_from_partial_sums"
+  ],
+  "kupiec_pof_likelihood_ratio": [
+    "p",
+    "t",
+    "x"
+  ],
+  "kyle_lambda": [
+    "q_t",
+    "epsilon_t"
+  ],
+  "large_exposure_ratio": [
+    "exposure_to_counterparty",
+    "tier_1_capital"
+  ],
+  "lbo_debt_paydown_schedule": [
+    "mandatory_amortization",
+    "cash_sweep"
+  ],
+  "lbo_equity_irr": [
+    "equity_0",
+    "t_cashtoequity_t",
+    "irr",
+    "t",
+    "exitequity"
+  ],
+  "ledoit_wolf_covariance_shrinkage": [
+    "s",
+    "delta_f"
+  ],
+  "leverage_constraint": [
+    "l_max"
+  ],
+  "leverage_ratio": [
+    "tier_1_capital",
+    "exposure_measure"
+  ],
+  "levered_beta_hamada": [
+    "beta_u",
+    "t",
+    "d",
+    "e"
+  ],
+  "levered_yield": [
+    "cash_flow_after_debt_service",
+    "equity"
+  ],
+  "lgd_downturn_adjustment": [
+    "lgd_base",
+    "stress_addon"
+  ],
+  "libor_market_model_lmm": [
+    "f_i",
+    "mu_i",
+    "sigma_i",
+    "dt",
+    "dw_t"
+  ],
+  "life_annuity_immediate": [
+    "interest_rate",
+    "mortality_probs"
+  ],
+  "lifetime_ecl": [
+    "marginal_pds",
+    "lgds",
+    "eads",
+    "discount_factors"
+  ],
+  "liquidity_coverage_ratio_lcr": [
+    "hqla",
+    "net_cash_outflows_over_30_days"
+  ],
+  "liquidity_gap": [
+    "cash_inflows_t",
+    "cash_outflows_t"
+  ],
+  "liquidity_adjusted_var": [
+    "var_val",
+    "liquidation_cost_addon"
+  ],
+  "loan_amortization_schedule_identity": [
+    "ending_balance"
+  ],
+  "loan_constant_mortgage_constant": [
+    "annual_debt_service",
+    "original_loan_amount"
+  ],
+  "loan_life_coverage_ratio": [
+    "npv",
+    "outstanding_debt"
+  ],
+  "loan_loss_coverage_ratio": [
+    "loan_loss_reserves",
+    "non",
+    "performing_loans"
+  ],
+  "loan_payment_annuity": [
+    "r",
+    "n"
+  ],
+  "loan_to_cost": [
+    "loan_amount",
+    "project_cost"
+  ],
+  "loan_to_deposit_ratio": [
+    "gross_loans",
+    "deposits"
+  ],
+  "loan_to_value": [
+    "loan_amount",
+    "collateral_value"
+  ],
+  "local_volatility_dupire": [
+    "dc_dt",
+    "k",
+    "r",
+    "dc_dk",
+    "d2c_dk2"
+  ],
+  "local_stochastic_volatility_surface_interpolation": [
+    "interpolate_observed_vol_surface"
+  ],
+  "log_return": [
+    "p_t"
+  ],
+  "long_only_constraint": [],
+  "lookback_option_price": [
+    "s",
+    "k",
+    "r",
+    "sigma",
+    "T",
+    "n_steps",
+    "n_sims",
+    "is_call"
+  ],
+  "loss_given_default": [
+    "recovery_rate"
+  ],
+  "loss_random_variable": [
+    "benefits",
+    "expenses",
+    "premiums"
+  ],
+  "loss_rate": [
+    "net_credit_losses",
+    "average_loans"
+  ],
+  "loss_ratio": [
+    "incurred_losses",
+    "earned_premiums"
+  ],
+  "ltv_for_mortgage": [
+    "mortgage_balance",
+    "property_value"
+  ],
+  "maq": [
+    "epsilon_t",
+    "sum_i",
+    "q",
+    "theta_i",
+    "i"
+  ],
+  "macaulay_duration": [
+    "cash_flows",
+    "yield_rate",
+    "price",
+    "m"
+  ],
+  "macaulay_spread_duration": [
+    "cash_flows",
+    "spread",
+    "base_rates",
+    "price"
+  ],
+  "macd": [
+    "ema_fast",
+    "ema_slow"
+  ],
+  "macd_histogram": [
+    "macd",
+    "signal"
+  ],
+  "management_option_value": [
+    "bs_or_lattice_value_of_management_options"
+  ],
+  "marginal_risk_contribution": [
+    "weights",
+    "cov_matrix"
+  ],
+  "marginal_var": [
+    "weights",
+    "cov_matrix",
+    "z_alpha"
+  ],
+  "margrabe_exchange_option": [
+    "s1_e",
+    "q1tn",
+    "d1",
+    "s2_e",
+    "q2tn",
+    "d2"
+  ],
+  "market_depth": [
+    "executable_quantity_within_price_band"
+  ],
+  "market_impact_breakeven": [
+    "total_execution_cost",
+    "notional"
+  ],
+  "market_value_added_mva": [
+    "market_value_of_firm",
+    "invested_capital"
+  ],
+  "market_neutral_constraint": [],
+  "maximum_drawdown": [
+    "values"
+  ],
+  "maximum_sharpe_portfolio": [
+    "expected_returns",
+    "cov_matrix",
+    "r_f"
+  ],
+  "mean_absolute_error": [
+    "n",
+    "sum_i",
+    "y_i",
+    "yhat_i"
+  ],
+  "mean_squared_error": [
+    "n",
+    "sum_i",
+    "y_i",
+    "yhat_i"
+  ],
+  "mean_cvar_optimization": [
+    "expected_returns",
+    "scenarios",
+    "alpha",
+    "target_return"
+  ],
+  "mean_variance_utility": [
+    "expected_returns",
+    "cov_matrix",
+    "risk_aversion"
+  ],
+  "merton_asset_value_model": [
+    "v_a_n",
+    "d1",
+    "d_e",
+    "rt_n",
+    "d2"
+  ],
+  "merton_distance_to_default": [
+    "v_a",
+    "d",
+    "mu_a",
+    "sigma_a",
+    "t"
+  ],
+  "merton_jump_diffusion_asset_process": [
+    "s",
+    "mu",
+    "sigma",
+    "lambda_j",
+    "dt",
+    "dw_t",
+    "jump_size"
+  ],
+  "merton_structural_pd": [
+    "n",
+    "dd"
+  ],
+  "metallurgical_gross_margin": [
+    "metal_selling_price",
+    "input_cost_bundle"
+  ],
+  "mid_price": [
+    "bid",
+    "ask"
+  ],
+  "minimum_variance_hedge_ratio": [
+    "delta_s",
+    "delta_f"
+  ],
+  "minimum_variance_hedged_return": [
+    "r_s",
+    "h_star",
+    "r_f"
+  ],
+  "minus_directional_indicator_di": [
+    "x",
+    "smoothed",
+    "dm",
+    "atr"
+  ],
+  "modified_duration": [
+    "d_m",
+    "y",
+    "m"
+  ],
+  "modified_irr_mirr": [
+    "fv_positive",
+    "pv_negative",
+    "n"
+  ],
+  "momentum": [
+    "p_t",
+    "n"
+  ],
+  "money_flow_index_mfi": [
+    "moneyflowratio"
+  ],
+  "money_flow_index_mfi_2": [
+    "moneyratio"
+  ],
+  "money_market_yield": [
+    "f",
+    "p",
+    "p_x_360",
+    "d"
+  ],
+  "money_multiple_moic": [
+    "total_value",
+    "invested_capital"
+  ],
+  "money_market_account": [
+    "r_rates",
+    "dt"
+  ],
+  "money_weighted_return_mwrr": [
+    "sum_t_cf_t",
+    "irr",
+    "t"
+  ],
+  "monte_carlo_var": [
+    "simulated_pnl",
+    "alpha"
+  ],
+  "mortality_rate": [
+    "d_x",
+    "l_x"
+  ],
+  "mortgage_constant": [
+    "annual_debt_service",
+    "loan_amount"
+  ],
+  "moving_average_convergence_divergence_macd": [
+    "ema_12",
+    "ema_26",
+    "signal__ema_9"
+  ],
+  "mrel_tlac_ratio": [
+    "eligible_liabilities_and_capital",
+    "rwa_or_leverage_exposure"
+  ],
+  "m_squared_modigliani": [
+    "sharpe_x_sigma_m",
+    "r_f"
+  ],
+  "multi_stage_ddm": [
+    "dividends",
+    "r",
+    "terminal_value"
+  ],
+  "naive_bayes_classifier": [
+    "p",
+    "y",
+    "x",
+    "proportional_p",
+    "prod_j_p",
+    "x_j"
+  ],
+  "nelson_siegel_yield_curve": [
+    "beta0",
+    "beta1",
+    "e",
+    "t",
+    "beta2"
+  ],
+  "nelson_siegel_svensson_curve": [
+    "beta0",
+    "beta1_l1",
+    "beta2",
+    "l1",
+    "e",
+    "t",
+    "tau1",
+    "beta3",
+    "l2",
+    "tau2"
+  ],
+  "net_charge_off_ratio": [
+    "charge",
+    "offs",
+    "recoveries",
+    "average_loans"
+  ],
+  "net_convenience_yield": [
+    "y",
+    "storage_cost"
+  ],
+  "net_debt_at_entry": [
+    "debt_assumed",
+    "new_debt",
+    "cash_acquired"
+  ],
+  "net_income": [
+    "revenue",
+    "expenses",
+    "taxes"
+  ],
+  "net_interest_income_nii": [
+    "interest_income",
+    "interest_expense"
+  ],
+  "net_interest_margin_nim": [
+    "nii",
+    "average_earning_assets"
+  ],
+  "net_irr_to_lp": [
+    "irr_on_lp_cash_flows_after_fees_and_carry"
+  ],
+  "net_margin": [
+    "net_income",
+    "revenue"
+  ],
+  "net_operating_income_noi": [
+    "rental_revenue",
+    "other_income",
+    "operating_expenses"
+  ],
+  "net_premium": [
+    "benefits",
+    "premium_annuity"
+  ],
+  "net_premium_equivalence_principle": [
+    "apv",
+    "benefits"
+  ],
+  "net_present_value_npv": [
+    "sum_t_cf_t",
+    "r",
+    "t"
+  ],
+  "net_stable_funding_ratio_nsfr": [
+    "available_stable_funding",
+    "required_stable_funding"
+  ],
+  "net_weighted_average_spread": [
+    "weighted_avg_asset_spread",
+    "funding_spread"
+  ],
+  "newey_west_hac_covariance": [
+    "x",
+    "_1_x_s_x"
+  ],
+  "nii_sensitivity": [
+    "balances",
+    "delta_rates",
+    "repricing_fractions"
+  ],
+  "noi_margin": [
+    "noi",
+    "effective_gross_income"
+  ],
+  "npl_ratio": [
+    "nonperforming_loans",
+    "gross_loans"
+  ],
+  "number_of_periods": [
+    "rpv",
+    "pmt",
+    "r"
+  ],
+  "oc_trigger": [
+    "oc_ratio",
+    "trigger_level"
+  ],
+  "omega_ratio": [
+    "int_r",
+    "f",
+    "x",
+    "dx",
+    "int_val",
+    "r_f"
+  ],
+  "on_balance_volume_obv": [
+    "volume_t_based_on_price_direction"
+  ],
+  "one_year_death_probability": [
+    "px_dies_within_1_year"
+  ],
+  "one_year_survival_probability": [
+    "q_x"
+  ],
+  "operating_cash_flow_ratio": [
+    "operating_cash_flow",
+    "current_liabilities"
+  ],
+  "operating_expense_ratio": [
+    "operating_expenses",
+    "effective_gross_income"
+  ],
+  "operating_leverage": [
+    "pctdelta_ebit",
+    "pctdelta_sales"
+  ],
+  "operating_margin": [
+    "ebit",
+    "revenue"
+  ],
+  "operational_risk_capital_sma": [
+    "bic_x_ilm"
+  ],
+  "optimal_number_of_contracts": [
+    "h_star",
+    "exposure_value",
+    "futures_contract_value"
+  ],
+  "option_delta_hedged_pandl": [
+    "gamma",
+    "ds",
+    "theta",
+    "dt",
+    "vega",
+    "d_sigma"
+  ],
+  "option_pool_dilution": [
+    "shares_owned",
+    "existing",
+    "new",
+    "option_pool"
+  ],
+  "option_adjusted_spread_oas": [
+    "scenario_cash_flows",
+    "scenario_rates",
+    "price",
+    "n_scenarios"
+  ],
+  "oracle_approximating_shrinkage_oas": [
+    "s",
+    "delta_mu_i"
+  ],
+  "order_imbalance": [
+    "buy_volume",
+    "sell_volume"
+  ],
+  "outstanding_balance_after_k_payments": [
+    "r",
+    "k",
+    "pmt"
+  ],
+  "outstanding_loan_balance": [
+    "r",
+    "t",
+    "pmt"
+  ],
+  "overcollateralization_ratio": [
+    "collateral_balance",
+    "notes_outstanding"
+  ],
+  "ownership_percentage": [
+    "investment",
+    "post",
+    "money_valuation"
+  ],
+  "p_b_ratio": [
+    "price_per_share",
+    "book_value_per_share"
+  ],
+  "p_e_ratio": [
+    "price_per_share",
+    "eps"
+  ],
+  "pain_index": [
+    "average",
+    "drawdown"
+  ],
+  "par_swap_rate": [
+    "df",
+    "t_n",
+    "i__i",
+    "t_i"
+  ],
+  "par_yield": [
+    "discount_factors"
+  ],
+  "parabolic_sar": [
+    "af",
+    "ep"
+  ],
+  "parametric_es_under_normality": [
+    "mu",
+    "sigma",
+    "alpha"
+  ],
+  "parametric_normal_var": [
+    "z_alpha",
+    "v"
+  ],
+  "parametric_var": [
+    "z"
+  ],
+  "parkinson_volatility": [
+    "highs",
+    "lows",
+    "n"
+  ],
+  "participation_rate": [
+    "executed_volume",
+    "market_volume"
+  ],
+  "pastor_stambaugh_liquidity": [
+    "gamma_i",
+    "r_i",
+    "t",
+    "excess",
+    "volume_i"
+  ],
+  "payables_turnover": [
+    "cogs",
+    "average_ap"
+  ],
+  "payback_period": [
+    "smallest_t_such_that_cumulative_cf_t__initial_outlay"
+  ],
+  "payment_shock_ratio": [
+    "new_payment",
+    "old_payment"
+  ],
+  "peg_ratio": [
+    "p",
+    "e",
+    "earnings_growth"
+  ],
+  "percentage_price_oscillator_ppo": [
+    "ema_fast",
+    "ema_slow"
+  ],
+  "perpetuity_value": [
+    "cf",
+    "r"
+  ],
+  "piotroski_f_score": [
+    "roa",
+    "operating_cash_flow",
+    "delta_roa",
+    "ocf_to_assets",
+    "roa_to_assets",
+    "delta_leverage",
+    "delta_current_ratio",
+    "shares_issued",
+    "delta_gross_margin",
+    "delta_asset_turnover"
+  ],
+  "plus_directional_indicator_plusdi": [
+    "x",
+    "smoothed",
+    "dm",
+    "atr"
+  ],
+  "pme_kaplan_schoar": [
+    "fv_of_distributions",
+    "nav_adjusted_by_index",
+    "fv_of_contributions"
+  ],
+  "po_strip_value": [
+    "principal_cash_flows",
+    "discount_factors"
+  ],
+  "point_in_time_pd": [
+    "conditional",
+    "default",
+    "probability",
+    "current",
+    "macro",
+    "state"
+  ],
+  "portfolio_covariance_contribution": [
+    "sigma_w",
+    "i"
+  ],
+  "portfolio_return": [
+    "weights",
+    "returns"
+  ],
+  "portfolio_variance": [
+    "w_sigma_w"
+  ],
+  "portfolio_volatility": [
+    "w_sigma_w"
+  ],
+  "post_money_valuation": [
+    "pre",
+    "money",
+    "new_investment"
+  ],
+  "potential_future_exposure_pfe": [
+    "quantile_alpha",
+    "exposure_t"
+  ],
+  "ppi_inflation_month_over_month": [
+    "ppi_t",
+    "ppi",
+    "t"
+  ],
+  "ppi_inflation_year_over_year": [
+    "ppi_t",
+    "ppi",
+    "t"
+  ],
+  "preferred_return_hurdle": [
+    "contributed_capital_x",
+    "h",
+    "t"
+  ],
+  "pre_money_valuation": [
+    "post",
+    "money",
+    "new_investment"
+  ],
+  "prepayment_speed_psa": [
+    "t",
+    "psa_pct"
+  ],
+  "present_value_pv": [
+    "sum_t_cf_t",
+    "r",
+    "t"
+  ],
+  "present_value_random_variable": [
+    "benefit",
+    "interest_rate",
+    "t"
+  ],
+  "price_impact": [
+    "execution_price",
+    "mid_price"
+  ],
+  "price_to_book": [
+    "price",
+    "book_value_per_share"
+  ],
+  "price_to_earnings_ratio": [
+    "price_per_share",
+    "eps"
+  ],
+  "price_to_sales": [
+    "market_cap",
+    "revenue"
+  ],
+  "principal_payment_portion_ppmt": [
+    "pmt",
+    "ipmt_t"
+  ],
+  "probability_of_default_from_hazard_rate": [
+    "hazard_rate",
+    "t"
+  ],
+  "probability_of_default_from_logit": [
+    "e",
+    "x"
+  ],
+  "probability_of_default_scorecard_logit": [
+    "beta0",
+    "x"
+  ],
+  "probit_default_model": [
+    "beta0",
+    "x_i"
+  ],
+  "probit_score": [
+    "x"
+  ],
+  "producer_price_index_laspeyres_style_index": [
+    "prices_current",
+    "quantities_base",
+    "prices_base"
+  ],
+  "profit_factor": [
+    "returns",
+    "negative"
+  ],
+  "profitability_index": [
+    "pv_of_future_cash_flows",
+    "initial_investment"
+  ],
+  "property_irr": [
+    "equity_0",
+    "sum_t_cf_t",
+    "irr",
+    "t",
+    "saleproceeds"
+  ],
+  "property_value_from_cap_rate": [
+    "noi",
+    "cap_rate"
+  ],
+  "prospective_reserve": [
+    "pv_t",
+    "future_benefits",
+    "future_premiums"
+  ],
+  "protective_put_payoff": [
+    "s_t",
+    "k",
+    "premium"
+  ],
+  "provision_coverage_ratio": [
+    "loan_loss_reserves",
+    "nonperforming_loans"
+  ],
+  "provision_coverage_ratio_2": [
+    "allowance_for_credit_losses",
+    "nonperforming_loans"
+  ],
+  "psa_prepayment_benchmark": [
+    "month"
+  ],
+  "pti_payment_to_income": [
+    "monthly_mortgage_payment",
+    "income"
+  ],
+  "pti_payment_to_income_gross": [
+    "monthly_loan_payment",
+    "gross_monthly_income"
+  ],
+  "pti_payment_to_income_net": [
+    "monthly_loan_payment",
+    "net_monthly_income"
+  ],
+  "public_market_equivalent_pme": [
+    "fv_distributions",
+    "fv_capital_calls"
+  ],
+  "purchasing_power_parity_ppp": [
+    "p"
+  ],
+  "pure_endowment_apv": [
+    "n",
+    "interest_rate",
+    "mortality_probs"
+  ],
+  "pure_premium": [
+    "frequency_x_severity"
+  ],
+  "put_payoff": [
+    "k",
+    "s_t"
+  ],
+  "put_spread_payoff": [
+    "k2",
+    "s",
+    "k1"
+  ],
+  "put_call_parity": [
+    "s_0",
+    "k_e",
+    "rt"
+  ],
+  "put_call_parity_equity": [
+    "s_0_e",
+    "qt",
+    "k_e",
+    "rt"
+  ],
+  "put_call_parity_futures_options": [
+    "df",
+    "f_0",
+    "k"
+  ],
+  "pv_of_tax_shield": [
+    "tax_shields",
+    "r_ts"
+  ],
+  "quadratic_program": [
+    "b"
+  ],
+  "quick_ratio": [
+    "cash",
+    "marketable_securities",
+    "ar",
+    "current_liabilities"
+  ],
+  "quoted_spread_pct": [
+    "ask",
+    "bid",
+    "mid"
+  ],
+  "rate_of_change_roc": [
+    "p_t",
+    "n"
+  ],
+  "real_estate_dcf": [
+    "t_noi_t",
+    "r",
+    "t",
+    "tv"
+  ],
+  "real_exchange_rate": [
+    "s",
+    "p"
+  ],
+  "real_yield_bond_pricing": [
+    "real_cash_flows",
+    "real_yield",
+    "inflation_index_ratios"
+  ],
+  "realized_beta": [
+    "cov_intraday",
+    "asset",
+    "market",
+    "var_intraday"
+  ],
+  "realized_hedge_effectiveness": [
+    "hedged_position",
+    "unhedged_position"
+  ],
+  "realized_spread": [
+    "x",
+    "side",
+    "trade_price",
+    "mid_t"
+  ],
+  "realized_variance": [
+    "returns"
+  ],
+  "realized_volatility": [
+    "intraday_returns"
+  ],
+  "receivables_turnover": [
+    "revenue",
+    "average_ar"
+  ],
+  "recovery_factor": [
+    "net_profit",
+    "max_drawdown"
+  ],
+  "recovery_rate": [
+    "lgd"
+  ],
+  "reduced_form_cds_hazard_relation": [
+    "cds_spread",
+    "lgd"
+  ],
+  "refinance_proceeds": [
+    "new_loan",
+    "old_loan",
+    "fees"
+  ],
+  "relative_ppp": [
+    "pi_d",
+    "pi_f"
+  ],
+  "relative_spread": [
+    "ask",
+    "bid",
+    "mid"
+  ],
+  "relative_strength_index_rsi": [
+    "rs",
+    "avggain",
+    "avgloss"
+  ],
+  "rent_coverage_ratio": [
+    "gross_monthly_income",
+    "monthly_rent"
+  ],
+  "repricing_gap": [
+    "rate_sensitive_assets_t",
+    "rate_sensitive_liabilities_t"
+  ],
+  "residual_income": [
+    "net_income",
+    "r_e",
+    "beginning_equity"
+  ],
+  "residual_income_valuation": [
+    "b_0",
+    "residual_incomes",
+    "r"
+  ],
+  "retention_ratio": [
+    "dividend_payout_ratio"
+  ],
+  "retrospective_reserve": [
+    "accumulated_value",
+    "past_premiums",
+    "past_benefits",
+    "expenses"
+  ],
+  "return_on_assets_roa": [
+    "net_income",
+    "average_assets"
+  ],
+  "return_on_capital_employed_roce": [
+    "ebit",
+    "capital_employed"
+  ],
+  "return_on_equity_roe": [
+    "net_income",
+    "average_equity"
+  ],
+  "return_on_invested_capital_roic": [
+    "nopat",
+    "average_invested_capital"
+  ],
+  "return_on_regulatory_capital_rorc": [
+    "expected_profit",
+    "economic_or_regulatory_capital"
+  ],
+  "revenue_growth": [
+    "revenue_t",
+    "revenue",
+    "t"
+  ],
+  "rho": [
+    "k_t_e",
+    "rt_n",
+    "d2"
+  ],
+  "risk_parity_objective": [
+    "weights",
+    "cov_matrix"
+  ],
+  "riskmetrics_covariance": [
+    "lambda_val",
+    "sigma_prev",
+    "r_prev"
+  ],
+  "risk_neutral_probability": [
+    "e",
+    "r",
+    "q",
+    "delta_t",
+    "d",
+    "u"
+  ],
+  "risk_weighted_assets_rwa": [
+    "exposures",
+    "risk_weights"
+  ],
+  "roc_auc": [
+    "integral_0",
+    "_1_tpr",
+    "fpr",
+    "u",
+    "du"
+  ],
+  "rogers_satchell_volatility": [
+    "h",
+    "o",
+    "c",
+    "l"
+  ],
+  "roll_implied_spread": [
+    "delta_prices"
+  ],
+  "roll_rate": [
+    "balances_migrating",
+    "prior_bucket_balance"
+  ],
+  "roll_spread_estimator": [
+    "delta_prices"
+  ],
+  "roll_yield": [
+    "futures_return",
+    "spot_return",
+    "collateral_return"
+  ],
+  "roll_down_return": [
+    "duration",
+    "delta_yield"
+  ],
+  "rsi": [
+    "rs"
+  ],
+  "rvpi": [
+    "residual_value",
+    "nav_of_unrealized_investments",
+    "paid",
+    "in_capital"
+  ],
+  "sabr_implied_vol": [
+    "sabr",
+    "f",
+    "k",
+    "t"
+  ],
+  "sarima": [
+    "l",
+    "s",
+    "epsilon_t"
+  ],
+  "security_market_line": [
+    "r_f",
+    "beta",
+    "r_m"
+  ],
+  "selection_effect_brinson_fachler": [
+    "w_i",
+    "b",
+    "r_i",
+    "p"
+  ],
+  "semivariance": [
+    "returns",
+    "mu"
+  ],
+  "severity": [
+    "net_loss",
+    "defaulted_balance"
+  ],
+  "sharpe_ratio": [
+    "r_p",
+    "r_f",
+    "sigma_p"
+  ],
+  "sharpe_lintner_beta_regression": [
+    "r_m",
+    "r_f"
+  ],
+  "short_rate_bond_pricing_pde": [],
+  "simple_compounding": [
+    "r",
+    "t"
+  ],
+  "simple_forward_rate": [
+    "df",
+    "t"
+  ],
+  "simple_return": [
+    "p_t"
+  ],
+  "single_monthly_mortality_smm": [
+    "cpr"
+  ],
+  "slippage": [
+    "actual_execution_price",
+    "expected_price"
+  ],
+  "smith_wilson_extrapolation": [
+    "ufr",
+    "zeta",
+    "kernel_values",
+    "u"
+  ],
+  "solvency_ratio": [
+    "available_capital",
+    "required_capital"
+  ],
+  "sortino_ratio": [
+    "r_p",
+    "mar",
+    "downside_deviation"
+  ],
+  "sources_and_uses_balance": [
+    "total_uses"
+  ],
+  "spark_spread": [
+    "electricity_price",
+    "heat_rate",
+    "fuel_price"
+  ],
+  "speed": [
+    "d",
+    "ds"
+  ],
+  "sponsor_cash_on_cash_return": [
+    "cumulative_cash_to_sponsor",
+    "sponsor_equity_invested"
+  ],
+  "spot_rate_bootstrapping": [
+    "par_coupons",
+    "discount_factors_so_far",
+    "face_value"
+  ],
+  "spot_rate_from_discount_factor": [
+    "df",
+    "t"
+  ],
+  "spread_duration": [
+    "dp",
+    "ds",
+    "p"
+  ],
+  "spread_option_kirk_approximation": [
+    "f1",
+    "f2",
+    "k",
+    "sigma1",
+    "sigma2",
+    "rho",
+    "T",
+    "df"
+  ],
+  "square_root_impact_law": [
+    "y_sigma_sqrt",
+    "q",
+    "v"
+  ],
+  "stable_funding_gap": [
+    "required_stable_funding",
+    "available_stable_funding"
+  ],
+  "state_space_measurement_equation": [
+    "z_t_alpha_t",
+    "epsilon_t"
+  ],
+  "state_space_transition_equation": [
+    "t_t_alpha_t",
+    "r_t_eta_t"
+  ],
+  "sterling_ratio": [
+    "cagr",
+    "average_drawdown"
+  ],
+  "stochastic_oscillator": [
+    "c",
+    "l_n",
+    "h_n"
+  ],
+  "stochastic_oscillator_pctd": [
+    "sma_3",
+    "k"
+  ],
+  "stochastic_oscillator_pctk": [
+    "c",
+    "l_n",
+    "h_n"
+  ],
+  "stochastic_rsi": [
+    "rsi",
+    "min_rsi_n",
+    "max_rsi_n"
+  ],
+  "stop_loss_premium": [
+    "e",
+    "s",
+    "d"
+  ],
+  "straddle_payoff": [
+    "s",
+    "k",
+    "premiums"
+  ],
+  "strangle_payoff": [
+    "s",
+    "k_c",
+    "k_p",
+    "premiums"
+  ],
+  "stress_capital_buffer": [
+    "stress_losses",
+    "regulatory_floor",
+    "rwa"
+  ],
+  "stress_loss": [
+    "portfolio_value",
+    "stressed_value"
+  ],
+  "stressed_var": [
+    "var_stress_window"
+  ],
+  "structural_credit_spread_approximation": [
+    "d",
+    "r",
+    "t",
+    "e",
+    "v_a"
+  ],
+  "survival_function": [
+    "pt_x__t__1",
+    "f_x",
+    "t"
+  ],
+  "survival_probability": [
+    "hazard_rate",
+    "t"
+  ],
+  "sustainable_growth_rate": [
+    "roe",
+    "retention_ratio"
+  ],
+  "swap_annuity": [
+    "discount_factors",
+    "year_fractions"
+  ],
+  "swap_fixed_leg_pv": [
+    "i_n",
+    "k",
+    "i",
+    "df",
+    "t_i"
+  ],
+  "swap_fixed_rate": [
+    "discount_factors",
+    "year_fractions"
+  ],
+  "swap_floating_leg_pv": [
+    "i_n",
+    "l_i",
+    "i",
+    "df",
+    "t_i"
+  ],
+  "swap_present_value": [
+    "pv_fixed_leg",
+    "pv_float_leg"
+  ],
+  "tail_hedge_payoff": [
+    "k",
+    "s_t",
+    "premium_or_futures_pandl_in_stress"
+  ],
+  "tail_ratio": [
+    "th",
+    "percentile"
+  ],
+  "tangency_portfolio_weights": [
+    "expected_returns",
+    "cov_matrix",
+    "r_f"
+  ],
+  "tax_shield": [
+    "interest_expense",
+    "tax_rate"
+  ],
+  "temporary_annuity": [
+    "n",
+    "interest_rate",
+    "mortality_probs"
+  ],
+  "term_insurance_apv": [
+    "n",
+    "interest_rate",
+    "mortality_probs"
+  ],
+  "terminal_capitalization_value": [
+    "noi_t",
+    "exit_cap_rate"
+  ],
+  "terminal_value_exit_multiple": [
+    "metric_n",
+    "exit_multiple"
+  ],
+  "terminal_value_gordon_growth": [
+    "fcf",
+    "n",
+    "wacc",
+    "g"
+  ],
+  "theta": [
+    "s_e",
+    "qt",
+    "n",
+    "d1",
+    "t",
+    "rke",
+    "rtn",
+    "d2",
+    "qse",
+    "qtn"
+  ],
+  "through_the_cycle_pd": [
+    "long_run_default_frequency"
+  ],
+  "tier_1_capital_ratio": [
+    "tier_1_capital",
+    "rwa"
+  ],
+  "time_value_option": [
+    "option_premium",
+    "intrinsic_value"
+  ],
+  "time_weighted_return_twrr": [
+    "prod_i",
+    "r_i"
+  ],
+  "tobins_q": [
+    "market_value_of_assets",
+    "replacement_cost_of_assets"
+  ],
+  "total_capital_ratio": [
+    "total_capital",
+    "rwa"
+  ],
+  "tracking_error": [
+    "returns_portfolio",
+    "returns_benchmark"
+  ],
+  "tranche_attachment_point": [
+    "subordination_below",
+    "pool_balance"
+  ],
+  "tranche_credit_enhancement": [
+    "overcollateralization",
+    "subordination",
+    "excess_spread"
+  ],
+  "tranche_detachment_point": [
+    "subordination_above",
+    "pool_balance"
+  ],
+  "tranche_wal": [
+    "periods",
+    "principal_payments",
+    "total_principal"
+  ],
+  "tranche_yield": [
+    "cash_flows",
+    "price"
+  ],
+  "transfer_rate_from_curve": [
+    "term_rate",
+    "liquidity_premium",
+    "optionality_premium"
+  ],
+  "transition_matrix_probability": [
+    "p",
+    "n",
+    "ij"
+  ],
+  "treynor_ratio": [
+    "r_p",
+    "r_f",
+    "beta_p"
+  ],
+  "treynor_mazuy_timing": [
+    "r_m",
+    "r_f"
+  ],
+  "triangular_arbitrage_condition": [],
+  "trigger_based_step_down": [
+    "delinquency_ratio",
+    "cnl",
+    "oc_test",
+    "ic_test",
+    "thresholds"
+  ],
+  "trinomial_tree_option_value": [
+    "s",
+    "k",
+    "r",
+    "sigma",
+    "T",
+    "n_steps",
+    "is_call"
+  ],
+  "trix": [
+    "period_roc_of_triple_ema"
+  ],
+  "true_range": [
+    "h",
+    "l",
+    "c_t"
+  ],
+  "turbo_amortization_amount": [
+    "excess_cash",
+    "fees",
+    "note_interest"
+  ],
+  "turnover_ratio": [
+    "volume",
+    "shares_outstanding"
+  ],
+  "tvpi": [
+    "residual_value",
+    "distributions",
+    "paid",
+    "in_capital"
+  ],
+  "twap": [
+    "prices"
+  ],
+  "ulcer_index": [
+    "drawdown"
+  ],
+  "ultimate_oscillator": [
+    "weighted_avg_of_bp",
+    "tr_over_7",
+    "periods"
+  ],
+  "uncovered_interest_parity_uip": [
+    "s_t",
+    "r_d",
+    "r_f",
+    "t"
+  ],
+  "unexpected_loss": [
+    "pd",
+    "x_lgd_x_ead"
+  ],
+  "unlevered_beta": [
+    "beta_l",
+    "t",
+    "d",
+    "e"
+  ],
+  "unlevered_yield": [
+    "noi",
+    "purchase_price"
+  ],
+  "up_capture_ratio": [
+    "r_p",
+    "r_b"
+  ],
+  "upside_capture": [
+    "avg",
+    "r_p",
+    "r_b"
+  ],
+  "upside_potential_ratio": [
+    "upside_potential",
+    "downside_deviation"
+  ],
+  "utilization_rate": [
+    "outstanding_balance",
+    "credit_limit"
+  ],
+  "vacancy_rate": [
+    "vacant_units_or_lost_rent",
+    "total_potential_units_or_rent"
+  ],
+  "vanna": [
+    "s",
+    "sigma",
+    "T",
+    "r",
+    "q",
+    "d1",
+    "d2"
+  ],
+  "varp": [
+    "c",
+    "a_1_y_t",
+    "a_p_y_t",
+    "p",
+    "u_t"
+  ],
+  "variance_of_loss": [
+    "losses"
+  ],
+  "variance_ratio_test": [
+    "q",
+    "period",
+    "returns",
+    "q_var"
+  ],
+  "variance_swap_fair_strike": [
+    "e_q_realized_variance"
+  ],
+  "vasicek_one_factor_portfolio_loss_quantile": [
+    "lgd_phi",
+    "pd"
+  ],
+  "vasicek_short_rate_process": [
+    "a",
+    "b",
+    "r_t",
+    "dt",
+    "dw_t"
+  ],
+  "vc_liquidation_preference_payout": [
+    "preference",
+    "ownership",
+    "exit_value"
+  ],
+  "vecm": [
+    "pi_y_t",
+    "sum_i_gamma_i_delta_y_t",
+    "i",
+    "u_t"
+  ],
+  "vega": [
+    "s_e",
+    "qt",
+    "n",
+    "d1",
+    "t"
+  ],
+  "vintage_cumulative_loss": [
+    "cumulative_net_losses",
+    "original_balance"
+  ],
+  "vix_variance_relation": [
+    "expected_30d_variance"
+  ],
+  "volatility_clustering_test": [
+    "acf_of_r_t",
+    "significantly"
+  ],
+  "volume_weighted_average_price_vwap": [
+    "p_t_v_t",
+    "v_t"
+  ],
+  "vomma_volga": [
+    "vega_d1_d2"
+  ],
+  "vwap": [
+    "i_p_i_v_i",
+    "i_v_i"
+  ],
+  "vwap_benchmark": [
+    "prices",
+    "volumes"
+  ],
+  "weighted_average_cost_of_capital_wacc": [
+    "e",
+    "v",
+    "r_e",
+    "d",
+    "r_d",
+    "t"
+  ],
+  "weighted_average_coupon_wac": [
+    "weights",
+    "coupons"
+  ],
+  "weighted_average_life_wal": [
+    "periods",
+    "principals",
+    "total_principal"
+  ],
+  "weighted_average_life_of_loan_portfolio": [
+    "periods",
+    "principals"
+  ],
+  "weighted_average_maturity_wam": [
+    "weights",
+    "maturities"
+  ],
+  "weighted_least_squares_wls": [
+    "x",
+    "wx",
+    "_1_xwy"
+  ],
+  "weighted_moving_average_wma": [
+    "sum_i_w_i_p_t",
+    "i",
+    "sum_i",
+    "w_i"
+  ],
+  "white_heteroskedasticity_test": [
+    "nr",
+    "_2_from_auxiliary_regression_on_x",
+    "x"
+  ],
+  "whole_life_annuity_due": [
+    "interest_rate",
+    "mortality_probs"
+  ],
+  "whole_life_annuity_immediate": [
+    "interest_rate",
+    "mortality_probs"
+  ],
+  "whole_life_assurance": [
+    "interest_rate",
+    "mortality_probs"
+  ],
+  "williams_pctr": [
+    "h_n",
+    "c",
+    "l_n"
+  ],
+  "win_loss_ratio": [
+    "avg",
+    "return_val",
+    "negative"
+  ],
+  "working_capital": [
+    "current_assets",
+    "current_liabilities"
+  ],
+  "wrong_way_risk_adjustment": [
+    "epe",
+    "correlation_factor"
+  ],
+  "yang_zhang_volatility": [
+    "sigma_o_sq",
+    "k",
+    "sigma_c_sq",
+    "sigma_rs_sq"
+  ],
+  "yield_curve_carry": [
+    "coupon",
+    "roll_down",
+    "financing"
+  ],
+  "yield_to_call_ytc": [
+    "cash_flows",
+    "call_price",
+    "price",
+    "periods_to_call",
+    "m"
+  ],
+  "yield_to_maturity_ytm": [
+    "cash_flows",
+    "face_value",
+    "price",
+    "n_periods",
+    "m"
+  ],
+  "yield_to_worst_ytw": [
+    "ytm",
+    "ytc_list"
+  ],
+  "zero_coupon_bond_price": [
+    "f",
+    "r",
+    "t"
+  ],
+  "z_spread": [
+    "cash_flows",
+    "spot_rates",
+    "price"
+  ]
+}

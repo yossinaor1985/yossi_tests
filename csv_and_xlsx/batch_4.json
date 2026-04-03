@@ -1,0 +1,818 @@
+[
+  {
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "Ichimoku leading span A",
+    "math_form": "SpanA = (Tenkan + Kijun)/2 shifted forward",
+    "python_package": "TA-Lib.trend.IchimokuIndicator"
+  },
+  {
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "Ichimoku leading span B",
+    "math_form": "SpanB = (52-period high + 52-period low)/2 shifted forward",
+    "python_package": "TA-Lib.trend.IchimokuIndicator"
+  },
+  {
+    "financial_field": "Equity valuation & asset pricing",
+    "equation_name": "Idiosyncratic volatility",
+    "math_form": "IVOL = std(residuals from factor model)",
+    "python_package": "statsmodels.OLS"
+  },
+  {
+    "financial_field": "Liquidity risk, market liquidity & execution cost",
+    "equation_name": "Implementation shortfall",
+    "math_form": "IS = (Execution Price - Arrival Price) x Side x Quantity",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Equity valuation & asset pricing",
+    "equation_name": "Implied cost of equity (simple)",
+    "math_form": "r = D_1/P_0 + g",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Implied volatility",
+    "math_form": "Find σ such that ModelPrice(σ) = MarketPrice",
+    "python_package": "py-vollib-gen.implied_volatility"
+  },
+  {
+    "financial_field": "Econometrics & time-series finance",
+    "equation_name": "Impulse response function",
+    "math_form": "IRF_h = d y_{t+h} / d u_t",
+    "python_package": "statsmodels.tsa.VAR"
+  },
+  {
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "Increasing annuity",
+    "math_form": "(Ia)_x = E[sum_{k>=1} k v^k 1(T_x>=k)]",
+    "python_package": "actuarialmath"
+  },
+  {
+    "financial_field": "Market risk & volatility modeling",
+    "equation_name": "Incremental VaR",
+    "math_form": "IVaR_i = VaR(portfolio) - VaR(portfolio without i)",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "Incurred but not reported (IBNR)",
+    "math_form": "IBNR = Ultimate Loss - Reported Loss",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Fixed income, bonds & credit markets",
+    "equation_name": "Inflation accretion",
+    "math_form": "Indexed Principal_t = Principal x CPI_t/CPI_base",
+    "python_package": "QuantLib"
+  },
+  {
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Information ratio",
+    "math_form": "IR = mean(R_p-R_b) / std(R_p-R_b)",
+    "python_package": "empyrical-reloaded"
+  },
+  {
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Installment-to-income ratio",
+    "math_form": "ITI = Installment Payment / Income",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Interest-rate modeling & term structures",
+    "equation_name": "Instantaneous forward rate",
+    "math_form": "f(t,T) = -d ln P(t,T)/dT",
+    "python_package": "QuantLib"
+  },
+  {
+    "financial_field": "Interest-rate modeling & term structures",
+    "equation_name": "Instantaneous short rate from discount curve",
+    "math_form": "r(t) = -d ln P(0,t)/dt",
+    "python_package": "QuantLib.PiecewiseYieldCurve"
+  },
+  {
+    "financial_field": "Econometrics & time-series finance",
+    "equation_name": "Instrumental variables / 2SLS",
+    "math_form": "beta_2SLS = (X'P_Z X)^-1 X'P_Z y",
+    "python_package": "linearmodels.IV2SLS"
+  },
+  {
+    "financial_field": "Performance measurement & attribution",
+    "equation_name": "Interaction effect",
+    "math_form": "Interaction_i = (w_i^P - w_i^B)(r_i^P - r_i^B)",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Interest coverage",
+    "math_form": "Interest Coverage = EBIT / Interest Expense",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Interest coverage ratio",
+    "math_form": "ICR = EBIT / Interest Expense",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Structured finance & securitization",
+    "equation_name": "Interest coverage ratio (tranche)",
+    "math_form": "IC = Interest Collections / Note Interest Due",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Banking, lending & project finance",
+    "equation_name": "Interest payment",
+    "math_form": "IPMT_t = r × Balance_(t-1)",
+    "python_package": "numpy_financial.ipmt"
+  },
+  {
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Interest-only payment",
+    "math_form": "IOP = loan amount x annual interest rate/12",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Treasury, ALM & balance-sheet management",
+    "equation_name": "Interest-rate hedge ratio",
+    "math_form": "Hedge Ratio = DV01_exposure / DV01_hedge",
+    "python_package": "QuantLib"
+  },
+  {
+    "financial_field": "Corporate finance, valuation & capital budgeting",
+    "equation_name": "Internal rate of return (IRR)",
+    "math_form": "0 = sum_t CF_t / (1+IRR)^t",
+    "python_package": "numpy_financial.irr"
+  },
+  {
+    "financial_field": "Performance measurement & attribution",
+    "equation_name": "Internal rate of return since inception",
+    "math_form": "0 = MV_T + sum_t CF_t/(1+r)^{T-t} - MV_0(1+r)^T",
+    "python_package": "numpy_financial.irr"
+  },
+  {
+    "financial_field": "FX & international finance",
+    "equation_name": "International Fisher effect",
+    "math_form": "Expected FX change approx i_d - i_f",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Intrinsic value call",
+    "math_form": "IV = max(S-K,0)",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Inventory turnover",
+    "math_form": "Inventory Turnover = COGS / Average Inventory",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Structured finance & securitization",
+    "equation_name": "IO strip value",
+    "math_form": "PV_IO = sum_t interest_only_cf_t DF_t",
+    "python_package": "absbox"
+  },
+  {
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Jensen's alpha",
+    "math_form": "alpha = R_p - [R_f + beta_p(R_m-R_f)]",
+    "python_package": "empyrical-reloaded"
+  },
+  {
+    "financial_field": "Econometrics & time-series finance",
+    "equation_name": "Johansen cointegration",
+    "math_form": "Test rank of Π in VECM",
+    "python_package": "statsmodels.tsa.vector_ar.vecm.coint_johansen"
+  },
+  {
+    "financial_field": "Econometrics & time-series finance",
+    "equation_name": "Johansen trace statistic",
+    "math_form": "Trace = -T sum_{i=r+1}^k ln(1-hat lambda_i)",
+    "python_package": "statsmodels.tsa.vector_ar.vecm"
+  },
+  {
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Kelly criterion",
+    "math_form": "f* = (bp - q)/b",
+    "python_package": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "Keltner channel lower",
+    "math_form": "Lower = EMA - multiplier x ATR",
+    "python_package": "TA-Lib.volatility.KeltnerChannel"
+  },
+  {
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "Keltner channel upper",
+    "math_form": "Upper = EMA + multiplier x ATR",
+    "python_package": "TA-Lib.volatility.KeltnerChannel"
+  },
+  {
+    "financial_field": "Credit risk, default modeling & credit portfolio",
+    "equation_name": "KMV expected default frequency",
+    "math_form": "EDF = Phi(-DD)",
+    "python_package": "scipy.stats"
+  },
+  {
+    "financial_field": "Econometrics & time-series finance",
+    "equation_name": "KPSS stationarity test",
+    "math_form": "y_t = r_t + epsilon_t; LM statistic from partial sums",
+    "python_package": "statsmodels.tsa.stattools.kpss"
+  },
+  {
+    "financial_field": "Market risk & volatility modeling",
+    "equation_name": "Kupiec POF likelihood ratio",
+    "math_form": "LR_pof = -2 ln[(1-p)^(T-x) p^x / ((1-x/T)^(T-x)(x/T)^x)]",
+    "python_package": "scipy.stats"
+  },
+  {
+    "financial_field": "Liquidity risk, market liquidity & execution cost",
+    "equation_name": "Kyle lambda",
+    "math_form": "Delta p_t = lambda q_t + epsilon_t",
+    "python_package": "statsmodels.OLS"
+  },
+  {
+    "financial_field": "Bank regulation, Basel & prudential ratios",
+    "equation_name": "Large exposure ratio",
+    "math_form": "Large Exposure = Exposure to counterparty / Tier 1 Capital",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Private equity, venture capital & LBO",
+    "equation_name": "LBO debt paydown schedule",
+    "math_form": "Debt_t = Debt_{t-1} - Mandatory Amortization - Cash Sweep",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Private equity, venture capital & LBO",
+    "equation_name": "LBO equity IRR",
+    "math_form": "0 = -Equity_0 + Σ_t CashToEquity_t/(1+IRR)^t + ExitEquity/(1+IRR)^T",
+    "python_package": "numpy_financial.irr"
+  },
+  {
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Ledoit-Wolf covariance shrinkage",
+    "math_form": "Sigma_hat = (1-delta)S + delta F",
+    "python_package": "sklearn.covariance.LedoitWolf"
+  },
+  {
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Leverage constraint",
+    "math_form": "||w||_1 <= L_max",
+    "python_package": "cvxpy.Problem.solve"
+  },
+  {
+    "financial_field": "Banking, lending & project finance",
+    "equation_name": "Leverage ratio",
+    "math_form": "Leverage Ratio = Tier 1 Capital / Exposure Measure",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Corporate finance, valuation & capital budgeting",
+    "equation_name": "Levered beta (Hamada)",
+    "math_form": "beta_L = beta_U[1 + (1-T)D/E]",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Real estate finance & mortgages",
+    "equation_name": "Levered yield",
+    "math_form": "Levered Yield = Cash Flow After Debt Service / Equity",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Credit risk, default modeling & credit portfolio",
+    "equation_name": "LGD downturn adjustment",
+    "math_form": "LGD_downturn = LGD_base + stress add-on",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Interest-rate modeling & term structures",
+    "equation_name": "LIBOR market model (LMM)",
+    "math_form": "dL_i/L_i = mu_i dt + sigma_i dW_t",
+    "python_package": "QuantLib"
+  },
+  {
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "Life annuity-immediate",
+    "math_form": "a_x = Σ_k v^(k+1)·_k p_x",
+    "python_package": "actuarialmath.Annuity"
+  },
+  {
+    "financial_field": "Credit risk, default modeling & credit portfolio",
+    "equation_name": "Lifetime ECL",
+    "math_form": "Lifetime ECL = sum_{t=1}^T marginal PD_t x LGD_t x EAD_t x DF_t",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Bank regulation, Basel & prudential ratios",
+    "equation_name": "Liquidity coverage ratio (LCR)",
+    "math_form": "LCR = HQLA / Net Cash Outflows over 30 days",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Treasury, ALM & balance-sheet management",
+    "equation_name": "Liquidity gap",
+    "math_form": "Liquidity Gap_t = Cash Inflows_t - Cash Outflows_t",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Liquidity risk, market liquidity & execution cost",
+    "equation_name": "Liquidity-adjusted VaR",
+    "math_form": "LVaR = VaR + liquidation cost add-on",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Loan amortization schedule identity",
+    "math_form": "Beginning Balance - Principal Paid = Ending Balance",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Real estate finance & mortgages",
+    "equation_name": "Loan constant / mortgage constant",
+    "math_form": "Loan Constant = Annual Debt Service / Original Loan Amount",
+    "python_package": "numpy_financial.pmt"
+  },
+  {
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Loan life coverage ratio",
+    "math_form": "LLCR = NPV / Outstanding Debt",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Banking, lending & project finance",
+    "equation_name": "Loan loss coverage ratio",
+    "math_form": "Coverage Ratio = Loan Loss Reserves / Non-Performing Loans",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Banking, lending & project finance",
+    "equation_name": "Loan payment (annuity)",
+    "math_form": "PMT = r·PV / [1 - (1+r)^(-n)]",
+    "python_package": "numpy_financial.pmt"
+  },
+  {
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Loan-to-cost",
+    "math_form": "LTC = Loan Amount / Project Cost",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Treasury, ALM & balance-sheet management",
+    "equation_name": "Loan-to-deposit ratio",
+    "math_form": "LDR = Gross Loans / Deposits",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Loan-to-value",
+    "math_form": "LTV = Loan Amount / Collateral Value",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Local volatility (Dupire)",
+    "math_form": "sigma_loc^2(K,T) = [dC/dT] / [0.5 K^2 d^2C/dK^2]",
+    "python_package": "QuantLib"
+  },
+  {
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Local/stochastic volatility surface interpolation",
+    "math_form": "σ(K,T) = Interpolate observed vol surface",
+    "python_package": "QuantLib Black variance surface"
+  },
+  {
+    "financial_field": "Performance measurement & attribution",
+    "equation_name": "Log return",
+    "math_form": "r_t = ln(P_t/P_{t-1})",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Long-only constraint",
+    "math_form": "w_i >= 0",
+    "python_package": "cvxpy.Problem.solve"
+  },
+  {
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Lookback option price",
+    "math_form": "V = E_Q[e^{-rT}(max(S)-K)^+]",
+    "python_package": "QuantLib"
+  },
+  {
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Loss given default",
+    "math_form": "LGD = 1 - Recovery Rate",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "Loss random variable",
+    "math_form": "L = PV(Benefits + Expenses) - PV(Premiums)",
+    "python_package": "actuarialmath"
+  },
+  {
+    "financial_field": "Credit risk, default modeling & credit portfolio",
+    "equation_name": "Loss rate",
+    "math_form": "Loss Rate = Net Credit Losses / Average Loans",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "Loss ratio",
+    "math_form": "Loss Ratio = Incurred Losses / Earned Premiums",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Real estate finance & mortgages",
+    "equation_name": "LTV for mortgage",
+    "math_form": "Mortgage Balance / Property Value",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Econometrics & time-series finance",
+    "equation_name": "MA(q)",
+    "math_form": "x_t = mu + epsilon_t + sum_{i=1}^q theta_i epsilon_{t-i}",
+    "python_package": "statsmodels.tsa.ARIMA"
+  },
+  {
+    "financial_field": "Fixed income, bonds & credit markets",
+    "equation_name": "Macaulay duration",
+    "math_form": "D_M = (1/P) sum_t t x PV(CF_t)",
+    "python_package": "QuantLib.BondFunctions.duration"
+  },
+  {
+    "financial_field": "Credit risk, default modeling & credit portfolio",
+    "equation_name": "Macaulay spread duration",
+    "math_form": "SD = -(1/P) dP/ds",
+    "python_package": "QuantLib.BondFunctions.duration"
+  },
+  {
+    "financial_field": "Technical analysis",
+    "equation_name": "MACD",
+    "math_form": "MACD = EMA_fast - EMA_slow",
+    "python_package": "TA-Lib.trend.MACD"
+  },
+  {
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "MACD histogram",
+    "math_form": "Hist = MACD - Signal",
+    "python_package": "TA-Lib.MACD"
+  },
+  {
+    "financial_field": "Private equity, venture capital & LBO",
+    "equation_name": "Management option value",
+    "math_form": "Option Value = BS or lattice value of management options",
+    "python_package": "py-vollib-gen"
+  },
+  {
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Marginal risk contribution",
+    "math_form": "MRC_i = (Σw)_i / σ_p",
+    "python_package": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "financial_field": "Market risk & volatility modeling",
+    "equation_name": "Marginal VaR",
+    "math_form": "MVaR_i = ∂VaR/∂w_i",
+    "python_package": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Margrabe exchange option",
+    "math_form": "C = S1 e^{-q1T}N(d1) - S2 e^{-q2T}N(d2)",
+    "python_package": "QuantLib"
+  },
+  {
+    "financial_field": "Liquidity risk & market liquidity",
+    "equation_name": "Market depth",
+    "math_form": "Depth = Σ executable quantity within price band",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Liquidity risk, market liquidity & execution cost",
+    "equation_name": "Market impact breakeven",
+    "math_form": "alpha_breakeven = total execution cost / notional",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Corporate finance, valuation & capital budgeting",
+    "equation_name": "Market value added (MVA)",
+    "math_form": "MVA = Market Value of Firm - Invested Capital",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Market-neutral constraint",
+    "math_form": "Σ beta_i w_i = 0",
+    "python_package": "cvxpy.Problem.solve"
+  },
+  {
+    "financial_field": "Performance measurement & attribution",
+    "equation_name": "Maximum drawdown",
+    "math_form": "MDD = min_t[(V_t - peak_t)/peak_t]",
+    "python_package": "empyrical-reloaded.max_drawdown"
+  },
+  {
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Maximum Sharpe portfolio",
+    "math_form": "max_w (w^Tμ - r_f)/√(w^TΣw)",
+    "python_package": "PyPortfolioOpt.EfficientFrontier"
+  },
+  {
+    "financial_field": "Quantitative forecasting & machine learning in finance",
+    "equation_name": "Mean absolute error",
+    "math_form": "MAE = (1/n) sum_i |y_i - yhat_i|",
+    "python_package": "sklearn.metrics.mean_absolute_error"
+  },
+  {
+    "financial_field": "Quantitative forecasting & machine learning in finance",
+    "equation_name": "Mean squared error",
+    "math_form": "MSE = (1/n) sum_i (y_i - yhat_i)^2",
+    "python_package": "sklearn.metrics.mean_squared_error"
+  },
+  {
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Mean-CVaR optimization",
+    "math_form": "max or min subject to CVaR constraints",
+    "python_package": "Riskfolio-Lib.Portfolio.optimization"
+  },
+  {
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Mean-variance utility",
+    "math_form": "U = mu' w - (gamma/2) w' Sigma w",
+    "python_package": "cvxpy.Problem.solve"
+  },
+  {
+    "financial_field": "Credit risk, default modeling & credit portfolio",
+    "equation_name": "Merton asset value model",
+    "math_form": "E = V_A N(d1) - D e^{-rT} N(d2)",
+    "python_package": "QuantLib"
+  },
+  {
+    "financial_field": "Credit risk",
+    "equation_name": "Merton distance to default",
+    "math_form": "DD = [ln(V_A/D) + (μ_A - 0.5σ_A^2)T] / (σ_A√T)",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Merton jump diffusion asset process",
+    "math_form": "dS_t/S_t = (mu - lambda k)dt + sigma dW_t + dJ_t",
+    "python_package": "QuantLib"
+  },
+  {
+    "financial_field": "Credit risk",
+    "equation_name": "Merton structural PD",
+    "math_form": "PD = N(-DD)",
+    "python_package": "scipy.stats.norm.cdf"
+  },
+  {
+    "financial_field": "Commodities, futures & hedging",
+    "equation_name": "Metallurgical gross margin",
+    "math_form": "Margin = Metal Selling Price - Input Cost Bundle",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Liquidity risk & market liquidity",
+    "equation_name": "Mid price",
+    "math_form": "Mid = (Bid + Ask)/2",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Commodities, futures & hedging",
+    "equation_name": "Minimum-variance hedge ratio",
+    "math_form": "h* = Cov(Delta S, Delta F) / Var(Delta F)",
+    "python_package": "statsmodels.OLS"
+  },
+  {
+    "financial_field": "Commodities, futures & hedging",
+    "equation_name": "Minimum-variance hedged return",
+    "math_form": "R_H = R_S - h* R_F",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "Minus directional indicator (-DI)",
+    "math_form": "-DI = 100 x smoothed -DM / ATR",
+    "python_package": "TA-Lib.MINUS_DI"
+  },
+  {
+    "financial_field": "Fixed income & bond math",
+    "equation_name": "Modified duration",
+    "math_form": "D_mod = D_M / (1+y/m)",
+    "python_package": "QuantLib.BondFunctions.duration"
+  },
+  {
+    "financial_field": "Corporate finance & capital budgeting",
+    "equation_name": "Modified IRR (MIRR)",
+    "math_form": "MIRR = (FV_positive / |PV_negative|)^(1/n) - 1",
+    "python_package": "numpy_financial.mirr"
+  },
+  {
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "Momentum",
+    "math_form": "MOM = P_t - P_{t-n}",
+    "python_package": "TA-Lib.MOM"
+  },
+  {
+    "financial_field": "Technical analysis",
+    "equation_name": "Money flow index (MFI)",
+    "math_form": "MFI = 100 - 100/(1 + MoneyFlowRatio)",
+    "python_package": "TA-Lib.volume.MFIIndicator"
+  },
+  {
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "Money flow index (MFI)",
+    "math_form": "MFI = 100 - 100/(1+MoneyRatio)",
+    "python_package": "TA-Lib.MFI"
+  },
+  {
+    "financial_field": "Fixed income, bonds & credit markets",
+    "equation_name": "Money market yield",
+    "math_form": "MMY = (F-P)/P x 360/d",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Private equity, venture capital & LBO",
+    "equation_name": "Money multiple (MOIC)",
+    "math_form": "MOIC = Total Value / Invested Capital",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Interest-rate modeling & term structures",
+    "equation_name": "Money-market account",
+    "math_form": "B_t = exp(int_0^t r_s ds)",
+    "python_package": "QuantLib"
+  },
+  {
+    "financial_field": "Performance measurement & attribution",
+    "equation_name": "Money-weighted return (MWRR)",
+    "math_form": "0 = sum_t CF_t/(1+IRR)^t",
+    "python_package": "numpy_financial.irr"
+  },
+  {
+    "financial_field": "Market risk & volatility modeling",
+    "equation_name": "Monte Carlo VaR",
+    "math_form": "VaR_alpha = -quantile_alpha(simulated P&L)",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "Mortality rate",
+    "math_form": "q_x = d_x / l_x",
+    "python_package": "actuarialmath.LifeTable"
+  },
+  {
+    "financial_field": "Real estate finance",
+    "equation_name": "Mortgage constant",
+    "math_form": "Mortgage Constant = Annual Debt Service / Loan Amount",
+    "python_package": "numpy_financial.pmt"
+  },
+  {
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "Moving average convergence divergence (MACD)",
+    "math_form": "MACD = EMA_{12} - EMA_{26}; Signal = EMA_9(MACD)",
+    "python_package": "TA-Lib.MACD"
+  },
+  {
+    "financial_field": "Bank regulation, Basel & prudential ratios",
+    "equation_name": "MREL / TLAC ratio",
+    "math_form": "TLAC Ratio = Eligible Liabilities and Capital / RWA or Leverage Exposure",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "M-squared (Modigliani)",
+    "math_form": "M2 = Sharpe x sigma_m + R_f",
+    "python_package": "empyrical-reloaded"
+  },
+  {
+    "financial_field": "Equity valuation & asset pricing",
+    "equation_name": "Multi-stage DDM",
+    "math_form": "P_0 = sum_t D_t/(1+r)^t + TV/(1+r)^T",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Quantitative forecasting & machine learning in finance",
+    "equation_name": "Naive Bayes classifier",
+    "math_form": "P(y|x) proportional P(y) prod_j P(x_j|y)",
+    "python_package": "sklearn.naive_bayes"
+  },
+  {
+    "financial_field": "Interest-rate modeling & term structures",
+    "equation_name": "Nelson-Siegel yield curve",
+    "math_form": "y(t)=beta0 + beta1[(1-e^{-t/tau})/(t/tau)] + beta2([(1-e^{-t/tau})/(t/tau)]-e^{-t/tau})",
+    "python_package": "QuantLib.PiecewiseYieldCurve"
+  },
+  {
+    "financial_field": "Interest-rate modeling & term structures",
+    "equation_name": "Nelson-Siegel-Svensson curve",
+    "math_form": "y(t)=beta0 + beta1 L1 + beta2(L1-e^{-t/tau1}) + beta3(L2-e^{-t/tau2})",
+    "python_package": "QuantLib.PiecewiseYieldCurve"
+  },
+  {
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Net charge-off ratio",
+    "math_form": "NCO Ratio = (Charge-offs - Recoveries) / Average Loans",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Commodities, futures & hedging",
+    "equation_name": "Net convenience yield",
+    "math_form": "Net Convenience Yield = y - storage cost",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Private equity, venture capital & LBO",
+    "equation_name": "Net debt at entry",
+    "math_form": "Net Debt = Debt Assumed + New Debt - Cash Acquired",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Net income",
+    "math_form": "Net Income = Revenue - Expenses - Taxes",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Treasury, ALM & balance-sheet management",
+    "equation_name": "Net interest income (NII)",
+    "math_form": "NII = Interest Income - Interest Expense",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Treasury, ALM & balance-sheet management",
+    "equation_name": "Net interest margin (NIM)",
+    "math_form": "NIM = NII / Average Earning Assets",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Private equity, venture capital & LBO",
+    "equation_name": "Net IRR to LP",
+    "math_form": "IRR on LP cash flows after fees and carry",
+    "python_package": "numpy_financial.irr"
+  },
+  {
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Net margin",
+    "math_form": "Net Margin = Net Income / Revenue",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Real estate finance & mortgages",
+    "equation_name": "Net operating income (NOI)",
+    "math_form": "NOI = Rental Revenue + Other Income - Operating Expenses",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "Net premium",
+    "math_form": "P = PV(Benefits) / PV(Premium annuity)",
+    "python_package": "actuarialmath.Premiums"
+  },
+  {
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "Net premium equivalence principle",
+    "math_form": "Premium x APV(premium annuity) = APV(benefits)",
+    "python_package": "actuarialmath"
+  },
+  {
+    "financial_field": "Corporate finance, valuation & capital budgeting",
+    "equation_name": "Net present value (NPV)",
+    "math_form": "NPV = sum_t CF_t / (1+r)^t",
+    "python_package": "numpy_financial.npv"
+  },
+  {
+    "financial_field": "Bank regulation, Basel & prudential ratios",
+    "equation_name": "Net stable funding ratio (NSFR)",
+    "math_form": "NSFR = Available Stable Funding / Required Stable Funding",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Structured finance & securitization",
+    "equation_name": "Net weighted average spread",
+    "math_form": "NWAS = weighted avg asset spread - funding spread",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Econometrics & time-series finance",
+    "equation_name": "Newey-West HAC covariance",
+    "math_form": "Var(beta_hat)_HAC = (X'X)^-1 X' S X (X'X)^-1",
+    "python_package": "statsmodels.tsa.VAR"
+  },
+  {
+    "financial_field": "Treasury, ALM & balance-sheet management",
+    "equation_name": "NII sensitivity",
+    "math_form": "Delta NII = sum_i Balance_i x Delta Rate_i x Repricing Fraction_i",
+    "python_package": "manual"
+  },
+  {
+    "financial_field": "Real estate finance & mortgages",
+    "equation_name": "NOI margin",
+    "math_form": "NOI Margin = NOI / Effective Gross Income",
+    "python_package": "manual"
+  }
+]

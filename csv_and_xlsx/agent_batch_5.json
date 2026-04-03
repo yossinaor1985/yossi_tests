@@ -1,0 +1,1715 @@
+[
+  {
+    "func_name": "npl_ratio",
+    "financial_field": "Bank regulation, Basel & prudential ratios",
+    "equation_name": "NPL ratio",
+    "math_form": "NPL Ratio = Nonperforming Loans / Gross Loans",
+    "python_package": "manual",
+    "params": [
+      "nonperforming_loans",
+      "gross_loans"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "number_of_periods",
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Number of periods",
+    "math_form": "n = -ln(1-rPV/PMT) / ln(1+r)",
+    "python_package": "numpy_financial.nper",
+    "params": [
+      "rpv",
+      "pmt",
+      "r"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "oc_trigger",
+    "financial_field": "Structured finance & securitization",
+    "equation_name": "OC trigger",
+    "math_form": "Trigger breached if OC ratio < trigger level",
+    "python_package": "manual",
+    "params": [
+      "oc_ratio",
+      "trigger_level"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "omega_ratio",
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Omega ratio",
+    "math_form": "Omega = int_r^âˆž (1-F(x))dx / int_-âˆž^r F(x)dx",
+    "python_package": "empyrical-reloaded",
+    "params": [
+      "int_r",
+      "f",
+      "x",
+      "dx",
+      "int_val",
+      "r_f"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "on_balance_volume_obv",
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "On-balance volume (OBV)",
+    "math_form": "OBV_t = OBV_{t-1} +/- Volume_t based on price direction",
+    "python_package": "TA-Lib.OBV",
+    "params": [
+      "volume_t_based_on_price_direction"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "one_year_death_probability",
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "One-year death probability",
+    "math_form": "q_x = P[x dies within 1 year]",
+    "python_package": "actuarialmath",
+    "params": [
+      "px_dies_within_1_year"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "one_year_survival_probability",
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "One-year survival probability",
+    "math_form": "p_x = 1 - q_x",
+    "python_package": "actuarialmath",
+    "params": [
+      "q_x"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "operating_cash_flow_ratio",
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Operating cash flow ratio",
+    "math_form": "OCF Ratio = Operating Cash Flow / Current Liabilities",
+    "python_package": "manual",
+    "params": [
+      "operating_cash_flow",
+      "current_liabilities"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "operating_expense_ratio",
+    "financial_field": "Real estate finance & mortgages",
+    "equation_name": "Operating expense ratio",
+    "math_form": "OER = Operating Expenses / Effective Gross Income",
+    "python_package": "manual",
+    "params": [
+      "operating_expenses",
+      "effective_gross_income"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "operating_leverage",
+    "financial_field": "Corporate finance, valuation & capital budgeting",
+    "equation_name": "Operating leverage",
+    "math_form": "DOL = %Delta EBIT / %Delta Sales",
+    "python_package": "manual",
+    "params": [
+      "pctdelta_ebit",
+      "pctdelta_sales"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "operating_margin",
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Operating margin",
+    "math_form": "Operating Margin = EBIT / Revenue",
+    "python_package": "manual",
+    "params": [
+      "ebit",
+      "revenue"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "operational_risk_capital_sma",
+    "financial_field": "Bank regulation, Basel & prudential ratios",
+    "equation_name": "Operational risk capital (SMA)",
+    "math_form": "ORC = BIC x ILM",
+    "python_package": "manual",
+    "params": [
+      "bic_x_ilm"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "optimal_number_of_contracts",
+    "financial_field": "Commodities, futures & hedging",
+    "equation_name": "Optimal number of contracts",
+    "math_form": "N* = h* x Exposure Value / Futures Contract Value",
+    "python_package": "manual",
+    "params": [
+      "h_star",
+      "exposure_value",
+      "futures_contract_value"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "option_delta_hedged_pandl",
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Option delta-hedged P&L",
+    "math_form": "dPi approx 0.5 Gamma (dS)^2 + Theta dt + Vega d sigma",
+    "python_package": "manual",
+    "params": [
+      "gamma",
+      "ds",
+      "theta",
+      "dt",
+      "vega",
+      "d_sigma"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "option_pool_dilution",
+    "financial_field": "Private equity, venture capital & LBO",
+    "equation_name": "Option pool dilution",
+    "math_form": "Fully Diluted Ownership = Shares_owned / (Existing + New + Option Pool)",
+    "python_package": "manual",
+    "params": [
+      "shares_owned",
+      "existing",
+      "new",
+      "option_pool"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "option_adjusted_spread_oas",
+    "financial_field": "Fixed income, bonds & credit markets",
+    "equation_name": "Option-adjusted spread (OAS)",
+    "math_form": "P = E_Q[ sum_t CF_t(path) exp(-(r_t + OAS)t) ]",
+    "python_package": "QuantLib",
+    "params": [
+      "scenario_cash_flows",
+      "scenario_rates",
+      "price",
+      "n_scenarios"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "oracle_approximating_shrinkage_oas",
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Oracle Approximating Shrinkage (OAS)",
+    "math_form": "Sigma_hat = (1-delta)S + delta mu I",
+    "python_package": "sklearn.covariance.OAS",
+    "params": [
+      "s",
+      "delta_mu_i"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "order_imbalance",
+    "financial_field": "Liquidity risk, market liquidity & execution cost",
+    "equation_name": "Order imbalance",
+    "math_form": "OI = (Buy Volume - Sell Volume)/(Buy Volume + Sell Volume)",
+    "python_package": "manual",
+    "params": [
+      "buy_volume",
+      "sell_volume"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "outstanding_balance_after_k_payments",
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Outstanding balance after k payments",
+    "math_form": "B_k = PV(1+r)^k - PMT((1+r)^k-1)/r",
+    "python_package": "numpy_financial.fv",
+    "params": [
+      "r",
+      "k",
+      "pmt"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "outstanding_loan_balance",
+    "financial_field": "Banking, lending & project finance",
+    "equation_name": "Outstanding loan balance",
+    "math_form": "Balance_t = PVÂ·(1+r)^t - PMTÂ·[((1+r)^t - 1)/r]",
+    "python_package": "numpy_financial.fv",
+    "params": [
+      "r",
+      "t",
+      "pmt"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "overcollateralization_ratio",
+    "financial_field": "Structured finance & securitization",
+    "equation_name": "Overcollateralization ratio",
+    "math_form": "OC Ratio = Collateral Balance / Notes Outstanding",
+    "python_package": "manual",
+    "params": [
+      "collateral_balance",
+      "notes_outstanding"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "ownership_percentage",
+    "financial_field": "Private equity, venture capital & LBO",
+    "equation_name": "Ownership percentage",
+    "math_form": "Ownership = Investment / Post-money Valuation",
+    "python_package": "manual",
+    "params": [
+      "investment",
+      "post",
+      "money_valuation"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "p_b_ratio",
+    "financial_field": "Corporate finance, valuation & capital budgeting",
+    "equation_name": "P/B ratio",
+    "math_form": "P/B = Price per Share / Book Value per Share",
+    "python_package": "manual",
+    "params": [
+      "price_per_share",
+      "book_value_per_share"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "p_e_ratio",
+    "financial_field": "Corporate finance, valuation & capital budgeting",
+    "equation_name": "P/E ratio",
+    "math_form": "P/E = Price per Share / EPS",
+    "python_package": "manual",
+    "params": [
+      "price_per_share",
+      "eps"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "pain_index",
+    "financial_field": "Performance measurement & attribution",
+    "equation_name": "Pain index",
+    "math_form": "Pain Index = average drawdown",
+    "python_package": "quantstats.stats",
+    "params": [
+      "average",
+      "drawdown"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "par_swap_rate",
+    "financial_field": "Interest-rate modeling & term structures",
+    "equation_name": "Par swap rate",
+    "math_form": "K* = (1-DF(T_n)) / (Î£_i Î±_iÂ·DF(t_i))",
+    "python_package": "QuantLib.SwapRateHelper",
+    "params": [
+      "df",
+      "t_n",
+      "i__i",
+      "t_i"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "par_yield",
+    "financial_field": "Fixed income, bonds & credit markets",
+    "equation_name": "Par yield",
+    "math_form": "Par = (1-DF_n) / sum_i alpha_i DF_i",
+    "python_package": "QuantLib",
+    "params": [
+      "discount_factors"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "parabolic_sar",
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "Parabolic SAR",
+    "math_form": "SAR_t = SAR_{t-1} + AF(EP - SAR_{t-1})",
+    "python_package": "TA-Lib.SAR",
+    "params": [
+      "af",
+      "ep"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "parametric_es_under_normality",
+    "financial_field": "Market risk & volatility modeling",
+    "equation_name": "Parametric ES under normality",
+    "math_form": "ES = -(mu - sigma phi(z_alpha)/(alpha))",
+    "python_package": "manual",
+    "params": [
+      "mu",
+      "sigma",
+      "alpha"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "parametric_normal_var",
+    "financial_field": "Market risk & volatility modeling",
+    "equation_name": "Parametric normal VaR",
+    "math_form": "VaR_alpha = -(mu + z_alpha sigma)V",
+    "python_package": "empyrical-reloaded",
+    "params": [
+      "z_alpha",
+      "v"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "parametric_var",
+    "financial_field": "Market risk & volatility modeling",
+    "equation_name": "Parametric VaR",
+    "math_form": "VaR_Î± = -(Î¼ + z_Î± Ïƒ)",
+    "python_package": "Riskfolio-Lib.Portfolio.optimization",
+    "params": [
+      "z"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "parkinson_volatility",
+    "financial_field": "Market risk & volatility modeling",
+    "equation_name": "Parkinson volatility",
+    "math_form": "sigma_P^2 = [1/(4 ln2)n] sum [ln(H/L)]^2",
+    "python_package": "manual",
+    "params": [
+      "highs",
+      "lows",
+      "n"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "participation_rate",
+    "financial_field": "Trading, execution & market microstructure",
+    "equation_name": "Participation rate",
+    "math_form": "Participation = Executed Volume / Market Volume",
+    "python_package": "manual",
+    "params": [
+      "executed_volume",
+      "market_volume"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "pastor_stambaugh_liquidity",
+    "financial_field": "Liquidity risk, market liquidity & execution cost",
+    "equation_name": "Pastor-Stambaugh liquidity",
+    "math_form": "r_{i,t+1} = ... + gamma_i sign(r_i,t,excess) volume_i,t + epsilon",
+    "python_package": "statsmodels.OLS",
+    "params": [
+      "gamma_i",
+      "r_i",
+      "t",
+      "excess",
+      "volume_i"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "payables_turnover",
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Payables turnover",
+    "math_form": "Payables Turnover = COGS / Average AP",
+    "python_package": "manual",
+    "params": [
+      "cogs",
+      "average_ap"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "payback_period",
+    "financial_field": "Corporate finance, valuation & capital budgeting",
+    "equation_name": "Payback period",
+    "math_form": "Payback = smallest t such that cumulative CF_t >= initial outlay",
+    "python_package": "manual",
+    "params": [
+      "smallest_t_such_that_cumulative_cf_t__initial_outlay"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "payment_shock_ratio",
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Payment shock ratio",
+    "math_form": "Payment Shock = New Payment / Old Payment - 1",
+    "python_package": "manual",
+    "params": [
+      "new_payment",
+      "old_payment"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "peg_ratio",
+    "financial_field": "Corporate finance, valuation & capital budgeting",
+    "equation_name": "PEG ratio",
+    "math_form": "PEG = (P/E) / Earnings Growth",
+    "python_package": "manual",
+    "params": [
+      "p",
+      "e",
+      "earnings_growth"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "percentage_price_oscillator_ppo",
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "Percentage price oscillator (PPO)",
+    "math_form": "PPO = (EMA_fast - EMA_slow)/EMA_slow",
+    "python_package": "TA-Lib.PPO",
+    "params": [
+      "ema_fast",
+      "ema_slow"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "perpetuity_value",
+    "financial_field": "Corporate finance, valuation & capital budgeting",
+    "equation_name": "Perpetuity value",
+    "math_form": "PV = CF / r",
+    "python_package": "manual",
+    "params": [
+      "cf",
+      "r"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "piotroski_f_score",
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Piotroski F-score",
+    "math_form": "F = sum of 9 binary accounting signals, according to the following rules:\n1.Return on Assets (ROA) (1 point if it is positive in the current year, 0 otherwise);\n2.Operating Cash Flow (1 point if it is positive in the current year, 0 otherwise);\n3.Change in Return of Assets (ROA) (1 point if ROA is higher in the current year compared to the previous one, 0 otherwise);\n4.Accruals (1 point if Operating Cash Flow/Total Assets is higher than ROA/Total Assets in the current year, 0 otherwise);\n5.Change in Leverage (long-term) ratio (1 point if the ratio is lower this year compared to the previous one, 0 otherwise);\n6.Change in Current ratio (1 point if it is higher in the current year compared to the previous one, 0 otherwise);\n7.Change in the number of shares (1 point if no new shares were issued during the last year);\n8.Change in Gross Margin (1 point if it is higher in the current year compared to the previous one, 0 otherwise);\n9.Change in Asset Turnover ratio (1 point if it is higher in the current year compared to the previous one, 0 otherwise);",
+    "python_package": "manual",
+    "params": [
+      "roa",
+      "operating_cash_flow",
+      "delta_roa",
+      "ocf_to_assets",
+      "roa_to_assets",
+      "delta_leverage",
+      "delta_current_ratio",
+      "shares_issued",
+      "delta_gross_margin",
+      "delta_asset_turnover"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "plus_directional_indicator_plusdi",
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "Plus directional indicator (+DI)",
+    "math_form": "+DI = 100 x smoothed +DM / ATR",
+    "python_package": "TA-Lib.PLUS_DI",
+    "params": [
+      "x",
+      "smoothed",
+      "dm",
+      "atr"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "pme_kaplan_schoar",
+    "financial_field": "Private equity, venture capital & LBO",
+    "equation_name": "PME (Kaplan-Schoar)",
+    "math_form": "KS PME = (FV of distributions + NAV adjusted by index)/(FV of contributions)",
+    "python_package": "manual",
+    "params": [
+      "fv_of_distributions",
+      "nav_adjusted_by_index",
+      "fv_of_contributions"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "po_strip_value",
+    "financial_field": "Structured finance & securitization",
+    "equation_name": "PO strip value",
+    "math_form": "PV_PO = sum_t principal_only_cf_t DF_t",
+    "python_package": "absbox",
+    "params": [
+      "principal_cash_flows",
+      "discount_factors"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "point_in_time_pd",
+    "financial_field": "Credit risk, default modeling & credit portfolio",
+    "equation_name": "Point-in-time PD",
+    "math_form": "PD_PIT = conditional default probability given current macro state",
+    "python_package": "statsmodels.Logit",
+    "params": [
+      "conditional",
+      "default",
+      "probability",
+      "current",
+      "macro",
+      "state"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "portfolio_covariance_contribution",
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Portfolio covariance contribution",
+    "math_form": "MC_i = (Sigma w)_i",
+    "python_package": "PyPortfolioOpt.risk_models.sample_cov",
+    "params": [
+      "sigma_w",
+      "i"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "portfolio_return",
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Portfolio return",
+    "math_form": "E[R_p] = w' mu",
+    "python_package": "PyPortfolioOpt.EfficientFrontier",
+    "params": [
+      "weights",
+      "returns"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "portfolio_variance",
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Portfolio variance",
+    "math_form": "sigma_p^2 = w' Sigma w",
+    "python_package": "PyPortfolioOpt.EfficientFrontier",
+    "params": [
+      "w_sigma_w"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "portfolio_volatility",
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Portfolio volatility",
+    "math_form": "sigma_p = sqrt(w' Sigma w)",
+    "python_package": "PyPortfolioOpt.risk_models.sample_cov",
+    "params": [
+      "w_sigma_w"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "post_money_valuation",
+    "financial_field": "Private equity, venture capital & LBO",
+    "equation_name": "Post-money valuation",
+    "math_form": "Post-money = Pre-money + New Investment",
+    "python_package": "manual",
+    "params": [
+      "pre",
+      "money",
+      "new_investment"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "potential_future_exposure_pfe",
+    "financial_field": "Credit risk, default modeling & credit portfolio",
+    "equation_name": "Potential future exposure (PFE)",
+    "math_form": "PFE_alpha(t) = quantile_alpha(exposure_t)",
+    "python_package": "manual",
+    "params": [
+      "quantile_alpha",
+      "exposure_t"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "ppi_inflation_month_over_month",
+    "financial_field": "Macroeconomics, inflation & price indices",
+    "equation_name": "PPI inflation (month over month)",
+    "math_form": "Ï€_t^(PPI,MoM) = PPI_t / PPI_(t-1) - 1",
+    "python_package": "manual",
+    "params": [
+      "ppi_t",
+      "ppi",
+      "t"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "ppi_inflation_year_over_year",
+    "financial_field": "Macroeconomics, inflation & price indices",
+    "equation_name": "PPI inflation (year over year)",
+    "math_form": "Ï€_t^(PPI,YoY) = PPI_t / PPI_(t-12) - 1",
+    "python_package": "manual",
+    "params": [
+      "ppi_t",
+      "ppi",
+      "t"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "preferred_return_hurdle",
+    "financial_field": "Private equity, venture capital & LBO",
+    "equation_name": "Preferred return hurdle",
+    "math_form": "Hurdle FV = Contributed Capital x (1+h)^t",
+    "python_package": "numpy_financial.fv",
+    "params": [
+      "contributed_capital_x",
+      "h",
+      "t"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "pre_money_valuation",
+    "financial_field": "Private equity, venture capital & LBO",
+    "equation_name": "Pre-money valuation",
+    "math_form": "Pre-money = Post-money - New Investment",
+    "python_package": "manual",
+    "params": [
+      "post",
+      "money",
+      "new_investment"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "prepayment_speed_psa",
+    "financial_field": "Structured finance & securitization",
+    "equation_name": "Prepayment speed (PSA)",
+    "math_form": "CPR_t = min(0.06, 0.002t) Ã— PSA%",
+    "python_package": "manual",
+    "params": [
+      "t",
+      "psa_pct"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "present_value_pv",
+    "financial_field": "Corporate finance, valuation & capital budgeting",
+    "equation_name": "Present value (PV)",
+    "math_form": "PV = sum_t CF_t / (1+r)^t",
+    "python_package": "numpy_financial.pv",
+    "params": [
+      "sum_t_cf_t",
+      "r",
+      "t"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "present_value_random_variable",
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "Present value random variable",
+    "math_form": "Z = b_T v^T",
+    "python_package": "actuarialmath",
+    "params": [
+      "benefit",
+      "interest_rate",
+      "t"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "price_impact",
+    "financial_field": "Liquidity risk, market liquidity & execution cost",
+    "equation_name": "Price impact",
+    "math_form": "Impact = (execution price/Mid price-1)*100",
+    "python_package": "manual",
+    "params": [
+      "execution_price",
+      "mid_price"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "price_to_book",
+    "financial_field": "Equity valuation & asset pricing",
+    "equation_name": "Price-to-book",
+    "math_form": "P/B = Price / Book value per share",
+    "python_package": "manual",
+    "params": [
+      "price",
+      "book_value_per_share"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "price_to_earnings_ratio",
+    "financial_field": "Equity valuation & asset pricing",
+    "equation_name": "Price-to-earnings ratio",
+    "math_form": "P/E = Price per share / EPS",
+    "python_package": "manual",
+    "params": [
+      "price_per_share",
+      "eps"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "price_to_sales",
+    "financial_field": "Equity valuation & asset pricing",
+    "equation_name": "Price-to-sales",
+    "math_form": "P/S = Market Cap / Revenue",
+    "python_package": "manual",
+    "params": [
+      "market_cap",
+      "revenue"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "principal_payment_portion_ppmt",
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Principal payment portion (PPMT)",
+    "math_form": "PPMT_t = PMT - IPMT_t",
+    "python_package": "numpy_financial.ppmt",
+    "params": [
+      "pmt",
+      "ipmt_t"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "probability_of_default_from_hazard_rate",
+    "financial_field": "Credit risk, default modeling & credit portfolio",
+    "equation_name": "Probability of default from hazard rate",
+    "math_form": "PD(0,T) = 1 - exp(-int_0^T lambda(t) dt)",
+    "python_package": "QuantLib",
+    "params": [
+      "hazard_rate",
+      "t"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "probability_of_default_from_logit",
+    "financial_field": "Credit risk",
+    "equation_name": "Probability of default from logit",
+    "math_form": "PD = 1 / (1 + e^{-XÎ²})",
+    "python_package": "sklearn.LogisticRegression",
+    "params": [
+      "e",
+      "x"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "probability_of_default_scorecard_logit",
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Probability of default scorecard logit",
+    "math_form": "logit(PD) = beta0 + beta'x",
+    "python_package": "sklearn.linear_model.LogisticRegression",
+    "params": [
+      "beta0",
+      "x"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "probit_default_model",
+    "financial_field": "Credit risk, default modeling & credit portfolio",
+    "equation_name": "Probit default model",
+    "math_form": "Phi^-1(PD_i) = beta0 + beta'x_i",
+    "python_package": "statsmodels.Probit",
+    "params": [
+      "beta0",
+      "x_i"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "probit_score",
+    "financial_field": "Quantitative forecasting & machine learning in finance",
+    "equation_name": "Probit score",
+    "math_form": "P(y=1|x)=Phi(beta'x)",
+    "python_package": "statsmodels.Probit",
+    "params": [
+      "x"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "producer_price_index_laspeyres_style_index",
+    "financial_field": "Macroeconomics, inflation & price indices",
+    "equation_name": "Producer Price Index (Laspeyres-style index)",
+    "math_form": "PPI_t = (Î£_i p_(i,t) q_(i,0) / Î£_i p_(i,0) q_(i,0)) Ã— 100",
+    "python_package": "manual",
+    "params": [
+      "prices_current",
+      "quantities_base",
+      "prices_base"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "profit_factor",
+    "financial_field": "Performance measurement & attribution",
+    "equation_name": "Profit factor",
+    "math_form": "Profit Factor = sum positive returns / |sum negative returns|",
+    "python_package": "quantstats.stats",
+    "params": [
+      "returns",
+      "negative"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "profitability_index",
+    "financial_field": "Corporate finance & capital budgeting",
+    "equation_name": "Profitability index",
+    "math_form": "PI = PV of future cash flows / Initial Investment",
+    "python_package": "manual",
+    "params": [
+      "pv_of_future_cash_flows",
+      "initial_investment"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "property_irr",
+    "financial_field": "Real estate finance & mortgages",
+    "equation_name": "Property IRR",
+    "math_form": "0 = -Equity_0 + sum_t CF_t/(1+IRR)^t + SaleProceeds/(1+IRR)^T",
+    "python_package": "numpy_financial.irr",
+    "params": [
+      "equity_0",
+      "sum_t_cf_t",
+      "irr",
+      "t",
+      "saleproceeds"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "property_value_from_cap_rate",
+    "financial_field": "Real estate finance",
+    "equation_name": "Property value from cap rate",
+    "math_form": "Value = NOI / Cap Rate",
+    "python_package": "manual",
+    "params": [
+      "noi",
+      "cap_rate"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "prospective_reserve",
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "Prospective reserve",
+    "math_form": "V_t = PV_t(Future Benefits) - PV_t(Future Premiums)",
+    "python_package": "actuarialmath.PolicyValues",
+    "params": [
+      "pv_t",
+      "future_benefits",
+      "future_premiums"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "protective_put_payoff",
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Protective put payoff",
+    "math_form": "Payoff = S_T + max(K-S_T,0) - Premium",
+    "python_package": "manual",
+    "params": [
+      "s_t",
+      "k",
+      "premium"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "provision_coverage_ratio",
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Provision coverage ratio",
+    "math_form": "Coverage Ratio = Allowance for Credit Losses / Nonperforming Loans",
+    "python_package": "manual",
+    "params": [
+      "loan_loss_reserves",
+      "nonperforming_loans"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "provision_coverage_ratio_2",
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Provision coverage ratio",
+    "math_form": "Coverage Ratio = Allowance for Credit Losses / Nonperforming Loans",
+    "python_package": "manual",
+    "params": [
+      "allowance_for_credit_losses",
+      "nonperforming_loans"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "psa_prepayment_benchmark",
+    "financial_field": "Structured finance & securitization",
+    "equation_name": "PSA prepayment benchmark",
+    "math_form": "CPR_PSA = min(0.06, 0.002 x month) for 100% PSA",
+    "python_package": "manual",
+    "params": [
+      "month"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "pti_payment_to_income",
+    "financial_field": "Real estate finance & mortgages",
+    "equation_name": "PTI payment-to-income",
+    "math_form": "Monthly Mortgage Payment / Income",
+    "python_package": "manual",
+    "params": [
+      "monthly_mortgage_payment",
+      "income"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "pti_payment_to_income_gross",
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "PTI payment-to-income (gross)",
+    "math_form": "PTI_gross = Monthly Loan Payment / Gross Monthly Income",
+    "python_package": "manual",
+    "params": [
+      "monthly_loan_payment",
+      "gross_monthly_income"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "pti_payment_to_income_net",
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "PTI payment-to-income (net)",
+    "math_form": "PTI_net = Monthly Loan Payment / Net Monthly Income",
+    "python_package": "manual",
+    "params": [
+      "monthly_loan_payment",
+      "net_monthly_income"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "public_market_equivalent_pme",
+    "financial_field": "Private equity, venture capital & LBO",
+    "equation_name": "Public market equivalent (PME)",
+    "math_form": "PME = FV(distributions indexed to public benchmark) / FV(capital calls indexed to public benchmark)",
+    "python_package": "manual",
+    "params": [
+      "fv_distributions",
+      "fv_capital_calls"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "purchasing_power_parity_ppp",
+    "financial_field": "FX & international finance",
+    "equation_name": "Purchasing power parity (PPP)",
+    "math_form": "S = P / P*",
+    "python_package": "manual",
+    "params": [
+      "p"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "pure_endowment_apv",
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "Pure endowment APV",
+    "math_form": "{}_nE_x = v^n {}_np_x",
+    "python_package": "actuarialmath",
+    "params": [
+      "n",
+      "interest_rate",
+      "mortality_probs"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "pure_premium",
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "Pure premium",
+    "math_form": "Pure Premium = Frequency x Severity",
+    "python_package": "manual",
+    "params": [
+      "frequency_x_severity"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "put_payoff",
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Put payoff",
+    "math_form": "P_T = max(K - S_T, 0)",
+    "python_package": "numpy.maximum",
+    "params": [
+      "k",
+      "s_t"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "put_spread_payoff",
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Put spread payoff",
+    "math_form": "Payoff = max(K2-S,0) - max(K1-S,0)",
+    "python_package": "manual",
+    "params": [
+      "k2",
+      "s",
+      "k1"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "put_call_parity",
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Put-call parity",
+    "math_form": "C - P = S_0 - K e^{-rT}",
+    "python_package": "py-vollib-gen",
+    "params": [
+      "s_0",
+      "k_e",
+      "rt"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "put_call_parity_equity",
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Put-call parity (equity)",
+    "math_form": "C - P = S_0 e^{-qT} - K e^{-rT}",
+    "python_package": "py-vollib-gen",
+    "params": [
+      "s_0_e",
+      "qt",
+      "k_e",
+      "rt"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "put_call_parity_futures_options",
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Put-call parity (futures options)",
+    "math_form": "C - P = DF(F_0 - K)",
+    "python_package": "py-vollib-gen",
+    "params": [
+      "df",
+      "f_0",
+      "k"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "pv_of_tax_shield",
+    "financial_field": "Corporate finance, valuation & capital budgeting",
+    "equation_name": "PV of tax shield",
+    "math_form": "PV(TS) = sum_t Tax Shield_t / (1+r_TS)^t",
+    "python_package": "manual",
+    "params": [
+      "tax_shields",
+      "r_ts"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "quadratic_program",
+    "financial_field": "Quantitative forecasting & machine learning in finance",
+    "equation_name": "Quadratic program",
+    "math_form": "min_x 1/2 x^T P x + q^T x  s.t. Gxâ‰¤h, Ax=b",
+    "python_package": "cvxpy.Problem.solve",
+    "params": [
+      "b"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "quick_ratio",
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Quick ratio",
+    "math_form": "Quick Ratio = (Cash + Marketable Securities + AR) / Current Liabilities",
+    "python_package": "manual",
+    "params": [
+      "cash",
+      "marketable_securities",
+      "ar",
+      "current_liabilities"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "quoted_spread_pct",
+    "financial_field": "Liquidity risk, market liquidity & execution cost",
+    "equation_name": "Quoted spread (%)",
+    "math_form": "Quoted Spread = (Ask-Bid)/Mid",
+    "python_package": "manual",
+    "params": [
+      "ask",
+      "bid",
+      "mid"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "rate_of_change_roc",
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "Rate of change (ROC)",
+    "math_form": "ROC = P_t/P_{t-n} - 1",
+    "python_package": "TA-Lib.ROC",
+    "params": [
+      "p_t",
+      "n"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "real_estate_dcf",
+    "financial_field": "Real estate finance",
+    "equation_name": "Real estate DCF",
+    "math_form": "Value = Î£_t NOI_t/(1+r)^t + TV/(1+r)^T",
+    "python_package": "numpy_financial.npv",
+    "params": [
+      "t_noi_t",
+      "r",
+      "t",
+      "tv"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "real_exchange_rate",
+    "financial_field": "FX & international finance",
+    "equation_name": "Real exchange rate",
+    "math_form": "q = SÂ·P* / P",
+    "python_package": "manual",
+    "params": [
+      "s",
+      "p"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "real_yield_bond_pricing",
+    "financial_field": "Fixed income, bonds & credit markets",
+    "equation_name": "Real yield bond pricing",
+    "math_form": "P = sum_t Real CF_t /(1+real y)^t",
+    "python_package": "QuantLib.BondFunctions.bondYield",
+    "params": [
+      "real_cash_flows",
+      "real_yield",
+      "inflation_index_ratios"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "realized_beta",
+    "financial_field": "Market risk & volatility modeling",
+    "equation_name": "Realized beta",
+    "math_form": "beta_realized = Cov_intraday(asset,market)/Var_intraday(market)",
+    "python_package": "manual",
+    "params": [
+      "cov_intraday",
+      "asset",
+      "market",
+      "var_intraday"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "realized_hedge_effectiveness",
+    "financial_field": "Commodities, futures & hedging",
+    "equation_name": "Realized hedge effectiveness",
+    "math_form": "HE = 1 - Var(Hedged Position)/Var(Unhedged Position)",
+    "python_package": "manual",
+    "params": [
+      "hedged_position",
+      "unhedged_position"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "realized_spread",
+    "financial_field": "Liquidity risk, market liquidity & execution cost",
+    "equation_name": "Realized spread",
+    "math_form": "Realized Spread = 2 x side x (Trade Price - Mid_{t+Delta})",
+    "python_package": "manual",
+    "params": [
+      "x",
+      "side",
+      "trade_price",
+      "mid_t"
+    ],
+    "y_as_x": [
+      "adverse_selection_cost"
+    ]
+  },
+  {
+    "func_name": "realized_variance",
+    "financial_field": "Market risk & volatility modeling",
+    "equation_name": "Realized variance",
+    "math_form": "RV_t = sum_{i=1}^n r_{t,i}^2",
+    "python_package": "manual",
+    "params": [
+      "returns"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "realized_volatility",
+    "financial_field": "Market risk & volatility modeling",
+    "equation_name": "Realized volatility",
+    "math_form": "RVOL = sqrt(sum intraday returns^2)",
+    "python_package": "manual",
+    "params": [
+      "intraday_returns"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "receivables_turnover",
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Receivables turnover",
+    "math_form": "Receivables Turnover = Revenue / Average AR",
+    "python_package": "manual",
+    "params": [
+      "revenue",
+      "average_ar"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "recovery_factor",
+    "financial_field": "Performance measurement & attribution",
+    "equation_name": "Recovery factor",
+    "math_form": "Recovery Factor = Net Profit / |Max Drawdown|",
+    "python_package": "quantstats.stats",
+    "params": [
+      "net_profit",
+      "max_drawdown"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "recovery_rate",
+    "financial_field": "Credit risk, default modeling & credit portfolio",
+    "equation_name": "Recovery rate",
+    "math_form": "Recovery = 1 - LGD",
+    "python_package": "manual",
+    "params": [
+      "lgd"
+    ],
+    "y_as_x": [
+      "cds_spread_approximation",
+      "loss_given_default"
+    ]
+  },
+  {
+    "func_name": "reduced_form_cds_hazard_relation",
+    "financial_field": "Credit risk, default modeling & credit portfolio",
+    "equation_name": "Reduced-form CDS hazard relation",
+    "math_form": "CDS Spread approx lambda x LGD",
+    "python_package": "QuantLib",
+    "params": [
+      "cds_spread",
+      "lgd"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "refinance_proceeds",
+    "financial_field": "Real estate finance & mortgages",
+    "equation_name": "Refinance proceeds",
+    "math_form": "Refi Proceeds = New Loan - Old Loan - Fees",
+    "python_package": "manual",
+    "params": [
+      "new_loan",
+      "old_loan",
+      "fees"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "relative_ppp",
+    "financial_field": "FX & international finance",
+    "equation_name": "Relative PPP",
+    "math_form": "Delta S / S approx pi_d - pi_f",
+    "python_package": "manual",
+    "params": [
+      "pi_d",
+      "pi_f"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "relative_spread",
+    "financial_field": "Liquidity risk & market liquidity",
+    "equation_name": "Relative spread",
+    "math_form": "Relative Spread = (Ask - Bid) / Mid",
+    "python_package": "manual",
+    "params": [
+      "ask",
+      "bid",
+      "mid"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "relative_strength_index_rsi",
+    "financial_field": "Technical analysis & chart-based indicators",
+    "equation_name": "Relative strength index (RSI)",
+    "math_form": "RSI = 100 - 100/(1+RS), RS=AvgGain/AvgLoss",
+    "python_package": "TA-Lib.RSI",
+    "params": [
+      "rs",
+      "avggain",
+      "avgloss"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "rent_coverage_ratio",
+    "financial_field": "Real estate finance & mortgages",
+    "equation_name": "Rent coverage ratio",
+    "math_form": "Rent Coverage = Gross Monthly Income / Monthly Rent",
+    "python_package": "manual",
+    "params": [
+      "gross_monthly_income",
+      "monthly_rent"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "repricing_gap",
+    "financial_field": "Treasury, ALM & balance-sheet management",
+    "equation_name": "Repricing gap",
+    "math_form": "Gap_t = Rate Sensitive Assets_t - Rate Sensitive Liabilities_t",
+    "python_package": "manual",
+    "params": [
+      "rate_sensitive_assets_t",
+      "rate_sensitive_liabilities_t"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "residual_income",
+    "financial_field": "Corporate finance, valuation & capital budgeting",
+    "equation_name": "Residual income",
+    "math_form": "RI = Net Income - R_e x Beginning Equity",
+    "python_package": "manual",
+    "params": [
+      "net_income",
+      "r_e",
+      "beginning_equity"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "residual_income_valuation",
+    "financial_field": "Equity valuation & asset pricing",
+    "equation_name": "Residual income valuation",
+    "math_form": "V_0 = B_0 + sum_t RI_t/(1+r)^t",
+    "python_package": "manual",
+    "params": [
+      "b_0",
+      "residual_incomes",
+      "r"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "retention_ratio",
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Retention ratio",
+    "math_form": "Retention = 1 - Dividend Payout Ratio",
+    "python_package": "manual",
+    "params": [
+      "dividend_payout_ratio"
+    ],
+    "y_as_x": [
+      "sustainable_growth_rate"
+    ]
+  },
+  {
+    "func_name": "retrospective_reserve",
+    "financial_field": "Actuarial science & insurance",
+    "equation_name": "Retrospective reserve",
+    "math_form": "V_t = Accumulated Value(Past Premiums - Past Benefits - Expenses)",
+    "python_package": "actuarialmath",
+    "params": [
+      "accumulated_value",
+      "past_premiums",
+      "past_benefits",
+      "expenses"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "return_on_assets_roa",
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Return on assets (ROA)",
+    "math_form": "ROA = Net Income / Average Assets",
+    "python_package": "manual",
+    "params": [
+      "net_income",
+      "average_assets"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "return_on_capital_employed_roce",
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Return on capital employed (ROCE)",
+    "math_form": "ROCE = EBIT / Capital Employed",
+    "python_package": "manual",
+    "params": [
+      "ebit",
+      "capital_employed"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "return_on_equity_roe",
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Return on equity (ROE)",
+    "math_form": "ROE = Net Income / Average Equity",
+    "python_package": "manual",
+    "params": [
+      "net_income",
+      "average_equity"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "return_on_invested_capital_roic",
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Return on invested capital (ROIC)",
+    "math_form": "ROIC = NOPAT / Average Invested Capital",
+    "python_package": "manual",
+    "params": [
+      "nopat",
+      "average_invested_capital"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "return_on_regulatory_capital_rorc",
+    "financial_field": "Banking, consumer lending & project finance",
+    "equation_name": "Return on regulatory capital (RORC)",
+    "math_form": "RORC = Expected Profit / Economic or Regulatory Capital",
+    "python_package": "manual",
+    "params": [
+      "expected_profit",
+      "economic_or_regulatory_capital"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "revenue_growth",
+    "financial_field": "Accounting & financial statement analysis",
+    "equation_name": "Revenue growth",
+    "math_form": "g_t = Revenue_t / Revenue_(t-1) - 1",
+    "python_package": "manual",
+    "params": [
+      "revenue_t",
+      "revenue",
+      "t"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "rho",
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Rho",
+    "math_form": "Rho = K T e^{-rT} N(d2)",
+    "python_package": "py-vollib-gen.greeks",
+    "params": [
+      "k_t_e",
+      "rt_n",
+      "d2"
+    ],
+    "y_as_x": [
+      "spread_option_kirk_approximation"
+    ]
+  },
+  {
+    "func_name": "risk_parity_objective",
+    "financial_field": "Asset management & portfolio optimization",
+    "equation_name": "Risk parity objective",
+    "math_form": "min_w sum_i sum_j (RC_i-RC_j)^2",
+    "python_package": "Riskfolio-Lib.Portfolio.optimization",
+    "params": [
+      "weights",
+      "cov_matrix"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "riskmetrics_covariance",
+    "financial_field": "Market risk & volatility modeling",
+    "equation_name": "RiskMetrics covariance",
+    "math_form": "Sigma_t = lambda Sigma_{t-1} + (1-lambda) r_{t-1} r_{t-1}'",
+    "python_package": "manual",
+    "params": [
+      "lambda_val",
+      "sigma_prev",
+      "r_prev"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "risk_neutral_probability",
+    "financial_field": "Derivatives, options & volatility",
+    "equation_name": "Risk-neutral probability",
+    "math_form": "p = (e^{(r-q)Delta t} - d)/(u-d)",
+    "python_package": "manual",
+    "params": [
+      "e",
+      "r",
+      "q",
+      "delta_t",
+      "d",
+      "u"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "risk_weighted_assets_rwa",
+    "financial_field": "Bank regulation, Basel & prudential ratios",
+    "equation_name": "Risk-weighted assets (RWA)",
+    "math_form": "RWA = sum_i Exposure_i x RiskWeight_i",
+    "python_package": "manual",
+    "params": [
+      "exposures",
+      "risk_weights"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "roc_auc",
+    "financial_field": "Quantitative forecasting & machine learning in finance",
+    "equation_name": "ROC AUC",
+    "math_form": "AUC = integral_0^1 TPR(FPR^{-1}(u)) du",
+    "python_package": "sklearn.metrics.roc_auc_score",
+    "params": [
+      "integral_0",
+      "_1_tpr",
+      "fpr",
+      "u",
+      "du"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "rogers_satchell_volatility",
+    "financial_field": "Market risk & volatility modeling",
+    "equation_name": "Rogers-Satchell volatility",
+    "math_form": "sigma_RS^2 = (ln(H/O))(ln(H/C)) + (ln(L/O))(ln(L/C))",
+    "python_package": "manual",
+    "params": [
+      "h",
+      "o",
+      "c",
+      "l"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "roll_implied_spread",
+    "financial_field": "Liquidity risk, market liquidity & execution cost",
+    "equation_name": "Roll implied spread",
+    "math_form": "Spread_Roll = 2 sqrt(-Cov(Delta p_t, Delta p_{t-1}))",
+    "python_package": "manual",
+    "params": [
+      "delta_prices"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "roll_rate",
+    "financial_field": "Credit risk, default modeling & credit portfolio",
+    "equation_name": "Roll rate",
+    "math_form": "Roll Rate = balances migrating to worse delinquency bucket / prior bucket balance",
+    "python_package": "manual",
+    "params": [
+      "balances_migrating",
+      "prior_bucket_balance"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "roll_spread_estimator",
+    "financial_field": "Liquidity risk & market liquidity",
+    "equation_name": "Roll spread estimator",
+    "math_form": "Spread_Roll = 2âˆš[-Cov(Î”P_t, Î”P_{t-1})]",
+    "python_package": "manual",
+    "params": [
+      "delta_prices"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "roll_yield",
+    "financial_field": "Commodities, futures & hedging",
+    "equation_name": "Roll yield",
+    "math_form": "Roll Yield = Futures Return - Spot Return - Collateral Return",
+    "python_package": "manual",
+    "params": [
+      "futures_return",
+      "spot_return",
+      "collateral_return"
+    ],
+    "y_as_x": [
+      "commodity_carry_return"
+    ]
+  },
+  {
+    "func_name": "roll_down_return",
+    "financial_field": "Fixed income, bonds & credit markets",
+    "equation_name": "Roll-down return",
+    "math_form": "Roll-down approx -Duration x Delta Yield from curve slide",
+    "python_package": "manual",
+    "params": [
+      "duration",
+      "delta_yield"
+    ],
+    "y_as_x": []
+  },
+  {
+    "func_name": "rsi",
+    "financial_field": "Technical analysis",
+    "equation_name": "RSI",
+    "math_form": "RSI = 100 - 100/(1 + RS)",
+    "python_package": "TA-Lib.momentum.RSIIndicator",
+    "params": [
+      "rs"
+    ],
+    "y_as_x": [
+      "stochastic_rsi"
+    ]
+  }
+]
