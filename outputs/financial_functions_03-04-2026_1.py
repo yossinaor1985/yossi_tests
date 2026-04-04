@@ -329,7 +329,10 @@ def returns(start_val, end_val):
     'hasbrouck_lambda','henriksson_merton_timing','historical_var','hit_ratio','idiosyncratic_volatility','incremental_var','information_ratio',
     'interaction_effect','ledoit_wolf_covariance_shrinkage','maximum_drawdown','maximum_sharpe_portfolio','mean_cvar_optimization',
     'mean_variance_utility','monte_carlo_var','m_squared_modigliani','omega_ratio','pain_index','parametric_normal_var',
-    'parametric_var','pastor_stambaugh_liquidity','portfolio_return']
+    'parametric_var','pastor_stambaugh_liquidity','portfolio_return','profit_factor','realized_beta','realized_hedge_effectiveness','realized_variance','realized_volatility',
+    'risk_parity_objective','riskmetrics_covariance','semivariance','sharpe_ratio','sortino_ratio','sterling_ratio','stressed_var','tail_ratio','tangency_portfolio_weights','time_weighted_return_twrr',
+    'tracking_error','treynor_ratio','treynor_mazuy_timing','ulcer_index','up_capture_ratio'
+    ]
     :param start_val: "the value at the beginning of the period"
     :param end_val: "the value at the end of the period"
     :return: "end/start-1"
@@ -5723,7 +5726,7 @@ def excess_return(portfolio_return, benchmark_return):
     subdomain: ['Return decomposition']
     function: "Computes excess return, the difference between the portfolio return and the benchmark or risk-free return."
     y_as_x: ['sharpe_ratio', 'information_ratio', 'burke_ratio', 'treynor_ratio','fama_french_3_factor_model',
-    'fama_french_5_factor_model','information_ratio']
+    'fama_french_5_factor_model','information_ratio','sharpe_lintner_beta_regression']
     :param portfolio_return: "Portfolio return (or array of portfolio returns)"
     :param benchmark_return: "Benchmark or risk-free return (or array)"
     :return: "ER = R_p - R_b"
@@ -10664,13 +10667,13 @@ def portfolio_covariance_contribution(weights, covariance_matrix):
     mc = covariance_matrix @ weights
     return mc
 
-
+#fixme: fix y_as_x
 def portfolio_return(weights, expected_returns):
     '''
     domain: ['Asset management & portfolio optimization']
     subdomain: ['Portfolio construction', 'Return estimation']
     function: "Compute expected portfolio return: E[R_p] = w' * mu"
-    y_as_x: ['active_return', 'excess_return', 'mean_variance_utility', 'sharpe_ratio']
+    y_as_x: ['active_return', 'excess_return', 'mean_variance_utility', 'sharpe_ratio','up_capture_ratio']
     :param weights: "Array of portfolio weights"
     :param expected_returns: "Array of expected asset returns"
     :return: "Expected portfolio return"
@@ -11034,7 +11037,6 @@ def producer_price_index_laspeyres_style_index(prices_current, prices_base, quan
 # ================================================================================
 # BATCH 7
 # ================================================================================
-
 def profit_factor(returns):
     '''
     domain: ['Performance measurement & attribution']
@@ -11486,6 +11488,7 @@ def realized_beta(asset_returns_intraday, market_returns_intraday):
     return cov / var_market
 
 
+
 def realized_hedge_effectiveness(hedged_returns, unhedged_returns):
     '''
     domain: ['Commodities, futures & hedging']
@@ -11512,7 +11515,6 @@ def realized_spread(trade_price, mid_price_future, side):
     '''
     return 2.0 * side * (trade_price - mid_price_future)
 
-
 def realized_variance(intraday_returns):
     '''
     domain: ['Market risk & volatility modeling']
@@ -11531,7 +11533,7 @@ def realized_volatility(intraday_returns):
     domain: ['Market risk & volatility modeling']
     subdomain: ['Volatility Estimation', 'High-Frequency Finance']
     function: "Realized Volatility is the square root of realized variance, providing an annualized or period-specific measure of actual price fluctuations based on high-frequency data. It is a model-free volatility estimator widely used for volatility forecasting and risk management."
-    y_as_x: ['yang_zhang_volatility']
+    y_as_x: ['yang_zhang_volatility','realized_variance']
     :param intraday_returns: "Array of intraday (high-frequency) returns."
     :return: "Computed Realized Volatility RVOL = sqrt(sum of squared intraday returns)"
     '''
@@ -11825,6 +11827,7 @@ def rho(K, T, r, d2_value, option_type='call'):
         return K * T * np.exp(-r * T) * norm.cdf(d2_value)
     else:
         return -K * T * np.exp(-r * T) * norm.cdf(-d2_value)
+
 
 
 def risk_parity_objective(returns, cov_matrix=None):
@@ -12940,7 +12943,6 @@ def tail_hedge_payoff(S_T, K, premium, position='long_put'):
     else:
         return np.maximum(K - S_T, 0) - premium
 
-
 def tail_ratio(returns):
     '''
     domain: ['Market risk & volatility modeling']
@@ -13183,6 +13185,7 @@ def total_capital_ratio(total_capital, risk_weighted_assets_rwa):
     :return: "Computed total capital ratio = Total Capital / RWA"
     '''
     return total_capital / risk_weighted_assets_rwa
+
 
 
 def tracking_error(returns, benchmark_returns):
