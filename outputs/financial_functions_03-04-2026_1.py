@@ -13,7 +13,8 @@ import warnings
 - It turns out I made a mistake with the domain and subdomain. I gave it empty columns instead of domain and subdomain
 to copy from. But I see it did a better job then GPT5.2
 - It turns out y_as_x was generated not exactly as requested. It is built on association to a function. 
-Not specifically if y is given as x in another function. needs to fix this.
+Not specifically if y is given as x in another function. This turns out to be a much better way because it 
+finds more connections. However it requires manual fix.
 """
 
 # ================================================================================
@@ -224,47 +225,9 @@ def adx(high, low, close, timeperiod=14):
     :param timeperiod: "Lookback period for the ADX calculation (default 14)"
     :return: "ADX values as a numpy array"
     '''
-    try:
-        import talib
-        return talib.ADX(high, low, close, timeperiod=timeperiod)
-    except ImportError:
-        high = np.asarray(high, dtype=float)
-        low = np.asarray(low, dtype=float)
-        close = np.asarray(close, dtype=float)
-        n = len(close)
-        tr = np.zeros(n)
-        plus_dm = np.zeros(n)
-        minus_dm = np.zeros(n)
-        for i in range(1, n):
-            hl = high[i] - low[i]
-            hc = abs(high[i] - close[i - 1])
-            lc = abs(low[i] - close[i - 1])
-            tr[i] = max(hl, hc, lc)
-            up_move = high[i] - high[i - 1]
-            down_move = low[i - 1] - low[i]
-            plus_dm[i] = up_move if (up_move > down_move and up_move > 0) else 0.0
-            minus_dm[i] = down_move if (down_move > up_move and down_move > 0) else 0.0
-        atr = np.zeros(n)
-        smoothed_plus = np.zeros(n)
-        smoothed_minus = np.zeros(n)
-        atr[timeperiod] = np.sum(tr[1:timeperiod + 1])
-        smoothed_plus[timeperiod] = np.sum(plus_dm[1:timeperiod + 1])
-        smoothed_minus[timeperiod] = np.sum(minus_dm[1:timeperiod + 1])
-        for i in range(timeperiod + 1, n):
-            atr[i] = atr[i - 1] - atr[i - 1] / timeperiod + tr[i]
-            smoothed_plus[i] = smoothed_plus[i - 1] - smoothed_plus[i - 1] / timeperiod + plus_dm[i]
-            smoothed_minus[i] = smoothed_minus[i - 1] - smoothed_minus[i - 1] / timeperiod + minus_dm[i]
-        plus_di = 100.0 * smoothed_plus / np.where(atr != 0, atr, 1.0)
-        minus_di = 100.0 * smoothed_minus / np.where(atr != 0, atr, 1.0)
-        di_sum = plus_di + minus_di
-        dx = 100.0 * np.abs(plus_di - minus_di) / np.where(di_sum != 0, di_sum, 1.0)
-        adx_arr = np.full(n, np.nan)
-        start = 2 * timeperiod
-        if start < n:
-            adx_arr[start] = np.mean(dx[timeperiod:start + 1])
-            for i in range(start + 1, n):
-                adx_arr[i] = (adx_arr[i - 1] * (timeperiod - 1) + dx[i]) / timeperiod
-        return adx_arr
+    import talib
+    return talib.ADX(high, low, close, timeperiod=timeperiod)
+
 
 
 def affine_term_structure_bond_price(a_coeff, b_coeff, state_vector):
@@ -275,7 +238,7 @@ def affine_term_structure_bond_price(a_coeff, b_coeff, state_vector):
     y_as_x: []
     :param a_coeff: "Scalar A(t,T) coefficient from the affine model solution"
     :param b_coeff: "Vector B(t,T) of factor loadings from the affine model"
-    :param state_vector: "Vector X_t of state variables (e.g., short rate factors)"
+    :param state_vector: "Vector X_t of state variables. usually represent underlying risk drivers (e.g., short rate factors)"
     :return: "Zero-coupon bond price P(t,T) = exp(A + B'X)"
     '''
     b_coeff = np.asarray(b_coeff, dtype=float)
@@ -299,7 +262,7 @@ def after_tax_cost_of_debt(pre_tax_cost_of_debt, tax_rate):
 def aggregate_loss_distribution(frequency_mean, severity_mean, severity_std, n_simulations=100000, seed=42):
     '''
     domain: ['Actuarial science & insurance']
-    subdomain: ['Loss Modeling', 'Aggregate Risk']
+    subdomain: ['Loss Modeling', 'Aggregate Risk','Actuarial Mathematics', 'Insurance Analytics']
     function: "Simulates the aggregate loss distribution S = sum_{i=1}^N X_i where N is Poisson-distributed claim frequency and X_i are iid severity draws."
     y_as_x: []
     :param frequency_mean: "Mean of the Poisson claim frequency distribution (lambda)"
@@ -345,7 +308,7 @@ def allocation_effect_brinson_fachler(portfolio_weights, benchmark_weights, benc
     br = np.asarray(benchmark_sector_returns, dtype=float)
     return (pw - bw) * (br - benchmark_total_return)
 
-
+#stopped here
 def alpha(returns, factor_returns, risk_free_rate=0.0):
     '''
     domain: ['Equity valuation & asset pricing']
@@ -14104,7 +14067,7 @@ def vwap_benchmark(prices, volumes):
     return np.sum(prices * volumes) / np.sum(volumes)
 
 
-def weighted_average_cost_of_capital_wacc(equity_value, debt_value, cost_of_equity, cost_of_debt, tax_rate):
+def weighted_average_cost_of_capital_wacc(equity_value, debt_value, cost_of_equity, pre_tax_cost_of_debt, tax_rate):
     '''
     domain: ['Corporate finance & capital budgeting']
     subdomain: ['Cost of Capital', 'Valuation']
@@ -14113,12 +14076,12 @@ def weighted_average_cost_of_capital_wacc(equity_value, debt_value, cost_of_equi
     :param equity_value: "Market value of equity (E)"
     :param debt_value: "Market value of debt (D)"
     :param cost_of_equity: "Cost of equity capital (R_e)"
-    :param cost_of_debt: "Cost of debt capital before tax (R_d)"
+    :param pre_tax_cost_of_debt: "Pre-tax cost of debt (yield on debt, R_d)"
     :param tax_rate: "Corporate marginal tax rate (T)"
     :return: "Computed WACC = (E/V)*R_e + (D/V)*R_d*(1-T)"
     '''
     total_value = equity_value + debt_value
-    return (equity_value / total_value) * cost_of_equity + (debt_value / total_value) * cost_of_debt * (1 - tax_rate)
+    return (equity_value / total_value) * cost_of_equity + (debt_value / total_value) * pre_tax_cost_of_debt * (1 - tax_rate)
 
 
 def weighted_average_coupon_wac(weights, coupons):
