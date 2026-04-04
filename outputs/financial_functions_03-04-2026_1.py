@@ -317,7 +317,7 @@ def alpha(returns, factor_returns, risk_free_rate=0.0):
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Asset Pricing', 'CAPM']
     function: "Computes Jensen's alpha: the excess return of an asset beyond what is predicted by the CAPM. alpha = E[R_i] - [R_f + beta_i(E[R_m]-R_f)]."
-    y_as_x: ['alpha_from_regression', 'appraisal_ratio']
+    y_as_x: ['alpha_from_regression', 'appraisal_ratio','henriksson_merton_timing']
     :param returns: "Array of asset returns"
     :param factor_returns: "Array of market (benchmark) returns"
     :param risk_free_rate: "Risk-free rate per period (default 0)"
@@ -339,7 +339,13 @@ def returns(start_val, end_val):
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Asset Pricing', 'CAPM']
     function: "Return - the percentage of change between the value at start to the value at end."
-    y_as_x: ['alpha_from_regression', 'alpha',...]
+    y_as_x: ['alpha_from_regression', 'alpha','amihud_illiquidity','amivest_liquidity_ratio','annualized_return_cagr','annualized_volatility','aparch','arch_q','batting_average',
+    'benchmark_relative_optimization','beta','bipower_variation','burke_ratio','calmar_ratio','carhart_4_factor_model',
+    'covariance_matrix','cumulative_return','downside_capture','downside_deviation','efficient_frontier_problem','egarch',
+    'egarch_11','equal_risk_contribution','ewma_volatility','ex_ante_tracking_error','excess_kurtosis','excess_return',
+    'expected_drawdown','expected_shortfall_cvar','garch_11','garch_11_v2','gjr_garch','global_minimum_variance_portfolio',
+    'hasbrouck_lambda','henriksson_merton_timing','historical_var','hit_ratio','idiosyncratic_volatility','incremental_var','information_ratio',
+    ]
     :param start_val: "the value at the beginning of the period"
     :param end_val: "the value at the end of the period"
     :return: "end/start-1"
@@ -1402,7 +1408,7 @@ def beta(returns, factor_returns, risk_free_rate=0.0):
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Asset Pricing', 'CAPM']
     function: "Computes the CAPM beta: beta_i = Cov(R_i, R_m) / Var(R_m)."
-    y_as_x: ['alpha', 'capm_expected_return', 'cost_of_equity_capm', 'garch_11',  'levered_beta_hamada', 'probability_of_default_from_logit', 'probit_score', 'sabr_implied_vol', 'security_market_line', 'treynor_ratio', 'unlevered_beta']
+    y_as_x: ['alpha', 'capm_expected_return', 'cost_of_equity_capm', 'garch_11',  'levered_beta_hamada', 'probability_of_default_from_logit', 'probit_score', 'sabr_implied_vol', 'security_market_line', 'treynor_ratio', 'unlevered_beta','henriksson_merton_timing']
     :param returns: "Array of asset returns"
     :param factor_returns: "Array of market (benchmark) returns"
     :param risk_free_rate: "Risk-free rate per period (default 0)"
@@ -2140,6 +2146,7 @@ def buhlmann_credibility_factor(n, k):
 # ---------------------------------------------------------------------------
 # 9. burke_ratio
 # ---------------------------------------------------------------------------
+
 def burke_ratio(returns, risk_free_rate=0.0):
     '''
     domain: ['Asset management & portfolio optimization']
@@ -2232,6 +2239,7 @@ def call_spread_payoff(S, K1, K2):
 # ---------------------------------------------------------------------------
 # 14. calmar_ratio
 # ---------------------------------------------------------------------------
+
 def calmar_ratio(returns, period='daily'):
     '''
     domain: ['Asset management & portfolio optimization']
@@ -2314,6 +2322,7 @@ def capm_expected_return(risk_free_rate, beta, market_return):
 # ---------------------------------------------------------------------------
 # 19. carhart_4_factor_model
 # ---------------------------------------------------------------------------
+
 def carhart_4_factor_model(returns, factor_returns):
     '''
     domain: ['Equity valuation & asset pricing']
@@ -3519,6 +3528,7 @@ def countercyclical_capital_buffer(jurisdiction_buffer_rate, rwa):
 # ---------------------------------------------------------------------------
 # 78. covariance_matrix
 # ---------------------------------------------------------------------------
+
 def covariance_matrix(returns):
     '''
     domain: ['Asset management & portfolio optimization']
@@ -3927,6 +3937,7 @@ def cumulative_net_loss(cumulative_net_charge_offs, original_balance):
 # ---------------------------------------------------------------------------
 # 101. cumulative_return
 # ---------------------------------------------------------------------------
+
 def cumulative_return(returns):
     '''
     domain: ['Performance measurement & attribution']
@@ -4801,6 +4812,7 @@ def donchian_channel_upper(high, period=20):
 # ---------------------------------------------------------------------------
 # 48. downside_capture
 # ---------------------------------------------------------------------------
+
 def downside_capture(portfolio_returns, benchmark_returns):
     '''
     domain: ['Performance measurement & attribution']
@@ -4824,6 +4836,7 @@ def downside_capture(portfolio_returns, benchmark_returns):
 # ---------------------------------------------------------------------------
 # 49. downside_deviation
 # ---------------------------------------------------------------------------
+
 def downside_deviation(returns, mar=0.0):
     '''
     domain: ['Market risk & volatility modeling']
@@ -5204,6 +5217,7 @@ def effective_spread(trade_price, mid_price):
 # ---------------------------------------------------------------------------
 # 71. efficient_frontier_problem
 # ---------------------------------------------------------------------------
+
 def efficient_frontier_problem(expected_returns, cov_matrix, target_return=None):
     '''
     domain: ['Asset management & portfolio optimization']
@@ -5230,6 +5244,7 @@ def efficient_frontier_problem(expected_returns, cov_matrix, target_return=None)
 # ---------------------------------------------------------------------------
 # 72. egarch
 # ---------------------------------------------------------------------------
+
 def egarch(returns, p=1, q=1):
     '''
     domain: ['Market risk & volatility modeling']
@@ -5251,6 +5266,7 @@ def egarch(returns, p=1, q=1):
 # ---------------------------------------------------------------------------
 # 73. egarch_11
 # ---------------------------------------------------------------------------
+
 def egarch_11(returns):
     '''
     domain: ['Market risk & volatility modeling']
@@ -5393,6 +5409,7 @@ def eps(net_income, weighted_avg_shares):
 # ---------------------------------------------------------------------------
 # 80. equal_risk_contribution
 # ---------------------------------------------------------------------------
+
 def equal_risk_contribution(expected_returns, cov_matrix):
     '''
     domain: ['Asset management & portfolio optimization']
@@ -5685,6 +5702,7 @@ def eve_sensitivity(duration_gap_val, delta_y):
 # ---------------------------------------------------------------------------
 # 96. ewma_volatility
 # ---------------------------------------------------------------------------
+
 def ewma_volatility(returns, lam=0.94):
     '''
     domain: ['Market risk & volatility modeling']
@@ -5707,6 +5725,7 @@ def ewma_volatility(returns, lam=0.94):
 # ---------------------------------------------------------------------------
 # 97. ex_ante_tracking_error
 # ---------------------------------------------------------------------------
+
 def ex_ante_tracking_error(weights, benchmark_weights, cov_matrix):
     '''
     domain: ['Asset management & portfolio optimization']
@@ -5728,6 +5747,7 @@ def ex_ante_tracking_error(weights, benchmark_weights, cov_matrix):
 # ---------------------------------------------------------------------------
 # 98. excess_kurtosis
 # ---------------------------------------------------------------------------
+
 def excess_kurtosis(returns):
     '''
     domain: ['Market risk & volatility modeling']
@@ -5743,12 +5763,14 @@ def excess_kurtosis(returns):
 # ---------------------------------------------------------------------------
 # 99. excess_return
 # ---------------------------------------------------------------------------
+
 def excess_return(portfolio_return, benchmark_return):
     '''
     domain: ['Performance measurement & attribution']
     subdomain: ['Return decomposition']
     function: "Computes excess return, the difference between the portfolio return and the benchmark or risk-free return."
-    y_as_x: ['sharpe_ratio', 'information_ratio', 'burke_ratio', 'treynor_ratio']
+    y_as_x: ['sharpe_ratio', 'information_ratio', 'burke_ratio', 'treynor_ratio','fama_french_3_factor_model',
+    'fama_french_5_factor_model','information_ratio']
     :param portfolio_return: "Portfolio return (or array of portfolio returns)"
     :param benchmark_return: "Benchmark or risk-free return (or array)"
     :return: "ER = R_p - R_b"
@@ -7309,7 +7331,6 @@ def heston_variance_process(v0, kappa, theta, xi, T, n_steps, n_paths):
         v[:, t + 1] = np.maximum(v[:, t + 1], 0)
     return v
 
-
 def historical_var(returns, alpha=0.05):
     '''
     domain: ['Market risk & volatility modeling']
@@ -7631,6 +7652,7 @@ def ichimoku_leading_span_b(high, low, period=52, shift=26):
     low = pd.Series(low)
     span_b = (high.rolling(window=period).max() + low.rolling(window=period).min()) / 2.0
     return span_b.shift(shift)
+
 
 
 def idiosyncratic_volatility(returns, factor_returns):
@@ -14095,7 +14117,7 @@ def weighted_average_cost_of_capital_wacc(equity_value, debt_value, cost_of_equi
     '''
     total_value = equity_value + debt_value
     return (equity_value / total_value) * cost_of_equity + (debt_value / total_value) * pre_tax_cost_of_debt * (
-                1 - tax_rate)
+            1 - tax_rate)
 
 
 def weighted_average_coupon_wac(weights, coupons):
