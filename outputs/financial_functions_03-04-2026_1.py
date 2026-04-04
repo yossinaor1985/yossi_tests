@@ -9,11 +9,17 @@ from scipy import stats
 from scipy.stats import norm
 import warnings
 
+"""
+- It turns out I made a mistake with the domain and subdomain. I gave it empty columns instead of domain and subdomain
+to copy from. But I see it did a better job then GPT5.2
+- It turns out y_as_x was generated not exactly as requested. It is built on association to a function. 
+Not specifically if y is given as x in another function. needs to fix this.
+"""
 
 # ================================================================================
 # BATCH 1
 # ================================================================================
-
+# fixme
 def abnormal_earnings_growth(eps_next, required_return, abnormal_growth_pv):
     '''
     domain: ['Equity valuation & asset pricing']
@@ -41,20 +47,7 @@ def abs_pool_factor(current_pool_balance, original_pool_balance):
     '''
     return current_pool_balance / original_pool_balance
 
-
-def absolute_ppp(domestic_price_level, foreign_price_level):
-    '''
-    domain: ['FX & international finance']
-    subdomain: ['Purchasing Power Parity', 'Exchange Rate Theory']
-    function: "Computes the equilibrium exchange rate under Absolute Purchasing Power Parity, where the exchange rate equals the ratio of domestic to foreign price levels."
-    y_as_x: ['purchasing_power_parity_ppp']
-    :param domestic_price_level: "Aggregate price level in the domestic economy (P)"
-    :param foreign_price_level: "Aggregate price level in the foreign economy (P*)"
-    :return: "Equilibrium spot exchange rate S = P / P*"
-    '''
-    return domestic_price_level / foreign_price_level
-
-
+# fixme: change to total assets and fix y_as_x
 def accounting_identity(liabilities, equity):
     '''
     domain: ['Accounting & financial statement analysis']
@@ -165,7 +158,7 @@ def adf_unit_root_test(time_series, max_lags=None, regression='c'):
     result = adfuller(time_series, maxlag=max_lags, regression=regression)
     return result
 
-
+#fixme
 def adjusted_present_value_apv(npv_unlevered, pv_financing_effects):
     '''
     domain: ['Corporate finance & capital budgeting']
@@ -205,7 +198,7 @@ def advance_rate(loan_amount, eligible_collateral_base):
     '''
     return loan_amount / eligible_collateral_base
 
-
+#fixme
 def adverse_selection_cost(effective_spread, realized_spread):
     '''
     domain: ['Liquidity risk, market liquidity & execution cost']
@@ -224,7 +217,7 @@ def adx(high, low, close, timeperiod=14):
     domain: ['Technical analysis']
     subdomain: ['Trend Indicators', 'Directional Movement']
     function: "Computes the Average Directional Index (ADX), which measures the strength of a trend regardless of direction."
-    y_as_x: ['average_directional_index_adx']
+    y_as_x: []
     :param high: "Array of high prices"
     :param low: "Array of low prices"
     :param close: "Array of closing prices"
@@ -334,7 +327,8 @@ def aggregate_loss_distribution(frequency_mean, severity_mean, severity_std, n_s
     return aggregate_losses
 
 
-def allocation_effect_brinson_fachler(portfolio_weights, benchmark_weights, benchmark_sector_returns, benchmark_total_return):
+def allocation_effect_brinson_fachler(portfolio_weights, benchmark_weights, benchmark_sector_returns,
+                                      benchmark_total_return):
     '''
     domain: ['Performance measurement & attribution']
     subdomain: ['Performance Attribution', 'Brinson Model']
@@ -418,7 +412,8 @@ def altman_z_score(working_capital, total_assets, retained_earnings, ebit, marke
     return 1.2 * x1 + 1.4 * x2 + 3.3 * x3 + 0.6 * x4 + 1.0 * x5
 
 
-def american_option_binomial_pricing(spot, strike, rate, volatility, time_to_maturity, steps=100, option_type='call', dividend_yield=0.0):
+def american_option_binomial_pricing(spot, strike, rate, volatility, time_to_maturity, steps=100, option_type='call',
+                                     dividend_yield=0.0):
     '''
     domain: ['Derivatives, options & volatility']
     subdomain: ['Option Pricing', 'Binomial Models']
@@ -657,7 +652,8 @@ def aparch(returns, omega=0.01, alpha_coeff=0.1, gamma=0.5, delta=2.0, beta_coef
         for t in range(1, n):
             shock = (np.abs(returns[t - 1]) - gamma * returns[t - 1]) ** delta
             sigma_delta[t] = omega + alpha_coeff * shock + beta_coeff * sigma_delta[t - 1]
-        return {'conditional_power_vol': sigma_delta, 'params': {'omega': omega, 'alpha': alpha_coeff, 'gamma': gamma, 'delta': delta, 'beta': beta_coeff}}
+        return {'conditional_power_vol': sigma_delta,
+                'params': {'omega': omega, 'alpha': alpha_coeff, 'gamma': gamma, 'delta': delta, 'beta': beta_coeff}}
 
 
 def appraisal_ratio(alpha_val, residual_risk):
@@ -701,7 +697,8 @@ def ar_1(time_series, constant=True):
     ts = np.asarray(time_series, dtype=float)
     trend = 'c' if constant else 'n'
     model = AutoReg(ts, lags=1, trend=trend).fit()
-    return {'constant': model.params[0] if constant else 0.0, 'phi': model.params[-1], 'residuals': model.resid, 'model': model}
+    return {'constant': model.params[0] if constant else 0.0, 'phi': model.params[-1], 'residuals': model.resid,
+            'model': model}
 
 
 def ar_1_v2(time_series, constant=True):
@@ -718,7 +715,8 @@ def ar_1_v2(time_series, constant=True):
     ts = np.asarray(time_series, dtype=float)
     trend = 'c' if constant else 'n'
     model = AutoReg(ts, lags=1, trend=trend).fit()
-    return {'constant': model.params[0] if constant else 0.0, 'phi': model.params[-1], 'residuals': model.resid, 'model': model}
+    return {'constant': model.params[0] if constant else 0.0, 'phi': model.params[-1], 'residuals': model.resid,
+            'model': model}
 
 
 def ar_p(time_series, p=1, constant=True):
@@ -928,7 +926,8 @@ def arrival_price_slippage(executed_price, arrival_price):
     return executed_price - arrival_price
 
 
-def asian_option_price(spot, strike, rate, volatility, time_to_maturity, n_averaging=12, option_type='call', dividend_yield=0.0, n_simulations=50000, seed=42):
+def asian_option_price(spot, strike, rate, volatility, time_to_maturity, n_averaging=12, option_type='call',
+                       dividend_yield=0.0, n_simulations=50000, seed=42):
     '''
     domain: ['Derivatives, options & volatility']
     subdomain: ['Exotic Options', 'Asian Options']
@@ -992,20 +991,6 @@ def asset_turnover(revenue, average_total_assets):
     '''
     return revenue / average_total_assets
 
-
-def average_directional_index_adx(high, low, close, timeperiod=14):
-    '''
-    domain: ['Technical analysis & chart-based indicators']
-    subdomain: ['Trend Indicators', 'Directional Movement']
-    function: "Computes the Average Directional Index (ADX) using TA-Lib. Measures trend strength."
-    y_as_x: []
-    :param high: "Array of high prices"
-    :param low: "Array of low prices"
-    :param close: "Array of closing prices"
-    :param timeperiod: "Lookback period (default 14)"
-    :return: "ADX values as numpy array"
-    '''
-    return adx(high, low, close, timeperiod=timeperiod)
 
 
 def average_loan_age(loan_ages, loan_balances):
@@ -1186,7 +1171,8 @@ def balloon_payment(rate, n_amortization_periods, n_payment_periods, loan_amount
         return balance
 
 
-def barrier_option_price(spot, strike, barrier, rate, volatility, time_to_maturity, option_type='call', barrier_type='down-and-out', dividend_yield=0.0, n_simulations=50000, seed=42):
+def barrier_option_price(spot, strike, barrier, rate, volatility, time_to_maturity, option_type='call',
+                         barrier_type='down-and-out', dividend_yield=0.0, n_simulations=50000, seed=42):
     '''
     domain: ['Derivatives, options & volatility']
     subdomain: ['Exotic Options', 'Barrier Options']
@@ -1500,7 +1486,8 @@ def binomial_down_factor(up_factor):
     return 1.0 / up_factor
 
 
-def binomial_option_pricing(spot, strike, rate, volatility, time_to_maturity, steps=100, option_type='call', dividend_yield=0.0):
+def binomial_option_pricing(spot, strike, rate, volatility, time_to_maturity, steps=100, option_type='call',
+                            dividend_yield=0.0):
     '''
     domain: ['Derivatives, options & volatility']
     subdomain: ['Option Pricing', 'Binomial Models']
@@ -1757,7 +1744,7 @@ def black_scholes_merton_d1(spot, strike, time_to_maturity, rate, volatility, di
     :return: "d1 value"
     '''
     return (np.log(spot / strike) + (rate - dividend_yield + 0.5 * volatility ** 2) * time_to_maturity) / \
-           (volatility * np.sqrt(time_to_maturity))
+        (volatility * np.sqrt(time_to_maturity))
 
 
 def black_scholes_merton_d2(d1_value, volatility, time_to_maturity):
@@ -2034,6 +2021,7 @@ def borrowing_base(eligible_collateral, advance_rates):
     eligible_collateral = np.asarray(eligible_collateral, dtype=float)
     advance_rates = np.asarray(advance_rates, dtype=float)
     return np.sum(eligible_collateral * advance_rates)
+
 
 # ================================================================================
 # BATCH 2
@@ -2361,7 +2349,8 @@ def carhart_4_factor_model(returns, factor_returns):
     :return: "Dictionary with 'alpha', 'betas' (dict of factor loadings), 'r_squared', 'residuals'"
     '''
     import statsmodels.api as sm
-    if isinstance(returns, pd.DataFrame) and all(c in returns.columns for c in ['excess_return', 'MKT', 'SMB', 'HML', 'MOM']):
+    if isinstance(returns, pd.DataFrame) and all(
+            c in returns.columns for c in ['excess_return', 'MKT', 'SMB', 'HML', 'MOM']):
         y = returns['excess_return']
         X = returns[['MKT', 'SMB', 'HML', 'MOM']]
     else:
@@ -2724,7 +2713,7 @@ def chain_ladder_development(latest_cumulative, cdf):
 # ---------------------------------------------------------------------------
 # 38. charm
 # ---------------------------------------------------------------------------
-def charm(S, K, T, r, sigma, option_type='call', dT=1/365):
+def charm(S, K, T, r, sigma, option_type='call', dT=1 / 365):
     '''
     domain: ['Derivatives, options & volatility']
     subdomain: ['Greeks', 'Second-order sensitivities']
@@ -2740,19 +2729,21 @@ def charm(S, K, T, r, sigma, option_type='call', dT=1/365):
     :return: "Charm: d(Delta)/dt computed numerically"
     '''
     from scipy.stats import norm
-    d1 = (np.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * np.sqrt(T))
+    d1 = (np.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
     d2 = d1 - sigma * np.sqrt(T)
     if option_type == 'call':
-        charm_val = -np.exp(-r * T) * (norm.pdf(d1) * (2 * r * T - d2 * sigma * np.sqrt(T)) / (2 * T * sigma * np.sqrt(T)))
+        charm_val = -np.exp(-r * T) * (
+                    norm.pdf(d1) * (2 * r * T - d2 * sigma * np.sqrt(T)) / (2 * T * sigma * np.sqrt(T)))
     else:
-        charm_val = -np.exp(-r * T) * (norm.pdf(d1) * (2 * r * T - d2 * sigma * np.sqrt(T)) / (2 * T * sigma * np.sqrt(T)))
+        charm_val = -np.exp(-r * T) * (
+                    norm.pdf(d1) * (2 * r * T - d2 * sigma * np.sqrt(T)) / (2 * T * sigma * np.sqrt(T)))
         # For puts, charm has the same formula for the time-dependent part
         # but delta itself differs; the decay component is:
         charm_val = charm_val + r * np.exp(-r * T) * norm.cdf(-d1)
         # Correction: re-derive
     # More robust: numerical
-    d1_1 = (np.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * np.sqrt(T))
-    d1_2 = (np.log(S / K) + (r + 0.5 * sigma**2) * (T - dT)) / (sigma * np.sqrt(T - dT)) if T > dT else d1_1
+    d1_1 = (np.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
+    d1_2 = (np.log(S / K) + (r + 0.5 * sigma ** 2) * (T - dT)) / (sigma * np.sqrt(T - dT)) if T > dT else d1_1
     if option_type == 'call':
         delta_1 = norm.cdf(d1_1)
         delta_2 = norm.cdf(d1_2) if T > dT else delta_1
@@ -2781,14 +2772,14 @@ def chooser_option_value(S, K, T_choose, T_expire, r, sigma, q=0.0):
     :return: "Chooser option value using the Rubinstein (1991) decomposition"
     '''
     from scipy.stats import norm
-    d1 = (np.log(S / K) + (r - q + 0.5 * sigma**2) * T_expire) / (sigma * np.sqrt(T_expire))
+    d1 = (np.log(S / K) + (r - q + 0.5 * sigma ** 2) * T_expire) / (sigma * np.sqrt(T_expire))
     d2 = d1 - sigma * np.sqrt(T_expire)
-    y = (np.log(S / K) + (r - q) * T_expire + 0.5 * sigma**2 * T_choose) / (sigma * np.sqrt(T_choose))
+    y = (np.log(S / K) + (r - q) * T_expire + 0.5 * sigma ** 2 * T_choose) / (sigma * np.sqrt(T_choose))
     # Simple chooser = Call(S, K, T_expire) + Put(S, K*exp(-(r-q)*(T_expire-T_choose)), T_choose)
     # But standard decomposition:
     call_value = S * np.exp(-q * T_expire) * norm.cdf(d1) - K * np.exp(-r * T_expire) * norm.cdf(d2)
     # Put component via parity adjustment
-    d1_choose = (np.log(S / K) + (r - q + 0.5 * sigma**2) * T_choose) / (sigma * np.sqrt(T_choose))
+    d1_choose = (np.log(S / K) + (r - q + 0.5 * sigma ** 2) * T_choose) / (sigma * np.sqrt(T_choose))
     d2_choose = d1_choose - sigma * np.sqrt(T_choose)
     # Chooser = C(S,K,T_expire) - S*exp(-q*T_expire)*N(-d1) + K*exp(-r*T_expire)*N(-d2_choose)
     # Using Rubinstein's formula:
@@ -2816,11 +2807,11 @@ def christoffersen_independence_test(hit_sequence):
     # Count transitions
     n00 = n01 = n10 = n11 = 0
     for i in range(n - 1):
-        if hits[i] == 0 and hits[i+1] == 0:
+        if hits[i] == 0 and hits[i + 1] == 0:
             n00 += 1
-        elif hits[i] == 0 and hits[i+1] == 1:
+        elif hits[i] == 0 and hits[i + 1] == 1:
             n01 += 1
-        elif hits[i] == 1 and hits[i+1] == 0:
+        elif hits[i] == 1 and hits[i + 1] == 0:
             n10 += 1
         else:
             n11 += 1
@@ -2893,12 +2884,12 @@ def cir_zero_coupon_bond_price(r, kappa, theta, sigma, T):
     :param T: "Time to maturity in years"
     :return: "Zero-coupon bond price under CIR model"
     '''
-    gamma = np.sqrt(kappa**2 + 2 * sigma**2)
+    gamma = np.sqrt(kappa ** 2 + 2 * sigma ** 2)
     exp_gamma_T = np.exp(gamma * T)
     denom = (gamma + kappa) * (exp_gamma_T - 1) + 2 * gamma
 
     B = 2 * (exp_gamma_T - 1) / denom
-    A = (2 * gamma * np.exp((kappa + gamma) * T / 2) / denom) ** (2 * kappa * theta / sigma**2)
+    A = (2 * gamma * np.exp((kappa + gamma) * T / 2) / denom) ** (2 * kappa * theta / sigma ** 2)
 
     return A * np.exp(-B * r)
 
@@ -2988,7 +2979,7 @@ def collateral_haircut(lending_value, market_value):
 # ---------------------------------------------------------------------------
 # 48. color
 # ---------------------------------------------------------------------------
-def color(S, K, T, r, sigma, dT=1/365):
+def color(S, K, T, r, sigma, dT=1 / 365):
     '''
     domain: ['Derivatives, options & volatility']
     subdomain: ['Greeks', 'Third-order sensitivities']
@@ -3003,10 +2994,10 @@ def color(S, K, T, r, sigma, dT=1/365):
     :return: "Color: d(Gamma)/dt computed analytically"
     '''
     from scipy.stats import norm
-    d1 = (np.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * np.sqrt(T))
+    d1 = (np.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
     d2 = d1 - sigma * np.sqrt(T)
     color_val = -norm.pdf(d1) / (2 * S * T * sigma * np.sqrt(T)) * (
-        2 * r * T - d2 * sigma * np.sqrt(T) + 1
+            2 * r * T - d2 * sigma * np.sqrt(T) + 1
     )
     return color_val
 
@@ -3418,7 +3409,7 @@ def convexity(face_value, coupon_rate, ytm, periods, freq=2):
         df = (1 + y) ** t
         price += cf / df
         conv_sum += t * (t + 1) * cf / ((1 + y) ** (t + 2))
-    convexity_val = conv_sum / (price * freq**2)
+    convexity_val = conv_sum / (price * freq ** 2)
     return convexity_val
 
 
@@ -3437,7 +3428,7 @@ def convexity_adjusted_futures_rate(futures_rate, sigma, T1, T2):
     :param T2: "End time of the forward period in years"
     :return: "Adjusted forward rate: F_adj = F_futures - 0.5 * sigma^2 * T1 * T2"
     '''
-    return futures_rate - 0.5 * sigma**2 * T1 * T2
+    return futures_rate - 0.5 * sigma ** 2 * T1 * T2
 
 
 # ---------------------------------------------------------------------------
@@ -3458,9 +3449,9 @@ def cornish_fisher_var(mu, sigma, skewness, excess_kurtosis, confidence=0.95):
     '''
     z = stats.norm.ppf(1 - confidence)  # negative quantile for loss
     z_cf = (z
-            + (z**2 - 1) * skewness / 6
-            + (z**3 - 3 * z) * excess_kurtosis / 24
-            - (2 * z**3 - 5 * z) * skewness**2 / 36)
+            + (z ** 2 - 1) * skewness / 6
+            + (z ** 3 - 3 * z) * excess_kurtosis / 24
+            - (2 * z ** 3 - 5 * z) * skewness ** 2 / 36)
     return -(mu + sigma * z_cf)
 
 
@@ -3767,7 +3758,7 @@ def credit_portfolio_variance_independent_defaults(ead, lgd, pd):
     ead = np.asarray(ead, dtype=float)
     lgd = np.asarray(lgd, dtype=float)
     pd = np.asarray(pd, dtype=float)
-    return np.sum(ead**2 * lgd**2 * pd * (1 - pd))
+    return np.sum(ead ** 2 * lgd ** 2 * pd * (1 - pd))
 
 
 # ---------------------------------------------------------------------------
@@ -3987,6 +3978,7 @@ def cure_rate(cured_delinquent_accounts, total_delinquent_accounts):
     :return: "Cure rate: cured delinquent accounts / total delinquent accounts"
     '''
     return cured_delinquent_accounts / total_delinquent_accounts
+
 
 # ================================================================================
 # BATCH 3
@@ -5438,7 +5430,8 @@ def equal_risk_contribution(expected_returns, cov_matrix):
     try:
         import riskfolio as rp
         port = rp.Portfolio(returns=pd.DataFrame())
-        port.mu = np.asarray(expected_returns, dtype=float).reshape(-1, 1) if np.ndim(expected_returns) == 1 else expected_returns
+        port.mu = np.asarray(expected_returns, dtype=float).reshape(-1, 1) if np.ndim(
+            expected_returns) == 1 else expected_returns
         port.cov = np.asarray(cov_matrix, dtype=float)
         w = port.rp_optimization(model='Classic', rm='MV', rf=0.0, b=None)
         return w
@@ -5841,6 +5834,7 @@ def expected_credit_loss_ifrs_9_over_cecl(pd_array, lgd_array, ead_array, df_arr
     ead_arr = np.asarray(ead_array, dtype=float)
     df_arr = np.asarray(df_array, dtype=float)
     return float(np.sum(pd_arr * lgd_arr * ead_arr * df_arr))
+
 
 # ================================================================================
 # BATCH 4
@@ -7460,7 +7454,7 @@ def holt_winters_seasonality(series, seasonal_periods, trend='add', seasonal='ad
     from statsmodels.tsa.holtwinters import ExponentialSmoothing
     series = pd.Series(series).reset_index(drop=True)
     model = ExponentialSmoothing(series, trend=trend, seasonal=seasonal,
-                                  seasonal_periods=seasonal_periods)
+                                 seasonal_periods=seasonal_periods)
     result = model.fit()
     forecast = result.forecast(forecast_periods)
     return {
@@ -7517,13 +7511,14 @@ def hull_white_bond_option_jamshidian(face_value, strike, r0, a, sigma, T_option
     :param frequency: "Coupon frequency per year (default 2)"
     :return: "Dictionary with 'call_price', 'put_price'"
     '''
+
     def B(t1, t2):
         return (1 - np.exp(-a * (t2 - t1))) / a
 
     def P(t, T_val, r):
         b = B(t, T_val)
         A_val = np.exp((b - (T_val - t)) * (a ** 2 * 0 - sigma ** 2 / (2 * a ** 2)) -
-                        sigma ** 2 * b ** 2 / (4 * a))
+                       sigma ** 2 * b ** 2 / (4 * a))
         return A_val * np.exp(-b * r)
 
     # Generate cash flow times
@@ -7551,10 +7546,11 @@ def hull_white_bond_option_jamshidian(face_value, strike, r0, a, sigma, T_option
         r_star = r0
 
     X_i = np.exp(-B(T_option, cf_times) * r_star)
-    h_i = (1 / sigma_p) * np.log(cf_amounts * P(0, cf_times, r0) / (X_i * P(0, T_option, r0) * strike / np.sum(cf_amounts * X_i))) + sigma_p / 2
+    h_i = (1 / sigma_p) * np.log(
+        cf_amounts * P(0, cf_times, r0) / (X_i * P(0, T_option, r0) * strike / np.sum(cf_amounts * X_i))) + sigma_p / 2
 
     call_price = np.sum(cf_amounts * P(0, cf_times, r0) * stats.norm.cdf(h_i) -
-                         X_i * P(0, T_option, r0) * (strike / np.sum(cf_amounts * X_i)) * stats.norm.cdf(h_i - sigma_p))
+                        X_i * P(0, T_option, r0) * (strike / np.sum(cf_amounts * X_i)) * stats.norm.cdf(h_i - sigma_p))
     put_price = call_price - np.sum(cf_amounts * P(0, cf_times, r0)) + strike * P(0, T_option, r0)
 
     return {'call_price': max(call_price, 0), 'put_price': max(put_price, 0)}
@@ -7619,6 +7615,7 @@ def ichimoku_conversion_line(high, low, period=9):
     highest = high.rolling(window=period).max()
     lowest = low.rolling(window=period).min()
     return (highest + lowest) / 2
+
 
 # ================================================================================
 # BATCH 5
@@ -8259,7 +8256,7 @@ def kupiec_pof_likelihood_ratio(T, x, p):
     else:
         pi_hat = x / T
         lr = -2.0 * ((T - x) * np.log(1 - p) + x * np.log(p)
-                      - (T - x) * np.log(1 - pi_hat) - x * np.log(pi_hat))
+                     - (T - x) * np.log(1 - pi_hat) - x * np.log(pi_hat))
     p_value = 1.0 - stats.chi2.cdf(lr, df=1)
     return {'lr_statistic': lr, 'p_value': p_value}
 
@@ -9357,38 +9354,21 @@ def minimum_variance_hedged_return(spot_return, hedge_ratio, futures_return):
     return np.array(spot_return) - hedge_ratio * np.array(futures_return)
 
 
-def minus_directional_indicator_di(high, low, close, period=14):
+def minus_directional_indicator_di(high, low, close, timeperiod=14):
     '''
     domain: ['Technical analysis & chart-based indicators']
     subdomain: ['Directional movement']
     function: "Minus directional indicator (-DI): smoothed -DM divided by ATR times 100"
-    y_as_x: ['adx', 'average_directional_index_adx']
+    y_as_x: []
     :param high: "High price series"
     :param low: "Low price series"
     :param close: "Close price series"
     :param period: "Smoothing period (default 14)"
     :return: "-DI series"
     '''
-    high = pd.Series(high, dtype=float)
-    low = pd.Series(low, dtype=float)
-    close = pd.Series(close, dtype=float)
-
-    # Directional movement
-    up_move = high.diff()
-    down_move = -low.diff()
-    minus_dm = pd.Series(np.where((down_move > up_move) & (down_move > 0), down_move, 0.0), index=high.index)
-
-    # True range
-    tr = pd.concat([
-        high - low,
-        (high - close.shift(1)).abs(),
-        (low - close.shift(1)).abs()
-    ], axis=1).max(axis=1)
-
-    atr = tr.rolling(window=period).sum()
-    smoothed_minus_dm = minus_dm.rolling(window=period).sum()
-
-    return 100.0 * smoothed_minus_dm / atr
+    import talib
+    minus_di = talib.MINUS_DI(high, low, close, timeperiod=timeperiod)
+    return minus_di
 
 
 def modified_duration(macaulay_dur, ytm, frequency=2):
@@ -9432,6 +9412,7 @@ def momentum(prices, period=10):
     '''
     prices = pd.Series(prices)
     return prices - prices.shift(period)
+
 
 # ================================================================================
 # BATCH 6
@@ -9596,8 +9577,8 @@ def moving_average_convergence_divergence_macd(close, fastperiod=12, slowperiod=
     '''
     import talib
     macd_line, signal_line, histogram = talib.MACD(close, fastperiod=fastperiod,
-                                                    slowperiod=slowperiod,
-                                                    signalperiod=signalperiod)
+                                                   slowperiod=slowperiod,
+                                                   signalperiod=signalperiod)
     return macd_line, signal_line, histogram
 
 
@@ -10169,7 +10150,7 @@ def option_delta_hedged_pandl(gamma, delta_s, theta, dt, vega, delta_sigma):
     :param delta_sigma: "Change in implied volatility"
     :return: "Delta-hedged P&L"
     '''
-    dpi = 0.5 * gamma * delta_s**2 + theta * dt + vega * delta_sigma
+    dpi = 0.5 * gamma * delta_s ** 2 + theta * dt + vega * delta_sigma
     return dpi
 
 
@@ -10472,7 +10453,7 @@ def parkinson_volatility(high, low):
     low = np.asarray(low, dtype=float)
     n = len(high)
     log_hl = np.log(high / low)
-    sigma_sq = np.sum(log_hl**2) / (4 * np.log(2) * n)
+    sigma_sq = np.sum(log_hl ** 2) / (4 * np.log(2) * n)
     return np.sqrt(sigma_sq)
 
 
@@ -10608,8 +10589,8 @@ def perpetuity_value(cashflow, discount_rate):
 
 
 def piotroski_f_score(roa, operating_cf, delta_roa, ocf_over_ta_vs_roa,
-                       delta_leverage, delta_current_ratio, no_new_shares,
-                       delta_gross_margin, delta_asset_turnover):
+                      delta_leverage, delta_current_ratio, no_new_shares,
+                      delta_gross_margin, delta_asset_turnover):
     '''
     domain: ['Accounting & financial statement analysis']
     subdomain: ['Fundamental analysis', 'Scoring models']
@@ -10644,7 +10625,7 @@ def plus_directional_indicator_plusdi(high, low, close, timeperiod=14):
     domain: ['Technical analysis & chart-based indicators']
     subdomain: ['Trend indicators', 'Directional movement']
     function: "Compute Plus Directional Indicator (+DI) = 100 x smoothed +DM / ATR"
-    y_as_x: ['average_directional_index_adx', 'adx']
+    y_as_x: []
     :param high: "Array of high prices"
     :param low: "Array of low prices"
     :param close: "Array of closing prices"
@@ -11097,6 +11078,7 @@ def producer_price_index_laspeyres_style_index(prices_current, prices_base, quan
     denominator = np.sum(prices_base * quantities_base)
     ppi = (numerator / denominator) * 100
     return ppi
+
 
 # ================================================================================
 # BATCH 7
@@ -12135,10 +12117,10 @@ def sabr_implied_vol(F, K, T, alpha, beta, rho_param, nu):
             x_z = z / x_z
 
     term1 = alpha / (FK_mid * (1 + ((1 - beta) ** 2 / 24.0) * logFK ** 2 +
-                                ((1 - beta) ** 4 / 1920.0) * logFK ** 4))
+                               ((1 - beta) ** 4 / 1920.0) * logFK ** 4))
     term2 = 1 + ((((1 - beta) ** 2 / 24.0) * alpha ** 2 / (FK_mid ** 2)) +
-                  (0.25 * rho_param * beta * nu * alpha / FK_mid) +
-                  ((2 - 3 * rho_param ** 2) / 24.0) * nu ** 2) * T
+                 (0.25 * rho_param * beta * nu * alpha / FK_mid) +
+                 ((2 - 3 * rho_param ** 2) / 24.0) * nu ** 2) * T
 
     return term1 * x_z * term2
 
@@ -12357,10 +12339,10 @@ def smith_wilson_extrapolation(maturities, discount_factors, ufr, alpha):
     # Wilson function W(u, v)
     def wilson_func(u, v, ufr_val, alpha_val):
         return np.exp(-ufr_val * (u + v)) * (
-            alpha_val * np.minimum(u, v) -
-            0.5 * np.exp(-alpha_val * np.maximum(u, v)) * (
-                np.exp(alpha_val * np.minimum(u, v)) - np.exp(-alpha_val * np.minimum(u, v))
-            )
+                alpha_val * np.minimum(u, v) -
+                0.5 * np.exp(-alpha_val * np.maximum(u, v)) * (
+                        np.exp(alpha_val * np.minimum(u, v)) - np.exp(-alpha_val * np.minimum(u, v))
+                )
         )
 
     # Build the W matrix
@@ -12655,11 +12637,11 @@ def stochastic_oscillator(high, low, close, fastk_period=14, slowk_period=3, slo
     low = np.array(low, dtype=np.float64)
     close = np.array(close, dtype=np.float64)
     slowk, slowd = talib.STOCH(high, low, close,
-                                fastk_period=fastk_period,
-                                slowk_period=slowk_period,
-                                slowk_matype=0,
-                                slowd_period=slowd_period,
-                                slowd_matype=0)
+                               fastk_period=fastk_period,
+                               slowk_period=slowk_period,
+                               slowk_matype=0,
+                               slowd_period=slowd_period,
+                               slowd_matype=0)
     return slowk, slowd
 
 
@@ -12743,6 +12725,7 @@ def stochastic_rsi(close, timeperiod=14, fastk_period=5, fastd_period=3):
             else:
                 result[i] = 0.5
     return result
+
 
 # ================================================================================
 # BATCH 8
@@ -13457,7 +13440,7 @@ def triangular_arbitrage_condition(S_AB, S_BC, S_CA):
 
 
 def trigger_based_step_down(delinquency_ratio, cnl_ratio, oc_ratio,
-                             delinquency_threshold, cnl_threshold, oc_threshold):
+                            delinquency_threshold, cnl_threshold, oc_threshold):
     '''
     domain: ['Structured finance & securitization']
     subdomain: ['Deal Triggers', 'Cash Flow Waterfall']

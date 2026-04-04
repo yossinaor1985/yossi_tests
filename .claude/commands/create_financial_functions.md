@@ -17,8 +17,10 @@ The relevant columns to pat attention to are:
 
 
 ## Tasks
-use only these instructions and nothing else. Not any .py file or .md file found in this folder "instltns"
-1. 
+- use only these instructions and nothing else. Not any .py file or .md file found in this folder "instltns"
+- all the python packages named in the xlsx file were installed here. you have access to them. use them to implement the equations rather than outputting NotImplementedError 
+- 
+1.
 ```
 Create a .py file where you translate each of these equations (each row) to a python function. The objective is that these 
 functions will serve as a graph where the name of the function serves as an edge (the y-output parameter) and the parameters serve as
@@ -30,40 +32,57 @@ but they have the different financial meaning. The meaning must be found accurat
 ```
 2. 
 ```
-For each function create a description of the domain in the function  - simply copy the list from the .xlsx file column domain.
-Name it "domain"
+- For each function create a description of the domain in the function  - simply copy the list from the .xlsx file column domain.
+- Name it "domain"
 ```
 3. 
 ```
-For each function create a description of the subdomain in the function  - simply copy the list from the .xlsx file column subdomain
-Name it "subdomain"
+- For each function create a description of the subdomain in the function  - simply copy the list from the .xlsx file column subdomain
+- Name it "subdomain"
 ```
 4. 
 ```
-For each function create a description of the function - a financial/statistial/etc. description of the function. Notice that this exact description must appear in the parameter description if it is also an edge of another function- an X parameter of another function (another financial parameter))
-Name it "function"
-In the :return desacriptions of the function output, give a textual description of the function used 
+- For each function create a description of the function - a financial/statistial/etc. description of the function. Notice that this exact description must appear in the parameter description if it is also an edge of another function- an X parameter of another function (another financial parameter))
+- To do that task on the best way, ask yourself the following question:
+"What is [the name of the equation] with respect to the financial realm, and how to compute it"
+- Notice that the given equation in the xlsx file is to help you validate you were not off in your research.
+- Name it "function"
+- In the :return desacriptions of the function output, give a textual description of the function used
+ 
 ```
 5. 
 ```
-For each parameter (a function's argument passed through the function) create a description of the parameter - a financial/statistial/etc. description of the parameter. Notice that this exact description must appear in the function description if it is also a node (an other function)
-insert in the :param desacriptions of the function arguments
+- For each parameter (a function's argument passed through the function) create a description of the parameter - a financial/statistial/etc. description of the parameter. Notice that this exact description must appear in the function description if it is also a node (an other function)
+- To do that task on the best way, ask yourself the following question:
+"What is [the name of the equation] with respect to the financial realm, and how to compute it"
+- Insert in the :param desacriptions of the function arguments
 ```
 6. 
 ```
-For each function create a description of all the functions in the python file that for which the function name serves as an argument (input X parameter) - this description will be served to create the graph - this would be a list with all the function names for which the function serves as an argument
-You will be tested for high accuracy for this list. So pay extra attention. This needs to be created according to the two previous tasks (4 and 5 - the description of the y parameter and the description of the X parameters - function arguments)
-Name it "y_as_x"
+- For each function create a description of all the functions in the python file that for which the function name serves as an argument (input X parameter) - this description will be served to create the graph - this would be a list with all the function names for which the function serves as an argument. 
+Notice that You will be tested for high accuracy for this list. So pay extra attention. This needs to be created according to the two previous tasks (4 and 5 - the description of the y parameter and the description of the X parameters - function arguments)
+- Name it "y_as_x"
 ```
 7. 
 ```
-Create the algorithm for each function. Notice that it is preferable to use the python package function over a manual scripting of that function. 
+- Create the algorithm for each function. Notice that it is preferable to use the python package function over a manual scripting of that function. 
 Notice that you need to understand which one is the correct one if not given specifically in the column python package in the .xlsx file of the specific row).
+Notice that all the python packages named in the xlsx file were installed here. you have access to them. use them to implement the equations rather than outputting NotImplementedError 
+If you feel like finalizing the function with NotImplementedError, give it another try. If some uninstalled math or financial related packages are required install and use them.
 ```
 8. 
 ```
-name the .py file 'financial_functions_1.py' and save it in the folder 'instltns'
+- Name the .py file 'financial_functions_03-04-2026_1.py' and save it in the folder 'yossi_tests/outputs'
 ```
+
+9. 
+```
+After finalizing the file, go over it again:
+1. Test if there are no redundant "NotImplementedError"
+2. Make sure that the parameters in the :params fit the arguments in the function input. If no. do a reseach and fix them, as described in TASK 5.
+3. The y_as_x in all the functions are as required. Go over all the functions and parameters again and make sure that all inputs that appear as function names are in the y_as_x of the function as requested.
+```
+
 
 ## Notes
 1.
