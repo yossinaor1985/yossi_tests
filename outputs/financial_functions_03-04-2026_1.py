@@ -327,7 +327,9 @@ def returns(start_val, end_val):
     'egarch_11','equal_risk_contribution','ewma_volatility','ex_ante_tracking_error','excess_kurtosis','excess_return',
     'expected_drawdown','expected_shortfall_cvar','garch_11','garch_11_v2','gjr_garch','global_minimum_variance_portfolio',
     'hasbrouck_lambda','henriksson_merton_timing','historical_var','hit_ratio','idiosyncratic_volatility','incremental_var','information_ratio',
-    'interaction_effect']
+    'interaction_effect','ledoit_wolf_covariance_shrinkage','maximum_drawdown','maximum_sharpe_portfolio','mean_cvar_optimization',
+    'mean_variance_utility','monte_carlo_var','m_squared_modigliani','omega_ratio','pain_index','parametric_normal_var',
+    'parametric_var','pastor_stambaugh_liquidity','portfolio_return']
     :param start_val: "the value at the beginning of the period"
     :param end_val: "the value at the end of the period"
     :return: "end/start-1"
@@ -8279,7 +8281,6 @@ def lbo_equity_irr(equity_invested, cash_to_equity, exit_equity, periods=None):
     cfs[-1] += exit_equity
     return npf.irr(cfs)
 
-
 def ledoit_wolf_covariance_shrinkage(returns):
     '''
     domain: ['Asset management & portfolio optimization']
@@ -8651,7 +8652,7 @@ def log_return(prices):
     domain: ['Performance measurement & attribution']
     subdomain: ['Return calculation']
     function: "Log return: r_t = ln(P_t / P_{t-1})"
-    y_as_x: []
+    y_as_x: ['return']
     :param prices: "Price series (array-like)"
     :return: "Array of log returns"
     '''
@@ -9013,6 +9014,7 @@ def market_neutral_constraint(weights, betas):
     betas = np.array(betas)
     port_beta = np.sum(betas * weights)
     return {'is_neutral': bool(np.abs(port_beta) < 1e-8), 'portfolio_beta': port_beta}
+
 
 
 def maximum_drawdown(returns):
