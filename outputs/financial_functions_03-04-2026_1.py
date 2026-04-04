@@ -293,24 +293,6 @@ def aggregate_loss_distribution(frequency_mean, severity_mean, severity_std, n_s
     return aggregate_losses
 
 
-def allocation_effect_brinson_fachler(portfolio_weights, benchmark_weights, benchmark_sector_returns,
-                                      benchmark_total_return):
-    '''
-    domain: ['Performance measurement & attribution']
-    subdomain: ['Performance Attribution', 'Brinson Model']
-    function: "Computes the allocation effect for each sector under the Brinson-Fachler attribution model: Allocation_i = (w_i^P - w_i^B)(r_i^B - r^B)."
-    y_as_x: []
-    :param portfolio_weights: "Array of portfolio sector weights"
-    :param benchmark_weights: "Array of benchmark sector weights"
-    :param benchmark_sector_returns: "Array of benchmark returns for each sector"
-    :param benchmark_total_return: "Total benchmark return"
-    :return: "Array of allocation effects per sector"
-    '''
-    pw = np.asarray(portfolio_weights, dtype=float)
-    bw = np.asarray(benchmark_weights, dtype=float)
-    br = np.asarray(benchmark_sector_returns, dtype=float)
-    return (pw - bw) * (br - benchmark_total_return)
-
 
 def alpha(returns, factor_returns, risk_free_rate=0.0):
     '''
@@ -345,7 +327,7 @@ def returns(start_val, end_val):
     'egarch_11','equal_risk_contribution','ewma_volatility','ex_ante_tracking_error','excess_kurtosis','excess_return',
     'expected_drawdown','expected_shortfall_cvar','garch_11','garch_11_v2','gjr_garch','global_minimum_variance_portfolio',
     'hasbrouck_lambda','henriksson_merton_timing','historical_var','hit_ratio','idiosyncratic_volatility','incremental_var','information_ratio',
-    ]
+    'interaction_effect']
     :param start_val: "the value at the beginning of the period"
     :param end_val: "the value at the end of the period"
     :return: "end/start-1"
@@ -2092,39 +2074,8 @@ def breusch_pagan_test(y, X):
     return bp_test  # (lm_stat, lm_pvalue, fvalue, f_pvalue)
 
 
-# ---------------------------------------------------------------------------
-# 6. brinson_allocation_effect
-# ---------------------------------------------------------------------------
-def brinson_allocation_effect(w_portfolio, w_benchmark, r_benchmark_sector, r_benchmark_total):
-    '''
-    domain: ['Performance measurement & attribution']
-    subdomain: ['Brinson attribution', 'Portfolio performance']
-    function: "Computes the allocation effect for a single sector in Brinson performance attribution, measuring the value added by over/under-weighting a sector."
-    y_as_x: []
-    :param w_portfolio: "Portfolio weight for sector i"
-    :param w_benchmark: "Benchmark weight for sector i"
-    :param r_benchmark_sector: "Benchmark return for sector i"
-    :param r_benchmark_total: "Total benchmark return across all sectors"
-    :return: "Allocation effect: (w_p,i - w_b,i) * (R_b,i - R_b)"
-    '''
-    return (w_portfolio - w_benchmark) * (r_benchmark_sector - r_benchmark_total)
 
 
-# ---------------------------------------------------------------------------
-# 7. brinson_selection_effect
-# ---------------------------------------------------------------------------
-def brinson_selection_effect(w_benchmark, r_portfolio_sector, r_benchmark_sector):
-    '''
-    domain: ['Performance measurement & attribution']
-    subdomain: ['Brinson attribution', 'Portfolio performance']
-    function: "Computes the selection (stock-picking) effect for a single sector in Brinson performance attribution."
-    y_as_x: []
-    :param w_benchmark: "Benchmark weight for sector i"
-    :param r_portfolio_sector: "Portfolio return for sector i"
-    :param r_benchmark_sector: "Benchmark return for sector i"
-    :return: "Selection effect: w_b,i * (R_p,i - R_b,i)"
-    '''
-    return w_benchmark * (r_portfolio_sector - r_benchmark_sector)
 
 
 # ---------------------------------------------------------------------------
@@ -12154,22 +12105,6 @@ def security_market_line(risk_free_rate, beta, expected_market_return):
     '''
     return risk_free_rate + beta * (expected_market_return - risk_free_rate)
 
-
-def selection_effect_brinson_fachler(benchmark_weights, portfolio_returns, benchmark_returns):
-    '''
-    domain: ['Performance measurement & attribution']
-    subdomain: ['Performance Attribution', 'Brinson Model']
-    function: "Selection Effect (Brinson-Fachler) measures the value added by the portfolio manager's security selection within each sector. It captures the return impact of choosing different securities within a sector compared to the benchmark, weighted by the benchmark's sector allocation."
-    y_as_x: []
-    :param benchmark_weights: "Array of benchmark weights for each sector (w_i^B)."
-    :param portfolio_returns: "Array of portfolio returns for each sector (r_i^P)."
-    :param benchmark_returns: "Array of benchmark returns for each sector (r_i^B)."
-    :return: "Computed Selection Effect per sector = w_i^B * (r_i^P - r_i^B)"
-    '''
-    benchmark_weights = np.array(benchmark_weights, dtype=float)
-    portfolio_returns = np.array(portfolio_returns, dtype=float)
-    benchmark_returns = np.array(benchmark_returns, dtype=float)
-    return benchmark_weights * (portfolio_returns - benchmark_returns)
 
 
 def semivariance(returns, target=0.0):
