@@ -17,6 +17,7 @@ Not specifically if y is given as x in another function. This turns out to be a 
 finds more connections. However it requires manual fix.
 """
 
+
 # ================================================================================
 # BATCH 1
 # ================================================================================
@@ -47,6 +48,7 @@ def abs_pool_factor(current_pool_balance, original_pool_balance):
     :return: "Pool factor = Current Pool Balance / Original Pool Balance, ranges from 0 to 1"
     '''
     return current_pool_balance / original_pool_balance
+
 
 # fixme: change to total assets and fix y_as_x
 def accounting_identity(liabilities, equity):
@@ -159,7 +161,8 @@ def adf_unit_root_test(time_series, max_lags=None, regression='c'):
     result = adfuller(time_series, maxlag=max_lags, regression=regression)
     return result
 
-#fixme
+
+# fixme
 def adjusted_present_value_apv(npv_unlevered, pv_financing_effects):
     '''
     domain: ['Corporate finance & capital budgeting']
@@ -199,7 +202,8 @@ def advance_rate(loan_amount, eligible_collateral_base):
     '''
     return loan_amount / eligible_collateral_base
 
-#fixme
+
+# fixme
 def adverse_selection_cost(effective_spread, realized_spread):
     '''
     domain: ['Liquidity risk, market liquidity & execution cost']
@@ -227,7 +231,6 @@ def adx(high, low, close, timeperiod=14):
     '''
     import talib
     return talib.ADX(high, low, close, timeperiod=timeperiod)
-
 
 
 def affine_term_structure_bond_price(a_coeff, b_coeff, state_vector):
@@ -308,29 +311,40 @@ def allocation_effect_brinson_fachler(portfolio_weights, benchmark_weights, benc
     br = np.asarray(benchmark_sector_returns, dtype=float)
     return (pw - bw) * (br - benchmark_total_return)
 
-#stopped here
+
 def alpha(returns, factor_returns, risk_free_rate=0.0):
     '''
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Asset Pricing', 'CAPM']
     function: "Computes Jensen's alpha: the excess return of an asset beyond what is predicted by the CAPM. alpha = E[R_i] - [R_f + beta_i(E[R_m]-R_f)]."
-    y_as_x: ['alpha_from_regression', 'appraisal_ratio', 'cash_flow_at_risk_cfar', 'credit_var', 'delta_normal_var', 'earnings_at_risk', 'elastic_net', 'expected_shortfall_cvar', 'garch_11', 'historical_var', 'holt_trend_method', 'mean_cvar_optimization', 'parametric_es_under_normality', 'sabr_implied_vol', 'smith_wilson_extrapolation', 'state_space_measurement_equation', 'state_space_transition_equation', 'treynor_ratio', 'vasicek_one_factor_portfolio_loss_quantile']
+    y_as_x: ['alpha_from_regression', 'appraisal_ratio']
     :param returns: "Array of asset returns"
     :param factor_returns: "Array of market (benchmark) returns"
     :param risk_free_rate: "Risk-free rate per period (default 0)"
     :return: "Annualized Jensen's alpha"
     '''
-    try:
-        import empyrical
-        return empyrical.alpha(returns, factor_returns, risk_free=risk_free_rate)
-    except ImportError:
-        returns = np.asarray(returns, dtype=float)
-        factor_returns = np.asarray(factor_returns, dtype=float)
-        excess_r = returns - risk_free_rate
-        excess_m = factor_returns - risk_free_rate
-        b = np.cov(excess_r, excess_m)[0, 1] / np.var(excess_m, ddof=1)
-        alpha_val = np.mean(excess_r) - b * np.mean(excess_m)
-        return alpha_val * 252
+    returns = np.asarray(returns, dtype=float)
+    factor_returns = np.asarray(factor_returns, dtype=float)
+    excess_r = returns - risk_free_rate
+    excess_m = factor_returns - risk_free_rate
+    b = np.cov(excess_r, excess_m)[0, 1] / np.var(excess_m, ddof=1)
+    alpha_val = np.mean(excess_r) - b * np.mean(excess_m)
+    return alpha_val
+
+
+# stopped here
+# fixme: add all the y_as_x
+def returns(start_val, end_val):
+    '''
+    domain: ['Equity valuation & asset pricing']
+    subdomain: ['Asset Pricing', 'CAPM']
+    function: "Return - the percentage of change between the value at start to the value at end."
+    y_as_x: ['alpha_from_regression', 'alpha',...]
+    :param start_val: "the value at the beginning of the period"
+    :param end_val: "the value at the end of the period"
+    :return: "end/start-1"
+    '''
+    return (end_val / start_val) - 1
 
 
 def alpha_from_regression(portfolio_returns, benchmark_returns, risk_free_rate=0.0):
@@ -955,7 +969,6 @@ def asset_turnover(revenue, average_total_assets):
     return revenue / average_total_assets
 
 
-
 def average_loan_age(loan_ages, loan_balances):
     '''
     domain: ['Structured finance & securitization']
@@ -1389,7 +1402,7 @@ def beta(returns, factor_returns, risk_free_rate=0.0):
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Asset Pricing', 'CAPM']
     function: "Computes the CAPM beta: beta_i = Cov(R_i, R_m) / Var(R_m)."
-    y_as_x: ['alpha', 'capm_expected_return', 'cost_of_equity_capm', 'garch_11', 'holt_trend_method', 'levered_beta_hamada', 'probability_of_default_from_logit', 'probit_score', 'sabr_implied_vol', 'security_market_line', 'treynor_ratio', 'unlevered_beta']
+    y_as_x: ['alpha', 'capm_expected_return', 'cost_of_equity_capm', 'garch_11',  'levered_beta_hamada', 'probability_of_default_from_logit', 'probit_score', 'sabr_implied_vol', 'security_market_line', 'treynor_ratio', 'unlevered_beta']
     :param returns: "Array of asset returns"
     :param factor_returns: "Array of market (benchmark) returns"
     :param risk_free_rate: "Risk-free rate per period (default 0)"
@@ -2696,10 +2709,10 @@ def charm(S, K, T, r, sigma, option_type='call', dT=1 / 365):
     d2 = d1 - sigma * np.sqrt(T)
     if option_type == 'call':
         charm_val = -np.exp(-r * T) * (
-                    norm.pdf(d1) * (2 * r * T - d2 * sigma * np.sqrt(T)) / (2 * T * sigma * np.sqrt(T)))
+                norm.pdf(d1) * (2 * r * T - d2 * sigma * np.sqrt(T)) / (2 * T * sigma * np.sqrt(T)))
     else:
         charm_val = -np.exp(-r * T) * (
-                    norm.pdf(d1) * (2 * r * T - d2 * sigma * np.sqrt(T)) / (2 * T * sigma * np.sqrt(T)))
+                norm.pdf(d1) * (2 * r * T - d2 * sigma * np.sqrt(T)) / (2 * T * sigma * np.sqrt(T)))
         # For puts, charm has the same formula for the time-dependent part
         # but delta itself differs; the decay component is:
         charm_val = charm_val + r * np.exp(-r * T) * norm.cdf(-d1)
@@ -14081,7 +14094,8 @@ def weighted_average_cost_of_capital_wacc(equity_value, debt_value, cost_of_equi
     :return: "Computed WACC = (E/V)*R_e + (D/V)*R_d*(1-T)"
     '''
     total_value = equity_value + debt_value
-    return (equity_value / total_value) * cost_of_equity + (debt_value / total_value) * pre_tax_cost_of_debt * (1 - tax_rate)
+    return (equity_value / total_value) * cost_of_equity + (debt_value / total_value) * pre_tax_cost_of_debt * (
+                1 - tax_rate)
 
 
 def weighted_average_coupon_wac(weights, coupons):
