@@ -331,8 +331,8 @@ def returns(start_val, end_val):
     'mean_variance_utility','monte_carlo_var','m_squared_modigliani','omega_ratio','pain_index','parametric_normal_var',
     'parametric_var','pastor_stambaugh_liquidity','portfolio_return','profit_factor','realized_beta','realized_hedge_effectiveness','realized_variance','realized_volatility',
     'risk_parity_objective','riskmetrics_covariance','semivariance','sharpe_ratio','sortino_ratio','sterling_ratio','stressed_var','tail_ratio','tangency_portfolio_weights','time_weighted_return_twrr',
-    'tracking_error','treynor_ratio','treynor_mazuy_timing','ulcer_index','up_capture_ratio'
-    ]
+    'tracking_error','treynor_ratio','treynor_mazuy_timing','ulcer_index','upside_capture','upside_potential_ratio','volatility_clustering_test','variance_ratio_test',
+    'win_over_loss_ratio','yang_zhang_volatility']
     :param start_val: "the value at the beginning of the period"
     :param end_val: "the value at the end of the period"
     :return: "end/start-1"
@@ -10673,7 +10673,7 @@ def portfolio_return(weights, expected_returns):
     domain: ['Asset management & portfolio optimization']
     subdomain: ['Portfolio construction', 'Return estimation']
     function: "Compute expected portfolio return: E[R_p] = w' * mu"
-    y_as_x: ['active_return', 'excess_return', 'mean_variance_utility', 'sharpe_ratio','up_capture_ratio']
+    y_as_x: ['active_return', 'excess_return', 'mean_variance_utility', 'sharpe_ratio','upside_capture']
     :param weights: "Array of portfolio weights"
     :param expected_returns: "Array of expected asset returns"
     :return: "Expected portfolio return"
@@ -13633,31 +13633,12 @@ def unlevered_yield(net_operating_income_noi, purchase_price):
     '''
     return net_operating_income_noi / purchase_price
 
-a
-def up_capture_ratio(returns, benchmark_returns):
-    '''
-    domain: ['Performance measurement & attribution']
-    subdomain: ['Capture Ratios', 'Relative Performance']
-    function: "Up capture ratio measures how much of the benchmark's positive returns are captured by the portfolio. It is the ratio of the portfolio's average return during up-market periods to the benchmark's average return during those same periods. A ratio above 100% indicates outperformance during up markets."
-    y_as_x: []
-    :param returns: "Array-like or pd.Series of portfolio returns"
-    :param benchmark_returns: "Array-like or pd.Series of benchmark returns"
-    :return: "Computed up capture ratio = mean(R_p | R_b > 0) / mean(R_b | R_b > 0)"
-    '''
-    import quantstats as qs
-    returns = pd.Series(returns)
-    benchmark_returns = pd.Series(benchmark_returns)
-    benchmark_up = benchmark_returns > 0
-    if benchmark_up.sum() == 0:
-        return np.nan
-    return np.mean(returns[benchmark_up]) / np.mean(benchmark_returns[benchmark_up])
-
 
 def upside_capture(returns, benchmark_returns):
     '''
     domain: ['Performance measurement & attribution']
     subdomain: ['Capture Ratios', 'Relative Performance']
-    function: "Upside capture measures the portfolio's average return during periods when the benchmark return is positive, relative to the benchmark's average positive return. It is equivalent to the up capture ratio and indicates how well the portfolio participates in bull markets."
+    function: "Upside capture (up-capture ratio) measures the portfolio's average return during periods when the benchmark return is positive, relative to the benchmark's average positive return. It is equivalent to the up capture ratio and indicates how well the portfolio participates in bull markets."
     y_as_x: []
     :param returns: "Array-like or pd.Series of portfolio returns"
     :param benchmark_returns: "Array-like or pd.Series of benchmark returns"
@@ -13669,7 +13650,6 @@ def upside_capture(returns, benchmark_returns):
     if np.sum(up_mask) == 0:
         return np.nan
     return np.mean(returns[up_mask]) / np.mean(benchmark_returns[up_mask])
-
 
 def upside_potential_ratio(returns, mar=0.0):
     '''
@@ -13771,6 +13751,8 @@ def variance_of_loss(loss_values, probabilities=None):
         e_l = np.mean(loss_values)
         e_l2 = np.mean(loss_values ** 2)
     return e_l2 - e_l ** 2
+
+
 
 
 def variance_ratio_test(returns, q=2):
@@ -13945,7 +13927,6 @@ def vix_variance_relation(vix_level):
     :return: "Expected 30-day annualized risk-neutral variance = (VIX/100)^2"
     '''
     return (vix_level / 100) ** 2
-
 
 def volatility_clustering_test(returns, n_lags=20):
     '''
@@ -14306,7 +14287,6 @@ def williams_pctr(high, low, close, period=14):
     low = np.asarray(low, dtype=np.float64)
     close = np.asarray(close, dtype=np.float64)
     return talib.WILLR(high, low, close, timeperiod=period)
-
 
 def win_over_loss_ratio(returns):
     '''
