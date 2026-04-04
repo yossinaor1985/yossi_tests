@@ -13633,7 +13633,7 @@ def unlevered_yield(net_operating_income_noi, purchase_price):
     '''
     return net_operating_income_noi / purchase_price
 
-
+a
 def up_capture_ratio(returns, benchmark_returns):
     '''
     domain: ['Performance measurement & attribution']
