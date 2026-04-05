@@ -502,25 +502,24 @@ def amortization_factor(interest_rate, n_periods):
         return interest_rate * (1 + interest_rate) ** n_periods / ((1 + interest_rate) ** n_periods - 1)
 
 
-def annual_percentage_rate_apr(periodic_rate, periods_per_year):
+def annual_percentage_rate_apr(nominal_rate, compounding_periods):
     '''
     domain: ['Banking, consumer lending & project finance']
     subdomain: ['Consumer Lending', 'Interest Rate Disclosure']
     function: "Computes the Annual Percentage Rate (APR) as periodic rate times the number of periods per year."
     y_as_x: ['effective_annual_rate_ear']
-    :param periodic_rate: "Interest rate per period (e.g., monthly rate)"
-    :param periods_per_year: "Number of compounding periods per year"
-    :return: "APR = periodic_rate * periods_per_year"
+    :param nominal_rate: "Interest rate per period (e.g., monthly rate)"
+    :param compounding_periods: "Number of compounding periods per year"
+    :return: "APR = periodic_rate * compounding_periods"
     '''
-    return periodic_rate * periods_per_year
-
+    return nominal_rate * compounding_periods
 
 def annualized_cpi_inflation_from_monthly_cpi(cpi_current, cpi_previous):
     '''
     domain: ['Macroeconomics, inflation & price indices']
     subdomain: ['Inflation Measurement', 'Consumer Price Index']
     function: "Computes annualized CPI inflation from consecutive monthly CPI readings: pi = (CPI_t / CPI_{t-1})^12 - 1."
-    y_as_x: []
+    y_as_x: ['inflation_accretion','cpi_inflation_month_over_month', 'cpi_inflation_year_over_year','cumulative_inflation_factor_from_cpi']
     :param cpi_current: "CPI value for the current month"
     :param cpi_previous: "CPI value for the previous month"
     :return: "Annualized inflation rate"
@@ -533,7 +532,7 @@ def annualized_ppi_inflation_from_monthly_ppi(ppi_current, ppi_previous):
     domain: ['Macroeconomics, inflation & price indices']
     subdomain: ['Inflation Measurement', 'Producer Price Index']
     function: "Computes annualized PPI inflation from consecutive monthly PPI readings: pi = (PPI_t / PPI_{t-1})^12 - 1."
-    y_as_x: []
+    y_as_x: ['cumulative_inflation_factor_from_ppi','ppi_inflation_month_over_month','ppi_inflation_year_over_year']
     :param ppi_current: "PPI value for the current month"
     :param ppi_previous: "PPI value for the previous month"
     :return: "Annualized PPI inflation rate"
@@ -546,7 +545,7 @@ def annualized_return_cagr(returns, period='daily'):
     domain: ['Performance measurement & attribution']
     subdomain: ['Return Measurement', 'Performance Metrics']
     function: "Computes the Compound Annual Growth Rate (CAGR) or annualized return from a series of periodic returns."
-    y_as_x: ['sharpe_ratio', 'calmar_ratio', 'sortino_ratio', 'treynor_ratio', 'information_ratio','sterling_ratio']
+    y_as_x: ['returns_val','cumulative_return']
     :param returns: "Array of periodic returns"
     :param period: "'daily', 'weekly', or 'monthly' to determine annualization factor"
     :return: "Annualized return (CAGR)"
@@ -582,7 +581,7 @@ def annualized_volatility(returns, period='daily'):
         ann = ann_factors.get(period, 252)
         return np.std(returns, ddof=1) * np.sqrt(ann)
 
-#stopped here
+
 def annuity_future_value(payment, rate, n_periods):
     '''
     domain: ['Corporate finance, valuation & capital budgeting']
@@ -609,7 +608,7 @@ def annuity_present_value(payment, rate, n_periods):
     subdomain: ['Time Value of Money', 'Annuities']
     function: "Computes the present value of an ordinary annuity: PV = PMT * (1 - (1+r)^-n) / r."
     y_as_x: ['present_value_pv','adjusted_present_value_apv', 'loan_payment_annuity','interest_payment','loan_payment_annuity','number_of_periods',
-    'continuous_compounding','equated_monthly_installment_emi']
+    'continuous_compounding','simple_compounding','equated_monthly_installment_emi']
     :param payment: "Periodic payment amount (PMT)"
     :param rate: "Discount rate per period"
     :param n_periods: "Total number of periods"
@@ -3221,7 +3220,8 @@ def consumer_price_index_laspeyres_form(prices_current, prices_base, quantities_
     domain: ['Macroeconomics, inflation & price indices']
     subdomain: ['Price indices', 'CPI construction']
     function: "Computes the Consumer Price Index using the Laspeyres formula with base-period quantities as weights."
-    y_as_x: ['cpi_inflation_month_over_month', 'cpi_inflation_year_over_year', 'cumulative_inflation_factor_from_cpi']
+    y_as_x: ['cpi_inflation_month_over_month', 'cpi_inflation_year_over_year', 'cumulative_inflation_factor_from_cpi',
+    'annualized_cpi_inflation_from_monthly_cpi','inflation_accretion','relative_ppp','purchasing_power_parity_ppp']
     :param prices_current: "Array of current period prices for each item"
     :param prices_base: "Array of base period prices for each item"
     :param quantities_base: "Array of base period quantities (weights) for each item"
@@ -3257,7 +3257,7 @@ def continuous_compounding(pv, r, t):
     domain: ['Interest-rate modeling & term structures']
     subdomain: ['Compounding conventions', 'Time value of money']
     function: "Computes the future value using continuous compounding."
-    y_as_x: [future_value_fv]
+    y_as_x: ['future_value_fv']
     :param pv: "Present value (initial investment)"
     :param r: "Continuously compounded annual interest rate"
     :param t: "Time in years"
@@ -3635,7 +3635,8 @@ def cpi_inflation_month_over_month(cpi_t, cpi_t_minus_1):
     domain: ['Macroeconomics, inflation & price indices']
     subdomain: ['Inflation measurement', 'CPI analysis']
     function: "Computes month-over-month CPI inflation rate."
-    y_as_x: ['annualized_cpi_inflation_from_monthly_cpi']
+    y_as_x: [ 'cpi_inflation_year_over_year', 'cumulative_inflation_factor_from_cpi',
+    'annualized_cpi_inflation_from_monthly_cpi','inflation_accretion']
     :param cpi_t: "CPI value in the current month"
     :param cpi_t_minus_1: "CPI value in the previous month"
     :return: "MoM inflation: CPI_t / CPI_(t-1) - 1"
@@ -3651,7 +3652,8 @@ def cpi_inflation_year_over_year(cpi_t, cpi_t_minus_12):
     domain: ['Macroeconomics, inflation & price indices']
     subdomain: ['Inflation measurement', 'CPI analysis']
     function: "Computes year-over-year CPI inflation rate."
-    y_as_x: []
+    y_as_x: ['cpi_inflation_month_over_month',  'cumulative_inflation_factor_from_cpi',
+    'annualized_cpi_inflation_from_monthly_cpi','inflation_accretion']
     :param cpi_t: "CPI value in the current month"
     :param cpi_t_minus_12: "CPI value 12 months prior"
     :return: "YoY inflation: CPI_t / CPI_(t-12) - 1"
@@ -3858,7 +3860,8 @@ def cumulative_inflation_factor_from_cpi(cpi_t, cpi_0):
     domain: ['Macroeconomics, inflation & price indices']
     subdomain: ['Inflation measurement', 'Purchasing power']
     function: "Computes the cumulative inflation factor from a base period to the current period using CPI values."
-    y_as_x: ['inflation_accretion']
+    y_as_x: ['inflation_accretion','cpi_inflation_month_over_month', 'cpi_inflation_year_over_year',
+    'annualized_cpi_inflation_from_monthly_cpi']
     :param cpi_t: "CPI value at the current time t"
     :param cpi_0: "CPI value at the base period 0"
     :return: "Cumulative inflation factor: CPI_t / CPI_0"
@@ -3874,7 +3877,7 @@ def cumulative_inflation_factor_from_ppi(ppi_t, ppi_0):
     domain: ['Macroeconomics, inflation & price indices']
     subdomain: ['Inflation measurement', 'Producer prices']
     function: "Computes the cumulative inflation factor from a base period to the current period using PPI values."
-    y_as_x: []
+    y_as_x: ['annualized_ppi_inflation_from_monthly_ppi','ppi_inflation_month_over_month','ppi_inflation_year_over_year']
     :param ppi_t: "PPI value at the current time t"
     :param ppi_0: "PPI value at the base period 0"
     :return: "Cumulative inflation factor: PPI_t / PPI_0"
@@ -3925,7 +3928,7 @@ def cumulative_return(returns):
     domain: ['Performance measurement & attribution']
     subdomain: ['Return calculation', 'Performance measurement']
     function: "Computes the cumulative return from a series of periodic returns."
-    y_as_x: ['annualized_return_cagr', 'maximum_drawdown', 'drawdown']
+    y_as_x: ['annualized_return_cagr','returns_val']
     :param returns: "Pandas Series of periodic returns"
     :return: "Cumulative return: product(1 + r_t) - 1"
     '''
@@ -5103,7 +5106,7 @@ def effective_annual_rate_ear(nominal_rate, compounding_periods):
     domain: ['Banking, consumer lending & project finance']
     subdomain: ['Interest rate conversions']
     function: "Converts a nominal interest rate with periodic compounding to an effective annual rate."
-    y_as_x: []
+    y_as_x: ['annual_percentage_rate_apr']
     :param nominal_rate: "Nominal (stated) annual interest rate"
     :param compounding_periods: "Number of compounding periods per year (m)"
     :return: "EAR = (1 + r/m)^m - 1"
@@ -6563,7 +6566,7 @@ def funds_transfer_pricing_spread_v2(customer_rate, internal_transfer_rate):
     '''
     return customer_rate - internal_transfer_rate
 
-#fixme
+
 def future_value_fv(present_value_pv, rate, nper, pmt=0):
     '''
     domain: ['Corporate finance & capital budgeting']
@@ -7780,7 +7783,7 @@ def inflation_accretion(principal, cpi_current, cpi_base):
     domain: ['Fixed income, bonds & credit markets']
     subdomain: ['Inflation-linked bonds']
     function: "Inflation accretion: indexed principal adjusted by CPI ratio"
-    y_as_x: []
+    y_as_x: ['cpi_inflation_month_over_month', 'cpi_inflation_year_over_year','cumulative_inflation_factor_from_cpi','annualized_cpi_inflation_from_monthly_cpi']
     :param principal: "Original bond principal"
     :param cpi_current: "Current CPI level"
     :param cpi_base: "Base CPI level at issuance"
@@ -7940,7 +7943,7 @@ def interest_payment(rate, per, nper, pv, fv=0):
     domain: ['Banking, lending & project finance']
     subdomain: ['Loan amortization']
     function: "Interest payment for a given period of an amortizing loan"
-    y_as_x: ['continuous_compounding','growing_annuity_value','loan_payment_annuity','number_of_periods', 'future_value_fv','present_value_pv',
+    y_as_x: ['continuous_compounding','simple_compounding','growing_annuity_value','loan_payment_annuity','number_of_periods', 'future_value_fv','present_value_pv',
     'amortization_factor','equated_monthly_installment_emi']
     :param rate: "Interest rate per period"
     :param per: "Period for which to compute interest (1-based)"
@@ -10757,13 +10760,12 @@ def potential_future_exposure_pfe(exposure_paths, confidence_level=0.95):
     pfe = np.percentile(exposure_paths, confidence_level * 100)
     return pfe
 
-
 def ppi_inflation_month_over_month(ppi_current, ppi_previous):
     '''
     domain: ['Macroeconomics, inflation & price indices']
     subdomain: ['Inflation measurement', 'Producer prices']
     function: "Compute PPI inflation month-over-month: pi_t = PPI_t / PPI_(t-1) - 1"
-    y_as_x: ['annualized_ppi_inflation_from_monthly_ppi']
+    y_as_x: ['annualized_ppi_inflation_from_monthly_ppi','cumulative_inflation_factor_from_ppi','ppi_inflation_year_over_year']
     :param ppi_current: "PPI for the current month"
     :param ppi_previous: "PPI for the previous month"
     :return: "Month-over-month PPI inflation rate"
@@ -10772,12 +10774,13 @@ def ppi_inflation_month_over_month(ppi_current, ppi_previous):
     return inflation
 
 
+
 def ppi_inflation_year_over_year(ppi_current, ppi_12_months_ago):
     '''
     domain: ['Macroeconomics, inflation & price indices']
     subdomain: ['Inflation measurement', 'Producer prices']
     function: "Compute PPI inflation year-over-year: pi_t = PPI_t / PPI_(t-12) - 1"
-    y_as_x: []
+    y_as_x: ['annualized_ppi_inflation_from_monthly_ppi','cumulative_inflation_factor_from_ppi','ppi_inflation_month_over_month']
     :param ppi_current: "PPI for the current month"
     :param ppi_12_months_ago: "PPI for the same month 12 months ago"
     :return: "Year-over-year PPI inflation rate"
@@ -10837,7 +10840,7 @@ def present_value_pv(rate, nper, pmt, fv=0.0):
     domain: ['Corporate finance, valuation & capital budgeting']
     subdomain: ['Time value of money', 'Discounting']
     function: "Compute present value: PV = sum_t CF_t / (1+r)^t using numpy_financial"
-    y_as_x: ['abnormal_earnings_growth','annuity_present_value', 'net_present_value_npv', 'profitability_index','continuous_compounding',
+    y_as_x: ['abnormal_earnings_growth','annuity_present_value', 'net_present_value_npv', 'profitability_index','simple_compounding','continuous_compounding',
     'interest_payment','loan_payment_annuity','number_of_periods', 'future_value_fv','equated_monthly_installment_emi']
     :param rate: "Discount rate per period"
     :param nper: "Number of periods"
@@ -11034,7 +11037,8 @@ def producer_price_index_laspeyres_style_index(prices_current, prices_base, quan
     domain: ['Macroeconomics, inflation & price indices']
     subdomain: ['Price indices', 'Producer prices']
     function: "Compute Producer Price Index (Laspeyres-style): PPI_t = (sum_i p_(i,t) * q_(i,0) / sum_i p_(i,0) * q_(i,0)) x 100"
-    y_as_x: ['ppi_inflation_month_over_month', 'ppi_inflation_year_over_year', 'cumulative_inflation_factor_from_ppi']
+    y_as_x: ['ppi_inflation_month_over_month', 'ppi_inflation_year_over_year', 'cumulative_inflation_factor_from_ppi',
+    'annualized_ppi_inflation_from_monthly_ppi']
     :param prices_current: "Array of current-period prices for each item"
     :param prices_base: "Array of base-period prices for each item"
     :param quantities_base: "Array of base-period quantities for each item"
@@ -11621,17 +11625,17 @@ def refinance_proceeds(new_loan_amount, old_loan_balance, fees):
     return new_loan_amount - old_loan_balance - fees
 
 
-def relative_ppp(domestic_inflation, foreign_inflation):
+def relative_ppp(domestic_price_level, foreign_price_level):
     '''
     domain: ['FX & international finance']
     subdomain: ['Exchange Rate Theory', 'International Economics']
     function: "Relative Purchasing Power Parity predicts that the change in the exchange rate will approximately equal the inflation differential between two countries. If the domestic inflation exceeds the foreign inflation, the domestic currency is expected to depreciate."
-    y_as_x: []
-    :param domestic_inflation: "The domestic inflation rate (pi_d) over the period."
-    :param foreign_inflation: "The foreign inflation rate (pi_f) over the period."
+    y_as_x: ['purchasing_power_parity_ppp']
+    :param domestic_price_level: "The domestic price level or price index (e.g., CPI) of the home country."
+    :param foreign_price_level: "The foreign price level or price index of the foreign country."
     :return: "Computed expected exchange rate change Delta S / S = pi_d - pi_f"
     '''
-    return domestic_inflation - foreign_inflation
+    return domestic_price_level - foreign_price_level
 
 
 def relative_spread(ask, bid):
@@ -12212,7 +12216,7 @@ def simple_compounding(pv, r, t):
     domain: ['Interest-rate modeling & term structures']
     subdomain: ['Interest Rate Conventions', 'Time Value of Money']
     function: "Simple Compounding calculates the future value under simple interest, where interest is not compounded. The future value equals the present value multiplied by (1 + rate x time). This convention is commonly used for money market instruments with maturities less than one year."
-    y_as_x: ['continuous_compounding']
+    y_as_x: ['future_value_fv']
     :param pv: "The present value or initial principal amount."
     :param r: "The simple interest rate (annualized)."
     :param t: "The time period in years (or fraction thereof)."
