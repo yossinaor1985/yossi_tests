@@ -310,7 +310,7 @@ def alpha(returns, factor_returns, risk_free_rate=0.0):
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Asset Pricing', 'CAPM']
     function: "Computes Jensen's alpha: the excess return of an asset beyond what is predicted by the CAPM. alpha = E[R_i] - [R_f + beta_i(E[R_m]-R_f)]."
-    y_as_x: ['alpha_from_regression', 'appraisal_ratio','henriksson_merton_timing']
+    y_as_x: ['capm_expected_return','alpha_from_regression', 'appraisal_ratio','henriksson_merton_timing']
     :param returns: "Array of asset returns"
     :param factor_returns: "Array of market (benchmark) returns"
     :param risk_free_rate: "Risk-free rate per period (default 0)"
@@ -567,7 +567,15 @@ def annualized_volatility(returns, period='daily'):
     domain: ['Performance measurement & attribution']
     subdomain: ['Risk Measurement', 'Volatility']
     function: "Computes annualized volatility by scaling periodic standard deviation: sigma_ann = sigma_period * sqrt(m)."
-    y_as_x: ['sharpe_ratio', 'sortino_ratio', 'calmar_ratio', 'parametric_normal_var', 'parametric_var','monte_carlo_var','m_squared_modigliani']
+    y_as_x: ['sharpe_ratio', 'sortino_ratio', 'calmar_ratio', 'parametric_normal_var', 'parametric_var','monte_carlo_var','m_squared_modigliani',
+    'asian_option_price','american_option_binomial_pricing',
+    'bachelier_option_price','barrier_option_price','binary_asset_or_nothing_call','binomial_option_pricing','binomial_up_factor',
+    'black_76_option_price','black_76_commodity_option','black_scholes_call','black_scholes_put','black_scholes_merton_d1',
+    'black_scholes_merton_d2','charm','chooser_option_value','cir_short_rate_model','color','d1','d2','delta_call','delta_put',
+    'digital_call_price','digital_put_price','trinomial_tree_option_value','efficient_frontier_problem','gamma','theta',
+    'speed','global_minimum_variance_portfolio','lookback_option_price','vanna','vega','vomma_over_volga',
+    'option_value','margrabe_exchange_option','merton_distance_to_default','spread_option_kirk_approximation',
+    'square_root_impact_law','realized_variance','realized_volatility']
     :param returns: "Array of periodic returns"
     :param period: "'daily', 'weekly', or 'monthly' to determine annualization factor"
     :return: "Annualized volatility"
@@ -663,7 +671,7 @@ def appraisal_ratio(alpha_val, residual_risk):
     function: "Computes the appraisal ratio (Treynor-Black): alpha divided by residual (idiosyncratic) risk."
     y_as_x: []
     :param alpha_val: "Jensen's alpha or regression alpha of the portfolio"
-    :param residual_risk: "Standard deviation of the residual (unsystematic) risk from regression"
+    :param residual_risk: "Standard deviation of the residual (unsystematic) risk from regression = inherent risk - mitigation"
     :return: "Appraisal ratio = alpha / residual_risk"
     '''
     return alpha_val / residual_risk
@@ -742,7 +750,7 @@ def arbitrage_pricing_theory_apt(risk_free_rate, betas, factor_risk_premia):
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Asset Pricing', 'Factor Models']
     function: "Computes the expected return under the Arbitrage Pricing Theory: E[R_i] = R_f + sum_k beta_ik * lambda_k."
-    y_as_x: ['capm_expected_return']
+    y_as_x: []
     :param risk_free_rate: "Risk-free rate"
     :param betas: "Array of factor betas (sensitivities) for the asset"
     :param factor_risk_premia: "Array of factor risk premia (lambda_k)"
@@ -836,7 +844,7 @@ def aroon_down(high, low, timeperiod=25):
     domain: ['Technical analysis & chart-based indicators']
     subdomain: ['Trend Indicators', 'Aroon']
     function: "Computes Aroon Down: AroonDown = 100 * (n - periods since n-period low) / n."
-    y_as_x: ['aroon_oscillator']
+    y_as_x: ['aroon_oscillator','aroon_up']
     :param high: "Array of high prices"
     :param low: "Array of low prices"
     :param timeperiod: "Lookback period (default 25)"
@@ -862,7 +870,7 @@ def aroon_oscillator(high, low, timeperiod=25):
     domain: ['Technical analysis & chart-based indicators']
     subdomain: ['Trend Indicators', 'Aroon']
     function: "Computes the Aroon Oscillator: AroonOsc = AroonUp - AroonDown."
-    y_as_x: []
+    y_as_x: ['aroon_up','aroon_down']
     :param high: "Array of high prices"
     :param low: "Array of low prices"
     :param timeperiod: "Lookback period (default 25)"
@@ -892,7 +900,7 @@ def aroon_up(high, low, timeperiod=25):
     domain: ['Technical analysis & chart-based indicators']
     subdomain: ['Trend Indicators', 'Aroon']
     function: "Computes Aroon Up: AroonUp = 100 * (n - periods since n-period high) / n."
-    y_as_x: ['aroon_oscillator']
+    y_as_x: ['aroon_oscillator','aroon_down']
     :param high: "Array of high prices"
     :param low: "Array of low prices"
     :param timeperiod: "Lookback period (default 25)"
@@ -918,7 +926,7 @@ def arrival_price_slippage(executed_price, arrival_price):
     domain: ['Trading, execution & market microstructure']
     subdomain: ['Execution Cost', 'Transaction Cost Analysis']
     function: "Computes arrival price slippage: the difference between the executed price and the arrival (decision) price."
-    y_as_x: ['implementation_shortfall']
+    y_as_x: ['implementation_shortfall','slippage']
     :param executed_price: "Average execution price of the order"
     :param arrival_price: "Price at the time the order was decided (arrival/decision price)"
     :return: "Slippage = Executed Price - Arrival Price"
@@ -1519,7 +1527,6 @@ def binomial_option_pricing(spot, strike, rate, volatility, time_to_maturity, st
     return option_values[0]
 
 
-
 def binomial_up_factor(volatility, dt):
     '''
     domain: ['Derivatives, options & volatility']
@@ -1547,6 +1554,7 @@ def bipower_variation(returns):
     n = len(returns)
     bv = (1.0 / mu_1 ** 2) * np.sum(np.abs(returns[1:]) * np.abs(returns[:-1])) * n / (n - 1)
     return bv
+
 
 
 def black_76_option_price(forward, strike, volatility, time_to_maturity, rate, option_type='call'):
@@ -2682,6 +2690,7 @@ def chain_ladder_development(latest_cumulative, cdf):
 # ---------------------------------------------------------------------------
 # 38. charm
 # ---------------------------------------------------------------------------
+
 def charm(S, K, T, r, sigma, option_type='call', dT=1 / 365):
     '''
     domain: ['Derivatives, options & volatility']
@@ -2725,6 +2734,7 @@ def charm(S, K, T, r, sigma, option_type='call', dT=1 / 365):
 # ---------------------------------------------------------------------------
 # 39. chooser_option_value
 # ---------------------------------------------------------------------------
+
 def chooser_option_value(S, K, T_choose, T_expire, r, sigma, q=0.0):
     '''
     domain: ['Derivatives, options & volatility']
@@ -2807,6 +2817,7 @@ def christoffersen_independence_test(hit_sequence):
 # ---------------------------------------------------------------------------
 # 41. cir_short_rate_model
 # ---------------------------------------------------------------------------
+
 def cir_short_rate_model(r0, kappa, theta, sigma, T, n_steps=252, n_paths=1000, seed=None):
     '''
     domain: ['Interest-rate modeling & term structures']
@@ -2948,6 +2959,7 @@ def collateral_haircut(lending_value, market_value):
 # ---------------------------------------------------------------------------
 # 48. color
 # ---------------------------------------------------------------------------
+
 def color(S, K, T, r, sigma, dT=1 / 365):
     '''
     domain: ['Derivatives, options & volatility']
@@ -4066,6 +4078,7 @@ def cva_capital_proxy(ead, lgd, pd, maturity, risk_weight_factor=1.0):
 # 7. d1
 # ---------------------------------------------------------------------------
 # fixme: params
+
 def d1(S, K, r, sigma, T):
     '''
     domain: ['Derivatives, options & volatility']
@@ -4371,6 +4384,7 @@ def delinquency_trigger(delinquency_ratio_val, threshold):
 # ---------------------------------------------------------------------------
 # 25. delta_call
 # ---------------------------------------------------------------------------
+
 def delta_call(S, K, r, sigma, T, q=0.0):
     '''
     domain: ['Derivatives, options & volatility']
@@ -4392,6 +4406,7 @@ def delta_call(S, K, r, sigma, T, q=0.0):
 # ---------------------------------------------------------------------------
 # 26. delta_put
 # ---------------------------------------------------------------------------
+
 def delta_put(S, K, r, sigma, T, q=0.0):
     '''
     domain: ['Derivatives, options & volatility']
@@ -11540,7 +11555,7 @@ def realized_variance(intraday_returns):
     domain: ['Market risk & volatility modeling']
     subdomain: ['Volatility Estimation', 'High-Frequency Finance']
     function: "Realized Variance is a non-parametric estimator of the variance of asset returns over a given period, computed as the sum of squared intraday returns. It provides a model-free measure of ex-post volatility using high-frequency data."
-    y_as_x: ['realized_volatility', 'bipower_variation', 'variance_swap_fair_strike']
+    y_as_x: ['annualized_volatility','realized_volatility', 'bipower_variation', 'variance_swap_fair_strike']
     :param intraday_returns: "Array of intraday (high-frequency) log returns."
     :return: "Computed Realized Variance RV_t = sum_{i=1}^n r_{t,i}^2"
     '''
@@ -11553,7 +11568,7 @@ def realized_volatility(intraday_returns):
     domain: ['Market risk & volatility modeling']
     subdomain: ['Volatility Estimation', 'High-Frequency Finance']
     function: "Realized Volatility is the square root of realized variance, providing an annualized or period-specific measure of actual price fluctuations based on high-frequency data. It is a model-free volatility estimator widely used for volatility forecasting and risk management."
-    y_as_x: ['yang_zhang_volatility','realized_variance']
+    y_as_x: ['yang_zhang_volatility','realized_variance','annualized_volatility']
     :param intraday_returns: "Array of intraday (high-frequency) returns."
     :return: "Computed Realized Volatility RVOL = sqrt(sum of squared intraday returns)"
     '''
