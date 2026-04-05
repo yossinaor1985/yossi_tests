@@ -21,13 +21,12 @@ finds more connections. However it requires manual fix.
 # ================================================================================
 # BATCH 1
 # ================================================================================
-# fixme: add to def present_value, check clean price
 def abnormal_earnings_growth(eps_next, required_return, abnormal_growth_pv):
     '''
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Equity Valuation', 'Earnings-Based Valuation']
     function: "Computes the intrinsic stock price using the Ohlson-Juettner model: capitalized next-period earnings plus the present value of abnormal earnings growth."
-    y_as_x: ['clean_price']
+    y_as_x: []
     :param eps_next: "Expected earnings per share for the next period"
     :param required_return: "Required rate of return (cost of equity)"
     :param abnormal_growth_pv: "Present value of future abnormal earnings growth beyond normal earnings"
@@ -176,7 +175,6 @@ def adf_unit_root_test(time_series, max_lags=None, regression='c'):
     return result
 
 
-# fixme
 def adjusted_present_value_apv(npv_unlevered, pv_financing_effects):
     '''
     domain: ['Corporate finance & capital budgeting']
@@ -217,7 +215,7 @@ def advance_rate(loan_amount, eligible_collateral_base):
     return loan_amount / eligible_collateral_base
 
 
-# fixme
+
 def adverse_selection_cost(effective_spread, realized_spread):
     '''
     domain: ['Liquidity risk, market liquidity & execution cost']
@@ -483,13 +481,13 @@ def amivest_liquidity_ratio(returns, dollar_volume):
     mask = abs_returns > 0
     return np.sum(dollar_volume[mask]) / np.sum(abs_returns[mask])
 
-#fixme: interset rate, also pv
+
 def amortization_factor(interest_rate, n_periods):
     '''
     domain: ['Banking, consumer lending & project finance']
     subdomain: ['Loan Amortization', 'Mortgage Mathematics']
     function: "Computes the amortization factor (capital recovery factor): AF = r(1+r)^n / ((1+r)^n - 1), which converts a present value into a periodic payment."
-    y_as_x: ['equated_monthly_installment_emi', 'loan_payment_annuity']
+    y_as_x: ['equated_monthly_installment_emi', 'loan_payment_annuity','annuity_present_value']
     :param interest_rate: "Periodic interest rate (e.g., monthly rate)"
     :param n_periods: "Total number of payment periods"
     :return: "Amortization factor"
@@ -611,7 +609,7 @@ def annuity_present_value(payment, rate, n_periods):
     subdomain: ['Time Value of Money', 'Annuities']
     function: "Computes the present value of an ordinary annuity: PV = PMT * (1 - (1+r)^-n) / r."
     y_as_x: ['present_value_pv','adjusted_present_value_apv', 'loan_payment_annuity','interest_payment','loan_payment_annuity','number_of_periods',
-    'continuous_compounding']
+    'continuous_compounding','equated_monthly_installment_emi']
     :param payment: "Periodic payment amount (PMT)"
     :param rate: "Discount rate per period"
     :param n_periods: "Total number of periods"
@@ -1063,7 +1061,7 @@ def awesome_oscillator(high, low, short_period=5, long_period=34):
         sma_long[i] = np.mean(median_price[i - long_period + 1:i + 1])
     return sma_short - sma_long
 
-
+#########################################################################################################################################################
 def bachelier_option_price(forward, strike, volatility, time_to_maturity, discount_factor, option_type='call'):
     '''
     domain: ['Interest-rate modeling & term structures']
@@ -5366,7 +5364,7 @@ def eps(net_income, weighted_avg_shares):
     domain: ['Accounting & financial statement analysis']
     subdomain: ['Earnings metrics']
     function: "Computes basic earnings per share, allocating net income across the weighted average number of common shares outstanding."
-    y_as_x: ['p_over_e_ratio', 'price_to_earnings_ratio', 'forward_p_over_e', 'peg_ratio', 'dividend_coverage', 'earnings_yield', 'financial_leverage']
+    y_as_x: ['abnormal_earnings_growth','p_over_e_ratio', 'price_to_earnings_ratio', 'forward_p_over_e', 'peg_ratio', 'dividend_coverage', 'earnings_yield', 'financial_leverage']
     :param net_income: "Net income available to common shareholders"
     :param weighted_avg_shares: "Weighted average number of common shares outstanding during the period"
     :return: "EPS = Net Income / Weighted Avg Shares"
@@ -5441,7 +5439,7 @@ def equated_monthly_installment_emi(principal, monthly_rate, n_months):
     subdomain: ['Loan amortization']
     function: "Computes the equated monthly installment for a fully amortizing loan using the annuity formula."
     y_as_x: []
-    :param principal: "Loan principal amount"
+    :param principal: "Loan principal amount (present value)"
     :param monthly_rate: "Monthly interest rate (annual rate / 12)"
     :param n_months: "Total number of monthly payments"
     :return: "EMI = P * r * (1+r)^n / ((1+r)^n - 1)"
@@ -5569,6 +5567,7 @@ def equity_value_bridge(enterprise_value_val, net_debt, preferred=0.0, minority_
 # ---------------------------------------------------------------------------
 # 90. equivalent_annual_annuity_eaa
 # ---------------------------------------------------------------------------
+
 def equivalent_annual_annuity_eaa(npv, rate, n):
     '''
     domain: ['Corporate finance, valuation & capital budgeting']
@@ -7941,7 +7940,8 @@ def interest_payment(rate, per, nper, pv, fv=0):
     domain: ['Banking, lending & project finance']
     subdomain: ['Loan amortization']
     function: "Interest payment for a given period of an amortizing loan"
-    y_as_x: ['continuous_compounding','loan_payment_annuity','number_of_periods', 'future_value_fv','present_value_fv']
+    y_as_x: ['continuous_compounding','growing_annuity_value','loan_payment_annuity','number_of_periods', 'future_value_fv','present_value_pv',
+    'amortization_factor','equated_monthly_installment_emi']
     :param rate: "Interest rate per period"
     :param per: "Period for which to compute interest (1-based)"
     :param nper: "Total number of periods"
@@ -8528,7 +8528,6 @@ def loan_constant_over_mortgage_constant(annual_rate, nper):
     annual_debt_service = monthly_pmt * 12.0
     return annual_debt_service
 
-
 def loan_life_coverage_ratio(npv_cashflows, outstanding_debt):
     '''
     domain: ['Banking, consumer lending & project finance']
@@ -8560,7 +8559,7 @@ def loan_payment_annuity(rate, nper, pv, fv=0):
     domain: ['Banking, lending & project finance']
     subdomain: ['Loan payments']
     function: "Annuity loan payment: PMT = r * PV / [1 - (1+r)^(-n)]"
-    y_as_x: ['interest_payment','number_of_periods', 'future_value_fv','present_value_fv']
+    y_as_x: ['interest_payment','number_of_periods', 'future_value_fv','present_value_pv','growing_annuity_value','amortization_factor']
     :param rate: "Interest rate per period"
     :param nper: "Total number of payment periods"
     :param pv: "Present value (loan amount)"
@@ -9937,7 +9936,8 @@ def number_of_periods(rate, pmt, pv, fv=0.0):
     domain: ['Banking, consumer lending & project finance']
     subdomain: ['Time value of money', 'Loan analysis']
     function: "Compute the number of periods required to pay off a loan or reach a future value target: n = -ln(1-rPV/PMT) / ln(1+r)"
-    y_as_x: ['interest_payment','loan_payment_annuity', 'future_value_fv','present_value_fv']
+    y_as_x: ['interest_payment','loan_payment_annuity', 'future_value_fv','present_value_pv','growing_annuity_value',
+    'amortization_factor','equated_monthly_installment_emi']
     :param rate: "Interest rate per period"
     :param pmt: "Payment per period (negative for outflows)"
     :param pv: "Present value (loan amount, negative for loan)"
@@ -10837,8 +10837,8 @@ def present_value_pv(rate, nper, pmt, fv=0.0):
     domain: ['Corporate finance, valuation & capital budgeting']
     subdomain: ['Time value of money', 'Discounting']
     function: "Compute present value: PV = sum_t CF_t / (1+r)^t using numpy_financial"
-    y_as_x: ['annuity_present_value', 'net_present_value_npv', 'profitability_index','continuous_compounding',
-    'interest_payment','loan_payment_annuity','number_of_periods', 'future_value_fv']
+    y_as_x: ['abnormal_earnings_growth','annuity_present_value', 'net_present_value_npv', 'profitability_index','continuous_compounding',
+    'interest_payment','loan_payment_annuity','number_of_periods', 'future_value_fv','equated_monthly_installment_emi']
     :param rate: "Discount rate per period"
     :param nper: "Number of periods"
     :param pmt: "Payment per period"
