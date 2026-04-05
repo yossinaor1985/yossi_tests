@@ -67,7 +67,7 @@ def total_assets_val(liabilities, equity):
     domain: ['Accounting & financial statement analysis']
     subdomain: ['Financial Statements', 'Balance Sheet Analysis']
     function: "Computes total assets using the fundamental accounting identity: Assets = Liabilities + Equity."
-    y_as_x: ['accounting_identity','altman_z_score','asset_turnover','encumbrance_ratio','equity_ratio','debt_to_assets',
+    y_as_x: ['nav,''accounting_identity','altman_z_score','asset_turnover','encumbrance_ratio','equity_ratio','debt_to_assets',
     'd1','d2','delta_call','delta_put','digital_call_price','digital_put_price','gamma','theta','vanna','vega','vomma_over_volga',
     'management_option_value','speed','trinomial_tree_option_value','risk_weighted_assets_rwa']
     :param liabilities: "Total liabilities of the firm"
@@ -561,13 +561,13 @@ def annualized_return_cagr(returns, period='daily'):
         n_periods = len(returns)
         return cum ** (ann / n_periods) - 1
 
-#fixme: add all y_as_x
+
 def annualized_volatility(returns, period='daily'):
     '''
     domain: ['Performance measurement & attribution']
     subdomain: ['Risk Measurement', 'Volatility']
     function: "Computes annualized volatility by scaling periodic standard deviation: sigma_ann = sigma_period * sqrt(m)."
-    y_as_x: ['sharpe_ratio', 'sortino_ratio', 'calmar_ratio', 'parametric_normal_var', 'parametric_var']
+    y_as_x: ['sharpe_ratio', 'sortino_ratio', 'calmar_ratio', 'parametric_normal_var', 'parametric_var','monte_carlo_var','m_squared_modigliani']
     :param returns: "Array of periodic returns"
     :param period: "'daily', 'weekly', or 'monthly' to determine annualization factor"
     :return: "Annualized volatility"
@@ -627,7 +627,9 @@ def aparch(returns, omega=0.01, alpha_coeff=0.1, gamma=0.5, delta=2.0, beta_coef
     '''
     domain: ['Market risk & volatility modeling']
     subdomain: ['Volatility Modeling', 'GARCH Family']
-    function: "Fits an Asymmetric Power ARCH (APARCH) model: sigma_t^delta = omega + alpha(|eps_{t-1}| - gamma*eps_{t-1})^delta + beta*sigma_{t-1}^delta."
+    function: "The Asymmetric Power ARCH (APARCH) model is a highly flexible econometric tool in
+    finance used to model conditional volatility, capturing both leverage effects (asymmetry) and fat-tailed distributions
+    in asset returns : sigma_t^delta = omega + alpha(|eps_{t-1}| - gamma*eps_{t-1})^delta + beta*sigma_{t-1}^delta."
     y_as_x: []
     :param returns: "Array of asset returns (or residuals)"
     :param omega: "Constant term in the variance equation"
@@ -2964,8 +2966,7 @@ def color(S, K, T, r, sigma, dT=1 / 365):
     d1 = (np.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
     d2 = d1 - sigma * np.sqrt(T)
     color_val = -norm.pdf(d1) / (2 * S * T * sigma * np.sqrt(T)) * (
-            2 * r * T - d2 * sigma * np.sqrt(T) + 1
-    )
+            2 * r * T - d2 * sigma * np.sqrt(T) + 1)
     return color_val
 
 
@@ -6733,7 +6734,7 @@ def gamma(S, K, r, q, sigma, T):
     domain: ['Derivatives, options & volatility']
     subdomain: ['Option Greeks', 'Gamma risk']
     function: "Computes option gamma, the rate of change of delta with respect to underlying price. Gamma = e^{-qT} * n(d1) / (S * sigma * sqrt(T))"
-    y_as_x: ['aparch', 'color', 'mean_variance_utility', 'option_delta_hedged_pandl', 'speed']
+    y_as_x: [ 'color', 'mean_variance_utility', 'option_delta_hedged_pandl', 'speed']
     :param S: "Current price of the underlying asset"
     :param K: "Strike price"
     :param r: "Risk-free interest rate (continuous compounding)"
@@ -13532,6 +13533,21 @@ def turnover_ratio(volume, shares_outstanding):
     '''
     return volume / shares_outstanding
 
+def nav(total_assets, total_liabalities, number_of_outstanding_shares):
+    '''
+    domain: ['Private equity, venture capital & LBO']
+    subdomain: ['Fund Performance', 'Return Multiples']
+    function: Net Asset Value (NAV) represents the per-share/unit price of a mutual fund or ETF, calculated daily by subtracting total liabilities from total assets and dividing by outstanding shares. It indicates the fund's market value, calculated at the end of each business day.
+    y_as_x: ['tvpi','rvpi']
+    :param total_assets: "Current net asset value (NAV) of unrealized investments"
+    :param total_liabalities: "Cumulative distributions returned to LPs"
+    :param number_of_outstanding_shares: "Total capital called and invested by LPs"
+    :return: nav=(total_assets - total_liabalities) / number_of_outstanding_shares"
+    '''
+    if number_of_outstanding_shares!=0:
+        return (total_assets - total_liabalities) / number_of_outstanding_shares
+    else:
+        return print('number of outstanding shares == 0 cannot be computed')
 
 def tvpi(residual_value, distributions, paid_in_capital):
     '''
