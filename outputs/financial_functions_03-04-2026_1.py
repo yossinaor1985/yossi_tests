@@ -21,7 +21,7 @@ finds more connections. However it requires manual fix.
 # ================================================================================
 # BATCH 1
 # ================================================================================
-# fixme
+# fixme: add to def present_value, check clean price
 def abnormal_earnings_growth(eps_next, required_return, abnormal_growth_pv):
     '''
     domain: ['Equity valuation & asset pricing']
@@ -50,13 +50,29 @@ def abs_pool_factor(current_pool_balance, original_pool_balance):
     return current_pool_balance / original_pool_balance
 
 
-# fixme: change to total assets and fix y_as_x
+
 def accounting_identity(liabilities, equity):
     '''
     domain: ['Accounting & financial statement analysis']
     subdomain: ['Financial Statements', 'Balance Sheet Analysis']
     function: "Computes total assets using the fundamental accounting identity: Assets = Liabilities + Equity."
-    y_as_x: ['asset_turnover', 'debt_to_assets', 'book_value_per_share', 'equity_ratio']
+    y_as_x: ['total_assets']
+    :param liabilities: "Total liabilities of the firm"
+    :param equity: "Total shareholders equity of the firm"
+    :return: "Total assets = Liabilities + Equity"
+    '''
+    return liabilities + equity
+
+
+
+def total_assets(liabilities, equity):
+    '''
+    domain: ['Accounting & financial statement analysis']
+    subdomain: ['Financial Statements', 'Balance Sheet Analysis']
+    function: "Computes total assets using the fundamental accounting identity: Assets = Liabilities + Equity."
+    y_as_x: ['accounting_identity','altman_z_score','asset_turnover','encumbrance_ratio','equity_ratio','debt_to_assets',
+    'd1','d2','delta_call','delta_put','digital_call_price','digital_put_price','gamma','theta','vanna','vega','vomma_over_volga',
+    'management_option_value','speed','trinomial_tree_option_value','risk_weighted_assets_rwa']
     :param liabilities: "Total liabilities of the firm"
     :param equity: "Total shareholders equity of the firm"
     :return: "Total assets = Liabilities + Equity"
@@ -331,14 +347,14 @@ def returns(start_val, end_val):
     'parametric_var','pastor_stambaugh_liquidity','portfolio_return','profit_factor','realized_beta','realized_hedge_effectiveness','realized_variance','realized_volatility',
     'risk_parity_objective','riskmetrics_covariance','semivariance','sharpe_ratio','sortino_ratio','sterling_ratio','stressed_var','tail_ratio','tangency_portfolio_weights','time_weighted_return_twrr',
     'tracking_error','treynor_ratio','treynor_mazuy_timing','ulcer_index','upside_capture','upside_potential_ratio','volatility_clustering_test','variance_ratio_test',
-    'win_over_loss_ratio','yang_zhang_volatility']
+    'win_over_loss_ratio','yang_zhang_volatility','contribution_to_return']
     :param start_val: "the value at the beginning of the period"
     :param end_val: "the value at the end of the period"
     :return: "end/start-1"
     '''
     return (end_val / start_val) - 1
 
-# stopped here
+
 def alpha_from_regression(portfolio_returns, benchmark_returns, risk_free_rate=0.0):
     '''
     domain: ['Performance measurement & attribution']
@@ -357,7 +373,7 @@ def alpha_from_regression(portfolio_returns, benchmark_returns, risk_free_rate=0
     model = sm.OLS(y, X).fit()
     return model.params[0], model.params[1], model.rsquared
 
-
+# stopped here
 def altman_z_score(working_capital, total_assets, retained_earnings, ebit, market_cap, total_liabilities, revenue):
     '''
     domain: ['Accounting & financial statement analysis']
@@ -1367,7 +1383,7 @@ def benefit_reserve_recursion(reserve_t, premium, interest_rate, mortality_rate,
     reserve_next = (accumulated - mortality_rate * benefit) / p
     return reserve_next
 
-
+#fixme: fix the params
 def beneish_m_score(dsri, gmi, aqi, sgi, depi, sgai, tata, lvgi):
     '''
     domain: ['Accounting & financial statement analysis']
@@ -3403,7 +3419,7 @@ def cost_of_equity_capm(risk_free_rate, beta, market_return):
     domain: ['Corporate finance, valuation & capital budgeting']
     subdomain: ['Cost of capital', 'Equity valuation']
     function: "Computes the cost of equity using the Capital Asset Pricing Model (CAPM)."
-    y_as_x: ['weighted_average_cost_of_capital_wacc']
+    y_as_x: ['weighted_average_cost_of_capital_wacc','alpha']
     :param risk_free_rate: "Risk-free rate of return"
     :param beta: "Equity beta of the company"
     :param market_return: "Expected market return"
@@ -4034,6 +4050,7 @@ def cva_capital_proxy(ead, lgd, pd, maturity, risk_weight_factor=1.0):
 # ---------------------------------------------------------------------------
 # 7. d1
 # ---------------------------------------------------------------------------
+#fixme: params
 def d1(S, K, r, sigma, T):
     '''
     domain: ['Derivatives, options & volatility']
@@ -4444,6 +4461,7 @@ def detrended_price_oscillator_dpo(close, period=20):
 # ---------------------------------------------------------------------------
 # 30. digital_call_price
 # ---------------------------------------------------------------------------
+
 def digital_call_price(S, K, r, sigma, T):
     '''
     domain: ['Derivatives, options & volatility']
@@ -4460,7 +4478,6 @@ def digital_call_price(S, K, r, sigma, T):
     d1_val = (np.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
     d2_val = d1_val - sigma * np.sqrt(T)
     return np.exp(-r * T) * stats.norm.cdf(d2_val)
-
 
 # ---------------------------------------------------------------------------
 # 31. digital_put_price
@@ -4572,25 +4589,6 @@ def discounted_payback_period(initial_outlay, cash_flows, rate):
             fraction = remaining / (cf / (1.0 + rate) ** t)
             return (t - 1) + fraction
     return np.nan  # Payback never achieved
-
-
-# ---------------------------------------------------------------------------
-# 37. distance_to_default_dd
-# ---------------------------------------------------------------------------
-def distance_to_default_dd(V_A, D, mu_A, sigma_A, T):
-    '''
-    domain: ['Credit risk, default modeling & credit portfolio']
-    subdomain: ['Structural credit models']
-    function: "Computes the Merton distance to default, measuring how many standard deviations the firm's asset value is from the default barrier."
-    y_as_x: ['kmv_expected_default_frequency', 'merton_structural_pd']
-    :param V_A: "Current market value of the firm's assets"
-    :param D: "Face value of debt (default barrier)"
-    :param mu_A: "Expected return on the firm's assets (drift)"
-    :param sigma_A: "Volatility of the firm's assets"
-    :param T: "Time horizon in years"
-    :return: "DD = [ln(V_A/D) + (mu_A - 0.5*sigma_A^2)*T] / (sigma_A * sqrt(T))"
-    '''
-    return (np.log(V_A / D) + (mu_A - 0.5 * sigma_A ** 2) * T) / (sigma_A * np.sqrt(T))
 
 
 # ---------------------------------------------------------------------------
@@ -5258,7 +5256,6 @@ def elastic_net(X, y, alpha=1.0, l1_ratio=0.5):
     model.fit(X, y)
     return model
 
-
 # ---------------------------------------------------------------------------
 # 75. encumbrance_ratio
 # ---------------------------------------------------------------------------
@@ -5364,6 +5361,7 @@ def eps(net_income, weighted_avg_shares):
 # ---------------------------------------------------------------------------
 # 80. equal_risk_contribution
 # ---------------------------------------------------------------------------
+
 
 def equal_risk_contribution(expected_returns, cov_matrix):
     '''
@@ -8877,12 +8875,12 @@ def macd_histogram(close, fast_period=12, slow_period=26, signal_period=9):
     return macd_line - signal
 
 
-def management_option_value(S, K, T, r, sigma, option_type='call'):
+def option_value(S, K, T, r, sigma, option_type='call'):
     '''
     domain: ['Private equity, venture capital & LBO']
     subdomain: ['Option valuation']
     function: "Management option value using Black-Scholes pricing"
-    y_as_x: []
+    y_as_x: ['black_scholes_put','black_scholes_call']
     :param S: "Current underlying asset value"
     :param K: "Strike price of management options"
     :param T: "Time to expiration in years"
@@ -11295,7 +11293,7 @@ def put_call_parity(S_0, K, r, T):
     domain: ['Derivatives, options & volatility']
     subdomain: ['Option Pricing Theory', 'Arbitrage Relations']
     function: "Put-Call Parity is a fundamental relationship between the prices of European call and put options with the same strike price and expiration. For a non-dividend-paying stock, C - P = S_0 - K*e^(-rT). This function returns the difference C - P implied by put-call parity."
-    y_as_x: ['put_call_parity_equity', 'put_call_parity_futures_options']
+    y_as_x: ['put_call_parity_equity', 'put_call_parity_futures_options','option_value']
     :param S_0: "The current spot price of the underlying asset."
     :param K: "The strike price of the options."
     :param r: "The risk-free interest rate (continuously compounded)."
@@ -11889,7 +11887,8 @@ def risk_weighted_assets_rwa(exposures, risk_weights):
     domain: ['Bank regulation, Basel & prudential ratios']
     subdomain: ['Capital Adequacy', 'Basel Framework']
     function: "Risk-Weighted Assets (RWA) is the total of all assets held by a bank weighted by their credit risk according to regulatory guidelines. RWA is the denominator in key capital adequacy ratios (CET1, Tier 1, Total Capital). Assets with higher risk receive higher weights."
-    y_as_x: ['cet1_ratio', 'tier_1_capital_ratio', 'total_capital_ratio', 'basel_standardized_capital_requirement', 'mrel_over_tlac_ratio', 'stress_capital_buffer']
+    y_as_x: ['cet1_ratio', 'tier_1_capital_ratio', 'total_capital_ratio', 'basel_standardized_capital_requirement',
+    'mrel_over_tlac_ratio', 'stress_capital_buffer','countercyclical_capital_buffer']
     :param exposures: "Array of exposure amounts for each asset class or credit exposure."
     :param risk_weights: "Array of regulatory risk weights corresponding to each exposure (e.g., 0% for sovereign, 20% for banks, 100% for corporate)."
     :return: "Computed RWA = sum_i Exposure_i x RiskWeight_i"
@@ -13087,7 +13086,6 @@ def terminal_value_gordon_growth(fcf_next, weighted_average_cost_of_capital_wacc
     '''
     return fcf_next / (weighted_average_cost_of_capital_wacc - growth_rate)
 
-
 def theta(S, K, r, sigma, T, q=0.0, option_type='c'):
     '''
     domain: ['Derivatives, options & volatility']
@@ -13396,6 +13394,7 @@ def trigger_based_step_down(delinquency_ratio, cnl_ratio, oc_ratio,
             oc_ratio >= oc_threshold)
 
 
+
 def trinomial_tree_option_value(S, K, r, sigma, T, n_steps=100, option_type='call', exercise='european'):
     '''
     domain: ['Derivatives, options & volatility']
@@ -13692,7 +13691,6 @@ def vacancy_rate(vacant_units_or_lost_rent, total_potential_units_or_rent):
     :return: "Computed vacancy rate = Vacant Units (or Lost Rent) / Total Units (or Potential Rent)"
     '''
     return vacant_units_or_lost_rent / total_potential_units_or_rent
-
 
 def vanna(S, K, r, sigma, T, q=0.0):
     '''
