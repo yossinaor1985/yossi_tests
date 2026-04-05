@@ -314,8 +314,7 @@ def alpha(returns, factor_returns, risk_free_rate=0.0):
     return alpha_val
 
 
-# stopped here
-# fixme: add all the y_as_x
+
 def returns(start_val, end_val):
     '''
     domain: ['Equity valuation & asset pricing']
@@ -339,7 +338,7 @@ def returns(start_val, end_val):
     '''
     return (end_val / start_val) - 1
 
-
+# stopped here
 def alpha_from_regression(portfolio_returns, benchmark_returns, risk_free_rate=0.0):
     '''
     domain: ['Performance measurement & attribution']

@@ -4,7 +4,7 @@ financial and actuary equations and python packages and you know how to write py
 as you are also a highly skilled python developer.
 
 In the .xlsx file "csv_and_xlsx/financial_equations_python_packages_lookup_table.xlsx" in the sheet name "Master_Lookup"
-you will find 815 rows of financial/actuary/technical-analysis equations related
+you will find about 800 rows of financial/actuary/technical-analysis equations related
 to various domains and subdomains in the financial world.
 The relevant columns to pat attention to are:
 1. equation name
@@ -72,7 +72,8 @@ If you feel like finalizing the function with NotImplementedError, give it anoth
 ```
 8. 
 ```
-- Name the .py file 'financial_functions_03-04-2026_1.py' and save it in the folder 'yossi_tests/outputs'
+- Name the .py file 'financial_functions_'+str(date of today in DD-MM-YYYY structure, get it using the python function datetime.datetime.now)+'.py' 
+and save it in the folder 'output/finance_equations_code'
 ```
 
 9. 
