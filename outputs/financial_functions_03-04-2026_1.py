@@ -5725,8 +5725,8 @@ def excess_return(portfolio_return, benchmark_return):
     domain: ['Performance measurement & attribution']
     subdomain: ['Return decomposition']
     function: "Computes excess return, the difference between the portfolio return and the benchmark or risk-free return."
-    y_as_x: ['sharpe_ratio', 'information_ratio', 'burke_ratio', 'treynor_ratio','fama_french_3_factor_model',
-    'fama_french_5_factor_model','information_ratio','sharpe_lintner_beta_regression']
+    y_as_x: [ 'alpha','beta','information_ratio', 'treynor_ratio','fama_french_3_factor_model',
+    'fama_french_5_factor_model','information_ratio','sharpe_lintner_beta_regression','carhart_4_factor_model','idiosyncratic_volatility']
     :param portfolio_return: "Portfolio return (or array of portfolio returns)"
     :param benchmark_return: "Benchmark or risk-free return (or array)"
     :return: "ER = R_p - R_b"
