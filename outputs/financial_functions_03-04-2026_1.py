@@ -2176,7 +2176,7 @@ def butterfly_payoff(S, K1, K2, K3):
     S = np.asarray(S, dtype=float)
     return np.maximum(S - K1, 0) - 2 * np.maximum(S - K2, 0) + np.maximum(S - K3, 0)
 
-
+#finish here tomorrow
 # ---------------------------------------------------------------------------
 # 11. calendar_spread
 # ---------------------------------------------------------------------------
