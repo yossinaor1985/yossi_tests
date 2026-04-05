@@ -1070,7 +1070,7 @@ def awesome_oscillator(high, low, short_period=5, long_period=34):
         sma_long[i] = np.mean(median_price[i - long_period + 1:i + 1])
     return sma_short - sma_long
 
-#########################################################################################################################################################
+#stopped here
 def bachelier_option_price(forward, strike, volatility, time_to_maturity, discount_factor, option_type='call'):
     '''
     domain: ['Interest-rate modeling & term structures']
