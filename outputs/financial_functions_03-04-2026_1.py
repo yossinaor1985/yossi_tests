@@ -63,7 +63,7 @@ def accounting_identity(liabilities, equity):
     return liabilities + equity
 
 
-def total_assets(liabilities, equity):
+def total_assets_val(liabilities, equity):
     '''
     domain: ['Accounting & financial statement analysis']
     subdomain: ['Financial Statements', 'Balance Sheet Analysis']
@@ -327,7 +327,7 @@ def alpha(returns, factor_returns, risk_free_rate=0.0):
     return alpha_val
 
 
-def returns(start_val, end_val):
+def returns_val(start_val, end_val):
     '''
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Asset Pricing', 'CAPM']
@@ -411,7 +411,7 @@ def revenue(sold_units, price_per_unit):
     price_per_unit = np.asarray(price_per_unit, dtype=float)
     return (sold_units * price_per_unit).sum()
 
-# stopped here
+
 def american_option_binomial_pricing(spot, strike, rate, volatility, time_to_maturity, steps=100, option_type='call',
                                      dividend_yield=0.0):
     '''
@@ -467,41 +467,41 @@ def amihud_illiquidity(returns, dollar_volume):
     return np.mean(np.abs(returns) / dollar_volume)
 
 
-def amivest_liquidity_ratio(volume, returns):
+def amivest_liquidity_ratio(returns, dollar_volume):
     '''
     domain: ['Trading, execution & market microstructure']
     subdomain: ['Liquidity Measurement', 'Market Microstructure']
     function: "Computes the Amivest liquidity ratio: Volume / |Return|. Higher values indicate greater liquidity."
     y_as_x: []
-    :param volume: "Array of trading volume (or dollar volume)"
+    :param dollar_volume: "Array of trading volume (or dollar volume)"
     :param returns: "Array of asset returns"
     :return: "Amivest liquidity ratio = sum(Volume) / sum(|Return|)"
     '''
-    volume = np.asarray(volume, dtype=float)
+    dollar_volume = np.asarray(dollar_volume, dtype=float)
     returns = np.asarray(returns, dtype=float)
     abs_returns = np.abs(returns)
     mask = abs_returns > 0
-    return np.sum(volume[mask]) / np.sum(abs_returns[mask])
+    return np.sum(dollar_volume[mask]) / np.sum(abs_returns[mask])
 
-
-def amortization_factor(rate, n_periods):
+#fixme: interset rate, also pv
+def amortization_factor(interest_rate, n_periods):
     '''
     domain: ['Banking, consumer lending & project finance']
     subdomain: ['Loan Amortization', 'Mortgage Mathematics']
     function: "Computes the amortization factor (capital recovery factor): AF = r(1+r)^n / ((1+r)^n - 1), which converts a present value into a periodic payment."
     y_as_x: ['equated_monthly_installment_emi', 'loan_payment_annuity']
-    :param rate: "Periodic interest rate (e.g., monthly rate)"
+    :param interest_rate: "Periodic interest rate (e.g., monthly rate)"
     :param n_periods: "Total number of payment periods"
     :return: "Amortization factor"
     '''
     try:
         import numpy_financial as npf
         # pmt returns negative, so negate and divide by 1 to get factor per unit PV
-        return -npf.pmt(rate, n_periods, 1.0)
+        return -npf.pmt(interest_rate, n_periods, 1.0)
     except ImportError:
-        if rate == 0:
+        if interest_rate == 0:
             return 1.0 / n_periods
-        return rate * (1 + rate) ** n_periods / ((1 + rate) ** n_periods - 1)
+        return interest_rate * (1 + interest_rate) ** n_periods / ((1 + interest_rate) ** n_periods - 1)
 
 
 def annual_percentage_rate_apr(periodic_rate, periods_per_year):
@@ -548,7 +548,7 @@ def annualized_return_cagr(returns, period='daily'):
     domain: ['Performance measurement & attribution']
     subdomain: ['Return Measurement', 'Performance Metrics']
     function: "Computes the Compound Annual Growth Rate (CAGR) or annualized return from a series of periodic returns."
-    y_as_x: ['sharpe_ratio', 'calmar_ratio', 'sortino_ratio', 'treynor_ratio', 'information_ratio']
+    y_as_x: ['sharpe_ratio', 'calmar_ratio', 'sortino_ratio', 'treynor_ratio', 'information_ratio','sterling_ratio']
     :param returns: "Array of periodic returns"
     :param period: "'daily', 'weekly', or 'monthly' to determine annualization factor"
     :return: "Annualized return (CAGR)"
@@ -564,7 +564,7 @@ def annualized_return_cagr(returns, period='daily'):
         n_periods = len(returns)
         return cum ** (ann / n_periods) - 1
 
-
+#fixme: add all y_as_x
 def annualized_volatility(returns, period='daily'):
     '''
     domain: ['Performance measurement & attribution']
@@ -590,7 +590,7 @@ def annuity_future_value(payment, rate, n_periods):
     domain: ['Corporate finance, valuation & capital budgeting']
     subdomain: ['Time Value of Money', 'Annuities']
     function: "Computes the future value of an ordinary annuity: FV = PMT * ((1+r)^n - 1) / r."
-    y_as_x: []
+    y_as_x: ['future_value']
     :param payment: "Periodic payment amount (PMT)"
     :param rate: "Interest rate per period"
     :param n_periods: "Total number of periods"
@@ -1517,6 +1517,7 @@ def binomial_option_pricing(spot, strike, rate, volatility, time_to_maturity, st
     for i in range(steps):
         option_values = disc * (p * option_values[:-1] + (1 - p) * option_values[1:])
     return option_values[0]
+
 
 
 def binomial_up_factor(volatility, dt):
@@ -4732,7 +4733,7 @@ def dollar_volume(price, shares_traded):
     domain: ['Liquidity risk, market liquidity & execution cost']
     subdomain: ['Volume & trading activity']
     function: "Computes the dollar volume of trading, used as a measure of liquidity."
-    y_as_x: ['amihud_illiquidity']
+    y_as_x: ['amihud_illiquidity','amivest_liquidity_ratio']
     :param price: "Price of the security (or average price over the period)"
     :param shares_traded: "Number of shares traded"
     :return: "Dollar Volume = Price * Shares Traded"
@@ -6562,13 +6563,13 @@ def funds_transfer_pricing_spread_v2(customer_rate, internal_transfer_rate):
     '''
     return customer_rate - internal_transfer_rate
 
-
+#fixme
 def future_value(present_value_pv, rate, nper, pmt=0):
     '''
     domain: ['Corporate finance & capital budgeting']
     subdomain: ['Time value of money', 'Compounding']
     function: "Computes the future value of an investment using compound interest. FV = PV * (1+r)^n (plus annuity component if pmt provided)"
-    y_as_x: []
+    y_as_x: ['annuity_future_value']
     :param present_value_pv: "Present value (initial investment)"
     :param rate: "Interest rate per period"
     :param nper: "Number of compounding periods"
