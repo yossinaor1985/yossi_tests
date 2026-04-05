@@ -50,7 +50,6 @@ def abs_pool_factor(current_pool_balance, original_pool_balance):
     return current_pool_balance / original_pool_balance
 
 
-
 def accounting_identity(liabilities, equity):
     '''
     domain: ['Accounting & financial statement analysis']
@@ -62,7 +61,6 @@ def accounting_identity(liabilities, equity):
     :return: "Total assets = Liabilities + Equity"
     '''
     return liabilities + equity
-
 
 
 def total_assets(liabilities, equity):
@@ -309,7 +307,6 @@ def aggregate_loss_distribution(frequency_mean, severity_mean, severity_std, n_s
     return aggregate_losses
 
 
-
 def alpha(returns, factor_returns, risk_free_rate=0.0):
     '''
     domain: ['Equity valuation & asset pricing']
@@ -328,7 +325,6 @@ def alpha(returns, factor_returns, risk_free_rate=0.0):
     b = np.cov(excess_r, excess_m)[0, 1] / np.var(excess_m, ddof=1)
     alpha_val = np.mean(excess_r) - b * np.mean(excess_m)
     return alpha_val
-
 
 
 def returns(start_val, end_val):
@@ -373,7 +369,8 @@ def alpha_from_regression(portfolio_returns, benchmark_returns, risk_free_rate=0
     model = sm.OLS(y, X).fit()
     return model.params[0], model.params[1], model.rsquared
 
-# stopped here
+
+
 def altman_z_score(working_capital, total_assets, retained_earnings, ebit, market_cap, total_liabilities, revenue):
     '''
     domain: ['Accounting & financial statement analysis']
@@ -397,6 +394,24 @@ def altman_z_score(working_capital, total_assets, retained_earnings, ebit, marke
     return 1.2 * x1 + 1.4 * x2 + 3.3 * x3 + 0.6 * x4 + 1.0 * x5
 
 
+def revenue(sold_units, price_per_unit):
+    '''
+    domain: ['Accounting & financial statement analysis']
+    subdomain: ['Financial Statements', 'Balance Sheet Analysis']
+    function: "Revenue is the total amount of money a business earns from its normal business activities—such as selling goods or services—before any expenses are deducted. Often called "top-line" or turnover, it is calculated by multiplying the number of units sold by the average price per unit."
+    y_as_x: ['altman_z_score','asset_turnover','cash_flow_margin','contribution_margin','contribution_margin_ratio','days_sales_outstanding_dso','ebit',
+    'ebitda_margin','ev_over_sales','fixed_asset_turnover','free_cash_flow_margin','gross_margin','gross_profit','hedged_commodity_revenue',
+    'metallurgical_gross_margin','net_income','net_margin','net_operating_income_noi','operating_margin','price_to_sales',
+    'receivables_turnover','revenue_growth']
+    :param sold_units: "number of units that were sold"
+    :param price_per_unit: "price of each unit"
+    :return: "gross revenue = sold_units * price_per_unit"
+    '''
+    sold_units = np.asarray(sold_units, dtype=float)
+    price_per_unit = np.asarray(price_per_unit, dtype=float)
+    return (sold_units * price_per_unit).sum()
+
+# stopped here
 def american_option_binomial_pricing(spot, strike, rate, volatility, time_to_maturity, steps=100, option_type='call',
                                      dividend_yield=0.0):
     '''
@@ -963,7 +978,6 @@ def asset_swap_spread(bond_coupon_rate, par_swap_rate, bond_dirty_price, face_va
     asw = (bond_coupon_rate - par_swap_rate) + (face_value - bond_dirty_price) / face_value
     return asw
 
-
 def asset_turnover(revenue, average_total_assets):
     '''
     domain: ['Accounting & financial statement analysis']
@@ -1383,7 +1397,8 @@ def benefit_reserve_recursion(reserve_t, premium, interest_rate, mortality_rate,
     reserve_next = (accumulated - mortality_rate * benefit) / p
     return reserve_next
 
-#fixme: fix the params
+
+# fixme: fix the params
 def beneish_m_score(dsri, gmi, aqi, sgi, depi, sgai, tata, lvgi):
     '''
     domain: ['Accounting & financial statement analysis']
@@ -2094,10 +2109,6 @@ def breusch_pagan_test(y, X):
     return bp_test  # (lm_stat, lm_pvalue, fvalue, f_pvalue)
 
 
-
-
-
-
 # ---------------------------------------------------------------------------
 # 8. buhlmann_credibility_factor
 # ---------------------------------------------------------------------------
@@ -2354,6 +2365,7 @@ def cash_flow_at_risk_cfar(cash_flows, alpha=0.05):
     '''
     cash_flows = np.asarray(cash_flows, dtype=float)
     return np.quantile(cash_flows, alpha)
+
 
 
 # ---------------------------------------------------------------------------
@@ -3253,7 +3265,6 @@ def continuous_compounding(pv, r, t):
     '''
     return pv * np.exp(r * t)
 
-
 # ---------------------------------------------------------------------------
 # 65. contribution_margin
 # ---------------------------------------------------------------------------
@@ -4050,7 +4061,7 @@ def cva_capital_proxy(ead, lgd, pd, maturity, risk_weight_factor=1.0):
 # ---------------------------------------------------------------------------
 # 7. d1
 # ---------------------------------------------------------------------------
-#fixme: params
+# fixme: params
 def d1(S, K, r, sigma, T):
     '''
     domain: ['Derivatives, options & volatility']
@@ -4478,6 +4489,7 @@ def digital_call_price(S, K, r, sigma, T):
     d1_val = (np.log(S / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * np.sqrt(T))
     d2_val = d1_val - sigma * np.sqrt(T)
     return np.exp(-r * T) * stats.norm.cdf(d2_val)
+
 
 # ---------------------------------------------------------------------------
 # 31. digital_put_price
@@ -4983,6 +4995,7 @@ def earnings_yield(eps_val, price):
     return eps_val / price
 
 
+
 # ---------------------------------------------------------------------------
 # 60. ebit
 # ---------------------------------------------------------------------------
@@ -5255,6 +5268,7 @@ def elastic_net(X, y, alpha=1.0, l1_ratio=0.5):
     model = EN(alpha=alpha, l1_ratio=l1_ratio)
     model.fit(X, y)
     return model
+
 
 # ---------------------------------------------------------------------------
 # 75. encumbrance_ratio
@@ -7284,6 +7298,7 @@ def heston_variance_process(v0, kappa, theta, xi, T, n_steps, n_paths):
         v[:, t + 1] = np.maximum(v[:, t + 1], 0)
     return v
 
+
 def historical_var(returns, alpha=0.05):
     '''
     domain: ['Market risk & volatility modeling']
@@ -7605,7 +7620,6 @@ def ichimoku_leading_span_b(high, low, period=52, shift=26):
     low = pd.Series(low)
     span_b = (high.rolling(window=period).max() + low.rolling(window=period).min()) / 2.0
     return span_b.shift(shift)
-
 
 
 def idiosyncratic_volatility(returns, factor_returns):
@@ -8280,6 +8294,7 @@ def lbo_equity_irr(equity_invested, cash_to_equity, exit_equity, periods=None):
     cfs = np.concatenate([[-equity_invested], cash_to_equity])
     cfs[-1] += exit_equity
     return npf.irr(cfs)
+
 
 def ledoit_wolf_covariance_shrinkage(returns):
     '''
@@ -9014,7 +9029,6 @@ def market_neutral_constraint(weights, betas):
     betas = np.array(betas)
     port_beta = np.sum(betas * weights)
     return {'is_neutral': bool(np.abs(port_beta) < 1e-8), 'portfolio_beta': port_beta}
-
 
 
 def maximum_drawdown(returns):
@@ -10664,7 +10678,8 @@ def portfolio_covariance_contribution(weights, covariance_matrix):
     mc = covariance_matrix @ weights
     return mc
 
-#fixme: fix y_as_x
+
+# fixme: fix y_as_x
 def portfolio_return(weights, expected_returns):
     '''
     domain: ['Asset management & portfolio optimization']
@@ -11485,7 +11500,6 @@ def realized_beta(asset_returns_intraday, market_returns_intraday):
     return cov / var_market
 
 
-
 def realized_hedge_effectiveness(hedged_returns, unhedged_returns):
     '''
     domain: ['Commodities, futures & hedging']
@@ -11511,6 +11525,7 @@ def realized_spread(trade_price, mid_price_future, side):
     :return: "Computed Realized Spread = 2 * side * (Trade Price - Mid_{t+Delta})"
     '''
     return 2.0 * side * (trade_price - mid_price_future)
+
 
 def realized_variance(intraday_returns):
     '''
@@ -11826,7 +11841,6 @@ def rho(K, T, r, d2_value, option_type='call'):
         return -K * T * np.exp(-r * T) * norm.cdf(-d2_value)
 
 
-
 def risk_parity_objective(returns, cov_matrix=None):
     '''
     domain: ['Asset management & portfolio optimization']
@@ -12107,7 +12121,6 @@ def security_market_line(risk_free_rate, beta, expected_market_return):
     :return: "Computed E[R] = R_f + beta * (E[R_m] - R_f)"
     '''
     return risk_free_rate + beta * (expected_market_return - risk_free_rate)
-
 
 
 def semivariance(returns, target=0.0):
@@ -12941,6 +12954,7 @@ def tail_hedge_payoff(S_T, K, premium, position='long_put'):
     else:
         return np.maximum(K - S_T, 0) - premium
 
+
 def tail_ratio(returns):
     '''
     domain: ['Market risk & volatility modeling']
@@ -13086,6 +13100,7 @@ def terminal_value_gordon_growth(fcf_next, weighted_average_cost_of_capital_wacc
     '''
     return fcf_next / (weighted_average_cost_of_capital_wacc - growth_rate)
 
+
 def theta(S, K, r, sigma, T, q=0.0, option_type='c'):
     '''
     domain: ['Derivatives, options & volatility']
@@ -13182,7 +13197,6 @@ def total_capital_ratio(total_capital, risk_weighted_assets_rwa):
     :return: "Computed total capital ratio = Total Capital / RWA"
     '''
     return total_capital / risk_weighted_assets_rwa
-
 
 
 def tracking_error(returns, benchmark_returns):
@@ -13392,7 +13406,6 @@ def trigger_based_step_down(delinquency_ratio, cnl_ratio, oc_ratio,
     return (delinquency_ratio <= delinquency_threshold and
             cnl_ratio <= cnl_threshold and
             oc_ratio >= oc_threshold)
-
 
 
 def trinomial_tree_option_value(S, K, r, sigma, T, n_steps=100, option_type='call', exercise='european'):
@@ -13649,6 +13662,7 @@ def upside_capture(returns, benchmark_returns):
         return np.nan
     return np.mean(returns[up_mask]) / np.mean(benchmark_returns[up_mask])
 
+
 def upside_potential_ratio(returns, mar=0.0):
     '''
     domain: ['Asset management & portfolio optimization']
@@ -13691,6 +13705,7 @@ def vacancy_rate(vacant_units_or_lost_rent, total_potential_units_or_rent):
     :return: "Computed vacancy rate = Vacant Units (or Lost Rent) / Total Units (or Potential Rent)"
     '''
     return vacant_units_or_lost_rent / total_potential_units_or_rent
+
 
 def vanna(S, K, r, sigma, T, q=0.0):
     '''
@@ -13748,8 +13763,6 @@ def variance_of_loss(loss_values, probabilities=None):
         e_l = np.mean(loss_values)
         e_l2 = np.mean(loss_values ** 2)
     return e_l2 - e_l ** 2
-
-
 
 
 def variance_ratio_test(returns, q=2):
@@ -13924,6 +13937,7 @@ def vix_variance_relation(vix_level):
     :return: "Expected 30-day annualized risk-neutral variance = (VIX/100)^2"
     '''
     return (vix_level / 100) ** 2
+
 
 def volatility_clustering_test(returns, n_lags=20):
     '''
@@ -14284,6 +14298,7 @@ def williams_pctr(high, low, close, period=14):
     low = np.asarray(low, dtype=np.float64)
     close = np.asarray(close, dtype=np.float64)
     return talib.WILLR(high, low, close, timeperiod=period)
+
 
 def win_over_loss_ratio(returns):
     '''
