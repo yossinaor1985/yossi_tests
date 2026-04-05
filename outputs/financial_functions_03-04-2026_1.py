@@ -1492,7 +1492,6 @@ def binomial_down_factor(up_factor):
     '''
     return 1.0 / up_factor
 
-
 def binomial_option_pricing(spot, strike, rate, volatility, time_to_maturity, steps=100, option_type='call',
                             dividend_yield=0.0):
     '''
@@ -1714,6 +1713,7 @@ def black_scholes_call(spot, strike, time_to_maturity, rate, volatility, dividen
     call = spot * np.exp(-dividend_yield * time_to_maturity) * stats.norm.cdf(d1) - \
            strike * np.exp(-rate * time_to_maturity) * stats.norm.cdf(d2)
     return call
+
 
 
 def black_scholes_put(spot, strike, time_to_maturity, rate, volatility, dividend_yield=0.0):
@@ -4719,7 +4719,9 @@ def dividend_yield(annual_dividend_per_share, price_per_share):
     domain: ['Corporate finance, valuation & capital budgeting']
     subdomain: ['Equity valuation']
     function: "Computes the dividend yield, expressing the annual dividend as a percentage of the current share price."
-    y_as_x: ['american_option_binomial_pricing', 'asian_option_price', 'barrier_option_price', 'binary_asset_or_nothing_call', 'binomial_option_pricing', 'black_scholes_call', 'black_scholes_merton_d1', 'black_scholes_put', 'cost_of_equity_dividend_growth']
+    y_as_x: ['cost_of_equity_dividend_growth','american_option_binomial_pricing','asian_option_price','barrier_option_price','binary_asset_or_nothing_call','binomial_option_pricing',
+    'black_scholes_call','black_scholes_put','black_scholes_merton_d1','chooser_option_value','delta_call','delta_put','gamma','heston_asset_process',
+    'implied_volatility','margrabe_exchange_option','put_call_parity_equity','risk_neutral_probability','speed','theta','vanna','vega','vomma_over_volga']
     :param annual_dividend_per_share: "Annual dividend per share"
     :param price_per_share: "Current market price per share"
     :return: "Dividend Yield = Annual Dividend per Share / Price per Share"
