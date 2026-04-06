@@ -1155,7 +1155,7 @@ def backwardation_slope(futures_long, futures_short):
     '''
     return 1.0 - futures_long / futures_short
 
-#stopped here
+
 def balloon_payment(rate, n_amortization_periods, n_payment_periods, loan_amount):
     '''
     domain: ['Banking, consumer lending & project finance']
@@ -1181,7 +1181,7 @@ def balloon_payment(rate, n_amortization_periods, n_payment_periods, loan_amount
         balance = loan_amount * (1 + rate) ** n_payment_periods - pmt * ((1 + rate) ** n_payment_periods - 1) / rate
         return balance
 
-
+#stopped here
 def barrier_option_price(spot, strike, barrier, rate, volatility, time_to_maturity, option_type='call',
                          barrier_type='down-and-out', dividend_yield=0.0, n_simulations=50000, seed=42):
     '''
@@ -1215,8 +1215,10 @@ def barrier_option_price(spot, strike, barrier, rate, volatility, time_to_maturi
     final_prices = paths[:, -1]
     if option_type == 'call':
         payoffs = np.maximum(final_prices - strike, 0.0)
-    else:
+    elif option_type == 'put':
         payoffs = np.maximum(strike - final_prices, 0.0)
+    else:
+        return print("option type not recognized")
     min_prices = np.min(paths, axis=1)
     max_prices = np.max(paths, axis=1)
     if barrier_type == 'down-and-out':
@@ -6325,6 +6327,20 @@ def forward_price_on_non_dividend_asset(S0, r, T):
     :return: "Forward price"
     '''
     return S0 * np.exp(r * T)
+
+#fixme: find all functions which use spot price with no dividend
+def spot_price_on_non_dividend_asset(f, r, T):
+    '''
+    domain: ['Derivatives, options & volatility']
+    subdomain: ['Forward pricing', 'No-arbitrage pricing']
+    function: "Computes the spot price on a non-dividend-paying asset. S_0 = F_0 * e^{-r*T}"
+    y_as_x: ['black_76_option_price','bachelier_option_price','backwardation_slope']
+    :param f: "Current forward price of the asset"
+    :param r: "Risk-free interest rate (continuous compounding)"
+    :param T: "Time to maturity in years"
+    :return: "Spot price"
+    '''
+    return f * np.exp(-r * T)
 
 
 def forward_price_with_carry(S0, r, storage_cost, convenience_yield, T):
