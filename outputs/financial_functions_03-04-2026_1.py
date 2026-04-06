@@ -1181,7 +1181,7 @@ def balloon_payment(rate, n_amortization_periods, n_payment_periods, loan_amount
         balance = loan_amount * (1 + rate) ** n_payment_periods - pmt * ((1 + rate) ** n_payment_periods - 1) / rate
         return balance
 
-#stopped here
+
 def barrier_option_price(spot, strike, barrier, rate, volatility, time_to_maturity, option_type='call',
                          barrier_type='down-and-out', dividend_yield=0.0, n_simulations=50000, seed=42):
     '''
@@ -1235,13 +1235,13 @@ def barrier_option_price(spot, strike, barrier, rate, volatility, time_to_maturi
         payoffs[not_knocked] = 0.0
     return np.exp(-rate * time_to_maturity) * np.mean(payoffs)
 
-
+#stopped here
 def basel_irb_capital_requirement(pd, lgd, maturity, ead, asset_correlation=None):
     '''
     domain: ['Credit risk, default modeling & credit portfolio']
     subdomain: ['Basel Regulation', 'Credit Risk Capital']
     function: "Computes the Basel II/III IRB capital requirement: K = LGD * [Phi((Phi^-1(PD) + sqrt(R)*Phi^-1(0.999))/sqrt(1-R)) - PD] * MA."
-    y_as_x: []
+    y_as_x: ['vasicek_one_factor_portfolio_loss_quantile']
     :param pd: "Probability of default (PD)"
     :param lgd: "Loss given default (LGD) as decimal"
     :param maturity: "Effective maturity in years"
@@ -8781,7 +8781,8 @@ def loss_given_default(recovery_rate):
     domain: ['Banking, consumer lending & project finance']
     subdomain: ['Credit risk parameters']
     function: "Loss given default: 1 minus recovery rate"
-    y_as_x: ['credit_var', 'expected_loss', 'lgd_downturn_adjustment', 'lifetime_ecl', 'recovery_rate', 'reduced_form_cds_hazard_relation', 'unexpected_loss']
+    y_as_x: ['credit_var', 'expected_loss', 'lgd_downturn_adjustment', 'lifetime_ecl', 'recovery_rate', 'reduced_form_cds_hazard_relation', 'unexpected_loss',
+    'basel_irb_capital_requirement']
     :param recovery_rate: "Recovery rate as a decimal (0 to 1)"
     :return: "Loss given default"
     '''
@@ -11008,7 +11009,7 @@ def probability_of_default_from_logit(X, beta):
     domain: ['Credit risk']
     subdomain: ['PD modeling', 'Logistic regression']
     function: "Compute probability of default from logistic regression: PD = 1 / (1 + exp(-X*beta))"
-    y_as_x: ['expected_loss', 'expected_credit_loss_ifrs_9_over_cecl', 'basel_irb_capital_requirement']
+    y_as_x: ['expected_loss', 'expected_credit_loss_ifrs_9_over_cecl', 'basel_irb_capital_requirement','vasicek_one_factor_portfolio_loss_quantile']
     :param X: "Feature matrix (n_samples x n_features)"
     :param beta: "Coefficient vector from logistic regression"
     :return: "Array of default probabilities"
