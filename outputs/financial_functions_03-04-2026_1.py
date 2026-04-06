@@ -1398,7 +1398,7 @@ def benchmark_relative_optimization(expected_returns, cov_matrix, benchmark_weig
         w_star = wb + 0.5 * risk_aversion * Sigma_inv @ mu
         return w_star / np.sum(w_star)
 
-#stopped here
+
 def benefit_reserve_recursion(reserve_t, premium, interest_rate, mortality_rate, benefit):
     '''
     domain: ['Actuarial science & insurance']
@@ -1418,7 +1418,6 @@ def benefit_reserve_recursion(reserve_t, premium, interest_rate, mortality_rate,
     return reserve_next
 
 
-# fixme: fix the params
 def beneish_m_score(dsri, gmi, aqi, sgi, depi, sgai, tata, lvgi):
     '''
     domain: ['Accounting & financial statement analysis']
@@ -1439,13 +1438,15 @@ def beneish_m_score(dsri, gmi, aqi, sgi, depi, sgai, tata, lvgi):
             0.892 * sgi + 0.115 * depi - 0.172 * sgai +
             4.679 * tata - 0.327 * lvgi)
 
-
+#stopped here
 def beta(returns, factor_returns, risk_free_rate=0.0):
     '''
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Asset Pricing', 'CAPM']
     function: "Computes the CAPM beta: beta_i = Cov(R_i, R_m) / Var(R_m)."
-    y_as_x: ['alpha', 'capm_expected_return', 'cost_of_equity_capm', 'garch_11',  'levered_beta_hamada', 'probability_of_default_from_logit', 'probit_score', 'sabr_implied_vol', 'security_market_line', 'treynor_ratio', 'unlevered_beta','henriksson_merton_timing']
+    y_as_x: ['alpha', 'capm_expected_return', 'cost_of_equity_capm', 'garch_11',  'levered_beta_hamada',
+    'probability_of_default_from_logit', 'probit_score', 'sabr_implied_vol', 'security_market_line', 'treynor_ratio',
+    'unlevered_beta','henriksson_merton_timing']
     :param returns: "Array of asset returns"
     :param factor_returns: "Array of market (benchmark) returns"
     :param risk_free_rate: "Risk-free rate per period (default 0)"
@@ -8016,7 +8017,7 @@ def interest_payment(rate, per, nper, pv, fv=0):
     subdomain: ['Loan amortization']
     function: "Interest payment for a given period of an amortizing loan"
     y_as_x: ['continuous_compounding','simple_compounding','growing_annuity_value','loan_payment_annuity','number_of_periods', 'future_value_fv','present_value_pv',
-    'amortization_factor','equated_monthly_installment_emi','balloon_payment']
+    'amortization_factor','equated_monthly_installment_emi','balloon_payment','benefit_reserve_recursion']
     :param rate: "Interest rate per period"
     :param per: "Period for which to compute interest (1-based)"
     :param nper: "Total number of periods"
