@@ -1265,7 +1265,7 @@ def basel_irb_capital_requirement(pd, lgd, maturity, ead, asset_correlation=None
     k = lgd * (conditional_pd - pd) * ma
     return k * ead
 
-#stopped here
+
 def basel_standardized_capital_requirement(risk_weighted_assets):
     '''
     domain: ['Bank regulation, Basel & prudential ratios']
@@ -1282,14 +1282,16 @@ def basis(spot_price, futures_price):
     '''
     domain: ['Commodities, futures & hedging']
     subdomain: ['Futures Markets', 'Basis Trading']
-    function: "Computes the basis: Basis = Spot Price - Futures Price."
-    y_as_x: ['basis_convergence', 'minimum_variance_hedge_ratio']
+    function: "Computes the basis: Basis = Spot Price - Futures Price. The future price (futures price)
+    is related to the base price (spot price) through the cost of carry, with the difference between them
+    known as the basis. Futures prices generally equal the spot price plus costs (storage, interest, insurance) to
+    hold the asset until delivery, often converging at expiration. "
+    y_as_x: ['basis_convergence']
     :param spot_price: "Current spot price of the commodity"
     :param futures_price: "Current futures price"
     :return: "Basis = S_t - F_t"
     '''
     return spot_price - futures_price
-
 
 def basis_convergence(spot_price, futures_price, time_to_maturity, tolerance=1e-6):
     '''
@@ -1324,13 +1326,15 @@ def batting_average(portfolio_returns, benchmark_returns):
     active = portfolio_returns - benchmark_returns
     return np.sum(active > 0) / len(active)
 
-
 def bayesian_shrinkage_return_forecast(mu_prior, mu_sample, shrinkage_lambda):
     '''
     domain: ['Asset management & portfolio optimization']
     subdomain: ['Return Forecasting', 'Bayesian Methods']
-    function: "Computes a Bayesian shrinkage return forecast as a weighted average of prior and sample means."
-    y_as_x: ['black_litterman_posterior_mean']
+    function: "Computes a Bayesian shrinkage return forecast as a weighted average of prior and sample means.
+    Bayesian shrinkage return forecasting is a technique that improves asset return predictions by pulling (shrinking) noisy,
+    extreme sample estimates toward a more stable, central prior mean (like the global mean or zero).
+    This reduces estimation error in financial models with many parameters, resulting in more stable and robust out-of-sample performance"
+    y_as_x: []
     :param mu_prior: "Prior expected return (or array of prior returns)"
     :param mu_sample: "Sample (historical) expected return (or array)"
     :param shrinkage_lambda: "Shrinkage weight on the prior, between 0 and 1"
@@ -1346,7 +1350,7 @@ def behavioral_duration_of_deposits(rate_changes, deposit_balance_changes):
     domain: ['Treasury, ALM & balance-sheet management']
     subdomain: ['Asset-Liability Management', 'Non-Maturity Deposits']
     function: "Estimates the behavioral (effective) duration of non-maturity deposits using regression of deposit balance changes on rate changes."
-    y_as_x: ['duration_gap']
+    y_as_x: []
     :param rate_changes: "Array of interest rate changes (independent variable)"
     :param deposit_balance_changes: "Array of percentage changes in deposit balances"
     :return: "Dictionary with 'duration' (negative of regression slope), 'r_squared', and 'model'"
@@ -1363,7 +1367,8 @@ def benchmark_relative_optimization(expected_returns, cov_matrix, benchmark_weig
     '''
     domain: ['Asset management & portfolio optimization']
     subdomain: ['Portfolio Optimization', 'Benchmark-Relative']
-    function: "Solves the benchmark-relative optimization: min_w (w-w_b)'Sigma(w-w_b) - lambda*mu'(w-w_b), subject to weights summing to 1."
+    function: "Solves the benchmark-relative optimization: min_w (w-w_b)'Sigma(w-w_b) - lambda*mu'(w-w_b), subject to weights summing to 1.
+    It seeks to maximize the information ratio"
     y_as_x: []
     :param expected_returns: "Array of expected returns for each asset"
     :param cov_matrix: "Covariance matrix of asset returns"
@@ -1393,7 +1398,7 @@ def benchmark_relative_optimization(expected_returns, cov_matrix, benchmark_weig
         w_star = wb + 0.5 * risk_aversion * Sigma_inv @ mu
         return w_star / np.sum(w_star)
 
-
+#stopped here
 def benefit_reserve_recursion(reserve_t, premium, interest_rate, mortality_rate, benefit):
     '''
     domain: ['Actuarial science & insurance']
@@ -7864,7 +7869,7 @@ def information_ratio(returns, benchmark_returns):
     domain: ['Asset management & portfolio optimization']
     subdomain: ['Performance measurement']
     function: "Information ratio: mean active return divided by tracking error"
-    y_as_x: []
+    y_as_x: ['benchmark_relative_optimization']
     :param returns: "Portfolio returns series"
     :param benchmark_returns: "Benchmark returns series"
     :return: "Information ratio"
