@@ -615,8 +615,9 @@ def annuity_present_value(payment, rate, n_periods):
     domain: ['Corporate finance, valuation & capital budgeting']
     subdomain: ['Time Value of Money', 'Annuities']
     function: "Computes the present value of an ordinary annuity: PV = PMT * (1 - (1+r)^-n) / r."
-    y_as_x: ['present_value_pv','adjusted_present_value_apv', 'loan_payment_annuity','interest_payment','loan_payment_annuity','number_of_periods',
-    'continuous_compounding','simple_compounding','equated_monthly_installment_emi']
+    y_as_x: ['present_value_pv','adjusted_present_value_apv','abnormal_earnings_growth', 'net_present_value_npv',
+    'profitability_index','simple_compounding','continuous_compounding','interest_payment','loan_payment_annuity',
+    'number_of_periods', 'future_value_fv','equated_monthly_installment_emi','balloon_payment']
     :param payment: "Periodic payment amount (PMT)"
     :param rate: "Discount rate per period"
     :param n_periods: "Total number of periods"
@@ -1070,7 +1071,7 @@ def awesome_oscillator(high, low, short_period=5, long_period=34):
         sma_long[i] = np.mean(median_price[i - long_period + 1:i + 1])
     return sma_short - sma_long
 
-#stopped here
+
 def bachelier_option_price(forward, strike, volatility, time_to_maturity, discount_factor, option_type='call'):
     '''
     domain: ['Interest-rate modeling & term structures']
@@ -1089,14 +1090,18 @@ def bachelier_option_price(forward, strike, volatility, time_to_maturity, discou
     if sigma_sqrt_t == 0:
         if option_type == 'call':
             return discount_factor * max(forward - strike, 0.0)
-        else:
+        elif option_type == 'put':
             return discount_factor * max(strike - forward, 0.0)
+        else:
+            return print('option type not recognized')
     d = (forward - strike) / sigma_sqrt_t
     if option_type == 'call':
-        price = discount_factor * ((forward - strike) * stats.norm.cdf(d) + sigma_sqrt_t * stats.norm.pdf(d))
+        return discount_factor * ((forward - strike) * stats.norm.cdf(d) + sigma_sqrt_t * stats.norm.pdf(d))
+    elif option_type == 'put':
+        return discount_factor * ((strike - forward) * stats.norm.cdf(-d) + sigma_sqrt_t * stats.norm.pdf(d))
     else:
-        price = discount_factor * ((strike - forward) * stats.norm.cdf(-d) + sigma_sqrt_t * stats.norm.pdf(d))
-    return price
+        return print('option type not recognized')
+
 
 
 def back_end_dti_gross_income(total_monthly_debt_payments, gross_monthly_income):
@@ -1150,7 +1155,7 @@ def backwardation_slope(futures_long, futures_short):
     '''
     return 1.0 - futures_long / futures_short
 
-
+#stopped here
 def balloon_payment(rate, n_amortization_periods, n_payment_periods, loan_amount):
     '''
     domain: ['Banking, consumer lending & project finance']
@@ -4566,12 +4571,15 @@ def dirty_price(clean_price_val, accrued_interest):
 # ---------------------------------------------------------------------------
 # 34. discount_factor
 # ---------------------------------------------------------------------------
+#fixme
 def discount_factor(r, t):
     '''
     domain: ['Corporate finance, valuation & capital budgeting']
     subdomain: ['Time value of money']
     function: "Computes the discount factor, representing the present value of one unit of currency received at a future time t."
-    y_as_x: ['bachelier_option_price', 'black_caplet_price', 'cds_premium_leg', 'compounded_forward_rate', 'expected_credit_loss_ifrs_9_over_cecl', 'forward_rate_from_discount_factors', 'fra_rate', 'lifetime_ecl', 'present_value_random_variable', 'spot_rate_from_discount_factor']
+    y_as_x: ['bachelier_option_price', 'black_caplet_price', 'cds_premium_leg', 'compounded_forward_rate',
+    'expected_credit_loss_ifrs_9_over_cecl', 'forward_rate_from_discount_factors', 'fra_rate', 'lifetime_ecl',
+    'present_value_random_variable', 'spot_rate_from_discount_factor','instantaneous_forward_rate']
     :param r: "Periodic discount rate (e.g., annual rate)"
     :param t: "Number of periods until payment"
     :return: "DF_t = 1 / (1 + r)^t"
@@ -6304,13 +6312,13 @@ def forward_p_over_e(price, forward_eps):
     '''
     return price / forward_eps
 
-
+#fixme: find all functions which use forward with no dividend
 def forward_price_on_non_dividend_asset(S0, r, T):
     '''
     domain: ['Derivatives, options & volatility']
     subdomain: ['Forward pricing', 'No-arbitrage pricing']
     function: "Computes the forward price on a non-dividend-paying asset. F_0 = S_0 * e^{r*T}"
-    y_as_x: []
+    y_as_x: ['black_76_option_price','bachelier_option_price','backwardation_slope']
     :param S0: "Current spot price of the asset"
     :param r: "Risk-free interest rate (continuous compounding)"
     :param T: "Time to maturity in years"
@@ -7962,7 +7970,7 @@ def interest_payment(rate, per, nper, pv, fv=0):
     subdomain: ['Loan amortization']
     function: "Interest payment for a given period of an amortizing loan"
     y_as_x: ['continuous_compounding','simple_compounding','growing_annuity_value','loan_payment_annuity','number_of_periods', 'future_value_fv','present_value_pv',
-    'amortization_factor','equated_monthly_installment_emi']
+    'amortization_factor','equated_monthly_installment_emi','balloon_payment']
     :param rate: "Interest rate per period"
     :param per: "Period for which to compute interest (1-based)"
     :param nper: "Total number of periods"
@@ -8580,7 +8588,7 @@ def loan_payment_annuity(rate, nper, pv, fv=0):
     domain: ['Banking, lending & project finance']
     subdomain: ['Loan payments']
     function: "Annuity loan payment: PMT = r * PV / [1 - (1+r)^(-n)]"
-    y_as_x: ['interest_payment','number_of_periods', 'future_value_fv','present_value_pv','growing_annuity_value','amortization_factor']
+    y_as_x: ['interest_payment','number_of_periods', 'balloon_payment','future_value_fv','present_value_pv','growing_annuity_value','amortization_factor']
     :param rate: "Interest rate per period"
     :param nper: "Total number of payment periods"
     :param pv: "Present value (loan amount)"
@@ -9957,7 +9965,7 @@ def number_of_periods(rate, pmt, pv, fv=0.0):
     domain: ['Banking, consumer lending & project finance']
     subdomain: ['Time value of money', 'Loan analysis']
     function: "Compute the number of periods required to pay off a loan or reach a future value target: n = -ln(1-rPV/PMT) / ln(1+r)"
-    y_as_x: ['interest_payment','loan_payment_annuity', 'future_value_fv','present_value_pv','growing_annuity_value',
+    y_as_x: ['interest_payment','balloon_payment','loan_payment_annuity', 'future_value_fv','present_value_pv','growing_annuity_value',
     'amortization_factor','equated_monthly_installment_emi']
     :param rate: "Interest rate per period"
     :param pmt: "Payment per period (negative for outflows)"
@@ -10858,8 +10866,7 @@ def present_value_pv(rate, nper, pmt, fv=0.0):
     domain: ['Corporate finance, valuation & capital budgeting']
     subdomain: ['Time value of money', 'Discounting']
     function: "Compute present value: PV = sum_t CF_t / (1+r)^t using numpy_financial"
-    y_as_x: ['abnormal_earnings_growth','annuity_present_value', 'net_present_value_npv', 'profitability_index','simple_compounding','continuous_compounding',
-    'interest_payment','loan_payment_annuity','number_of_periods', 'future_value_fv','equated_monthly_installment_emi']
+    y_as_x: ['annuity_present_value']
     :param rate: "Discount rate per period"
     :param nper: "Number of periods"
     :param pmt: "Payment per period"
