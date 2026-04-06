@@ -310,7 +310,7 @@ def alpha(returns, factor_returns, risk_free_rate=0.0):
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Asset Pricing', 'CAPM']
     function: "Computes Jensen's alpha: the excess return of an asset beyond what is predicted by the CAPM. alpha = E[R_i] - [R_f + beta_i(E[R_m]-R_f)]."
-    y_as_x: ['capm_expected_return','alpha_from_regression', 'appraisal_ratio','henriksson_merton_timing']
+    y_as_x: ['capm_expected_return', 'appraisal_ratio','henriksson_merton_timing']
     :param returns: "Array of asset returns"
     :param factor_returns: "Array of market (benchmark) returns"
     :param risk_free_rate: "Risk-free rate per period (default 0)"
@@ -330,7 +330,7 @@ def returns_val(start_val, end_val):
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Asset Pricing', 'CAPM']
     function: "Return - the percentage of change between the value at start to the value at end."
-    y_as_x: ['alpha_from_regression', 'alpha','amihud_illiquidity','amivest_liquidity_ratio','annualized_return_cagr','annualized_volatility','aparch','arch_q','batting_average',
+    y_as_x: ['alpha_and_beta_from_regression', 'alpha','amihud_illiquidity','amivest_liquidity_ratio','annualized_return_cagr','annualized_volatility','aparch','arch_q','batting_average',
     'benchmark_relative_optimization','beta','bipower_variation','burke_ratio','calmar_ratio','carhart_4_factor_model',
     'covariance_matrix','cumulative_return','downside_capture','downside_deviation','efficient_frontier_problem','egarch',
     'egarch_11','equal_risk_contribution','ewma_volatility','ex_ante_tracking_error','excess_kurtosis','excess_return',
@@ -349,12 +349,12 @@ def returns_val(start_val, end_val):
     return (end_val / start_val) - 1
 
 
-def alpha_from_regression(portfolio_returns, benchmark_returns, risk_free_rate=0.0):
+def alpha_and_beta_from_regression(portfolio_returns, benchmark_returns, risk_free_rate=0.0):
     '''
     domain: ['Performance measurement & attribution']
     subdomain: ['Regression Analysis', 'Performance Measurement']
     function: "Estimates alpha from a single-factor regression: R_p - R_f = alpha + beta(R_b - R_f) + epsilon."
-    y_as_x: []
+    y_as_x: ['alpha','beta','sharpe_lintner_beta_regression']
     :param portfolio_returns: "Array of portfolio returns"
     :param benchmark_returns: "Array of benchmark returns"
     :param risk_free_rate: "Risk-free rate per period (default 0)"
@@ -1438,15 +1438,14 @@ def beneish_m_score(dsri, gmi, aqi, sgi, depi, sgai, tata, lvgi):
             0.892 * sgi + 0.115 * depi - 0.172 * sgai +
             4.679 * tata - 0.327 * lvgi)
 
-#stopped here
+
 def beta(returns, factor_returns, risk_free_rate=0.0):
     '''
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Asset Pricing', 'CAPM']
     function: "Computes the CAPM beta: beta_i = Cov(R_i, R_m) / Var(R_m)."
-    y_as_x: ['alpha', 'capm_expected_return', 'cost_of_equity_capm', 'garch_11',  'levered_beta_hamada',
-    'probability_of_default_from_logit', 'probit_score', 'sabr_implied_vol', 'security_market_line', 'treynor_ratio',
-    'unlevered_beta','henriksson_merton_timing']
+    y_as_x: ['alpha','arbitrage_pricing_theory_apt', 'capm_expected_return', 'cost_of_equity_capm',
+    'unlevered_beta','market_neutral_constraint','realized_beta','security_market_line','treynor_ratio']
     :param returns: "Array of asset returns"
     :param factor_returns: "Array of market (benchmark) returns"
     :param risk_free_rate: "Risk-free rate per period (default 0)"
@@ -1461,7 +1460,7 @@ def beta(returns, factor_returns, risk_free_rate=0.0):
         cov_matrix = np.cov(returns, factor_returns)
         return cov_matrix[0, 1] / cov_matrix[1, 1]
 
-
+#stopped here
 def bid_ask_spread(ask_price, bid_price):
     '''
     domain: ['Liquidity risk & market liquidity']
@@ -8422,7 +8421,7 @@ def levered_beta_hamada(unlevered_beta, tax_rate, debt, equity):
     domain: ['Corporate finance, valuation & capital budgeting']
     subdomain: ['Cost of capital']
     function: "Levered beta (Hamada equation): beta_L = beta_U * [1 + (1-T)*D/E]"
-    y_as_x: []
+    y_as_x: ['beta','unlevered_beta']
     :param unlevered_beta: "Unlevered (asset) beta"
     :param tax_rate: "Corporate tax rate"
     :param debt: "Total debt"
@@ -11567,8 +11566,9 @@ def realized_beta(asset_returns_intraday, market_returns_intraday):
     '''
     domain: ['Market risk & volatility modeling']
     subdomain: ['Beta Estimation', 'High-Frequency Finance']
-    function: "Realized Beta measures the sensitivity of an asset's returns to market returns using intraday (high-frequency) data. It is computed as the ratio of the realized covariance between the asset and the market to the realized variance of the market."
-    y_as_x: []
+    function: "Realized Beta measures the sensitivity of an asset's returns to market returns using intraday (high-frequency) data.
+    It is computed as the ratio of the realized covariance between the asset and the market to the realized variance of the market."
+    y_as_x: ['beta']
     :param asset_returns_intraday: "Array of intraday returns of the asset."
     :param market_returns_intraday: "Array of intraday returns of the market index."
     :return: "Computed Realized Beta = Cov_intraday(asset, market) / Var_intraday(market)"
@@ -12192,7 +12192,7 @@ def sarima(endog, order=(1, 0, 0), seasonal_order=(1, 0, 0, 12)):
 def security_market_line(risk_free_rate, beta, expected_market_return):
     '''
     domain: ['Equity valuation & asset pricing']
-    subdomain: ['Capital Asset Pricing Model', 'Expected Returns']
+    subdomain: ['Capital Asset Pricing Model', 'Expected Returns', CAPM]
     function: "Security Market Line (SML) represents the CAPM relationship graphically, plotting expected return against systematic risk (beta). Any security plotting above the SML is undervalued (positive alpha), and below it is overvalued (negative alpha). The equation is the same as CAPM."
     y_as_x: ['capm_expected_return', 'alpha']
     :param risk_free_rate: "The risk-free rate of return (R_f), typically the yield on government bonds."
@@ -12251,7 +12251,7 @@ def sharpe_lintner_beta_regression(portfolio_excess_returns, market_excess_retur
     domain: ['Equity valuation & asset pricing']
     subdomain: ['Factor Models', 'Beta Estimation']
     function: "Sharpe-Lintner Beta Regression estimates the CAPM beta and alpha by regressing the portfolio's excess returns on the market's excess returns. The slope coefficient is the estimated beta, and the intercept is Jensen's alpha, measuring the portfolio's risk-adjusted abnormal return."
-    y_as_x: ['alpha_from_regression']
+    y_as_x: ['alpha_and_beta_from_regression','beta','alpha']
     :param portfolio_excess_returns: "Array of portfolio excess returns (R_p - R_f) for each period."
     :param market_excess_returns: "Array of market excess returns (R_m - R_f) for each period."
     :return: "Fitted OLS regression results with alpha (intercept) and beta (slope)"
