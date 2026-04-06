@@ -416,7 +416,7 @@ def american_option_binomial_pricing(spot, strike, rate, volatility, time_to_mat
     domain: ['Derivatives, options & volatility']
     subdomain: ['Option Pricing', 'Binomial Models']
     function: "Prices an American option using the Cox-Ross-Rubinstein binomial tree, allowing for early exercise at each node."
-    y_as_x: []
+    y_as_x: ['binomial_option_pricing']
     :param spot: "Current price of the underlying asset"
     :param strike: "Strike price of the option"
     :param rate: "Risk-free interest rate (annualized, continuous)"
@@ -1460,7 +1460,7 @@ def beta(returns, factor_returns, risk_free_rate=0.0):
         cov_matrix = np.cov(returns, factor_returns)
         return cov_matrix[0, 1] / cov_matrix[1, 1]
 
-#stopped here
+
 def bid_ask_spread(ask_price, bid_price):
     '''
     domain: ['Liquidity risk & market liquidity']
@@ -1530,8 +1530,10 @@ def binomial_option_pricing(spot, strike, rate, volatility, time_to_maturity, st
     asset_prices = spot * u ** np.arange(steps, -1, -1) * d ** np.arange(0, steps + 1)
     if option_type == 'call':
         option_values = np.maximum(asset_prices - strike, 0.0)
-    else:
+    elif option_type == 'put':
         option_values = np.maximum(strike - asset_prices, 0.0)
+    else:
+        return print('Invalid option type')
     # Backward induction (European, no early exercise)
     for i in range(steps):
         option_values = disc * (p * option_values[:-1] + (1 - p) * option_values[1:])
@@ -1550,7 +1552,7 @@ def binomial_up_factor(volatility, dt):
     '''
     return np.exp(volatility * np.sqrt(dt))
 
-
+#stopped here
 def bipower_variation(returns):
     '''
     domain: ['Market risk & volatility modeling']
@@ -11965,7 +11967,7 @@ def risk_neutral_probability(r, q, dt, u, d):
     domain: ['Derivatives, options & volatility']
     subdomain: ['Binomial Trees', 'Option Pricing']
     function: "Risk-Neutral Probability is the probability used in the binomial option pricing model to discount expected payoffs at the risk-free rate. It ensures the expected return on the underlying asset under the risk-neutral measure equals the risk-free rate minus the dividend yield."
-    y_as_x: ['binomial_option_pricing', 'american_option_binomial_pricing']
+    y_as_x: ['american_option_binomial_pricing','binomial_option_pricing']
     :param r: "The risk-free interest rate (continuously compounded)."
     :param q: "The continuous dividend yield on the underlying asset."
     :param dt: "The length of each time step in the binomial tree (Delta t)."
@@ -12031,7 +12033,7 @@ def roll_implied_spread(prices):
     domain: ['Liquidity risk, market liquidity & execution cost']
     subdomain: ['Market Microstructure', 'Spread Estimation']
     function: "Roll Implied Spread estimates the effective bid-ask spread from transaction price data alone, without requiring quote data. It exploits the negative serial covariance induced by the bid-ask bounce: the spread equals 2 times the square root of the negative autocovariance of price changes."
-    y_as_x: []
+    y_as_x: ['bid_ask_spread','mid_price']
     :param prices: "Array or Series of transaction prices."
     :return: "Computed Roll Spread = 2 * sqrt(-Cov(Delta p_t, Delta p_{t-1})) if covariance is negative, else 0"
     '''
