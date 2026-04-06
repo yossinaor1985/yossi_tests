@@ -1235,7 +1235,7 @@ def barrier_option_price(spot, strike, barrier, rate, volatility, time_to_maturi
         payoffs[not_knocked] = 0.0
     return np.exp(-rate * time_to_maturity) * np.mean(payoffs)
 
-#stopped here
+
 def basel_irb_capital_requirement(pd, lgd, maturity, ead, asset_correlation=None):
     '''
     domain: ['Credit risk, default modeling & credit portfolio']
@@ -1265,7 +1265,7 @@ def basel_irb_capital_requirement(pd, lgd, maturity, ead, asset_correlation=None
     k = lgd * (conditional_pd - pd) * ma
     return k * ead
 
-
+#stopped here
 def basel_standardized_capital_requirement(risk_weighted_assets):
     '''
     domain: ['Bank regulation, Basel & prudential ratios']
@@ -5030,12 +5030,26 @@ def earnings_yield(eps_val, price):
 # ---------------------------------------------------------------------------
 # 60. ebit
 # ---------------------------------------------------------------------------
+#fixme
+def ebit_from_base_values(net_income, interest, taxes):
+    '''
+    domain: ['Accounting & financial statement analysis']
+    subdomain: ['Income statement metrics']
+    function: "Computes Earnings Before Interest and Taxes by subtracting operating expenses from revenue."
+    y_as_x: ['ebit']
+    :param revenue: "Total revenue"
+    :param operating_expenses: "Total operating expenses"
+    :return: "EBIT = Revenue - Operating Expenses"
+    '''
+    return net_income + interest + taxes
+
+
 def ebit(revenue, operating_expenses):
     '''
     domain: ['Accounting & financial statement analysis']
     subdomain: ['Income statement metrics']
     function: "Computes Earnings Before Interest and Taxes by subtracting operating expenses from revenue."
-    y_as_x: ['altman_z_score', 'ebitda', 'ebitda_margin', 'ev_over_ebit', 'fcff', 'financial_leverage', 'free_cash_flow_to_firm_fcff', 'interest_coverage', 'interest_coverage_ratio', 'operating_margin', 'return_on_capital_employed_roce']
+    y_as_x: ['ebit_from_base_values','altman_z_score', 'ebitda', 'ebitda_margin', 'ev_over_ebit', 'fcff', 'financial_leverage', 'free_cash_flow_to_firm_fcff', 'interest_coverage', 'interest_coverage_ratio', 'operating_margin', 'return_on_capital_employed_roce']
     :param revenue: "Total revenue"
     :param operating_expenses: "Total operating expenses"
     :return: "EBIT = Revenue - Operating Expenses"
@@ -5058,6 +5072,17 @@ def ebitda(ebit_val, depreciation_amortization):
     '''
     return ebit_val + depreciation_amortization
 
+def ebita(ebit_val, amortization):
+    '''
+    domain: ['Accounting & financial statement analysis']
+    subdomain: ['Income statement metrics']
+    function: "Computes Earnings Before Interest, Taxes, Depreciation, and Amortization by adding D&A back to EBIT."
+    y_as_x: ['ebitda_margin', 'ev_over_ebitda', 'enterprise_value_in_lbo', 'exit_enterprise_value', 'equity_check_multiple_of_ebitda', 'cash_interest_coverage', 'fixed_charge_coverage']
+    :param ebit_val: "Earnings Before Interest and Taxes"
+    :param amortization: "amortization charges"
+    :return: "EBITDA = EBIT + D&A"
+    '''
+    return ebit_val + amortization
 
 # ---------------------------------------------------------------------------
 # 62. ebitda_margin
