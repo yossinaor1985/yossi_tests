@@ -5,7 +5,12 @@
       "Bash(dir \"C:\\\\Users\\\\ISR831\\\\Documents\\\\git\\\\instltns\")",
       "Bash(python3 -c ':*)",
       "Bash(py --version)",
-      "Bash(ls -la C:/Users/ISR831/Documents/git/instltns/batch_*.json)"
+      "Bash(ls -la C:/Users/ISR831/Documents/git/instltns/batch_*.json)",
+      "WebSearch",
+      "Bash(py -c \"import ast; ast.parse\\(open\\('quantum/algorithms/15_hybrid_torch_qnn/hybrid_torch_qnn_local.py'\\).read\\(\\)\\); print\\('15_local: VALID'\\)\")",
+      "Bash(py -c \"import ast; ast.parse\\(open\\('quantum/algorithms/15_hybrid_torch_qnn/hybrid_torch_qnn_ibm_production.py'\\).read\\(\\)\\); print\\('15_ibm: VALID'\\)\")",
+      "Bash(py -c \"import ast; ast.parse\\(open\\('quantum/error_correction/01_bit_flip_code/bit_flip_local.py'\\).read\\(\\)\\); print\\('01_local: VALID'\\)\")",
+      "Bash(py -c \"import ast; ast.parse\\(open\\('quantum/error_correction/01_bit_flip_code/bit_flip_ibm_production.py'\\).read\\(\\)\\); print\\('01_ibm: VALID'\\)\")"
     ]
   }
 }

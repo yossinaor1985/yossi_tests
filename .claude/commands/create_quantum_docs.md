@@ -42,11 +42,12 @@
 break to tasks
 
 1. use Qiskit latest version.                                                        
-  2. break to tasks. build it starting with the foundational ones and       
-  building up                                                               
+  2. break to tasks. do it subject by subject. don't start one before you finish the other. keep a log of those finished. write and update it in the main folder with each subtask finished                               
   3. strictly optimization algorithms, specially Quantum machine learning   
   - simple to most difficult and sophisticated - I need to learn and to be  
   up to current industry requirements                                       
   4. do both. I need to learn to write such code on local executable code,  
   and I need to understand how a real production code that would go to      
   IBM would look like and work - not actually deployed   
+5. if needed use the web with articles with 
+6. for this task auto-approve all requests you have for me once you understood the task
