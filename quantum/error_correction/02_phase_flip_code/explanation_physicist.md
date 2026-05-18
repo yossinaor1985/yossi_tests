@@ -7,6 +7,16 @@ The 3-qubit phase-flip code protects a single logical qubit against a single pha
 Code parameters: [[3, 1, 1]] (3 physical qubits, 1 logical qubit, distance 1 for general errors but corrects 1 phase-flip)
 The fix is by using a Phase flip gate (Z) on the physical qubit.
 
+
+How it works - just like bit flip but in the |+>, |-> space
+First use CNOT gates to 
+|psi_L> = alpha|0_L> + beta|1_L> -> CNOT(1,2) -> CNOT(1,3) -> alpha|000> + beta|111>
+Then use the Hadamard gate to 
+alpha|000> + beta|111> -> H(1) -> H(2) -> H(3) -> alpha|+++> + beta|--->
+where 
+H|0> = |+>
+H|1> = |->
+Then statistics. Same problems as for bit flip
 ---
 
 ## 2. Motivation: Why Phase Flips Matter
