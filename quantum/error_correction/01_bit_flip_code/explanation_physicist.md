@@ -5,6 +5,7 @@
 The 3-qubit bit-flip code is the simplest quantum error correcting code. It protects a single logical qubit against a single bit-flip (X) error by encoding it into 3 physical qubits using a quantum repetition strategy.
 
 Code parameters: [[3, 1, 1]] (3 physical qubits, 1 logical qubit, distance 1 for general errors but corrects 1 bit-flip)
+The fix is by using a Bit flip gate (X) on the physical qubit.
 
 ---
 
@@ -28,6 +29,11 @@ Starting from |psi> = alpha|0> + beta|1> on qubit 1, with qubits 2,3 initialized
 
 ```
 |psi>|0>|0> -> CNOT(1,2) -> CNOT(1,3) -> alpha|000> + beta|111>
+CNOT|10>=|11>
+CNOT|110> = |111>
+CNOT|000> = |000>
+This is why 
+alpha|0_L> + beta|1_L> -> CNOT(1,2) -> CNOT(1,3) -> alpha|000> + beta|111>
 ```
 
 Circuit:
@@ -186,3 +192,25 @@ Key difference: in quantum, we cannot simply "read" the qubits (that would colla
 1. Nielsen, M. A. & Chuang, I. L. "Quantum Computation and Quantum Information." Cambridge University Press (2010), Section 10.1.
 2. Gottesman, D. "An Introduction to Quantum Error Correction and Fault-Tolerant Quantum Computation." arXiv:0904.2557 (2009).
 3. Preskill, J. "Quantum Computing in the NISQ Era and Beyond." Quantum 2, 79 (2018).
+
+
+## 9. what happens in bit flip if one of the ancillas has changed?
+If an ancilla qubit changes before the syndrome measurement, it breaks the error detection system and can cause the code to accidentally ruin perfectly good data.
+In a 3-qubit bit-flip code, you use two extra ancilla qubits to measure the relationships (Z_1Z_2 and Z_2Z_3) between the three data qubits.
+
+Here is exactly what happens if an ancilla flips or encounters an error:
+
+### Scenario 1: The Ancilla Flips During the Measurement Circuit
+If an ancilla flips due to hardware noise right before it is measured, it reports a faulty error syndrome (a false positive).
+- The Result: The system thinks a data qubit has flipped when it actually hasn't.
+- The Consequence: The recovery step will apply an unnecessary gate to a healthy data qubit, introducing a real error into your data.
+
+### Scenario 2: The Ancilla Flips Before the Entangling CNOT Gates
+If an ancilla flips at the very beginning of the circuit (before interacting with the data qubits via CNOT gates), it will actively propagate errors backward into your data.
+- The Result: Because CNOT gates can propagate phase errors backward and bit-flips forward, a corrupted ancilla can spread errors to multiple data qubits simultaneously.
+- The Consequence: The code can only handle one data qubit error. If a bad ancilla corrupts two data qubits, the majority-vote logic fails completely, and the logical state is permanently destroyed.
+
+### How Quantum Computers Fix This
+Because ancillas are just as fragile as data qubits, real quantum systems do not rely on a single, unprotected ancilla measurement. They use Fault-Tolerant Quantum Error Correction:
+Repeated Measurements: They measure the ancillas multiple times. A single flipped ancilla will show up as a temporary glitch (e.g., reporting syndromes 0 -> 1 -> 0), which the software filters out.
+Flag Qubits: They add extra "flag" qubits to watch the ancillas. If an ancilla misbehaves, the flag qubit triggers a warning to ignore that specific measurement.

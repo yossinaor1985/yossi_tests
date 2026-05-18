@@ -5,6 +5,7 @@
 The 3-qubit phase-flip code protects a single logical qubit against a single phase-flip (Z) error. It is the exact dual of the 3-qubit bit-flip code, obtained by conjugating the entire encoding/decoding procedure with Hadamard gates. This duality makes phase-flip correction conceptually transparent: transform to the Hadamard basis, apply the bit-flip code, then transform back.
 
 Code parameters: [[3, 1, 1]] (3 physical qubits, 1 logical qubit, distance 1 for general errors but corrects 1 phase-flip)
+The fix is by using a Phase flip gate (Z) on the physical qubit.
 
 ---
 
