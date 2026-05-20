@@ -20,6 +20,7 @@ transversal gate set.
 
 The Steane code protects against both bit-flip (X) and phase-flip (Z) errors by using the same classical binary [7, 4, 3] Hamming code for both X-error correction and Z-error correction
 
+Notice that for phase flip we run the same process as for X but with v after hadamard gate
 
 ## exmaple 1
 ### Steane [[7,1,3]] Code: Error Correction Example

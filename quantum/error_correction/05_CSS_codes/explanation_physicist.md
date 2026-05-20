@@ -6,6 +6,11 @@ The CSS construction is one of the most important and elegant frameworks in quan
 
 The key idea: take two classical codes C1 and C2 with C2 a subset of C1, and combine them so that C1 corrects X (bit-flip) errors while the dual of C2 corrects Z (phase-flip) errors -- independently.
 
+
+We choose H1 and H2 such that H1 * H_2^T = 0 (mod 2)
+apply H1 on v -> the bit flip
+apply H2 on hadamard (v) -> the phase flip
+
 ---
 
 ## 2. Classical Linear Codes: Prerequisites
