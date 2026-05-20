@@ -148,6 +148,108 @@ $$H = \begin{pmatrix}
 ### Why this is used:
 This format makes it incredibly easy to find the **generator matrix $G$** for creating the logical codewords, using the standard linear algebra shortcut $G = \begin{pmatrix} I_4 \ \big| \ P^T \end{pmatrix}$.
 
+
+### example
+## 2. Generating Codewords via Systematic Form
+
+Information theory textbooks often prefer a specific variant of the "systematic form" where the parity matrix block ($P$) and identity matrix block ($I_3$) are neatly separated. 
+
+This format makes it incredibly easy to find the **generator matrix $G$** for creating logical codewords, using the standard linear algebra shortcut $G = \begin{pmatrix} I_4 \ \big| \ P^T \end{pmatrix}$.
+
+### Step 1: Identify the Matrices ($H$ and $P$)
+
+From our systematic $H$ matrix for a Hamming (7,4) code:
+
+$$H = \left[\begin{array}{ccccc|ccc} 0 & 1 & 1 & 1 & 1 & 1 & 0 & 0 \\ 1 & 0 & 1 & 1 & 0 & 0 & 1 & 0 \\ 1 & 1 & 0 & 1 & 0 & 0 & 0 & 1 \end{array}\right] = [P \ | \ I_3]$$
+
+The left block represents our **Parity Matrix ($P$)**:
+$$P = \begin{pmatrix} 0 & 1 & 1 & 1 \\ 1 & 0 & 1 & 1 \\ 1 & 1 & 0 & 1 \end{pmatrix}$$
+
+### Step 2: Transpose the Parity Matrix ($P^T$)
+
+To find $P^T$, we swap the rows and columns of $P$. Because $P$ is $3 \times 4$, $P^T$ becomes a $4 \times 3$ matrix:
+
+$$P^T = \begin{pmatrix} 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \end{pmatrix}$$
+
+### Step 3: Construct the Generator Matrix ($G$)
+
+Using the shortcut formula $G = [I_4 \ | \ P^T]$, we place a $4 \times 4$ identity matrix on the left and our newly created $P^T$ matrix on the right:
+
+$$G = \left[\begin{array}{cccc|ccc} 1 & 0 & 0 & 0 & 0 & 1 & 1 \\ 0 & 1 & 0 & 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 1 & 1 & 1 & 1 \end{array}\right]$$
+
+### Step 4: Concrete Encoding Example
+
+Let's encode a 4-bit data message vector: **$d = \begin{pmatrix} 1 & 0 & 1 & 1 \end{pmatrix}$**. 
+
+To get the 7-bit systematic codeword ($c$), we multiply the data vector by the generator matrix ($c = d \times G$) using **modulo-2 arithmetic** (XOR logic, where $1+1=0$):
+
+$$c = \begin{pmatrix} 1 & 0 & 1 & 1 \end{pmatrix} \times \left[\begin{array}{cccc|ccc} 1 & 0 & 0 & 0 & 0 & 1 & 1 \\ 0 & 1 & 0 & 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 & 1 & 1 & 0 \\ 0 & 0 & 0 & 1 & 1 & 1 & 1 \end{array}\right]$$
+
+Because of the identity block $I_4$, the first 4 bits of the codeword are just a direct copy of our original data. The final 3 parity bits are calculated by multiplying $d$ by each column of $P^T$:
+
+* **Bit 1**: $1 \times 1 = \mathbf{1}$
+* **Bit 2**: $1 \times 0 = \mathbf{0}$
+* **Bit 3**: $1 \times 1 = \mathbf{1}$
+* **Bit 4**: $1 \times 1 = \mathbf{1}$
+* **Bit 5 (Parity 1)**: $(1 \times 0) + (0 \times 1) + (1 \times 1) + (1 \times 1) = 0 + 0 + 1 + 1 = \mathbf{0}$
+* **Bit 6 (Parity 2)**: $(1 \times 1) + (0 \times 0) + (1 \times 1) + (1 \times 1) = 1 + 0 + 1 + 1 = \mathbf{1}$
+* **Bit 7 (Parity 3)**: $(1 \times 1) + (0 \times 1) + (1 \times 0) + (1 \times 1) = 1 + 0 + 0 + 1 = \mathbf{0}$
+
+#### Final Systematic Codeword:
+
+c = \begin{pmatrix} \underbrace{1 & 0 & 1 & 1}_{\text{Original Data}} & \underbrace{0 & 1 & 0}_{\text{Parity Bits}} \end{pmatrix}
+
+---
+
+## 3. How it is Used for Error Correction
+
+To correct errors, the receiver multiplies the incoming codeword by the transposed Parity-Check Matrix ($H^T$). This calculates a vector called the **Syndrome ($S$)**. 
+
+If an error occurred, the syndrome matches one of the columns in the $H$ matrix, pointing directly to the broken bit.
+
+### Step 1: Transpose the $H$ Matrix ($H^T$)
+Using our systematic $H$ matrix from earlier, we flip the rows and columns to create $H^T$:
+
+$$H^T = \begin{pmatrix} 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \\ \hline 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$$
+
+### Step 2: Simulate a Bit Error
+Let's take our valid codeword from the previous example: $c = \begin{pmatrix} 1 & 0 & 1 & 1 & 0 & 1 & 0 \end{pmatrix}$. 
+
+Assume signal interference flips the **3rd bit** from a `1` to a `0` during transmission. 
+The receiver gets this corrupted vector ($r$):
+$$r = \begin{pmatrix} 1 & 0 & \mathbf{0} & 1 & 0 & 1 & 0 \end{pmatrix}$$
+
+### Step 3: Calculate the Syndrome ($S$)
+The receiver multiplies the received vector by $H^T$ using modulo-2 arithmetic (XOR math):
+
+$$S = r \times H^T$$
+
+$$S = \begin{pmatrix} 1 & 0 & 0 & 1 & 0 & 1 & 0 \end{pmatrix} \times \begin{pmatrix} 0 & 1 & 1 \\ 1 & 0 & 1 \\ 1 & 1 & 0 \\ 1 & 1 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{pmatrix}$$
+
+Multiply each bit of $r$ by its corresponding row in $H^T$ and add them up:
+* **Position 1**: $1 \times \begin{pmatrix} 0 & 1 & 1 \end{pmatrix} = \begin{pmatrix} 0 & 1 & 1 \end{pmatrix}$
+* **Position 2**: $0 \times \begin{pmatrix} 1 & 0 & 1 \end{pmatrix} = \begin{pmatrix} 0 & 0 & 0 \end{pmatrix}$
+* **Position 3**: $0 \times \begin{pmatrix} 1 & 1 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 0 & 0 \end{pmatrix}$
+* **Position 4**: $1 \times \begin{pmatrix} 1 & 1 & 1 \end{pmatrix} = \begin{pmatrix} 1 & 1 & 1 \end{pmatrix}$
+* **Position 5**: $0 \times \begin{pmatrix} 1 & 0 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 0 & 0 \end{pmatrix}$
+* **Position 6**: $1 \times \begin{pmatrix} 0 & 1 & 0 \end{pmatrix} = \begin{pmatrix} 0 & 1 & 0 \end{pmatrix}$
+* **Position 7**: $0 \times \begin{pmatrix} 0 & 0 & 1 \end{pmatrix} = \begin{pmatrix} 0 & 0 & 0 \end{pmatrix}$
+
+Add the resulting vectors together:
+$$S = \begin{pmatrix} 0+0+0+1+0+0+0 \\ 1+0+0+1+0+1+0 \\ 1+0+0+1+0+0+0 \end{pmatrix} \pmod 2$$
+
+$$S = \begin{pmatrix} 1 \\ 3 \\ 2 \end{pmatrix} \pmod 2 \implies \mathbf{\begin{pmatrix} 1 & 1 & 0 \end{pmatrix}}$$
+
+### Step 4: Locate and Fix the Error
+The non-zero syndrome $\begin{pmatrix} 1 & 1 & 0 \end{pmatrix}$ proves an error happened. 
+
+To find out which bit broke, the receiver looks at the original $H$ matrix and finds the column that matches this syndrome vector:
+
+$$H = \left[\begin{array}{ccccccc} \text{Col 1} & \text{Col 2} & \mathbf{\text{Col 3}} & \text{Col 4} & \text{Col 5} & \text{Col 6} & \text{Col 7} \\ 0 & 1 & \mathbf{1} & 1 & 1 & 0 & 0 \\ 1 & 0 & \mathbf{1} & 1 & 0 & 1 & 0 \\ 1 & 1 & \mathbf{0} & 1 & 0 & 0 & 1 \end{array}\right]$$
+
+Column 3 matches the syndrome exactly. The receiver now knows **bit 3 is the corrupted bit**. It flips bit 3 back from `0` to `1`, successfully recovering the clean data.
+
+
 ---
 
 ## Summary Rule for Your Notes
