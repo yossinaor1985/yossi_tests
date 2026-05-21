@@ -1,5 +1,44 @@
 # Repetition Codes - Physicist's Deep Dive
 
+Notice that Z is implemented with a CNOT: this is the explanation:
+Great question. The confusion is between applying Z and
+  measuring Z_i Z_{i+1}.
+                                              
+  The problem: We need to extract the eigenvalue of Z_i Z_{i+1}
+  into an ancilla qubit that we can then measure — without
+  collapsing the data qubits.                                    
+   
+  Why Z gates don't work: A Z gate just adds a phase (Z|0⟩=|0⟩,  
+  Z|1⟩=-|1⟩). It modifies the state but doesn't send any
+  information to an ancilla. After applying Z, you haven't
+  learned anything.
+
+  Why CNOT works: CNOT copies Z-basis information from the
+  control (data qubit) into the target (ancilla):
+
+  data = |0⟩ → ancilla unchanged  (control=0, no flip)
+  data = |1⟩ → ancilla flipped    (control=1, flip)
+
+  Two CNOTs from data[i] and data[i+1] into the same ancilla
+  (starting at |0⟩) compute:
+
+  ancilla = 0 ⊕ data[i] ⊕ data[i+1]
+
+  - Both qubits same (|00⟩ or |11⟩) → ancilla = 0 → stabilizer =
+  +1
+  - Qubits differ (|01⟩ or |10⟩) → ancilla = 1 → stabilizer = -1
+
+  The key point: CNOT is the standard tool for non-destructively
+  reading Z-parity into an ancilla. It extracts the stabilizer
+  eigenvalue without collapsing the superposition α|0_L⟩ + β|1_L⟩
+   — because both |000⟩ and |111⟩ have the same parity (ancilla =
+   0 for both), so the measurement doesn't distinguish them.
+
+  If the stabilizer were X-type (like in the phase-flip code),
+  you'd need a different circuit — Hadamards around the CNOTs, or
+   CNOTs with the ancilla as control and data as targets.
+
+
 ## 1. Overview
 
 The repetition code is the generalization of the 3-qubit bit-flip code to an arbitrary number of qubits d. It encodes a single logical qubit into d physical qubits, correcting up to floor((d-1)/2) bit-flip (X) errors. While it only protects against one type of error, it is the foundational model for understanding key concepts in quantum error correction: code distance, error thresholds, and the tradeoff between overhead and protection.
