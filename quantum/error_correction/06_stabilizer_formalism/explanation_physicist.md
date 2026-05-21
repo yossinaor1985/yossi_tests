@@ -1,5 +1,7 @@
 # Stabilizer Formalism - Physicist's Deep Dive
 
+An error E in P_n is detectable if and only if it anticommutes with at least one stabilizer generator.
+
 ## 1. Overview
 
 The stabilizer formalism, introduced by Daniel Gottesman (1997), provides a unified algebraic framework for describing and analyzing a large class of quantum error-correcting codes. Rather than specifying the code space by its basis vectors (which requires exponentially many amplitudes), we specify it compactly by a set of operators that "stabilize" (leave invariant) every state in the code space.

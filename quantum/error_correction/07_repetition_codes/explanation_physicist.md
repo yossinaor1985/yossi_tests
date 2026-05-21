@@ -79,6 +79,33 @@ S_i = Z_i Z_{i+1}    for i = 1, 2, ..., d-1
 
 These measure the parity between neighboring qubits. The full stabilizer group has 2^{d-1} elements (all products of generators).
 
+Note: For bit flip the stabilizers are the combination of Z gates 
+For phase flip it is a combination of X gates. and that is because of the commutation between X and Z
+
+Bit flip:
+Yes, you are on the right track, but with one important clarification: Z-type operators are used to detect bit-flip errors, but the stabilizer itself is not just a single
+Z gate. Instead, the stabilizers are multi-qubit combinations of  Z gates.
+
+When moving to quantum systems, **Z-type operators are used to detect bit-flip errors, but the stabilizer itself is not just a single $Z$ gate.** Instead, the stabilizers are multi-qubit combinations of $Z$ gates, such as $Z_1Z_2$ and $Z_2Z_3$.
+
+Here is how the relationship between errors and stabilizers works in a 3-qubit quantum bit-flip repetition code:
+
+### The Code and Its Stabilizers
+To protect a quantum state against a bit-flip ($X$) error, we encode it into three qubits:
+*   $|0\rangle_L = |000\rangle$
+*   $|1\rangle_L = |111\rangle$
+
+The stabilizer group for this code must leave both $|000\rangle$ and $|111\rangle$ completely unchanged. The two independent **stabilizer generators** chosen for this are:
+*   $S_1 = Z_1Z_2I_3$ (often written as $Z_1Z_2$)
+*   $S_2 = I_1Z_2Z_3$ (often written as $Z_2Z_3$)
+
+> **Note:** A single $Z$ operator on Qubit 1 ($Z_1 I_2 I_3$) cannot be a stabilizer because it would turn $|111\rangle$ into $-|111\rangle$, altering the state.
+
+
+
+
+
+
 ### 3.2 Codespace Characterization
 
 The codespace is the simultaneous +1 eigenspace of all stabilizers:
