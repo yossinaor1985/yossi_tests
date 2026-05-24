@@ -1,5 +1,10 @@
 # Quantum LDPC Codes - Explained Like You're 5
 
+
+
+
+
+
 ## The Problem with Surface Codes
 
 Remember the surface code? It is like a tiled bathroom floor where each tile checks its neighbors. It works great for protecting quantum data, but it has a BIG problem: you need a LOT of tiles.

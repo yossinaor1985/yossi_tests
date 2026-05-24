@@ -18,6 +18,46 @@ The smallest color code is the **7-qubit color code**, which is equivalent to th
 [[7, 1, 3]] code. This connection provides a concrete bridge between CSS codes and
 topological codes.
 
+
+## example
+
+# Hexagonal (6.6.6) Color Code: The [[7, 1, 3]] Steane Code
+
+This example shows the numerical structure of the smallest hexagonal color code. It uses 7 physical qubits to protect 1 logical qubit with a code distance of 3.
+
+## 1. Lattice Structure and Qubit Mapping
+
+Imagine a single central hexagon surrounded by boundary lines. Qubits sit on the vertices:
+
+*   **Face 1 (Red Hexagon)**: Qubits **1, 2, 3, 4, 5, 6**
+*   **Face 2 (Green Boundary)**: Qubits **2, 3, 4, 7**
+*   **Face 3 (Blue Boundary)**: Qubits **4, 5, 6, 7**
+
+## 2. The Numerical Stabilizers
+
+Every face requires both an $X$-type and a $Z$-type stabilizer check. The 6 generator matrices are defined below:
+
+
+| Face (Color) | Qubits Map | $X$-Stabilizer | $Z$-Stabilizer |
+| :--- | :--- | :--- | :--- |
+| **Face 1 (Red)** | [1, 2, 3, 4, 5, 6] | $X_1 X_2 X_3 X_4 X_5 X_6$ | $Z_1 Z_2 Z_3 Z_4 Z_5 Z_6$ |
+| **Face 2 (Green)** | [2, 3, 4, 7] | $X_2 X_3 X_4 X_7$ | $Z_2 Z_3 Z_4 Z_7$ |
+| **Face 3 (Blue)** | [4, 5, 6, 7] | $X_4 X_5 X_6 X_7$ | $Z_4 Z_5 Z_6 Z_7$ |
+
+## 3. Error Detection Walkthrough
+
+When the system is error-free, measuring these 6 operators yields a product value of $+1$. 
+
+### Scenario: A phase-flip error ($Z$) occurs on Qubit 1
+
+1. **Anti-commutation**: $Z$ errors only trigger $X$-type stabilizers ($X_1 Z_1 = -Z_1 X_1$).
+2. **Syndrome Measurement**:
+   * **Red $X$-Check**: Contains Qubit 1 $\rightarrow$ Flips to **$-1$**
+   * **Green $X$-Check**: Misses Qubit 1 $\rightarrow$ Stays **$+1$**
+   * **Blue $X$-Check**: Misses Qubit 1 $\rightarrow$ Stays **$+1$**
+3. **Syndrome Vector**: `[-1, +1, +1]`
+4. **Correction**: The unique syndrome points exclusively to Qubit 1. The decoder applies a $Z_1$ operation to fix the error ($Z_1 \times Z_1 = I$).
+Use code with caution.
 ---
 
 ## 2. Lattice Structure and Colorability
