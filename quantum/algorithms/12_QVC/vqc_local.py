@@ -420,9 +420,9 @@ def plot_results(vqc_model, X_train, X_test, y_train, y_test,
                     f'{acc:.3f}', ha='center', fontsize=10)
 
     plt.tight_layout()
-    plt.savefig("quantum/algorithms/12_VQC/vqc_results.png", dpi=150, bbox_inches='tight')
+    plt.savefig("quantum/algorithms/12_QVC/vqc_results.png", dpi=150, bbox_inches='tight')
     plt.show()
-    print("\nPlot saved to quantum/algorithms/12_VQC/vqc_results.png")
+    print("\nPlot saved to quantum/algorithms/12_QVC/vqc_results.png")
 
 
 # =============================================================================

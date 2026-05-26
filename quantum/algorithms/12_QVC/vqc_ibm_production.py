@@ -66,7 +66,7 @@ from qiskit_algorithms.optimizers import COBYLA, SPSA
 # CONFIGURATION
 # =============================================================================
 
-RESULTS_DIR = "quantum/algorithms/12_VQC/production_results"
+RESULTS_DIR = "quantum/algorithms/12_QVC/production_results"
 NUM_QUBITS = 2
 FEATURE_MAP_REPS = 1      # Shallow for hardware (reduces gate errors)
 ANSATZ_REPS = 1            # Shallow for hardware
